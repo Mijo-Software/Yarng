@@ -1,0 +1,116 @@
+# Microsoft Developer Studio Generated Dependency File, included by Yarng.mak
+
+.\BCMenu.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\BCMenu.h"\
+	".\StdAfx.h"\
+	
+
+.\BtnST.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\BCMenu.h"\
+	".\BtnST.h"\
+	".\StdAfx.h"\
+	
+
+.\HistoryDlg.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\HistoryDlg.h"\
+	".\StdAfx.h"\
+	".\Yarng.h"\
+	
+
+.\HowtoDlg.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\HowtoDlg.h"\
+	".\StdAfx.h"\
+	".\Yarng.h"\
+	
+
+.\HyperLink.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\HyperLink.h"\
+	".\StdAfx.h"\
+	
+
+.\ProbabilityDlg.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\BCMenu.h"\
+	".\BtnST.h"\
+	".\HyperLink.h"\
+	".\ProbabilityDlg.h"\
+	".\StdAfx.h"\
+	".\ThemeHelperST.h"\
+	".\XPStyleButtonST.h"\
+	".\Yarng.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\StdAfx.h"\
+	
+
+.\ThemeHelperST.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\StdAfx.h"\
+	".\ThemeHelperST.h"\
+	
+
+.\XPStyleButtonST.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\BCMenu.h"\
+	".\BtnST.h"\
+	".\StdAfx.h"\
+	".\ThemeHelperST.h"\
+	".\XPStyleButtonST.h"\
+	
+
+.\Yarng.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\BCMenu.h"\
+	".\BtnST.h"\
+	".\HyperLink.h"\
+	".\StdAfx.h"\
+	".\ThemeHelperST.h"\
+	".\XPStyleButtonST.h"\
+	".\Yarng.h"\
+	".\YarngDlg.h"\
+	
+
+.\Yarng.rc : \
+	".\res\about.ico"\
+	".\res\cancel.ico"\
+	".\res\exit.ico"\
+	".\res\generate.ico"\
+	".\res\history.ico"\
+	".\res\home.ico"\
+	".\res\how.ico"\
+	".\res\manifest.xml"\
+	".\res\mfc.ico"\
+	".\res\mfc7.ico"\
+	".\res\msvc6.ico"\
+	".\res\msvc7.ico"\
+	".\res\ok.ico"\
+	".\res\open.ico"\
+	".\res\probabilitytable.ico"\
+	".\res\random.ico"\
+	".\res\save.ico"\
+	".\res\settings.ico"\
+	".\res\Yarng.ico"\
+	".\res\Yarng.rc2"\
+	
+
+.\YarngDlg.cpp : \
+	"..\..\..\..\microsoft visual studio 6\vc98\include\basetsd.h"\
+	".\BCMenu.h"\
+	".\BtnST.h"\
+	".\HistoryDlg.h"\
+	".\HowtoDlg.h"\
+	".\HyperLink.h"\
+	".\ProbabilityDlg.h"\
+	".\StdAfx.h"\
+	".\ThemeHelperST.h"\
+	".\XPStyleButtonST.h"\
+	".\Yarng.h"\
+	".\YarngDlg.h"\
+	
