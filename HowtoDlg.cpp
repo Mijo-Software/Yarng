@@ -58,9 +58,18 @@ void CHowtoDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CHowtoDlg, CDialog)
 	//{{AFX_MSG_MAP(CHowtoDlg)
-		// NOTE: the ClassWizard will add message map macros here
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CHowtoDlg message handlers
+
+BOOL CHowtoDlg::OnInitDialog() 
+{
+	CDialog::OnInitDialog();
+	
+  EnableThemeDialogTexture(GetSafeHwnd());
+	
+	return TRUE;  // return TRUE unless you set the focus to a control
+	              // EXCEPTION: OCX Property Pages should return FALSE
+}

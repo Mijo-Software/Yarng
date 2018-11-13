@@ -42,6 +42,7 @@ public:
 // Implementation
 protected:
 	//{{AFX_MSG(CAboutDlg)
+	virtual BOOL OnInitDialog();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
@@ -75,7 +76,6 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
 	//{{AFX_MSG_MAP(CAboutDlg)
-		// No message handlers
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -101,6 +101,14 @@ void CYarngDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CYarngDlg)
+	DDX_Control(pDX, IDC_SPIN_EDIT_MIN_LEN_OF_NAMES, m_sbMinLengthOfNames);
+	DDX_Control(pDX, IDC_SPIN_EDIT_MAX_LEN_OF_NAMES, m_sbMaxLengthOfNames);
+	DDX_Control(pDX, IDC_SPIN_NUMB_OF_NAMES, m_sbNumberOfNames);
+	DDX_Control(pDX, IDC_BUTTON_PP_SCRAMBLE, m_btnPostProcessingScramble);
+	DDX_Control(pDX, IDC_BUTTON_PP_MIRROR, m_btnPostProcessingMirror);
+	DDX_Control(pDX, IDC_BUTTON_PP_RIGHT, m_btnPostProcessingRight);
+	DDX_Control(pDX, IDC_BUTTON_PP_LEFT, m_btnPostProcessingLeft);
+	DDX_Control(pDX, IDC_BUTTON_PP_AZ, m_btnPostProcessingAZ);
 	DDX_Control(pDX, IDC_PROGRESS_GENERATE, m_prgsGenerate);
 	DDX_Control(pDX, IDC_BUTTON_PRINT, m_btnPrint);
 	DDX_Control(pDX, IDC_BUTTON_COPY, m_btnClipboard);
@@ -148,6 +156,14 @@ BEGIN_MESSAGE_MAP(CYarngDlg, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON_EXPORT, OnButtonExport)
 	ON_BN_CLICKED(IDC_BUTTON_PRINT, OnButtonPrint)
 	ON_WM_TIMER()
+	ON_BN_CLICKED(IDC_BUTTON_PP_LEFT, OnButtonPPLeft)
+	ON_BN_CLICKED(IDC_BUTTON_PP_RIGHT, OnButtonPPRight)
+	ON_BN_CLICKED(IDC_BUTTON_PP_MIRROR, OnButtonPPMirror)
+	ON_BN_CLICKED(IDC_BUTTON_PP_AZ, OnButtonPPAz)
+	ON_BN_CLICKED(IDC_BUTTON_PP_SCRAMBLE, OnButtonPPScramble)
+	ON_EN_SETFOCUS(IDC_EDIT_NUMB_OF_NAMES, OnSetfocusEditNumbOfNames)
+	ON_EN_SETFOCUS(IDC_EDIT_MAX_LEN_OF_NAMES, OnSetfocusEditMaxLenOfNames)
+	ON_EN_SETFOCUS(IDC_EDIT_MIN_LEN_OF_NAMES, OnSetfocusEditMinLenOfNames)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -181,7 +197,7 @@ BOOL CYarngDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 	
-	// TODO: Add extra initialization here
+	EnableThemeDialogTexture(GetSafeHwnd());
   static UINT BASED_CODE indicators[] =
   {                                    
     IDS_INDICATOR_NISH,
@@ -308,6 +324,36 @@ BOOL CYarngDlg::OnInitDialog()
   m_btnExit.DrawFlatFocus(true);
   m_btnExit.SetTooltipText(IDS_EXIT);
   
+  m_btnPostProcessingLeft.SetThemeHelper(&m_ThemeHelper);
+  m_btnPostProcessingLeft.SetIcon(IDI_ICON_LEFT);
+  m_btnPostProcessingLeft.OffsetColor(CButtonST::BTNST_COLOR_BK_IN,100);
+  m_btnPostProcessingLeft.DrawFlatFocus(true);
+  m_btnPostProcessingLeft.SetTooltipText(IDS_PP_LEFT);
+  
+  m_btnPostProcessingRight.SetThemeHelper(&m_ThemeHelper);
+  m_btnPostProcessingRight.SetIcon(IDI_ICON_RIGHT);
+  m_btnPostProcessingRight.OffsetColor(CButtonST::BTNST_COLOR_BK_IN,100);
+  m_btnPostProcessingRight.DrawFlatFocus(true);
+  m_btnPostProcessingRight.SetTooltipText(IDS_PP_RIGHT);
+  
+  m_btnPostProcessingMirror.SetThemeHelper(&m_ThemeHelper);
+  m_btnPostProcessingMirror.SetIcon(IDI_ICON_METAL);
+  m_btnPostProcessingMirror.OffsetColor(CButtonST::BTNST_COLOR_BK_IN,100);
+  m_btnPostProcessingMirror.DrawFlatFocus(true);
+  m_btnPostProcessingMirror.SetTooltipText(IDS_PP_MIRROR);
+
+  m_btnPostProcessingAZ.SetThemeHelper(&m_ThemeHelper);
+  m_btnPostProcessingAZ.SetIcon(IDI_ICON_AZ);
+  m_btnPostProcessingAZ.OffsetColor(CButtonST::BTNST_COLOR_BK_IN,100);
+  m_btnPostProcessingAZ.DrawFlatFocus(true);
+  m_btnPostProcessingAZ.SetTooltipText(IDS_PP_AZ);
+  
+  m_btnPostProcessingScramble.SetThemeHelper(&m_ThemeHelper);
+  m_btnPostProcessingScramble.SetIcon(IDI_ICON_RANDOM);
+  m_btnPostProcessingScramble.OffsetColor(CButtonST::BTNST_COLOR_BK_IN,100);
+  m_btnPostProcessingScramble.DrawFlatFocus(true);
+  m_btnPostProcessingScramble.SetTooltipText(IDS_PP_SCRAMBLE);
+ 
   srand((unsigned)time(NULL));
   UpdateData(false);
   return TRUE;  // return TRUE  unless you set the focus to a control
@@ -528,7 +574,7 @@ void CYarngDlg::OnButtonGenerate()
     }            
   }          
 
-  if (m_nLengthOfNamesMin < m_nLengthOfNamesMax)
+  if ((m_nLengthOfNamesMin <= m_nLengthOfNamesMax) || (m_nLengthOfNamesMin >= 1) && (m_nLengthOfNamesMax >= 1))
   {
     m_prgsGenerate.SetRange(0,m_nNumberOfNames-1);
     m_prgsGenerate.SetPos(0);
@@ -642,7 +688,7 @@ void CYarngDlg::OnButtonDefaultSettings()
   m_cmbLanguage.SetCurSel(0);
   m_uintLanguage = m_cmbLanguage.GetCurSel();
   UpdateData(false);
-  MessageBox("The settings were reset.","Default settings",MB_ICONINFORMATION);
+  MessageBox("The settings were resetted.","Default settings",MB_ICONINFORMATION);
 }
 
 void CYarngDlg::OnButtonProbabilityTable() 
@@ -2148,6 +2194,31 @@ BOOL CYarngDlg::PreTranslateMessage(MSG* pMsg)
       strStaticTooltip.LoadString(IDS_COMBO_LANGUAGE);
       m_StatusBar.SetPaneText(0,strStaticTooltip);
     } else 
+	  if (pMsg->hwnd == GetDlgItem(IDC_BUTTON_PP_LEFT)->m_hWnd)
+    {
+      strStaticTooltip.LoadString(IDS_PP_LEFT);
+      m_StatusBar.SetPaneText(0,strStaticTooltip);
+    } else 
+	  if (pMsg->hwnd == GetDlgItem(IDC_BUTTON_PP_RIGHT)->m_hWnd)
+    {
+      strStaticTooltip.LoadString(IDS_PP_RIGHT);
+      m_StatusBar.SetPaneText(0,strStaticTooltip);
+    } else 
+	  if (pMsg->hwnd == GetDlgItem(IDC_BUTTON_PP_MIRROR)->m_hWnd)
+    {
+      strStaticTooltip.LoadString(IDS_PP_MIRROR);
+      m_StatusBar.SetPaneText(0,strStaticTooltip);
+    } else 
+	  if (pMsg->hwnd == GetDlgItem(IDC_BUTTON_PP_AZ)->m_hWnd)
+    {
+      strStaticTooltip.LoadString(IDS_PP_AZ);
+      m_StatusBar.SetPaneText(0,strStaticTooltip);
+    } else 
+	  if (pMsg->hwnd == GetDlgItem(IDC_BUTTON_PP_SCRAMBLE)->m_hWnd)
+    {
+      strStaticTooltip.LoadString(IDS_PP_SCRAMBLE);
+      m_StatusBar.SetPaneText(0,strStaticTooltip);
+    } else 
     m_StatusBar.SetPaneText(0,"");
   }
 	return CDialog::PreTranslateMessage(pMsg);
@@ -2233,4 +2304,127 @@ void CYarngDlg::OnTimer(UINT nIDEvent)
     m_StatusBar.SetPaneText(1,Time.Format("%y-%m-%d %H:%M:%S"));
   }	
 	CDialog::OnTimer(nIDEvent);
+}
+
+void CYarngDlg::OnButtonPPLeft() 
+{
+	// TODO: Add your control notification handler code here
+	
+}
+
+void CYarngDlg::OnButtonPPRight() 
+{
+  CString strTemp;
+  UpdateData(true);
+  m_prgsGenerate.SetRange(0,m_strGeneratedNames.GetLength()-1);
+  m_prgsGenerate.SetPos(0);  
+  for (int i = 0; i < m_strGeneratedNames.GetLength()-1; i++)
+  {
+    m_prgsGenerate.OffsetPos(1);
+    
+    strTemp = m_strGeneratedNames.GetAt(0);
+    //if (i != m_strGeneratedNames.GetLength()-1)
+    m_strGeneratedNames.SetAt(i,m_strGeneratedNames.GetAt(i+1));
+    m_strGeneratedNames.SetAt(m_strGeneratedNames.GetLength()-1,strTemp.GetAt(0));
+
+    MSG msg;
+    while (PeekMessage(&msg,NULL,0,0,PM_REMOVE))
+    {
+  		TranslateMessage(&msg);
+    	DispatchMessage(&msg);
+    }
+  }
+	UpdateData(false);
+}
+
+void CYarngDlg::OnButtonPPMirror() 
+{
+  CString strTemp;
+  UpdateData(true);
+  m_prgsGenerate.SetRange(0,m_strGeneratedNames.GetLength()-1);
+  m_prgsGenerate.SetPos(0);
+	m_strGeneratedNames.MakeReverse();
+  m_strGeneratedNames.Replace("\x0A\x0D","\x0D\x0A");
+  m_strGeneratedNames.Replace(" ,",", ");
+  m_strGeneratedNames.Replace(", ",NULL);
+  m_strGeneratedNames.Replace("\x0D\x0A",", \x0D\x0A");
+  m_strGeneratedNames.MakeLower();
+  for (int i = 0; i < m_strGeneratedNames.GetLength(); i++)
+  {
+    m_prgsGenerate.OffsetPos(1);
+    if (m_strGeneratedNames.GetAt(i) == ' ') 
+    {
+      MSG msg;
+	    while (PeekMessage(&msg,NULL,0,0,PM_REMOVE))
+      {
+    		TranslateMessage(&msg);
+	    	DispatchMessage(&msg);
+      }
+      strTemp = m_strGeneratedNames.GetAt(i+3);
+      strTemp.MakeUpper();
+      m_strGeneratedNames.SetAt(i+3,strTemp.GetAt(0));
+    }
+  }
+  strTemp = m_strGeneratedNames.GetAt(0);
+  strTemp.MakeUpper();
+  m_strGeneratedNames.SetAt(0,strTemp.GetAt(0));
+	UpdateData(false);
+}
+
+void CYarngDlg::OnButtonPPAz() 
+{
+	// TODO: Add your control notification handler code here
+	
+}
+
+void CYarngDlg::OnButtonPPScramble() 
+{
+}
+
+/***********************************************************************************************************/
+// Helper functions
+/***********************************************************************************************************/
+// constant string definitions here (or you can put it into resource string table)
+#define IDS_UTIL_UXTHEME        "UxTheme.dll"
+#define IDS_UTIL_THEMETEXTURE   "EnableThemeDialogTexture"
+/////////////////////////////////////////////////////////////////////////////
+void EnableThemeDialogTexture(HWND hwndDlg)
+{
+	HINSTANCE hDll=LoadLibrary(CString((LPCTSTR)IDS_UTIL_UXTHEME));							// 'UxTheme.dll'
+	if(hDll==NULL)
+		return;	// the DLL won't be available on anything except Windows XP
+	ULONG (PASCAL *lpfnEnableTheme)(HWND, DWORD);
+	(FARPROC&)lpfnEnableTheme=GetProcAddress(hDll,CString((LPCTSTR)IDS_UTIL_THEMETEXTURE));	// 'EnableThemeDialogTexture'
+	if(lpfnEnableTheme)
+		lpfnEnableTheme(hwndDlg, 6);		// ETDT_ENABLETAB = (ETDT_ENABLE | ETDT_USETABTEXTURE) = (2|4) = 6
+	else ASSERT(FALSE);
+	FreeLibrary(hDll);
+}
+/***********************************************************************************************************/
+//
+/***********************************************************************************************************/
+
+
+BOOL CAboutDlg::OnInitDialog() 
+{
+	CDialog::OnInitDialog();	
+  //EnableThemeDialogTexture(GetSafeHwnd());
+	
+	return TRUE;  // return TRUE unless you set the focus to a control
+	              // EXCEPTION: OCX Property Pages should return FALSE
+}
+
+void CYarngDlg::OnSetfocusEditNumbOfNames() 
+{
+  m_sbNumberOfNames.SetRange(1,32000);
+}
+
+void CYarngDlg::OnSetfocusEditMaxLenOfNames() 
+{
+  m_sbMaxLengthOfNames.SetRange(1,32000);
+}
+
+void CYarngDlg::OnSetfocusEditMinLenOfNames() 
+{
+  m_sbMinLengthOfNames.SetRange(1,32000);
 }

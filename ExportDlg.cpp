@@ -202,6 +202,7 @@ void CExportDlg::OnButtonExport()
 BOOL CExportDlg::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+  EnableThemeDialogTexture(GetSafeHwnd());
   m_btnExport.SetThemeHelper(&m_ThemeHelper);
   m_btnExport.SetIcon(IDI_ICON_EXPORT);
   m_btnExport.OffsetColor(CButtonST::BTNST_COLOR_BK_IN,100);

@@ -87,6 +87,8 @@ LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 IDI_ICON_WIN16          ICON    DISCARDABLE     "res\\win16.ico"
 IDI_ICON_MAIL3          ICON    DISCARDABLE     "res\\mail3.ico"
 IDI_ICON_PRINT2         ICON    DISCARDABLE     "res\\print2.ico"
+IDI_ICON_AZ             ICON    DISCARDABLE     "res\\az.ico"
+IDI_ICON_METAL          ICON    DISCARDABLE     "res\\metal.ico"
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -158,7 +160,7 @@ BEGIN
     IDS_INDICATOR_TIME      "Time"
     IDS_INDICATOR_DESCRIPT  "Description"
     IDS_PRODUCTNAME         "Yarng"
-    IDS_PRODUCTVERSION      "1.0.6.1"
+    IDS_PRODUCTVERSION      "1.0.7"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -177,6 +179,11 @@ BEGIN
     IDS_EXPORT              "Export the list with the random names"
     IDS_PRINT               "Print the list with the random names"
     IDS_COPY                "Copy the list with the random names to the clipboard"
+    IDS_PP_LEFT             "Moves each letter a step to left"
+    IDS_PP_RIGHT            "Moves each letter a step to right"
+    IDS_PP_MIRROR           "Mirrors the generated names"
+    IDS_PP_AZ               "Sorts seperately the vowels and consonants"
+    IDS_PP_SCRAMBLE         "Scramble"
 END
 
 #endif    // German (Germany) resources
@@ -303,8 +310,8 @@ CAPTION "About Yarng"
 FONT 8, "MS Sans Serif"
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,25,25,20,20
-    LTEXT           "Yarng Version 1.0.6.1",IDC_STATIC,5,50,70,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2007",IDC_STATIC,5,60,60,8
+    LTEXT           "Yarng Version 1.0.7",IDC_STATIC,5,50,70,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,5,60,60,8
     DEFPUSHBUTTON   "&OK",IDOK,170,55,50,14,WS_GROUP
     ICON            IDI_ICON_MSVC6,IDC_STATIC,90,25,20,20
     ICON            IDI_ICON_MFC6,IDC_STATIC,125,25,20,20
@@ -317,16 +324,16 @@ BEGIN
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,15,145,1
     EDITTEXT        IDC_EDIT_ABOUT,5,75,230,55,ES_MULTILINE | ES_AUTOVSCROLL | 
                     ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
-    CTEXT           "(C) 2007 Michael Johne",IDC_STATIC,155,10,80,8
+    CTEXT           "(C) 2008 Michael Johne",IDC_STATIC,155,10,80,8
     CTEXT           "<michael-johne@gmx.de>",IDC_EMAILLINK,155,20,80,8
     CTEXT           "http://www.planeten.ch",IDC_WWWLINK1,155,40,80,8
     CTEXT           "http://www.exodb.de.vu",IDC_WWWLINK2,155,30,80,8
 END
 
-IDD_YARNG_DIALOG DIALOGEX 0, 0, 277, 186
+IDD_YARNG_DIALOG DIALOGEX 0, 0, 282, 201
 STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "Yarng 1.0.6.1"
+CAPTION "Yarng 1.0.7"
 FONT 8, "MS Sans Serif"
 BEGIN
     GROUPBOX        "Settings",IDC_STATIC,5,5,155,145
@@ -335,7 +342,7 @@ BEGIN
                     ES_AUTOHSCROLL | ES_NUMBER
     CONTROL         "Spin1",IDC_SPIN_NUMB_OF_NAMES,"msctls_updown32",
                     UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,130,15,11,13
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,130,15,11,13
     LTEXT           "Character length of generated names",IDC_STATIC,10,30,
                     120,8
     LTEXT           "&Min.:",IDC_STATIC,10,40,18,8
@@ -343,13 +350,13 @@ BEGIN
                     ES_AUTOHSCROLL | ES_NUMBER
     CONTROL         "Spin1",IDC_SPIN_EDIT_MIN_LEN_OF_NAMES,"msctls_updown32",
                     UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,56,41,11,13
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,56,41,11,13
     LTEXT           "Ma&x.:",IDC_STATIC,70,40,18,8
     EDITTEXT        IDC_EDIT_MAX_LEN_OF_NAMES,90,41,25,12,ES_RIGHT | 
                     ES_AUTOHSCROLL | ES_NUMBER
     CONTROL         "Spin1",IDC_SPIN_EDIT_MAX_LEN_OF_NAMES,"msctls_updown32",
                     UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS,116,41,11,13
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,116,41,11,13
     LTEXT           "Used characters",IDC_STATIC,10,60,53,8
     LTEXT           "&Vowels:",IDC_STATIC,10,70,26,8
     EDITTEXT        IDC_EDIT_VOWELS,35,70,25,12,ES_AUTOHSCROLL
@@ -368,19 +375,26 @@ BEGIN
     EDITTEXT        IDC_EDIT_GENERATED_NAMES,170,10,105,95,ES_MULTILINE | 
                     ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL | 
                     WS_HSCROLL
-    DEFPUSHBUTTON   "&Generate!!!",IDC_BUTTON_GENERATE,170,115,75,35,0,
+    DEFPUSHBUTTON   "&Generate!!!",IDC_BUTTON_GENERATE,170,120,70,30,0,
                     WS_EX_CLIENTEDGE
-    PUSHBUTTON      "&About",IDC_BUTTON_ABOUT,20,155,40,15
-    PUSHBUTTON      "&History",IDC_BUTTON_HISTORY,85,155,40,15
-    PUSHBUTTON      "H&ow to",IDC_BUTTON_HOWTO,150,155,40,15,BS_MULTILINE
-    PUSHBUTTON      "&Exit",IDC_BUTTON_EXIT,215,155,40,15
+    PUSHBUTTON      "&About",IDC_BUTTON_ABOUT,10,165,40,15
+    PUSHBUTTON      "&History",IDC_BUTTON_HISTORY,55,165,40,15
+    PUSHBUTTON      "H&ow to",IDC_BUTTON_HOWTO,100,165,40,15,BS_MULTILINE
+    PUSHBUTTON      "&Exit",IDC_BUTTON_EXIT,145,165,40,15
     CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,165,10,1,140
     PUSHBUTTON      "",IDC_BUTTON_EXPORT,245,135,15,15
-    PUSHBUTTON      "",IDC_BUTTON_CLEAR,245,115,15,15
-    PUSHBUTTON      "",IDC_BUTTON_COPY,260,115,15,15
+    PUSHBUTTON      "",IDC_BUTTON_CLEAR,245,120,15,15
+    PUSHBUTTON      "",IDC_BUTTON_COPY,260,120,15,15
     PUSHBUTTON      "",IDC_BUTTON_PRINT,260,135,15,15
     CONTROL         "Progress1",IDC_PROGRESS_GENERATE,"msctls_progress32",
                     PBS_SMOOTH,170,105,105,10
+    GROUPBOX        "Misc",IDC_STATIC,5,155,185,30
+    PUSHBUTTON      "",IDC_BUTTON_PP_LEFT,200,165,15,15
+    GROUPBOX        "Post-Processing",IDC_STATIC,195,155,85,30
+    PUSHBUTTON      "",IDC_BUTTON_PP_RIGHT,215,165,15,15
+    PUSHBUTTON      "",IDC_BUTTON_PP_MIRROR,230,165,15,15
+    PUSHBUTTON      "",IDC_BUTTON_PP_AZ,245,165,15,15
+    PUSHBUTTON      "",IDC_BUTTON_PP_SCRAMBLE,260,165,15,15
 END
 
 IDD_DIALOG_HISTORY DIALOG DISCARDABLE  0, 0, 167, 166
@@ -456,9 +470,9 @@ BEGIN
     IDD_YARNG_DIALOG, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 270
+        RIGHTMARGIN, 275
         TOPMARGIN, 7
-        BOTTOMMARGIN, 179
+        BOTTOMMARGIN, 194
     END
 
     IDD_DIALOG_HISTORY, DIALOG
@@ -495,8 +509,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,6,1
- PRODUCTVERSION 1,0,6,1
+ FILEVERSION 1,0,7,0
+ PRODUCTVERSION 1,0,7,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -514,14 +528,14 @@ BEGIN
             VALUE "Comments", "Yarng bedeutet ""Yet Another Random Name Generator"".\0"
             VALUE "CompanyName", "\0"
             VALUE "FileDescription", "Yarng\0"
-            VALUE "FileVersion", "1, 0, 6, 1\0"
+            VALUE "FileVersion", "1, 0, 7, 0\0"
             VALUE "InternalName", "Yarng\0"
             VALUE "LegalCopyright", "Copyright © 2007 Michael Johne\0"
             VALUE "LegalTrademarks", "Copyright © 2007 Michael Johne\0"
             VALUE "OriginalFilename", "Yarng.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Yarng\0"
-            VALUE "ProductVersion", "1, 0, 6, 1\0"
+            VALUE "ProductVersion", "1, 0, 7, 0\0"
             VALUE "SpecialBuild", "\0"
         END
         BLOCK "080904b0"
@@ -529,14 +543,14 @@ BEGIN
             VALUE "Comments", "Yarng means ""Yet Another Random Name Generator"".\0"
             VALUE "CompanyName", "\0"
             VALUE "FileDescription", "\0"
-            VALUE "FileVersion", "1, 0, 6, 1\0"
+            VALUE "FileVersion", "1, 0, 7, 0\0"
             VALUE "InternalName", "Yarng\0"
             VALUE "LegalCopyright", "Copyright © 2007 Michael Johne\0"
             VALUE "LegalTrademarks", "Copyright © 2007 Michael Johne\0"
             VALUE "OriginalFilename", "Yarng.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "Yarng\0"
-            VALUE "ProductVersion", "1, 0, 6, 1\0"
+            VALUE "ProductVersion", "1, 0, 7, 0\0"
             VALUE "SpecialBuild", "\0"
         END
     END

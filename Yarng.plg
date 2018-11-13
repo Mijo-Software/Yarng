@@ -6,13 +6,8 @@
 --------------------Configuration: Yarng - Win32 Release Static--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\DOKUME~1\MICHAE~1.EXO\LOKALE~1\Temp\RSP18F.tmp" with contents
-[
-/nologo /MT /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release_Static/Yarng.pch" /Yu"stdafx.h" /Fo"Release_Static/" /Fd"Release_Static/" /FD /c 
-"E:\Programmierung\C, C++ und C#\MyProjects\Yarng\Yarng 1.0.6.1\HistoryDlg.cpp"
-]
-Creating command line "cl.exe @C:\DOKUME~1\MICHAE~1.EXO\LOKALE~1\Temp\RSP18F.tmp" 
-Creating temporary file "C:\DOKUME~1\MICHAE~1.EXO\LOKALE~1\Temp\RSP190.tmp" with contents
+Creating command line "rc.exe /l 0x407 /fo"Release_Static/Yarng.res" /d "NDEBUG" "E:\Programmierung\C, C++ und C#\MyProjects\Yarng\Yarng 1.0.7\Yarng.rc"" 
+Creating temporary file "C:\DOKUME~1\MICHAE~1.MIC\LOKALE~1\Temp\RSPFF.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:no /pdb:"Release_Static/Yarng.pdb" /machine:I386 /out:"Release_Static/Yarng.exe" 
 ".\Release_Static\BCMenu.obj"
@@ -25,14 +20,14 @@ Creating temporary file "C:\DOKUME~1\MICHAE~1.EXO\LOKALE~1\Temp\RSP190.tmp" with
 ".\Release_Static\StdAfx.obj"
 ".\Release_Static\ThemeHelperST.obj"
 ".\Release_Static\XPStyleButtonST.obj"
+".\Release_Static\XPTabCtrl.obj"
 ".\Release_Static\Yarng.obj"
 ".\Release_Static\YarngDlg.obj"
 ".\Release_Static\Yarng.res"
 ]
-Creating command line "link.exe @C:\DOKUME~1\MICHAE~1.EXO\LOKALE~1\Temp\RSP190.tmp"
+Creating command line "link.exe @C:\DOKUME~1\MICHAE~1.MIC\LOKALE~1\Temp\RSPFF.tmp"
 <h3>Output Window</h3>
-Compiling...
-HistoryDlg.cpp
+Compiling resources...
 Linking...
 
 

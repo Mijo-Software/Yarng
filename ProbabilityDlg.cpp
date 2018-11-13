@@ -264,7 +264,7 @@ BOOL CProbabilityDlg::OnInitDialog()
   UpdateData(true);
 
   CProbabilityDlg::Assign();
-  
+  EnableThemeDialogTexture(GetSafeHwnd());
   m_uintProbabilityA_Copy = m_uintProbabilityA;
   m_uintProbabilityB_Copy = m_uintProbabilityB;
   m_uintProbabilityC_Copy = m_uintProbabilityC;

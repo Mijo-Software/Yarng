@@ -11,6 +11,14 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
+/***********************************************************************************************************/
+// constant string definitions here (or you can put it into resource string table)
+#define IDS_UTIL_TAB            "TAB"
+#define IDS_UTIL_UXTHEME        "UxTheme.dll"
+#define IDS_UTIL_THEMEACT       "IsThemeActive"
+#define IDS_UTIL_THEMEOPN       "OpenThemeData"
+#define IDS_UTIL_THEMEBCKG      "DrawThemeBackground"
+
 /////////////////////////////////////////////////////////////////////////////
 // CYarngApp
 

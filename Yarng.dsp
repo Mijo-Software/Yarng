@@ -218,6 +218,10 @@ SOURCE=.\XPStyleButtonST.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\XPTabCtrl.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\Yarng.cpp
 # End Source File
 # Begin Source File
@@ -258,6 +262,10 @@ SOURCE=.\StdAfx.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\XPTabCtrl.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\Yarng.h
 # End Source File
 # Begin Source File
@@ -271,6 +279,10 @@ SOURCE=.\YarngDlg.h
 # Begin Source File
 
 SOURCE=.\res\about.ico
+# End Source File
+# Begin Source File
+
+SOURCE=.\res\az.ico
 # End Source File
 # Begin Source File
 
@@ -363,6 +375,10 @@ SOURCE=.\res\mail3.ico
 # Begin Source File
 
 SOURCE=.\res\manifest.xml
+# End Source File
+# Begin Source File
+
+SOURCE=.\res\metal.ico
 # End Source File
 # Begin Source File
 

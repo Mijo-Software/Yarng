@@ -2,7 +2,7 @@
 
 [General Info]
 Version=1
-LastClass=CExportDlg
+LastClass=CYarngDlg
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "yarng.h"
@@ -18,11 +18,11 @@ Class6=CAboutDlg
 Class7=CYarngDlg
 
 ResourceCount=6
-Resource1=IDD_DIALOG_PROBABILITY (English (U.K.))
-Resource2=IDD_DIALOG_HISTORY (English (U.K.))
-Resource3=IDD_YARNG_DIALOG (English (U.K.))
-Resource4=IDD_ABOUTBOX (English (U.K.))
-Resource5=IDD_DIALOG_HOWTO (English (U.K.))
+Resource1=IDD_ABOUTBOX (English (U.K.))
+Resource2=IDD_YARNG_DIALOG (English (U.K.))
+Resource3=IDD_DIALOG_HOWTO (English (U.K.))
+Resource4=IDD_DIALOG_HISTORY (English (U.K.))
+Resource5=IDD_DIALOG_PROBABILITY (English (U.K.))
 Class8=CExportDlg
 Resource6=IDD_DIALOG_EXPORT (English (U.K.))
 
@@ -39,6 +39,8 @@ BaseClass=CDialog
 HeaderFile=HistoryDlg.h
 ImplementationFile=HistoryDlg.cpp
 LastObject=CHistoryDlg
+Filter=D
+VirtualFilter=dWC
 
 [CLS:CHowtoDlg]
 Type=0
@@ -46,6 +48,8 @@ BaseClass=CDialog
 HeaderFile=HowtoDlg.h
 ImplementationFile=HowtoDlg.cpp
 LastObject=CHowtoDlg
+Filter=D
+VirtualFilter=dWC
 
 [CLS:CProbabilityDlg]
 Type=0
@@ -77,7 +81,7 @@ Type=0
 BaseClass=CDialog
 HeaderFile=YarngDlg.h
 ImplementationFile=YarngDlg.cpp
-LastObject=CYarngDlg
+LastObject=IDC_SPIN_EDIT_MAX_LEN_OF_NAMES
 Filter=D
 VirtualFilter=dWC
 
@@ -213,18 +217,18 @@ Control17=IDC_WWWLINK2,static,1342308353
 [DLG:IDD_YARNG_DIALOG (English (U.K.))]
 Type=1
 Class=?
-ControlCount=35
+ControlCount=42
 Control1=IDC_STATIC,button,1342177287
 Control2=IDC_STATIC,static,1342308352
 Control3=IDC_EDIT_NUMB_OF_NAMES,edit,1350639746
-Control4=IDC_SPIN_NUMB_OF_NAMES,msctls_updown32,1342177334
+Control4=IDC_SPIN_NUMB_OF_NAMES,msctls_updown32,1342177462
 Control5=IDC_STATIC,static,1342308352
 Control6=IDC_STATIC,static,1342308352
 Control7=IDC_EDIT_MIN_LEN_OF_NAMES,edit,1350639746
-Control8=IDC_SPIN_EDIT_MIN_LEN_OF_NAMES,msctls_updown32,1342177334
+Control8=IDC_SPIN_EDIT_MIN_LEN_OF_NAMES,msctls_updown32,1342177462
 Control9=IDC_STATIC,static,1342308352
 Control10=IDC_EDIT_MAX_LEN_OF_NAMES,edit,1350639746
-Control11=IDC_SPIN_EDIT_MAX_LEN_OF_NAMES,msctls_updown32,1342177334
+Control11=IDC_SPIN_EDIT_MAX_LEN_OF_NAMES,msctls_updown32,1342177462
 Control12=IDC_STATIC,static,1342308352
 Control13=IDC_STATIC,static,1342308352
 Control14=IDC_EDIT_VOWELS,edit,1350631552
@@ -249,6 +253,13 @@ Control32=IDC_BUTTON_CLEAR,button,1342242816
 Control33=IDC_BUTTON_COPY,button,1342242816
 Control34=IDC_BUTTON_PRINT,button,1342242816
 Control35=IDC_PROGRESS_GENERATE,msctls_progress32,1342177281
+Control36=IDC_STATIC,button,1342177287
+Control37=IDC_BUTTON_PP_LEFT,button,1342242816
+Control38=IDC_STATIC,button,1342177287
+Control39=IDC_BUTTON_PP_RIGHT,button,1342242816
+Control40=IDC_BUTTON_PP_MIRROR,button,1342242816
+Control41=IDC_BUTTON_PP_AZ,button,1342242816
+Control42=IDC_BUTTON_PP_SCRAMBLE,button,1342242816
 
 [DLG:IDD_DIALOG_HISTORY (English (U.K.))]
 Type=1
@@ -286,5 +297,5 @@ ImplementationFile=ExportDlg.cpp
 BaseClass=CDialog
 Filter=D
 VirtualFilter=dWC
-LastObject=IDC_CHECK_EXPORT_CREATOR
+LastObject=CExportDlg
 

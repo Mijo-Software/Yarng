@@ -35,10 +35,12 @@ protected:
 
 	// Generated message map functions
 	//{{AFX_MSG(CHistoryDlg)
-		// NOTE: the ClassWizard will add member functions here
+	virtual BOOL OnInitDialog();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
+
+void	EnableThemeDialogTexture(HWND hwndDlg);
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

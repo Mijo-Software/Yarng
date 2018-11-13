@@ -21,8 +21,8 @@ CHistoryDlg::CHistoryDlg(CWnd* pParent /*=NULL*/)
 	//{{AFX_DATA_INIT(CHistoryDlg)
 	m_strHistory = _T("");
 	//}}AFX_DATA_INIT
-
   m_strHistory = "History\x0D\x0A======";
+  m_strHistory += "\x0D\x0A\x0D\x0A"; m_strHistory += "xx.02.2008\x0D\x0A------------------\x0D\x0A* Yarng 1.0.7 was created";
   m_strHistory += "\x0D\x0A\x0D\x0A"; m_strHistory += "22.10.2007\x0D\x0A------------------\x0D\x0A* Yarng 1.0.6.1 was created\x0D\x0A* Fixed a small bug and optimized the \x0D\x0A  performance";
   m_strHistory += "\x0D\x0A\x0D\x0A"; m_strHistory += "21.10.2007\x0D\x0A------------------\x0D\x0A* Yarng 1.0.6 was created\x0D\x0A* This version was design to make a \x0D\x0A  better compatibility by 'emulation' with \x0D\x0A  the linux-app 'wine'. \x0D\x0A* Consequently some windows of the gui \x0D\x0A  were reformed \x0D\x0A* Added a status bar for some useful \x0D\x0A  information \x0D\x0A* Printing and exporting of the gene- \x0D\x0A  rated names are now possible; also \x0D\x0A  the generated names can be copied \x0D\x0A  to the clipboard\x0D\x0A* Removed 1 bug; two tooltips were \x0D\x0A  permuted";
   m_strHistory += "\x0D\x0A\x0D\x0A"; m_strHistory += "08.10.2007\x0D\x0A------------------\x0D\x0A* Yarng 1.0.5.2 was created\x0D\x0A* Removed 1 bug; he was hidden in the \x0D\x0A  selection box of the language and was \x0D\x0A  found interestingly by 'emulation' with \x0D\x0A  the app 'wine' under the linux-os \x0D\x0A  'openSUSE 10.3'";
@@ -49,9 +49,18 @@ void CHistoryDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CHistoryDlg, CDialog)
 	//{{AFX_MSG_MAP(CHistoryDlg)
-		// NOTE: the ClassWizard will add message map macros here
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CHistoryDlg message handlers
+
+BOOL CHistoryDlg::OnInitDialog() 
+{
+	CDialog::OnInitDialog();
+	
+  EnableThemeDialogTexture(GetSafeHwnd());
+	
+	return TRUE;  // return TRUE unless you set the focus to a control
+	              // EXCEPTION: OCX Property Pages should return FALSE
+}

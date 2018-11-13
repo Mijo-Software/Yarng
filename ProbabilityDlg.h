@@ -156,6 +156,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 };
 
+void	EnableThemeDialogTexture(HWND hwndDlg);
+
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 

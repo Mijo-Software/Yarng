@@ -68,6 +68,8 @@
 #define IDI_ICON_EXPORT                 181
 #define IDI_ICON_COPY2                  182
 #define IDD_DIALOG_EXPORT               183
+#define IDI_ICON_AZ                     184
+#define IDI_ICON_METAL                  185
 #define IDC_EDIT_GENERATED_NAMES        1000
 #define IDC_EDIT_MIN_LEN_OF_NAMES       1001
 #define IDC_EDIT_MAX_LEN_OF_NAMES       1002
@@ -89,10 +91,15 @@
 #define IDC_EDIT_HISTORY                1012
 #define IDS_COPY                        1012
 #define IDC_EDIT_HOWTO                  1013
+#define IDS_PP_LEFT                     1013
 #define IDC_EDIT_VOWELS                 1014
+#define IDS_PP_RIGHT                    1014
 #define IDC_EDIT_CONSONANTS             1015
+#define IDS_PP_MIRROR                   1015
 #define IDC_BUTTON_DEFAULT_SETTINGS     1016
+#define IDS_PP_AZ                       1016
 #define IDC_EDIT_PROBABILITY_A          1017
+#define IDS_PP_SCRAMBLE                 1017
 #define IDC_EDIT_PROBABILITY_B          1018
 #define IDC_EDIT_PROBABILITY_C          1019
 #define IDC_EDIT_PROBABILITY_D          1020
@@ -153,6 +160,7 @@
 #define IDC_EMAILLINK                   1076
 #define IDC_BUTTON_CLEAR                1076
 #define IDC_WWWLINK1                    1077
+#define IDC_BUTTON_PP_LEFT              1077
 #define IDC_WWWLINK2                    1078
 #define IDC_BUTTON_COPY                 1078
 #define IDC_SPIN_NUMB_OF_NAMES          1079
@@ -161,9 +169,13 @@
 #define IDC_BUTTON_PRINT                1082
 #define IDC_PROGRESS_GENERATE           1083
 #define IDC_RADIO_EXPORT_TXT            1084
+#define IDC_BUTTON_PP_RIGHT             1084
 #define IDC_RADIO_EXPORT_CSV            1085
+#define IDC_BUTTON_PP_MIRROR            1085
 #define IDC_RADIO_EXPORT_HTM            1086
+#define IDC_BUTTON_PP_AZ                1086
 #define IDC_BUTTON1                     1087
+#define IDC_BUTTON_PP_SCRAMBLE          1087
 #define IDC_RADIO_EXPORT_SLK            1088
 #define IDC_CHECK_EXPORT_LINEFEEDS      1089
 #define IDC_CHECK_EXPORT_CREATOR        1090
@@ -172,7 +184,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        184
+#define _APS_NEXT_RESOURCE_VALUE        186
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1090
 #define _APS_NEXT_SYMED_VALUE           101
