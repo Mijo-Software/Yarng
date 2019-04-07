@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Windows.Forms;
 
@@ -6,7 +7,7 @@ namespace Yarng
 {
 	public partial class MainForm : Form
 	{
-		static string
+		private static readonly string
 			strVowels = "aeiou",
 			strConsonants = "bcdfghjklmnpqrstvwxyz",
 			strAlphabet = strVowels + strConsonants;
@@ -21,7 +22,17 @@ namespace Yarng
 			comboLanguage.SelectedIndex = 0;
 		}
 
-		private void MwcNumericCharacterLenghtsMin(object sender, MouseEventArgs e)
+		private void SetStatusText(string text)
+		{
+			textInfo.Text = text;
+		}
+
+		private void ClearStatusText()
+		{
+			SetStatusText(text: "");
+		}
+
+		private void NumericCharacterLenghtsMin(object sender, MouseEventArgs e)
 		{
 			((HandledMouseEventArgs)e).Handled = true;
 			bool up = true;
@@ -32,12 +43,14 @@ namespace Yarng
 			if (up)
 			{
 				numericCharacterLenghtsMin.UpButton();
-			} else {
+			}
+			else
+			{
 				numericCharacterLenghtsMin.DownButton();
 			}
 		}
 
-		private void MwcNumericCharacterLenghtsMax(object sender, MouseEventArgs e)
+		private void NumericCharacterLenghtsMax(object sender, MouseEventArgs e)
 		{
 			((HandledMouseEventArgs)e).Handled = true;
 			bool up = true;
@@ -48,7 +61,9 @@ namespace Yarng
 			if (up)
 			{
 				numericCharacterLenghtsMax.UpButton();
-			} else {
+			}
+			else
+			{
 				numericCharacterLenghtsMax.DownButton();
 			}
 		}
@@ -60,23 +75,23 @@ namespace Yarng
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
-			numericCharacterLenghtsMin.MouseWheel += new MouseEventHandler(MwcNumericCharacterLenghtsMin);
-			numericCharacterLenghtsMax.MouseWheel += new MouseEventHandler(MwcNumericCharacterLenghtsMax);
-			this.ResetSettings();
+			ClearStatusText();
+			numericCharacterLenghtsMin.MouseWheel += new MouseEventHandler(NumericCharacterLenghtsMin);
+			numericCharacterLenghtsMax.MouseWheel += new MouseEventHandler(NumericCharacterLenghtsMax);
+			ResetSettings();
 		}
 
 		#region Click handlers
 
 		private void ButtonShowProbabilityTable_Click(object sender, EventArgs e)
 		{
-			ProbabilityTableForm formProbabilityTable = new ProbabilityTableForm();
-			formProbabilityTable.ShowDialog();
+			new ProbabilityTableForm().ShowDialog();
 		}
 
 		private void ButtonLoadDefaultSettings_Click(object sender, EventArgs e)
 		{
 			ResetSettings();
-			MessageBox.Show("The settings were resetted", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show(text: "The settings were resetted", caption: "", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
 		}
 
 		private void ButtonLoadTemplate_Click(object sender, EventArgs e)
@@ -89,20 +104,23 @@ namespace Yarng
 
 		private void ButtonAbout_Click(object sender, EventArgs e)
 		{
+			new AboutForm().ShowDialog();
 		}
 
 		private void ButtonHistory_Click(object sender, EventArgs e)
 		{
+			new HistoryForm().ShowDialog();
 		}
 
 		private void ButtonHowTo_Click(object sender, EventArgs e)
 		{
+			new HowToForm().ShowDialog();
 		}
 
 		private void ButtonExit_Click(object sender, EventArgs e)
 		{
 			Close();
-	  }
+		}
 
 		private void ButtonGenerate_Click(object sender, EventArgs e)
 		{
@@ -110,13 +128,15 @@ namespace Yarng
 			char ch;
 			Random _r = new Random();
 			StringBuilder
-				sbName = new StringBuilder(""),
-				sbNames = new StringBuilder("");
+				sbName = new StringBuilder(value: ""),
+				sbNames = new StringBuilder(value: "");
 			bool isEven;
-			if (_r.Next(0, 10) % 2 == 0)
+			if (_r.Next(minValue: 0, maxValue: 10) % 2 == 0)
 			{
 				isEven = true;
-			} else {
+			}
+			else
+			{
 				isEven = false;
 			}
 			textList.Clear();
@@ -127,42 +147,63 @@ namespace Yarng
 			{
 				progressGenerate.Value = i;
 				//progressGenerate.PerformStep();
-				nLengthOfName = _r.Next((int)numericCharacterLenghtsMin.Value, (int)numericCharacterLenghtsMax.Value + 1);
+				nLengthOfName = _r.Next(minValue: (int)numericCharacterLenghtsMin.Value, maxValue: (int)numericCharacterLenghtsMax.Value + 1);
 				sbNames.Length = 0;
 				for (int n = 0; n < nLengthOfName; n++)
 				{
 					if (isEven)
 					{
-						ch = textVowels.Text[_r.Next(textVowels.TextLength)];
-					} else {
-						ch = textConsonants.Text[_r.Next(textConsonants.TextLength)];
+						ch = textVowels.Text[_r.Next(maxValue: textVowels.TextLength)];
+					}
+					else
+					{
+						ch = textConsonants.Text[_r.Next(maxValue: textConsonants.TextLength)];
 					}
 					isEven = !isEven;
 					if (n == 0)
 					{
-						ch = Char.ToUpper(ch);
+						ch = char.ToUpper(c: ch);
 					}
 					sbName.Length = 0;
-					sbName.Append(ch);
-					sbNames.Append(sbName);
+					sbName.Append(value: ch);
+					sbNames.Append(value: sbName);
 				}
-				textList.AppendText(sbNames.ToString());
+				textList.AppendText(text: sbNames.ToString());
 				if (i < numericNumberOfNames.Value - 1)
 				{
-					textList.AppendText(", \r\n");
+					textList.AppendText(text: ", \r\n");
 				}
+			}
+		}
+
+		private void ButtonSpeechText_Click(object sender, EventArgs e)
+		{
+			SpeechSynthesizer synth = new SpeechSynthesizer();
+			synth.SetOutputToDefaultAudioDevice();
+			if (textList.SelectionLength > 0)
+			{
+				synth.SpeakAsync(textToSpeak: textList.SelectedText);
+			}
+			else
+			{
+				synth.SpeakAsync(textToSpeak: textList.Text);
 			}
 		}
 
 		private void ButtonClearList_Click(object sender, EventArgs e)
 		{
+			textList.Clear();
 		}
 
 		private void ButtonCopyList_Click(object sender, EventArgs e)
 		{
+			if (textList.Text != "")
+			{
+				Clipboard.SetText(text: textList.Text);
+			}
 		}
 
-		private void buttonExportList_Click(object sender, EventArgs e)
+		private void ButtonExportList_Click(object sender, EventArgs e)
 		{
 		}
 
@@ -202,7 +243,7 @@ namespace Yarng
 		{
 			if (numericCharacterLenghtsMin.Value > numericCharacterLenghtsMax.Value)
 			{
-				MessageBox.Show("The min-value mustn't be bigger than the max-value.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: "The min-value mustn't be bigger than the max-value.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
 				numericCharacterLenghtsMin.Value = numericCharacterLenghtsMax.Value;
 			}
 		}
@@ -211,7 +252,7 @@ namespace Yarng
 		{
 			if (numericCharacterLenghtsMax.Value < numericCharacterLenghtsMin.Value)
 			{
-				MessageBox.Show("The max-value mustn't be lesser than the min-value.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: "The max-value mustn't be lesser than the min-value.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
 				numericCharacterLenghtsMax.Value = numericCharacterLenghtsMin.Value;
 			}
 		}
@@ -257,6 +298,10 @@ namespace Yarng
 		}
 
 		private void ButtonGenerate_Enter(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSpeechText_Enter(object sender, EventArgs e)
 		{
 		}
 
@@ -376,6 +421,11 @@ namespace Yarng
 		{
 		}
 
+		private void ButtonSpeechText_MouseEnter(object sender, EventArgs e)
+		{
+		}
+
+
 		private void ButtonClearList_MouseEnter(object sender, EventArgs e)
 		{
 		}
@@ -418,112 +468,142 @@ namespace Yarng
 
 		private void TextVowels_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 			if (textVowels.TextLength == 0)
 			{
-				MessageBox.Show("The text field must include not less than one vowel.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: "The text field must include not less than one vowel.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
 				textVowels.Text = strVowels;
 			}
 		}
 
 		private void TextConsonants_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 			if (textConsonants.TextLength == 0)
 			{
-				MessageBox.Show("The text field must include not less than one consonant.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: "The text field must include not less than one consonant.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
 				textConsonants.Text = strConsonants;
 			}
 		}
 
 		private void NumericNumberOfNames_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void NumericCharacterLenghtsMin_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void NumericCharacterLenghtsMax_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonShowProbabilityTable_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonLoadDefaultSettings_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ComboLanguage_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonLoadTemplate_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonSaveTemplate_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonAbout_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonHistory_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonHowTo_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonExit_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void TextList_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonGenerate_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
+		}
+
+		private void ButtonSpeechText_Leave(object sender, EventArgs e)
+		{
+			ClearStatusText();
 		}
 
 		private void ButtonClearList_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonCopyList_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonExportList_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonPrintList_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonStepLeft_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonStepRight_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonMirror_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonSort_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonScramble_Leave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		#endregion
@@ -532,90 +612,117 @@ namespace Yarng
 
 		private void TextVowels_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void TextConsonants_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonShowProbabilityTable_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonLoadDefaultSettings_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ComboLanguage_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonLoadTemplate_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonSaveTemplate_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonAbout_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonHistory_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonHowTo_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonExit_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void TextList_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonGenerate_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
+		}
+
+		private void ButtonSpeechText_MouseLeave(object sender, EventArgs e)
+		{
+			ClearStatusText();
 		}
 
 		private void ButtonClearList_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonCopyList_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonExportList_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonPrintList_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonStepLeft_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonStepRight_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonMirror_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonSort_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		private void ButtonScramble_MouseLeave(object sender, EventArgs e)
 		{
+			ClearStatusText();
 		}
 
 		#endregion

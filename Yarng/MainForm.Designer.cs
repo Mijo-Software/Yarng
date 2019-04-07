@@ -63,14 +63,17 @@
 			this.labelTemplate = new System.Windows.Forms.Label();
 			this.buttonSaveTemplate = new System.Windows.Forms.Button();
 			this.buttonLoadTemplate = new System.Windows.Forms.Button();
+			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.statusStrip = new System.Windows.Forms.StatusStrip();
+			this.textInfo = new System.Windows.Forms.ToolStripStatusLabel();
+			this.buttonSpeechText = new System.Windows.Forms.Button();
 			this.buttonPrintList = new System.Windows.Forms.Button();
 			this.buttonExportList = new System.Windows.Forms.Button();
 			this.buttonCopyList = new System.Windows.Forms.Button();
 			this.buttonClearList = new System.Windows.Forms.Button();
 			this.buttonGenerate = new System.Windows.Forms.Button();
-			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-			this.statusStrip = new System.Windows.Forms.StatusStrip();
-			this.textInfo = new System.Windows.Forms.ToolStripStatusLabel();
+			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
 			this.groupMiscellaneous.SuspendLayout();
 			this.groupPostProcessing.SuspendLayout();
 			this.groupSettings.SuspendLayout();
@@ -441,6 +444,31 @@
 			this.buttonLoadTemplate.MouseEnter += new System.EventHandler(this.ButtonLoadTemplate_MouseEnter);
 			this.buttonLoadTemplate.MouseLeave += new System.EventHandler(this.ButtonLoadTemplate_MouseLeave);
 			// 
+			// statusStrip
+			// 
+			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.textInfo});
+			resources.ApplyResources(this.statusStrip, "statusStrip");
+			this.statusStrip.Name = "statusStrip";
+			this.statusStrip.SizingGrip = false;
+			// 
+			// textInfo
+			// 
+			this.textInfo.Name = "textInfo";
+			resources.ApplyResources(this.textInfo, "textInfo");
+			// 
+			// buttonSpeechText
+			// 
+			this.buttonSpeechText.Image = global::Yarng.Properties.Resources.sound_16;
+			resources.ApplyResources(this.buttonSpeechText, "buttonSpeechText");
+			this.buttonSpeechText.Name = "buttonSpeechText";
+			this.buttonSpeechText.UseVisualStyleBackColor = true;
+			this.buttonSpeechText.Click += new System.EventHandler(this.ButtonSpeechText_Click);
+			this.buttonSpeechText.Enter += new System.EventHandler(this.ButtonSpeechText_Enter);
+			this.buttonSpeechText.Leave += new System.EventHandler(this.ButtonSpeechText_Leave);
+			this.buttonSpeechText.MouseEnter += new System.EventHandler(this.ButtonSpeechText_MouseEnter);
+			this.buttonSpeechText.MouseLeave += new System.EventHandler(this.ButtonSpeechText_MouseLeave);
+			// 
 			// buttonPrintList
 			// 
 			this.buttonPrintList.Image = global::Yarng.Properties.Resources.printer_16;
@@ -459,7 +487,7 @@
 			resources.ApplyResources(this.buttonExportList, "buttonExportList");
 			this.buttonExportList.Name = "buttonExportList";
 			this.buttonExportList.UseVisualStyleBackColor = true;
-			this.buttonExportList.Click += new System.EventHandler(this.buttonExportList_Click);
+			this.buttonExportList.Click += new System.EventHandler(this.ButtonExportList_Click);
 			this.buttonExportList.Enter += new System.EventHandler(this.ButtonExportList_Enter);
 			this.buttonExportList.Leave += new System.EventHandler(this.ButtonExportList_Leave);
 			this.buttonExportList.MouseEnter += new System.EventHandler(this.ButtonExportList_MouseEnter);
@@ -492,7 +520,7 @@
 			// buttonGenerate
 			// 
 			resources.ApplyResources(this.buttonGenerate, "buttonGenerate");
-			this.buttonGenerate.Image = global::Yarng.Properties.Resources.resultset_next;
+			this.buttonGenerate.Image = global::Yarng.Properties.Resources.resultset_next_16;
 			this.buttonGenerate.Name = "buttonGenerate";
 			this.buttonGenerate.UseVisualStyleBackColor = true;
 			this.buttonGenerate.Click += new System.EventHandler(this.ButtonGenerate_Click);
@@ -501,22 +529,11 @@
 			this.buttonGenerate.MouseEnter += new System.EventHandler(this.ButtonGenerate_MouseEnter);
 			this.buttonGenerate.MouseLeave += new System.EventHandler(this.ButtonGenerate_MouseLeave);
 			// 
-			// statusStrip
-			// 
-			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.textInfo});
-			resources.ApplyResources(this.statusStrip, "statusStrip");
-			this.statusStrip.Name = "statusStrip";
-			// 
-			// textInfo
-			// 
-			this.textInfo.Name = "textInfo";
-			resources.ApplyResources(this.textInfo, "textInfo");
-			// 
 			// MainForm
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.buttonSpeechText);
 			this.Controls.Add(this.statusStrip);
 			this.Controls.Add(this.groupSettings);
 			this.Controls.Add(this.textList);
@@ -590,6 +607,9 @@
 		private System.Windows.Forms.ToolTip toolTip;
 		private System.Windows.Forms.StatusStrip statusStrip;
 		private System.Windows.Forms.ToolStripStatusLabel textInfo;
+		private System.Windows.Forms.Button buttonSpeechText;
+		private System.Windows.Forms.OpenFileDialog openFileDialog;
+		private System.Windows.Forms.SaveFileDialog saveFileDialog;
 	}
 }
 

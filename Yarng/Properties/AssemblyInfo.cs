@@ -6,18 +6,18 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("Yarng - Yet Another Random Name Generator")]
-[assembly: AssemblyDescription("Yarng ist an abbreviation for 'Yet another random name generator'.  It was developed to generate random names for extrasolar and fictive planets, e. g. in Celestia. Of cause you can generate random names for role games and other related things.")]
+[assembly: AssemblyDescription("Yarng ist an abbreviation for 'Yet another random name generator'.  It was developed to generate random names for extrasolar and fictional planets, e. g. in Celestia. Of cause you can generate random names for role games and other related things.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Mijo Software")]
 [assembly: AssemblyProduct("Yarng.NET")]
-[assembly: AssemblyCopyright("Copyright © Michael Johne  2012")]
+[assembly: AssemblyCopyright("Copyright © Michael Johne 2007-2019")]
 [assembly: AssemblyTrademark("Yarng")]
 [assembly: AssemblyCulture("")]
 
 // Durch Festlegen von ComVisible auf "false" werden die Typen in dieser Assembly unsichtbar 
 // für COM-Komponenten. Wenn Sie auf einen Typ in dieser Assembly von 
 // COM zugreifen müssen, legen Sie das ComVisible-Attribut für diesen Typ auf "true" fest.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
 [assembly: Guid("2ee7c4e9-a284-457a-8267-98f687b38177")]

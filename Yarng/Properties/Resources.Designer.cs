@@ -19,7 +19,7 @@ namespace Yarng.Properties {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -201,12 +201,40 @@ namespace Yarng.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die {\rtf1\ansi\ansicpg1252\deff0\deflang1031{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+        ///{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl240\slmult1\lang7\f0\fs40 History\par
+        ///\pard\sl240\slmult1\fs22\par
+        ///\pard\sa200\sl240\slmult1\b xx.02.2008\par
+        ///\pard{\pntext\f1\&apos;B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\&apos;B7}}\fi-360\li720\sa200\sl240\slmult1\b0 Yarng 1.0.7 was created, buter never finished\par
+        ///\pard\sa200\sl240\slmult1\b 22.10.2007\par
+        ///\pard{\pntext\f1\&apos;B7\ta [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        /// </summary>
+        internal static string history {
+            get {
+                return ResourceManager.GetString("history", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap hourglass_16 {
             get {
                 object obj = ResourceManager.GetObject("hourglass_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die {\rtf1\ansi\ansicpg1252\deff0\deflang1031{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Consolas;}{\f2\fnil\fcharset2 Symbol;}}
+        ///{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl240\slmult1\lang7\f0\fs40 How to generate random names\par
+        ///\pard\sl240\slmult1\fs22\par
+        ///\pard\sa200\sl240\slmult1 Yarng uses a very easy algorithm. It is based on a constant change between consonants (\f1 c\f0 ) and vowels (\f1 v\f0 ), e. g. \f1 cvcvc...\f0  or \f1 vcvcvc... \f0\par
+        ///All consonants and v [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        /// </summary>
+        internal static string howto {
+            get {
+                return ResourceManager.GetString("howto", resourceCulture);
             }
         }
         
@@ -303,9 +331,19 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap resultset_next {
+        internal static System.Drawing.Bitmap resultset_next_16 {
             get {
-                object obj = ResourceManager.GetObject("resultset_next", resourceCulture);
+                object obj = ResourceManager.GetObject("resultset_next_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resultset_next_32 {
+            get {
+                object obj = ResourceManager.GetObject("resultset_next_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -316,6 +354,16 @@ namespace Yarng.Properties {
         internal static System.Drawing.Bitmap shape_align_center_16 {
             get {
                 object obj = ResourceManager.GetObject("shape_align_center_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sound_16 {
+            get {
+                object obj = ResourceManager.GetObject("sound_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
