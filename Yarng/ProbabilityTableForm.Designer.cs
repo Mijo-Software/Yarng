@@ -140,6 +140,7 @@
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.textInfo = new System.Windows.Forms.ToolStripStatusLabel();
 			this.labelCharPool = new System.Windows.Forms.Label();
+			this.toolStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharA)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharB)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharD)).BeginInit();
@@ -1758,7 +1759,8 @@
 			// statusStrip
 			// 
 			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.textInfo});
+            this.textInfo,
+            this.toolStripProgressBar});
 			this.statusStrip.Location = new System.Drawing.Point(0, 302);
 			this.statusStrip.Name = "statusStrip";
 			this.statusStrip.Size = new System.Drawing.Size(509, 22);
@@ -1785,6 +1787,13 @@
 			this.labelCharPool.Leave += new System.EventHandler(this.LabelCharPool_Leave);
 			this.labelCharPool.MouseEnter += new System.EventHandler(this.LabelCharPool_MouseEnter);
 			this.labelCharPool.MouseLeave += new System.EventHandler(this.LabelCharPool_MouseLeave);
+			// 
+			// toolStripProgressBar
+			// 
+			this.toolStripProgressBar.Name = "toolStripProgressBar";
+			this.toolStripProgressBar.Size = new System.Drawing.Size(100, 16);
+			this.toolStripProgressBar.Step = 1;
+			this.toolStripProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
 			// 
 			// ProbabilityTableForm
 			// 
@@ -2054,5 +2063,6 @@
 		private System.Windows.Forms.StatusStrip statusStrip;
 		private System.Windows.Forms.ToolStripStatusLabel textInfo;
 		private System.Windows.Forms.Label labelCharPool;
+		private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar;
 	}
 }
