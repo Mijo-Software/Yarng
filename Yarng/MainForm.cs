@@ -22,6 +22,34 @@ namespace Yarng
 			comboLanguage.SelectedIndex = 0;
 		}
 
+		private void SetStatusText(object sender, EventArgs e)
+		{
+			if (sender is Button button)
+			{
+				textInfo.Text = button.AccessibleDescription;
+			}
+			else if (sender is Label label)
+			{
+				textInfo.Text = label.AccessibleDescription;
+			}
+			else if (sender is ComboBox comboBox)
+			{
+				textInfo.Text = comboBox.AccessibleDescription;
+			}
+			else if (sender is TextBox textBox)
+			{
+				textInfo.Text = textBox.AccessibleDescription;
+			}
+			else if (sender is ProgressBar progressBar)
+			{
+				textInfo.Text = progressBar.AccessibleDescription;
+			}
+			else if (sender is NumericUpDown numericUpDown)
+			{
+				textInfo.Text = numericUpDown.AccessibleDescription;
+			}
+		}
+
 		private void SetStatusText(string text)
 		{
 			textInfo.Text = text;
@@ -263,106 +291,132 @@ namespace Yarng
 
 		private void ButtonShowProbabilityTable_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonLoadDefaultSettings_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboLanguage_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonLoadTemplate_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonSaveTemplate_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonAbout_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonHistory_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonHowTo_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonExit_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonGenerate_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonSpeechText_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonClearList_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonCopyList_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonExportList_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonPrintList_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonStepLeft_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonStepRight_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonMirror_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonSort_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonScramble_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericNumberOfNames_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericCharacterLenghtsMin_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericCharacterLenghtsMax_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void TextVowels_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void TextConsonants_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void TextList_Enter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		#endregion
@@ -371,95 +425,118 @@ namespace Yarng
 
 		private void TextVowels_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void TextConsonants_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonShowProbabilityTable_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonLoadDefaultSettings_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboLanguage_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonLoadTemplate_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonSaveTemplate_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonAbout_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonHistory_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonHowTo_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonExit_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void TextList_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonGenerate_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonSpeechText_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 
 		private void ButtonClearList_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonCopyList_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonExportList_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonPrintList_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonStepLeft_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonStepRight_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonMirror_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonSort_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonScramble_MouseEnter(object sender, EventArgs e)
 		{
+			SetStatusText(sender: sender, e: e);
 		}
 
 		#endregion

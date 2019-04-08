@@ -85,6 +85,7 @@
 			// 
 			// groupMiscellaneous
 			// 
+			this.groupMiscellaneous.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
 			this.groupMiscellaneous.Controls.Add(this.buttonAbout);
 			this.groupMiscellaneous.Controls.Add(this.buttonExit);
 			this.groupMiscellaneous.Controls.Add(this.buttonHistory);
@@ -95,6 +96,7 @@
 			// 
 			// buttonAbout
 			// 
+			this.buttonAbout.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonAbout.Image = global::Yarng.Properties.Resources.information_16;
 			resources.ApplyResources(this.buttonAbout, "buttonAbout");
 			this.buttonAbout.Name = "buttonAbout";
@@ -107,6 +109,7 @@
 			// 
 			// buttonExit
 			// 
+			this.buttonExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonExit.Image = global::Yarng.Properties.Resources.door_16;
 			resources.ApplyResources(this.buttonExit, "buttonExit");
 			this.buttonExit.Name = "buttonExit";
@@ -119,6 +122,7 @@
 			// 
 			// buttonHistory
 			// 
+			this.buttonHistory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonHistory.Image = global::Yarng.Properties.Resources.time_16;
 			resources.ApplyResources(this.buttonHistory, "buttonHistory");
 			this.buttonHistory.Name = "buttonHistory";
@@ -131,6 +135,7 @@
 			// 
 			// buttonHowTo
 			// 
+			this.buttonHowTo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonHowTo.Image = global::Yarng.Properties.Resources.lightbulb_16;
 			resources.ApplyResources(this.buttonHowTo, "buttonHowTo");
 			this.buttonHowTo.Name = "buttonHowTo";
@@ -143,6 +148,7 @@
 			// 
 			// groupPostProcessing
 			// 
+			this.groupPostProcessing.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
 			this.groupPostProcessing.Controls.Add(this.buttonStepLeft);
 			this.groupPostProcessing.Controls.Add(this.buttonStepRight);
 			this.groupPostProcessing.Controls.Add(this.buttonScramble);
@@ -154,6 +160,7 @@
 			// 
 			// buttonStepLeft
 			// 
+			this.buttonStepLeft.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonStepLeft.Image = global::Yarng.Properties.Resources.arrow_left_16;
 			resources.ApplyResources(this.buttonStepLeft, "buttonStepLeft");
 			this.buttonStepLeft.Name = "buttonStepLeft";
@@ -166,6 +173,7 @@
 			// 
 			// buttonStepRight
 			// 
+			this.buttonStepRight.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonStepRight.Image = global::Yarng.Properties.Resources.arrow_right_16;
 			resources.ApplyResources(this.buttonStepRight, "buttonStepRight");
 			this.buttonStepRight.Name = "buttonStepRight";
@@ -178,6 +186,7 @@
 			// 
 			// buttonScramble
 			// 
+			this.buttonScramble.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonScramble.Image = global::Yarng.Properties.Resources.dice_16;
 			resources.ApplyResources(this.buttonScramble, "buttonScramble");
 			this.buttonScramble.Name = "buttonScramble";
@@ -190,6 +199,7 @@
 			// 
 			// buttonSort
 			// 
+			this.buttonSort.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonSort.Image = global::Yarng.Properties.Resources.text_replace_16;
 			resources.ApplyResources(this.buttonSort, "buttonSort");
 			this.buttonSort.Name = "buttonSort";
@@ -202,6 +212,7 @@
 			// 
 			// buttonMirror
 			// 
+			this.buttonMirror.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonMirror.Image = global::Yarng.Properties.Resources.shape_align_center_16;
 			resources.ApplyResources(this.buttonMirror, "buttonMirror");
 			this.buttonMirror.Name = "buttonMirror";
@@ -220,6 +231,7 @@
 			// 
 			// textList
 			// 
+			this.textList.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
 			resources.ApplyResources(this.textList, "textList");
 			this.textList.Name = "textList";
 			this.textList.Enter += new System.EventHandler(this.TextList_Enter);
@@ -229,6 +241,7 @@
 			// 
 			// groupSettings
 			// 
+			this.groupSettings.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
 			this.groupSettings.Controls.Add(this.textConsonants);
 			this.groupSettings.Controls.Add(this.labelConsonants);
 			this.groupSettings.Controls.Add(this.textVowels);
@@ -263,6 +276,7 @@
 			// 
 			// labelConsonants
 			// 
+			this.labelConsonants.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelConsonants, "labelConsonants");
 			this.labelConsonants.Name = "labelConsonants";
 			// 
@@ -277,16 +291,19 @@
 			// 
 			// labelVowels
 			// 
+			this.labelVowels.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelVowels, "labelVowels");
 			this.labelVowels.Name = "labelVowels";
 			// 
 			// labelCharacters
 			// 
+			this.labelCharacters.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelCharacters, "labelCharacters");
 			this.labelCharacters.Name = "labelCharacters";
 			// 
 			// numericCharacterLenghtsMax
 			// 
+			this.numericCharacterLenghtsMax.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			resources.ApplyResources(this.numericCharacterLenghtsMax, "numericCharacterLenghtsMax");
 			this.numericCharacterLenghtsMax.Minimum = new decimal(new int[] {
             1,
@@ -305,11 +322,13 @@
 			// 
 			// labelCharacterLenghtsMax
 			// 
+			this.labelCharacterLenghtsMax.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelCharacterLenghtsMax, "labelCharacterLenghtsMax");
 			this.labelCharacterLenghtsMax.Name = "labelCharacterLenghtsMax";
 			// 
 			// numericCharacterLenghtsMin
 			// 
+			this.numericCharacterLenghtsMin.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			resources.ApplyResources(this.numericCharacterLenghtsMin, "numericCharacterLenghtsMin");
 			this.numericCharacterLenghtsMin.Minimum = new decimal(new int[] {
             1,
@@ -328,21 +347,25 @@
 			// 
 			// labelCharacterLenghtsMin
 			// 
+			this.labelCharacterLenghtsMin.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelCharacterLenghtsMin, "labelCharacterLenghtsMin");
 			this.labelCharacterLenghtsMin.Name = "labelCharacterLenghtsMin";
 			// 
 			// labelCharacterLenghts
 			// 
+			this.labelCharacterLenghts.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelCharacterLenghts, "labelCharacterLenghts");
 			this.labelCharacterLenghts.Name = "labelCharacterLenghts";
 			// 
 			// labelNumberOfNames
 			// 
+			this.labelNumberOfNames.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelNumberOfNames, "labelNumberOfNames");
 			this.labelNumberOfNames.Name = "labelNumberOfNames";
 			// 
 			// numericNumberOfNames
 			// 
+			this.numericNumberOfNames.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			resources.ApplyResources(this.numericNumberOfNames, "numericNumberOfNames");
 			this.numericNumberOfNames.Maximum = new decimal(new int[] {
             32000,
@@ -366,6 +389,7 @@
 			// 
 			// buttonShowProbabilityTable
 			// 
+			this.buttonShowProbabilityTable.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShowProbabilityTable.Image = global::Yarng.Properties.Resources.table_16;
 			resources.ApplyResources(this.buttonShowProbabilityTable, "buttonShowProbabilityTable");
 			this.buttonShowProbabilityTable.Name = "buttonShowProbabilityTable";
@@ -378,6 +402,7 @@
 			// 
 			// buttonLoadDefaultSettings
 			// 
+			this.buttonLoadDefaultSettings.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonLoadDefaultSettings.Image = global::Yarng.Properties.Resources.arrow_refresh_16;
 			resources.ApplyResources(this.buttonLoadDefaultSettings, "buttonLoadDefaultSettings");
 			this.buttonLoadDefaultSettings.Name = "buttonLoadDefaultSettings";
@@ -390,11 +415,13 @@
 			// 
 			// labelLanguage
 			// 
+			this.labelLanguage.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelLanguage, "labelLanguage");
 			this.labelLanguage.Name = "labelLanguage";
 			// 
 			// comboLanguage
 			// 
+			this.comboLanguage.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboLanguage.FormattingEnabled = true;
 			this.comboLanguage.Items.AddRange(new object[] {
@@ -417,11 +444,13 @@
 			// 
 			// labelTemplate
 			// 
+			this.labelTemplate.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelTemplate, "labelTemplate");
 			this.labelTemplate.Name = "labelTemplate";
 			// 
 			// buttonSaveTemplate
 			// 
+			this.buttonSaveTemplate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonSaveTemplate.Image = global::Yarng.Properties.Resources.disk_16;
 			resources.ApplyResources(this.buttonSaveTemplate, "buttonSaveTemplate");
 			this.buttonSaveTemplate.Name = "buttonSaveTemplate";
@@ -434,6 +463,7 @@
 			// 
 			// buttonLoadTemplate
 			// 
+			this.buttonLoadTemplate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonLoadTemplate.Image = global::Yarng.Properties.Resources.folder_16;
 			resources.ApplyResources(this.buttonLoadTemplate, "buttonLoadTemplate");
 			this.buttonLoadTemplate.Name = "buttonLoadTemplate";
@@ -446,6 +476,7 @@
 			// 
 			// statusStrip
 			// 
+			this.statusStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.StatusBar;
 			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.textInfo});
 			resources.ApplyResources(this.statusStrip, "statusStrip");
@@ -454,11 +485,13 @@
 			// 
 			// textInfo
 			// 
+			this.textInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.textInfo.Name = "textInfo";
 			resources.ApplyResources(this.textInfo, "textInfo");
 			// 
 			// buttonSpeechText
 			// 
+			this.buttonSpeechText.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonSpeechText.Image = global::Yarng.Properties.Resources.sound_16;
 			resources.ApplyResources(this.buttonSpeechText, "buttonSpeechText");
 			this.buttonSpeechText.Name = "buttonSpeechText";
@@ -471,6 +504,7 @@
 			// 
 			// buttonPrintList
 			// 
+			this.buttonPrintList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonPrintList.Image = global::Yarng.Properties.Resources.printer_16;
 			resources.ApplyResources(this.buttonPrintList, "buttonPrintList");
 			this.buttonPrintList.Name = "buttonPrintList";
@@ -483,6 +517,7 @@
 			// 
 			// buttonExportList
 			// 
+			this.buttonExportList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonExportList.Image = global::Yarng.Properties.Resources.document_export_16;
 			resources.ApplyResources(this.buttonExportList, "buttonExportList");
 			this.buttonExportList.Name = "buttonExportList";
@@ -495,6 +530,7 @@
 			// 
 			// buttonCopyList
 			// 
+			this.buttonCopyList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonCopyList.Image = global::Yarng.Properties.Resources.paste_plain_16;
 			resources.ApplyResources(this.buttonCopyList, "buttonCopyList");
 			this.buttonCopyList.Name = "buttonCopyList";
@@ -507,6 +543,7 @@
 			// 
 			// buttonClearList
 			// 
+			this.buttonClearList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonClearList.Image = global::Yarng.Properties.Resources.page_white_16;
 			resources.ApplyResources(this.buttonClearList, "buttonClearList");
 			this.buttonClearList.Name = "buttonClearList";
@@ -519,6 +556,7 @@
 			// 
 			// buttonGenerate
 			// 
+			this.buttonGenerate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			resources.ApplyResources(this.buttonGenerate, "buttonGenerate");
 			this.buttonGenerate.Image = global::Yarng.Properties.Resources.resultset_next_16;
 			this.buttonGenerate.Name = "buttonGenerate";
@@ -531,6 +569,7 @@
 			// 
 			// MainForm
 			// 
+			this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.buttonSpeechText);

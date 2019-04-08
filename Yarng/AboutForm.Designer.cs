@@ -41,6 +41,7 @@
 			// 
 			// tableLayoutPanel
 			// 
+			this.tableLayoutPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.Table;
 			this.tableLayoutPanel.ColumnCount = 2;
 			this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.51079F));
 			this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.48921F));
@@ -66,6 +67,7 @@
 			// 
 			// logoPictureBox
 			// 
+			this.logoPictureBox.AccessibleRole = System.Windows.Forms.AccessibleRole.Graphic;
 			this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.logoPictureBox.Image = global::Yarng.Properties.Resources.world_32;
 			this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
@@ -77,6 +79,7 @@
 			// 
 			// labelProductName
 			// 
+			this.labelProductName.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelProductName.Location = new System.Drawing.Point(51, 0);
 			this.labelProductName.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
@@ -89,6 +92,7 @@
 			// 
 			// labelVersion
 			// 
+			this.labelVersion.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelVersion.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelVersion.Location = new System.Drawing.Point(51, 19);
 			this.labelVersion.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
@@ -101,6 +105,7 @@
 			// 
 			// labelCopyright
 			// 
+			this.labelCopyright.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelCopyright.Location = new System.Drawing.Point(51, 38);
 			this.labelCopyright.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
@@ -113,6 +118,7 @@
 			// 
 			// labelCompanyName
 			// 
+			this.labelCompanyName.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.labelCompanyName.Location = new System.Drawing.Point(51, 57);
 			this.labelCompanyName.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
@@ -125,6 +131,7 @@
 			// 
 			// textBoxDescription
 			// 
+			this.textBoxDescription.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
 			this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxDescription.Location = new System.Drawing.Point(51, 77);
 			this.textBoxDescription.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
@@ -139,6 +146,7 @@
 			// 
 			// okButton
 			// 
+			this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.Image = global::Yarng.Properties.Resources.accept_16;
@@ -153,6 +161,7 @@
 			// AboutForm
 			// 
 			this.AcceptButton = this.okButton;
+			this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(398, 207);

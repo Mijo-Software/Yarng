@@ -172,6 +172,7 @@
 			// 
 			// buttonApply
 			// 
+			this.buttonApply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonApply.Image = global::Yarng.Properties.Resources.accept_16;
 			this.buttonApply.Location = new System.Drawing.Point(121, 257);
 			this.buttonApply.Name = "buttonApply";
@@ -189,6 +190,7 @@
 			// 
 			// buttonCancel
 			// 
+			this.buttonCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.buttonCancel.Image = global::Yarng.Properties.Resources.cancel_16;
 			this.buttonCancel.Location = new System.Drawing.Point(202, 257);
@@ -207,6 +209,7 @@
 			// 
 			// buttonRandomize
 			// 
+			this.buttonRandomize.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRandomize.Image = global::Yarng.Properties.Resources.dice_16;
 			this.buttonRandomize.Location = new System.Drawing.Point(283, 257);
 			this.buttonRandomize.Name = "buttonRandomize";
@@ -224,6 +227,7 @@
 			// 
 			// labelCharA
 			// 
+			this.labelCharA.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharA.AutoSize = true;
 			this.labelCharA.Location = new System.Drawing.Point(12, 9);
 			this.labelCharA.Name = "labelCharA";
@@ -237,6 +241,7 @@
 			// 
 			// numericUpDownCharA
 			// 
+			this.numericUpDownCharA.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharA.Location = new System.Drawing.Point(79, 6);
 			this.numericUpDownCharA.Name = "numericUpDownCharA";
 			this.numericUpDownCharA.Size = new System.Drawing.Size(39, 20);
@@ -253,6 +258,7 @@
 			// 
 			// comboBoxCharA
 			// 
+			this.comboBoxCharA.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharA.FormattingEnabled = true;
 			this.comboBoxCharA.Items.AddRange(new object[] {
@@ -269,6 +275,7 @@
 			// 
 			// labelPercentCharA
 			// 
+			this.labelPercentCharA.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharA.AutoSize = true;
 			this.labelPercentCharA.Location = new System.Drawing.Point(124, 9);
 			this.labelPercentCharA.Name = "labelPercentCharA";
@@ -283,6 +290,7 @@
 			// 
 			// labelPercentCharB
 			// 
+			this.labelPercentCharB.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharB.AutoSize = true;
 			this.labelPercentCharB.Location = new System.Drawing.Point(124, 36);
 			this.labelPercentCharB.Name = "labelPercentCharB";
@@ -297,6 +305,7 @@
 			// 
 			// comboBoxCharB
 			// 
+			this.comboBoxCharB.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharB.FormattingEnabled = true;
 			this.comboBoxCharB.Items.AddRange(new object[] {
@@ -313,6 +322,7 @@
 			// 
 			// numericUpDownCharB
 			// 
+			this.numericUpDownCharB.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharB.Location = new System.Drawing.Point(79, 33);
 			this.numericUpDownCharB.Name = "numericUpDownCharB";
 			this.numericUpDownCharB.Size = new System.Drawing.Size(39, 20);
@@ -329,6 +339,7 @@
 			// 
 			// labelCharB
 			// 
+			this.labelCharB.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharB.AutoSize = true;
 			this.labelCharB.Location = new System.Drawing.Point(12, 36);
 			this.labelCharB.Name = "labelCharB";
@@ -342,6 +353,7 @@
 			// 
 			// labelPercentCharD
 			// 
+			this.labelPercentCharD.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharD.AutoSize = true;
 			this.labelPercentCharD.Location = new System.Drawing.Point(124, 90);
 			this.labelPercentCharD.Name = "labelPercentCharD";
@@ -356,6 +368,7 @@
 			// 
 			// comboBoxCharD
 			// 
+			this.comboBoxCharD.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharD.FormattingEnabled = true;
 			this.comboBoxCharD.Items.AddRange(new object[] {
@@ -372,6 +385,7 @@
 			// 
 			// numericUpDownCharD
 			// 
+			this.numericUpDownCharD.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharD.Location = new System.Drawing.Point(79, 87);
 			this.numericUpDownCharD.Name = "numericUpDownCharD";
 			this.numericUpDownCharD.Size = new System.Drawing.Size(39, 20);
@@ -388,6 +402,7 @@
 			// 
 			// labelCharD
 			// 
+			this.labelCharD.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharD.AutoSize = true;
 			this.labelCharD.Location = new System.Drawing.Point(12, 90);
 			this.labelCharD.Name = "labelCharD";
@@ -401,6 +416,7 @@
 			// 
 			// labelPercentCharC
 			// 
+			this.labelPercentCharC.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharC.AutoSize = true;
 			this.labelPercentCharC.Location = new System.Drawing.Point(124, 63);
 			this.labelPercentCharC.Name = "labelPercentCharC";
@@ -415,6 +431,7 @@
 			// 
 			// comboBoxCharC
 			// 
+			this.comboBoxCharC.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharC.FormattingEnabled = true;
 			this.comboBoxCharC.Items.AddRange(new object[] {
@@ -431,6 +448,7 @@
 			// 
 			// numericUpDownCharC
 			// 
+			this.numericUpDownCharC.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharC.Location = new System.Drawing.Point(79, 60);
 			this.numericUpDownCharC.Name = "numericUpDownCharC";
 			this.numericUpDownCharC.Size = new System.Drawing.Size(39, 20);
@@ -447,6 +465,7 @@
 			// 
 			// labelCharC
 			// 
+			this.labelCharC.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharC.AutoSize = true;
 			this.labelCharC.Location = new System.Drawing.Point(12, 63);
 			this.labelCharC.Name = "labelCharC";
@@ -460,6 +479,7 @@
 			// 
 			// labelPercentCharF
 			// 
+			this.labelPercentCharF.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharF.AutoSize = true;
 			this.labelPercentCharF.Location = new System.Drawing.Point(124, 144);
 			this.labelPercentCharF.Name = "labelPercentCharF";
@@ -474,6 +494,7 @@
 			// 
 			// comboBoxCharF
 			// 
+			this.comboBoxCharF.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharF.FormattingEnabled = true;
 			this.comboBoxCharF.Items.AddRange(new object[] {
@@ -490,6 +511,7 @@
 			// 
 			// numericUpDownCharF
 			// 
+			this.numericUpDownCharF.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharF.Location = new System.Drawing.Point(79, 141);
 			this.numericUpDownCharF.Name = "numericUpDownCharF";
 			this.numericUpDownCharF.Size = new System.Drawing.Size(39, 20);
@@ -506,6 +528,7 @@
 			// 
 			// labelCharF
 			// 
+			this.labelCharF.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharF.AutoSize = true;
 			this.labelCharF.Location = new System.Drawing.Point(12, 144);
 			this.labelCharF.Name = "labelCharF";
@@ -519,6 +542,7 @@
 			// 
 			// labelPercentCharE
 			// 
+			this.labelPercentCharE.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharE.AutoSize = true;
 			this.labelPercentCharE.Location = new System.Drawing.Point(124, 117);
 			this.labelPercentCharE.Name = "labelPercentCharE";
@@ -533,6 +557,7 @@
 			// 
 			// comboBoxCharE
 			// 
+			this.comboBoxCharE.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharE.FormattingEnabled = true;
 			this.comboBoxCharE.Items.AddRange(new object[] {
@@ -549,6 +574,7 @@
 			// 
 			// numericUpDownCharE
 			// 
+			this.numericUpDownCharE.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharE.Location = new System.Drawing.Point(79, 114);
 			this.numericUpDownCharE.Name = "numericUpDownCharE";
 			this.numericUpDownCharE.Size = new System.Drawing.Size(39, 20);
@@ -565,6 +591,7 @@
 			// 
 			// labelCharE
 			// 
+			this.labelCharE.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharE.AutoSize = true;
 			this.labelCharE.Location = new System.Drawing.Point(12, 117);
 			this.labelCharE.Name = "labelCharE";
@@ -578,6 +605,7 @@
 			// 
 			// labelPercentCharH
 			// 
+			this.labelPercentCharH.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharH.AutoSize = true;
 			this.labelPercentCharH.Location = new System.Drawing.Point(124, 198);
 			this.labelPercentCharH.Name = "labelPercentCharH";
@@ -592,6 +620,7 @@
 			// 
 			// comboBoxCharH
 			// 
+			this.comboBoxCharH.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharH.FormattingEnabled = true;
 			this.comboBoxCharH.Items.AddRange(new object[] {
@@ -608,6 +637,7 @@
 			// 
 			// numericUpDownCharH
 			// 
+			this.numericUpDownCharH.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharH.Location = new System.Drawing.Point(79, 195);
 			this.numericUpDownCharH.Name = "numericUpDownCharH";
 			this.numericUpDownCharH.Size = new System.Drawing.Size(39, 20);
@@ -624,6 +654,7 @@
 			// 
 			// labelCharH
 			// 
+			this.labelCharH.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharH.AutoSize = true;
 			this.labelCharH.Location = new System.Drawing.Point(12, 198);
 			this.labelCharH.Name = "labelCharH";
@@ -637,6 +668,7 @@
 			// 
 			// labelPercentCharG
 			// 
+			this.labelPercentCharG.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharG.AutoSize = true;
 			this.labelPercentCharG.Location = new System.Drawing.Point(124, 171);
 			this.labelPercentCharG.Name = "labelPercentCharG";
@@ -651,6 +683,7 @@
 			// 
 			// comboBoxCharG
 			// 
+			this.comboBoxCharG.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharG.FormattingEnabled = true;
 			this.comboBoxCharG.Items.AddRange(new object[] {
@@ -667,6 +700,7 @@
 			// 
 			// numericUpDownCharG
 			// 
+			this.numericUpDownCharG.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharG.Location = new System.Drawing.Point(79, 168);
 			this.numericUpDownCharG.Name = "numericUpDownCharG";
 			this.numericUpDownCharG.Size = new System.Drawing.Size(39, 20);
@@ -683,6 +717,7 @@
 			// 
 			// labelCharG
 			// 
+			this.labelCharG.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharG.AutoSize = true;
 			this.labelCharG.Location = new System.Drawing.Point(12, 171);
 			this.labelCharG.Name = "labelCharG";
@@ -696,6 +731,7 @@
 			// 
 			// labelPercentCharI
 			// 
+			this.labelPercentCharI.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharI.AutoSize = true;
 			this.labelPercentCharI.Location = new System.Drawing.Point(124, 225);
 			this.labelPercentCharI.Name = "labelPercentCharI";
@@ -710,6 +746,7 @@
 			// 
 			// comboBoxCharI
 			// 
+			this.comboBoxCharI.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharI.FormattingEnabled = true;
 			this.comboBoxCharI.Items.AddRange(new object[] {
@@ -726,6 +763,7 @@
 			// 
 			// numericUpDownCharI
 			// 
+			this.numericUpDownCharI.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharI.Location = new System.Drawing.Point(79, 222);
 			this.numericUpDownCharI.Name = "numericUpDownCharI";
 			this.numericUpDownCharI.Size = new System.Drawing.Size(39, 20);
@@ -742,6 +780,7 @@
 			// 
 			// labelCharI
 			// 
+			this.labelCharI.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharI.AutoSize = true;
 			this.labelCharI.Location = new System.Drawing.Point(12, 225);
 			this.labelCharI.Name = "labelCharI";
@@ -755,6 +794,7 @@
 			// 
 			// labelPercentCharR
 			// 
+			this.labelPercentCharR.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharR.AutoSize = true;
 			this.labelPercentCharR.Location = new System.Drawing.Point(291, 225);
 			this.labelPercentCharR.Name = "labelPercentCharR";
@@ -769,6 +809,7 @@
 			// 
 			// comboBoxCharR
 			// 
+			this.comboBoxCharR.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharR.FormattingEnabled = true;
 			this.comboBoxCharR.Items.AddRange(new object[] {
@@ -785,6 +826,7 @@
 			// 
 			// numericUpDownCharR
 			// 
+			this.numericUpDownCharR.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharR.Location = new System.Drawing.Point(246, 222);
 			this.numericUpDownCharR.Name = "numericUpDownCharR";
 			this.numericUpDownCharR.Size = new System.Drawing.Size(39, 20);
@@ -801,6 +843,7 @@
 			// 
 			// labelCharR
 			// 
+			this.labelCharR.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharR.AutoSize = true;
 			this.labelCharR.Location = new System.Drawing.Point(179, 225);
 			this.labelCharR.Name = "labelCharR";
@@ -814,6 +857,7 @@
 			// 
 			// labelPercentCharQ
 			// 
+			this.labelPercentCharQ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharQ.AutoSize = true;
 			this.labelPercentCharQ.Location = new System.Drawing.Point(291, 198);
 			this.labelPercentCharQ.Name = "labelPercentCharQ";
@@ -828,6 +872,7 @@
 			// 
 			// comboBoxCharQ
 			// 
+			this.comboBoxCharQ.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharQ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharQ.FormattingEnabled = true;
 			this.comboBoxCharQ.Items.AddRange(new object[] {
@@ -844,6 +889,7 @@
 			// 
 			// numericUpDownCharQ
 			// 
+			this.numericUpDownCharQ.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharQ.Location = new System.Drawing.Point(246, 195);
 			this.numericUpDownCharQ.Name = "numericUpDownCharQ";
 			this.numericUpDownCharQ.Size = new System.Drawing.Size(39, 20);
@@ -860,6 +906,7 @@
 			// 
 			// labelCharQ
 			// 
+			this.labelCharQ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharQ.AutoSize = true;
 			this.labelCharQ.Location = new System.Drawing.Point(179, 198);
 			this.labelCharQ.Name = "labelCharQ";
@@ -873,6 +920,7 @@
 			// 
 			// labelPercentCharP
 			// 
+			this.labelPercentCharP.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharP.AutoSize = true;
 			this.labelPercentCharP.Location = new System.Drawing.Point(291, 171);
 			this.labelPercentCharP.Name = "labelPercentCharP";
@@ -887,6 +935,7 @@
 			// 
 			// comboBoxCharP
 			// 
+			this.comboBoxCharP.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharP.FormattingEnabled = true;
 			this.comboBoxCharP.Items.AddRange(new object[] {
@@ -903,6 +952,7 @@
 			// 
 			// numericUpDownCharP
 			// 
+			this.numericUpDownCharP.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharP.Location = new System.Drawing.Point(246, 168);
 			this.numericUpDownCharP.Name = "numericUpDownCharP";
 			this.numericUpDownCharP.Size = new System.Drawing.Size(39, 20);
@@ -919,6 +969,7 @@
 			// 
 			// labelCharP
 			// 
+			this.labelCharP.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharP.AutoSize = true;
 			this.labelCharP.Location = new System.Drawing.Point(179, 171);
 			this.labelCharP.Name = "labelCharP";
@@ -932,6 +983,7 @@
 			// 
 			// labelPercentCharO
 			// 
+			this.labelPercentCharO.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharO.AutoSize = true;
 			this.labelPercentCharO.Location = new System.Drawing.Point(291, 144);
 			this.labelPercentCharO.Name = "labelPercentCharO";
@@ -946,6 +998,7 @@
 			// 
 			// comboBoxCharO
 			// 
+			this.comboBoxCharO.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharO.FormattingEnabled = true;
 			this.comboBoxCharO.Items.AddRange(new object[] {
@@ -962,6 +1015,7 @@
 			// 
 			// numericUpDownCharO
 			// 
+			this.numericUpDownCharO.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharO.Location = new System.Drawing.Point(246, 141);
 			this.numericUpDownCharO.Name = "numericUpDownCharO";
 			this.numericUpDownCharO.Size = new System.Drawing.Size(39, 20);
@@ -978,6 +1032,7 @@
 			// 
 			// labelCharO
 			// 
+			this.labelCharO.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharO.AutoSize = true;
 			this.labelCharO.Location = new System.Drawing.Point(179, 144);
 			this.labelCharO.Name = "labelCharO";
@@ -991,6 +1046,7 @@
 			// 
 			// labelPercentCharN
 			// 
+			this.labelPercentCharN.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharN.AutoSize = true;
 			this.labelPercentCharN.Location = new System.Drawing.Point(291, 117);
 			this.labelPercentCharN.Name = "labelPercentCharN";
@@ -1005,6 +1061,7 @@
 			// 
 			// comboBoxCharN
 			// 
+			this.comboBoxCharN.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharN.FormattingEnabled = true;
 			this.comboBoxCharN.Items.AddRange(new object[] {
@@ -1021,6 +1078,7 @@
 			// 
 			// numericUpDownCharN
 			// 
+			this.numericUpDownCharN.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharN.Location = new System.Drawing.Point(246, 114);
 			this.numericUpDownCharN.Name = "numericUpDownCharN";
 			this.numericUpDownCharN.Size = new System.Drawing.Size(39, 20);
@@ -1037,6 +1095,7 @@
 			// 
 			// labelCharN
 			// 
+			this.labelCharN.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharN.AutoSize = true;
 			this.labelCharN.Location = new System.Drawing.Point(179, 117);
 			this.labelCharN.Name = "labelCharN";
@@ -1050,6 +1109,7 @@
 			// 
 			// labelPercentCharM
 			// 
+			this.labelPercentCharM.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharM.AutoSize = true;
 			this.labelPercentCharM.Location = new System.Drawing.Point(291, 90);
 			this.labelPercentCharM.Name = "labelPercentCharM";
@@ -1064,6 +1124,7 @@
 			// 
 			// comboBoxCharM
 			// 
+			this.comboBoxCharM.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharM.FormattingEnabled = true;
 			this.comboBoxCharM.Items.AddRange(new object[] {
@@ -1080,6 +1141,7 @@
 			// 
 			// numericUpDownCharM
 			// 
+			this.numericUpDownCharM.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharM.Location = new System.Drawing.Point(246, 87);
 			this.numericUpDownCharM.Name = "numericUpDownCharM";
 			this.numericUpDownCharM.Size = new System.Drawing.Size(39, 20);
@@ -1096,6 +1158,7 @@
 			// 
 			// labelCharM
 			// 
+			this.labelCharM.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharM.AutoSize = true;
 			this.labelCharM.Location = new System.Drawing.Point(179, 90);
 			this.labelCharM.Name = "labelCharM";
@@ -1109,6 +1172,7 @@
 			// 
 			// labelPercentCharL
 			// 
+			this.labelPercentCharL.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharL.AutoSize = true;
 			this.labelPercentCharL.Location = new System.Drawing.Point(291, 63);
 			this.labelPercentCharL.Name = "labelPercentCharL";
@@ -1123,6 +1187,7 @@
 			// 
 			// comboBoxCharL
 			// 
+			this.comboBoxCharL.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharL.FormattingEnabled = true;
 			this.comboBoxCharL.Items.AddRange(new object[] {
@@ -1139,6 +1204,7 @@
 			// 
 			// numericUpDownCharL
 			// 
+			this.numericUpDownCharL.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharL.Location = new System.Drawing.Point(246, 60);
 			this.numericUpDownCharL.Name = "numericUpDownCharL";
 			this.numericUpDownCharL.Size = new System.Drawing.Size(39, 20);
@@ -1155,6 +1221,7 @@
 			// 
 			// labelCharL
 			// 
+			this.labelCharL.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharL.AutoSize = true;
 			this.labelCharL.Location = new System.Drawing.Point(179, 63);
 			this.labelCharL.Name = "labelCharL";
@@ -1168,6 +1235,7 @@
 			// 
 			// labelPercentCharK
 			// 
+			this.labelPercentCharK.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharK.AutoSize = true;
 			this.labelPercentCharK.Location = new System.Drawing.Point(291, 36);
 			this.labelPercentCharK.Name = "labelPercentCharK";
@@ -1182,6 +1250,7 @@
 			// 
 			// comboBoxCharK
 			// 
+			this.comboBoxCharK.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharK.FormattingEnabled = true;
 			this.comboBoxCharK.Items.AddRange(new object[] {
@@ -1198,6 +1267,7 @@
 			// 
 			// numericUpDownCharK
 			// 
+			this.numericUpDownCharK.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharK.Location = new System.Drawing.Point(246, 33);
 			this.numericUpDownCharK.Name = "numericUpDownCharK";
 			this.numericUpDownCharK.Size = new System.Drawing.Size(39, 20);
@@ -1214,6 +1284,7 @@
 			// 
 			// labelCharK
 			// 
+			this.labelCharK.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharK.AutoSize = true;
 			this.labelCharK.Location = new System.Drawing.Point(179, 36);
 			this.labelCharK.Name = "labelCharK";
@@ -1227,6 +1298,7 @@
 			// 
 			// labelPercentCharJ
 			// 
+			this.labelPercentCharJ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharJ.AutoSize = true;
 			this.labelPercentCharJ.Location = new System.Drawing.Point(291, 9);
 			this.labelPercentCharJ.Name = "labelPercentCharJ";
@@ -1241,6 +1313,7 @@
 			// 
 			// comboBoxCharJ
 			// 
+			this.comboBoxCharJ.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharJ.FormattingEnabled = true;
 			this.comboBoxCharJ.Items.AddRange(new object[] {
@@ -1257,6 +1330,7 @@
 			// 
 			// numericUpDownCharJ
 			// 
+			this.numericUpDownCharJ.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharJ.Location = new System.Drawing.Point(246, 6);
 			this.numericUpDownCharJ.Name = "numericUpDownCharJ";
 			this.numericUpDownCharJ.Size = new System.Drawing.Size(39, 20);
@@ -1273,6 +1347,7 @@
 			// 
 			// labelCharJ
 			// 
+			this.labelCharJ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharJ.AutoSize = true;
 			this.labelCharJ.Location = new System.Drawing.Point(179, 9);
 			this.labelCharJ.Name = "labelCharJ";
@@ -1286,6 +1361,7 @@
 			// 
 			// labelPercentCharZ
 			// 
+			this.labelPercentCharZ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharZ.AutoSize = true;
 			this.labelPercentCharZ.Location = new System.Drawing.Point(457, 197);
 			this.labelPercentCharZ.Name = "labelPercentCharZ";
@@ -1300,6 +1376,7 @@
 			// 
 			// comboBoxCharZ
 			// 
+			this.comboBoxCharZ.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharZ.FormattingEnabled = true;
 			this.comboBoxCharZ.Items.AddRange(new object[] {
@@ -1316,6 +1393,7 @@
 			// 
 			// numericUpDownCharZ
 			// 
+			this.numericUpDownCharZ.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharZ.Location = new System.Drawing.Point(412, 194);
 			this.numericUpDownCharZ.Name = "numericUpDownCharZ";
 			this.numericUpDownCharZ.Size = new System.Drawing.Size(39, 20);
@@ -1332,6 +1410,7 @@
 			// 
 			// labelCharZ
 			// 
+			this.labelCharZ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharZ.AutoSize = true;
 			this.labelCharZ.Location = new System.Drawing.Point(345, 197);
 			this.labelCharZ.Name = "labelCharZ";
@@ -1345,6 +1424,7 @@
 			// 
 			// labelPercentCharY
 			// 
+			this.labelPercentCharY.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharY.AutoSize = true;
 			this.labelPercentCharY.Location = new System.Drawing.Point(457, 170);
 			this.labelPercentCharY.Name = "labelPercentCharY";
@@ -1359,6 +1439,7 @@
 			// 
 			// comboBoxCharY
 			// 
+			this.comboBoxCharY.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharY.FormattingEnabled = true;
 			this.comboBoxCharY.Items.AddRange(new object[] {
@@ -1375,6 +1456,7 @@
 			// 
 			// numericUpDownCharY
 			// 
+			this.numericUpDownCharY.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharY.Location = new System.Drawing.Point(413, 167);
 			this.numericUpDownCharY.Name = "numericUpDownCharY";
 			this.numericUpDownCharY.Size = new System.Drawing.Size(39, 20);
@@ -1391,6 +1473,7 @@
 			// 
 			// labelCharY
 			// 
+			this.labelCharY.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharY.AutoSize = true;
 			this.labelCharY.Location = new System.Drawing.Point(345, 170);
 			this.labelCharY.Name = "labelCharY";
@@ -1404,6 +1487,7 @@
 			// 
 			// labelPercentCharX
 			// 
+			this.labelPercentCharX.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharX.AutoSize = true;
 			this.labelPercentCharX.Location = new System.Drawing.Point(457, 143);
 			this.labelPercentCharX.Name = "labelPercentCharX";
@@ -1418,6 +1502,7 @@
 			// 
 			// comboBoxCharX
 			// 
+			this.comboBoxCharX.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharX.FormattingEnabled = true;
 			this.comboBoxCharX.Items.AddRange(new object[] {
@@ -1434,6 +1519,7 @@
 			// 
 			// numericUpDownCharX
 			// 
+			this.numericUpDownCharX.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharX.Location = new System.Drawing.Point(412, 140);
 			this.numericUpDownCharX.Name = "numericUpDownCharX";
 			this.numericUpDownCharX.Size = new System.Drawing.Size(39, 20);
@@ -1450,6 +1536,7 @@
 			// 
 			// labelCharX
 			// 
+			this.labelCharX.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharX.AutoSize = true;
 			this.labelCharX.Location = new System.Drawing.Point(345, 143);
 			this.labelCharX.Name = "labelCharX";
@@ -1463,6 +1550,7 @@
 			// 
 			// labelPercentCharW
 			// 
+			this.labelPercentCharW.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharW.AutoSize = true;
 			this.labelPercentCharW.Location = new System.Drawing.Point(457, 116);
 			this.labelPercentCharW.Name = "labelPercentCharW";
@@ -1477,6 +1565,7 @@
 			// 
 			// comboBoxCharW
 			// 
+			this.comboBoxCharW.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharW.FormattingEnabled = true;
 			this.comboBoxCharW.Items.AddRange(new object[] {
@@ -1493,6 +1582,7 @@
 			// 
 			// numericUpDownCharW
 			// 
+			this.numericUpDownCharW.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharW.Location = new System.Drawing.Point(412, 113);
 			this.numericUpDownCharW.Name = "numericUpDownCharW";
 			this.numericUpDownCharW.Size = new System.Drawing.Size(39, 20);
@@ -1509,6 +1599,7 @@
 			// 
 			// labelCharW
 			// 
+			this.labelCharW.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharW.AutoSize = true;
 			this.labelCharW.Location = new System.Drawing.Point(345, 116);
 			this.labelCharW.Name = "labelCharW";
@@ -1522,6 +1613,7 @@
 			// 
 			// labelPercentCharV
 			// 
+			this.labelPercentCharV.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharV.AutoSize = true;
 			this.labelPercentCharV.Location = new System.Drawing.Point(457, 89);
 			this.labelPercentCharV.Name = "labelPercentCharV";
@@ -1536,6 +1628,7 @@
 			// 
 			// comboBoxCharV
 			// 
+			this.comboBoxCharV.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharV.FormattingEnabled = true;
 			this.comboBoxCharV.Items.AddRange(new object[] {
@@ -1552,6 +1645,7 @@
 			// 
 			// numericUpDownCharV
 			// 
+			this.numericUpDownCharV.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharV.Location = new System.Drawing.Point(412, 86);
 			this.numericUpDownCharV.Name = "numericUpDownCharV";
 			this.numericUpDownCharV.Size = new System.Drawing.Size(39, 20);
@@ -1568,6 +1662,7 @@
 			// 
 			// labelCharV
 			// 
+			this.labelCharV.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharV.AutoSize = true;
 			this.labelCharV.Location = new System.Drawing.Point(345, 89);
 			this.labelCharV.Name = "labelCharV";
@@ -1581,6 +1676,7 @@
 			// 
 			// labelPercentCharU
 			// 
+			this.labelPercentCharU.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharU.AutoSize = true;
 			this.labelPercentCharU.Location = new System.Drawing.Point(457, 62);
 			this.labelPercentCharU.Name = "labelPercentCharU";
@@ -1595,6 +1691,7 @@
 			// 
 			// comboBoxCharU
 			// 
+			this.comboBoxCharU.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharU.FormattingEnabled = true;
 			this.comboBoxCharU.Items.AddRange(new object[] {
@@ -1611,6 +1708,7 @@
 			// 
 			// numericUpDownCharU
 			// 
+			this.numericUpDownCharU.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharU.Location = new System.Drawing.Point(412, 59);
 			this.numericUpDownCharU.Name = "numericUpDownCharU";
 			this.numericUpDownCharU.Size = new System.Drawing.Size(39, 20);
@@ -1627,6 +1725,7 @@
 			// 
 			// labelCharU
 			// 
+			this.labelCharU.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharU.AutoSize = true;
 			this.labelCharU.Location = new System.Drawing.Point(345, 62);
 			this.labelCharU.Name = "labelCharU";
@@ -1640,6 +1739,7 @@
 			// 
 			// labelPercentCharT
 			// 
+			this.labelPercentCharT.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharT.AutoSize = true;
 			this.labelPercentCharT.Location = new System.Drawing.Point(457, 35);
 			this.labelPercentCharT.Name = "labelPercentCharT";
@@ -1654,6 +1754,7 @@
 			// 
 			// comboBoxCharT
 			// 
+			this.comboBoxCharT.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharT.FormattingEnabled = true;
 			this.comboBoxCharT.Items.AddRange(new object[] {
@@ -1670,6 +1771,7 @@
 			// 
 			// numericUpDownCharT
 			// 
+			this.numericUpDownCharT.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharT.Location = new System.Drawing.Point(412, 32);
 			this.numericUpDownCharT.Name = "numericUpDownCharT";
 			this.numericUpDownCharT.Size = new System.Drawing.Size(39, 20);
@@ -1686,6 +1788,7 @@
 			// 
 			// labelCharT
 			// 
+			this.labelCharT.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharT.AutoSize = true;
 			this.labelCharT.Location = new System.Drawing.Point(345, 35);
 			this.labelCharT.Name = "labelCharT";
@@ -1699,6 +1802,7 @@
 			// 
 			// labelPercentCharS
 			// 
+			this.labelPercentCharS.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharS.AutoSize = true;
 			this.labelPercentCharS.Location = new System.Drawing.Point(457, 8);
 			this.labelPercentCharS.Name = "labelPercentCharS";
@@ -1713,6 +1817,7 @@
 			// 
 			// comboBoxCharS
 			// 
+			this.comboBoxCharS.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharS.FormattingEnabled = true;
 			this.comboBoxCharS.Items.AddRange(new object[] {
@@ -1729,6 +1834,7 @@
 			// 
 			// numericUpDownCharS
 			// 
+			this.numericUpDownCharS.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharS.Location = new System.Drawing.Point(412, 5);
 			this.numericUpDownCharS.Name = "numericUpDownCharS";
 			this.numericUpDownCharS.Size = new System.Drawing.Size(39, 20);
@@ -1745,6 +1851,7 @@
 			// 
 			// labelCharS
 			// 
+			this.labelCharS.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharS.AutoSize = true;
 			this.labelCharS.Location = new System.Drawing.Point(345, 8);
 			this.labelCharS.Name = "labelCharS";
@@ -1758,6 +1865,7 @@
 			// 
 			// statusStrip
 			// 
+			this.statusStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.StatusBar;
 			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.textInfo,
             this.toolStripProgressBar});
@@ -1770,12 +1878,14 @@
 			// 
 			// textInfo
 			// 
+			this.textInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.textInfo.Name = "textInfo";
 			this.textInfo.Size = new System.Drawing.Size(92, 17);
 			this.textInfo.Text = "information text";
 			// 
 			// labelCharPool
 			// 
+			this.labelCharPool.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharPool.AutoSize = true;
 			this.labelCharPool.Location = new System.Drawing.Point(365, 225);
 			this.labelCharPool.Name = "labelCharPool";
@@ -1790,6 +1900,7 @@
 			// 
 			// toolStripProgressBar
 			// 
+			this.toolStripProgressBar.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar;
 			this.toolStripProgressBar.Name = "toolStripProgressBar";
 			this.toolStripProgressBar.Size = new System.Drawing.Size(100, 16);
 			this.toolStripProgressBar.Step = 1;
@@ -1798,6 +1909,7 @@
 			// ProbabilityTableForm
 			// 
 			this.AcceptButton = this.buttonApply;
+			this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.buttonCancel;

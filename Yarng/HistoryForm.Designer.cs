@@ -36,6 +36,7 @@
 			// 
 			// richTextBox
 			// 
+			this.richTextBox.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
 			this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.richTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.richTextBox.Dock = System.Windows.Forms.DockStyle.Top;
@@ -48,6 +49,7 @@
 			// 
 			// okButton
 			// 
+			this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.okButton.Image = global::Yarng.Properties.Resources.accept_16;
@@ -62,6 +64,7 @@
 			// HistoryForm
 			// 
 			this.AcceptButton = this.okButton;
+			this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(484, 266);

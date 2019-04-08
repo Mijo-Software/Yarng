@@ -19,6 +19,34 @@ namespace Yarng
 			}
 		}
 
+		private void SetStatusText(object sender, EventArgs e)
+		{
+			if (sender is Button button)
+			{
+				textInfo.Text = button.AccessibleDescription;
+			}
+			else if (sender is Label label)
+			{
+				textInfo.Text = label.AccessibleDescription;
+			}
+			else if (sender is ComboBox comboBox)
+			{
+				textInfo.Text = comboBox.AccessibleDescription;
+			}
+			else if (sender is TextBox textBox)
+			{
+				textInfo.Text = textBox.AccessibleDescription;
+			}
+			else if (sender is ProgressBar progressBar)
+			{
+				textInfo.Text = progressBar.AccessibleDescription;
+			}
+			else if (sender is NumericUpDown numericUpDown)
+			{
+				textInfo.Text = numericUpDown.AccessibleDescription;
+			}
+		}
+
 		private void SetStatusText(string text)
 		{
 			textInfo.Text = text;
@@ -704,542 +732,542 @@ namespace Yarng
 
 		private void LabelCharA_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharB_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharC_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharD_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharE_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharF_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharG_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharH_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharI_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharJ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharK_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharL_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharM_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharN_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharO_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharP_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharQ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharR_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharS_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharT_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharU_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharV_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharW_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharX_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharY_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharZ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharPool_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonApply_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonCancel_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonRandomize_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharA_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharB_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharC_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharD_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharE_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharF_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharG_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharH_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharI_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharJ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharK_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharL_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharM_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharN_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharO_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharP_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharQ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharR_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharS_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharT_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharU_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharV_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharW_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharX_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharY_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharZ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharA_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharB_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharC_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharD_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharE_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharF_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharG_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharH_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharI_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharJ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharK_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharL_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharM_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharN_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharO_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharP_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharQ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharR_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharS_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharT_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharU_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharV_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharW_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharX_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharY_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void NumericUpDownCharZ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharA_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharB_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharC_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharD_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharE_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharF_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharG_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharH_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharI_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharJ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharK_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharL_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharM_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharN_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharO_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharP_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharQ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharR_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharS_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharT_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharU_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharV_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharW_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharX_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharY_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharZ_Enter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		#endregion
@@ -1792,412 +1820,412 @@ namespace Yarng
 
 		private void LabelCharA_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharB_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharC_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharD_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharE_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharF_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharG_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharH_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharI_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharJ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharK_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharL_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharM_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharN_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharO_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharP_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharQ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharR_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharS_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharT_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharU_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharV_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharW_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharX_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharY_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharZ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelCharPool_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonApply_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonCancel_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ButtonRandomize_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharA_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharB_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharC_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharD_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharE_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharF_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharG_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharH_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharI_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharJ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharK_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharL_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharM_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharN_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharO_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharP_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharQ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharR_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharS_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharT_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharU_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharV_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharW_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharX_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharY_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void ComboBoxCharZ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharA_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharB_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharC_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharD_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharE_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharF_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharG_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharH_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharI_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharJ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharK_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharL_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharM_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharN_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharO_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharP_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharQ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharR_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharS_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharT_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharU_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharV_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharW_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharX_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharY_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		private void LabelPercentCharZ_MouseEnter(object sender, EventArgs e)
 		{
-
+			SetStatusText(sender: sender, e: e);
 		}
 
 		#endregion
