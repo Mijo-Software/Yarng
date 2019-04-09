@@ -148,7 +148,7 @@
 			// 
 			this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.okButton.Image = global::Yarng.Properties.Resources.accept_16;
 			this.okButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.Location = new System.Drawing.Point(314, 169);

@@ -173,11 +173,12 @@
 			// buttonApply
 			// 
 			this.buttonApply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonApply.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.buttonApply.Image = global::Yarng.Properties.Resources.accept_16;
 			this.buttonApply.Location = new System.Drawing.Point(121, 257);
 			this.buttonApply.Name = "buttonApply";
 			this.buttonApply.Size = new System.Drawing.Size(75, 32);
-			this.buttonApply.TabIndex = 104;
+			this.buttonApply.TabIndex = 105;
 			this.buttonApply.Text = "&Apply";
 			this.buttonApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.buttonApply.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -196,7 +197,7 @@
 			this.buttonCancel.Location = new System.Drawing.Point(202, 257);
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.Size = new System.Drawing.Size(75, 32);
-			this.buttonCancel.TabIndex = 105;
+			this.buttonCancel.TabIndex = 106;
 			this.buttonCancel.Text = "&Cancel";
 			this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -214,7 +215,7 @@
 			this.buttonRandomize.Location = new System.Drawing.Point(283, 257);
 			this.buttonRandomize.Name = "buttonRandomize";
 			this.buttonRandomize.Size = new System.Drawing.Size(75, 32);
-			this.buttonRandomize.TabIndex = 106;
+			this.buttonRandomize.TabIndex = 107;
 			this.buttonRandomize.Text = "&Random";
 			this.buttonRandomize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.buttonRandomize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1873,7 +1874,7 @@
 			this.statusStrip.Name = "statusStrip";
 			this.statusStrip.Size = new System.Drawing.Size(509, 22);
 			this.statusStrip.SizingGrip = false;
-			this.statusStrip.TabIndex = 107;
+			this.statusStrip.TabIndex = 108;
 			this.statusStrip.Text = "statusStrip";
 			// 
 			// textInfo
@@ -1890,7 +1891,7 @@
 			this.labelCharPool.Location = new System.Drawing.Point(365, 225);
 			this.labelCharPool.Name = "labelCharPool";
 			this.labelCharPool.Size = new System.Drawing.Size(57, 13);
-			this.labelCharPool.TabIndex = 108;
+			this.labelCharPool.TabIndex = 104;
 			this.labelCharPool.Text = "char pool: ";
 			this.labelCharPool.DoubleClick += new System.EventHandler(this.LabelCharPool_DoubleClick);
 			this.labelCharPool.Enter += new System.EventHandler(this.LabelCharPool_Enter);

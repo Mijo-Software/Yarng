@@ -10,6 +10,30 @@ namespace Yarng
 
 		private enum Letter : byte { Consonant = 0, Vowel /*Syllable, Semivowel, DoubleConsonant, DoubleVowel*/ };
 
+		public string Consonants
+		{
+			get => strConsonants;
+			set => strConsonants = value;
+		}
+
+		public string Vowels
+		{
+			get => strVowels;
+			set => strVowels = value;
+		}
+
+		public string ConsonantPool
+		{
+			get => strConsonantPool;
+			set => strConsonantPool = value;
+		}
+
+		public string VowelPool
+		{
+			get => strVowelPool;
+			set => strVowelPool = value;
+		}
+
 		private void CopyToClipboard(string text, bool showMessage)
 		{
 			Clipboard.SetText(text: text);

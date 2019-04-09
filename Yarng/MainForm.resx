@@ -117,18 +117,90 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
+    <value>buttonAbout</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Parent" xml:space="preserve">
+    <value>groupMiscellaneous</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonExit.Name" xml:space="preserve">
+    <value>buttonExit</value>
+  </data>
+  <data name="&gt;&gt;buttonExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonExit.Parent" xml:space="preserve">
+    <value>groupMiscellaneous</value>
+  </data>
+  <data name="&gt;&gt;buttonExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonHistory.Name" xml:space="preserve">
+    <value>buttonHistory</value>
+  </data>
+  <data name="&gt;&gt;buttonHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonHistory.Parent" xml:space="preserve">
+    <value>groupMiscellaneous</value>
+  </data>
+  <data name="&gt;&gt;buttonHistory.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonHowTo.Name" xml:space="preserve">
+    <value>buttonHowTo</value>
+  </data>
+  <data name="&gt;&gt;buttonHowTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonHowTo.Parent" xml:space="preserve">
+    <value>groupMiscellaneous</value>
+  </data>
+  <data name="&gt;&gt;buttonHowTo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupMiscellaneous.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 264</value>
+  </data>
+  <data name="groupMiscellaneous.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 62</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupMiscellaneous.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="groupMiscellaneous.Text" xml:space="preserve">
+    <value>&amp;Miscellaneous</value>
+  </data>
+  <data name="&gt;&gt;groupMiscellaneous.Name" xml:space="preserve">
+    <value>groupMiscellaneous</value>
+  </data>
+  <data name="&gt;&gt;groupMiscellaneous.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupMiscellaneous.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupMiscellaneous.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonAbout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonAbout.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 19</value>
   </data>
   <data name="buttonAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 32</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -252,29 +324,89 @@
   <data name="&gt;&gt;buttonHowTo.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="groupMiscellaneous.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 264</value>
+  <data name="&gt;&gt;buttonStepLeft.Name" xml:space="preserve">
+    <value>buttonStepLeft</value>
   </data>
-  <data name="groupMiscellaneous.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 62</value>
+  <data name="&gt;&gt;buttonStepLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="groupMiscellaneous.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;buttonStepLeft.Parent" xml:space="preserve">
+    <value>groupPostProcessing</value>
   </data>
-  <data name="groupMiscellaneous.Text" xml:space="preserve">
-    <value>&amp;Miscellaneous</value>
+  <data name="&gt;&gt;buttonStepLeft.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;groupMiscellaneous.Name" xml:space="preserve">
-    <value>groupMiscellaneous</value>
+  <data name="&gt;&gt;buttonStepRight.Name" xml:space="preserve">
+    <value>buttonStepRight</value>
   </data>
-  <data name="&gt;&gt;groupMiscellaneous.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonStepRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonStepRight.Parent" xml:space="preserve">
+    <value>groupPostProcessing</value>
+  </data>
+  <data name="&gt;&gt;buttonStepRight.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonScramble.Name" xml:space="preserve">
+    <value>buttonScramble</value>
+  </data>
+  <data name="&gt;&gt;buttonScramble.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonScramble.Parent" xml:space="preserve">
+    <value>groupPostProcessing</value>
+  </data>
+  <data name="&gt;&gt;buttonScramble.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonSort.Name" xml:space="preserve">
+    <value>buttonSort</value>
+  </data>
+  <data name="&gt;&gt;buttonSort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSort.Parent" xml:space="preserve">
+    <value>groupPostProcessing</value>
+  </data>
+  <data name="&gt;&gt;buttonSort.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;buttonMirror.Name" xml:space="preserve">
+    <value>buttonMirror</value>
+  </data>
+  <data name="&gt;&gt;buttonMirror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonMirror.Parent" xml:space="preserve">
+    <value>groupPostProcessing</value>
+  </data>
+  <data name="&gt;&gt;buttonMirror.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupPostProcessing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 264</value>
+  </data>
+  <data name="groupPostProcessing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 62</value>
+  </data>
+  <data name="groupPostProcessing.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="groupPostProcessing.Text" xml:space="preserve">
+    <value>Post&amp;-Processing</value>
+  </data>
+  <data name="&gt;&gt;groupPostProcessing.Name" xml:space="preserve">
+    <value>groupPostProcessing</value>
+  </data>
+  <data name="&gt;&gt;groupPostProcessing.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupMiscellaneous.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupPostProcessing.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupMiscellaneous.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;groupPostProcessing.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="buttonStepLeft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -395,30 +527,6 @@
   </data>
   <data name="&gt;&gt;buttonMirror.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="groupPostProcessing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 264</value>
-  </data>
-  <data name="groupPostProcessing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 62</value>
-  </data>
-  <data name="groupPostProcessing.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="groupPostProcessing.Text" xml:space="preserve">
-    <value>Post&amp;-Processing</value>
-  </data>
-  <data name="&gt;&gt;groupPostProcessing.Name" xml:space="preserve">
-    <value>groupPostProcessing</value>
-  </data>
-  <data name="&gt;&gt;groupPostProcessing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupPostProcessing.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupPostProcessing.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="progressGenerate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1077,12 +1185,6 @@
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>107, 17</value>
   </metadata>
-  <data name="textInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
-  </data>
-  <data name="textInfo.Text" xml:space="preserve">
-    <value>information text</value>
-  </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 332</value>
   </data>
@@ -1106,6 +1208,12 @@
   </data>
   <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="textInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 17</value>
+  </data>
+  <data name="textInfo.Text" xml:space="preserve">
+    <value>information text</value>
   </data>
   <data name="buttonSpeechText.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>

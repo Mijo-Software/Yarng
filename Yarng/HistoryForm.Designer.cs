@@ -44,20 +44,20 @@
 			this.richTextBox.Name = "richTextBox";
 			this.richTextBox.ReadOnly = true;
 			this.richTextBox.Size = new System.Drawing.Size(484, 219);
-			this.richTextBox.TabIndex = 8;
+			this.richTextBox.TabIndex = 0;
 			this.richTextBox.Text = "";
 			// 
 			// okButton
 			// 
 			this.okButton.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.okButton.Image = global::Yarng.Properties.Resources.accept_16;
 			this.okButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.okButton.Location = new System.Drawing.Point(206, 225);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(75, 29);
-			this.okButton.TabIndex = 7;
+			this.okButton.TabIndex = 1;
 			this.okButton.Text = "&OK";
 			this.okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			// 

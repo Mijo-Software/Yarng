@@ -7,13 +7,18 @@ namespace Yarng
 {
 	public partial class MainForm : Form
 	{
-		private static readonly string
+		private readonly string
 			strVowels = "aeiou",
-			strConsonants = "bcdfghjklmnpqrstvwxyz",
-			strAlphabet = strVowels + strConsonants;
+			strConsonants = "bcdfghjklmnpqrstvwxyz";
+
+		private string
+			strVowelPool,
+			strConsonantPool;
 
 		private void ResetSettings()
 		{
+			strVowelPool = strVowels;
+			strConsonantPool = strConsonants;
 			numericNumberOfNames.Value = 10;
 			numericCharacterLenghtsMin.Value = 3;
 			numericCharacterLenghtsMax.Value = 10;
@@ -112,8 +117,23 @@ namespace Yarng
 		#region Click handlers
 
 		private void ButtonShowProbabilityTable_Click(object sender, EventArgs e)
-		{
-			new ProbabilityTableForm().ShowDialog();
+		{																																																											
+			//new ProbabilityTableForm().ShowDialog();
+			ProbabilityTableForm formProbabilityTable = new ProbabilityTableForm
+			{
+				Consonants = textConsonants.Text,
+				Vowels = textVowels.Text,
+				ConsonantPool = strConsonantPool,
+				VowelPool = strVowelPool
+			};
+			if (formProbabilityTable.ShowDialog() == DialogResult.OK)
+			{
+				textConsonants.Text = "";
+				textConsonants.Text = formProbabilityTable.Consonants;
+				textVowels.Text = formProbabilityTable.Vowels;
+				strConsonantPool = formProbabilityTable.ConsonantPool;
+				strVowelPool = formProbabilityTable.VowelPool;
+			}
 		}
 
 		private void ButtonLoadDefaultSettings_Click(object sender, EventArgs e)
@@ -170,22 +190,22 @@ namespace Yarng
 			textList.Clear();
 			progressGenerate.Value = 0;
 			progressGenerate.Maximum = (int)numericNumberOfNames.Value - 1;
-			//progressGenerate.Step = 1;
+			progressGenerate.Step = 1;
 			for (int i = 0; i < numericNumberOfNames.Value; i++)
 			{
-				progressGenerate.Value = i;
-				//progressGenerate.PerformStep();
+				//progressGenerate.Value = i;
+				progressGenerate.PerformStep();
 				nLengthOfName = _r.Next(minValue: (int)numericCharacterLenghtsMin.Value, maxValue: (int)numericCharacterLenghtsMax.Value + 1);
 				sbNames.Length = 0;
 				for (int n = 0; n < nLengthOfName; n++)
 				{
 					if (isEven)
 					{
-						ch = textVowels.Text[_r.Next(maxValue: textVowels.TextLength)];
+						ch = strVowelPool[_r.Next(maxValue: strVowelPool.Length)];
 					}
 					else
 					{
-						ch = textConsonants.Text[_r.Next(maxValue: textConsonants.TextLength)];
+						ch = strConsonantPool[_r.Next(maxValue: strConsonantPool.Length)];
 					}
 					isEven = !isEven;
 					if (n == 0)
@@ -206,15 +226,17 @@ namespace Yarng
 
 		private void ButtonSpeechText_Click(object sender, EventArgs e)
 		{
-			SpeechSynthesizer synth = new SpeechSynthesizer();
-			synth.SetOutputToDefaultAudioDevice();
+			SpeechSynthesizer speaker = new SpeechSynthesizer();
+			speaker.SetOutputToDefaultAudioDevice();
+			speaker.Rate = -2;
+			speaker.Volume = 100;
 			if (textList.SelectionLength > 0)
 			{
-				synth.SpeakAsync(textToSpeak: textList.SelectedText);
+				speaker.SpeakAsync(textToSpeak: textList.SelectedText);
 			}
 			else
 			{
-				synth.SpeakAsync(textToSpeak: textList.Text);
+				speaker.SpeakAsync(textToSpeak: textList.Text);
 			}
 		}
 
@@ -258,6 +280,21 @@ namespace Yarng
 		private void ButtonScramble_Click(object sender, EventArgs e)
 		{
 		}
+
+		#endregion
+
+		#region DoubleClick handlers
+
+		private void LabelVowels_DoubleClick(object sender, EventArgs e)
+		{
+			MessageBox.Show(text: "vowel pool: " + strVowelPool, caption: "information", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+		}
+
+		private void LabelConsonants_DoubleClick(object sender, EventArgs e)
+		{
+			MessageBox.Show(text: "consonant pool: " + strConsonantPool, caption: "information", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+		}
+
 
 		#endregion
 

@@ -279,6 +279,7 @@
 			this.labelConsonants.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelConsonants, "labelConsonants");
 			this.labelConsonants.Name = "labelConsonants";
+			this.labelConsonants.DoubleClick += new System.EventHandler(this.LabelConsonants_DoubleClick);
 			// 
 			// textVowels
 			// 
@@ -294,6 +295,7 @@
 			this.labelVowels.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelVowels, "labelVowels");
 			this.labelVowels.Name = "labelVowels";
+			this.labelVowels.DoubleClick += new System.EventHandler(this.LabelVowels_DoubleClick);
 			// 
 			// labelCharacters
 			// 
