@@ -34,6 +34,318 @@ namespace Yarng
 			set => strVowelPool = value;
 		}
 
+		public byte NumericValueCharA
+		{
+			get => (byte)numericUpDownCharA.Value;
+			set => numericUpDownCharA.Value = value;
+		}
+
+		public byte NumericValueCharB
+		{
+			get => (byte)numericUpDownCharB.Value;
+			set => numericUpDownCharB.Value = value;
+		}
+
+		public byte NumericValueCharC
+		{
+			get => (byte)numericUpDownCharC.Value;
+			set => numericUpDownCharC.Value = value;
+		}
+
+		public byte NumericValueCharD
+		{
+			get => (byte)numericUpDownCharD.Value;
+			set => numericUpDownCharD.Value = value;
+		}
+
+		public byte NumericValueCharE
+		{
+			get => (byte)numericUpDownCharE.Value;
+			set => numericUpDownCharE.Value = value;
+		}
+
+		public byte NumericValueCharF
+		{
+			get => (byte)numericUpDownCharF.Value;
+			set => numericUpDownCharF.Value = value;
+		}
+
+		public byte NumericValueCharG
+		{
+			get => (byte)numericUpDownCharG.Value;
+			set => numericUpDownCharG.Value = value;
+		}
+
+		public byte NumericValueCharH
+		{
+			get => (byte)numericUpDownCharH.Value;
+			set => numericUpDownCharH.Value = value;
+		}
+
+		public byte NumericValueCharI
+		{
+			get => (byte)numericUpDownCharI.Value;
+			set => numericUpDownCharI.Value = value;
+		}
+
+		public byte NumericValueCharJ
+		{
+			get => (byte)numericUpDownCharJ.Value;
+			set => numericUpDownCharJ.Value = value;
+		}
+
+		public byte NumericValueCharK
+		{
+			get => (byte)numericUpDownCharK.Value;
+			set => numericUpDownCharK.Value = value;
+		}
+
+		public byte NumericValueCharL
+		{
+			get => (byte)numericUpDownCharL.Value;
+			set => numericUpDownCharL.Value = value;
+		}
+
+		public byte NumericValueCharM
+		{
+			get => (byte)numericUpDownCharM.Value;
+			set => numericUpDownCharM.Value = value;
+		}
+
+		public byte NumericValueCharN
+		{
+			get => (byte)numericUpDownCharN.Value;
+			set => numericUpDownCharN.Value = value;
+		}
+
+		public byte NumericValueCharO
+		{
+			get => (byte)numericUpDownCharO.Value;
+			set => numericUpDownCharO.Value = value;
+		}
+
+		public byte NumericValueCharP
+		{
+			get => (byte)numericUpDownCharP.Value;
+			set => numericUpDownCharP.Value = value;
+		}
+
+		public byte NumericValueCharQ
+		{
+			get => (byte)numericUpDownCharQ.Value;
+			set => numericUpDownCharQ.Value = value;
+		}
+
+		public byte NumericValueCharR
+		{
+			get => (byte)numericUpDownCharR.Value;
+			set => numericUpDownCharR.Value = value;
+		}
+
+		public byte NumericValueCharS
+		{
+			get => (byte)numericUpDownCharS.Value;
+			set => numericUpDownCharS.Value = value;
+		}
+
+		public byte NumericValueCharT
+		{
+			get => (byte)numericUpDownCharT.Value;
+			set => numericUpDownCharT.Value = value;
+		}
+
+		public byte NumericValueCharU
+		{
+			get => (byte)numericUpDownCharU.Value;
+			set => numericUpDownCharU.Value = value;
+		}
+
+		public byte NumericValueCharV
+		{
+			get => (byte)numericUpDownCharV.Value;
+			set => numericUpDownCharV.Value = value;
+		}
+
+		public byte NumericValueCharW
+		{
+			get => (byte)numericUpDownCharW.Value;
+			set => numericUpDownCharW.Value = value;
+		}
+
+		public byte NumericValueCharX
+		{
+			get => (byte)numericUpDownCharX.Value;
+			set => numericUpDownCharX.Value = value;
+		}
+
+		public byte NumericValueCharY
+		{
+			get => (byte)numericUpDownCharY.Value;
+			set => numericUpDownCharY.Value = value;
+		}
+
+		public byte NumericValueCharZ
+		{
+			get => (byte)numericUpDownCharZ.Value;
+			set => numericUpDownCharZ.Value = value;
+		}
+
+		public byte SortOfCharA
+		{
+			get => (byte)comboBoxCharA.SelectedIndex;
+			set => comboBoxCharA.SelectedIndex = value;
+		}
+
+		public byte SortOfCharB
+		{
+			get => (byte)comboBoxCharB.SelectedIndex;
+			set => comboBoxCharB.SelectedIndex = value;
+		}
+
+		public byte SortOfCharC
+		{
+			get => (byte)comboBoxCharC.SelectedIndex;
+			set => comboBoxCharC.SelectedIndex = value;
+		}
+
+		public byte SortOfCharD
+		{
+			get => (byte)comboBoxCharD.SelectedIndex;
+			set => comboBoxCharD.SelectedIndex = value;
+		}
+
+		public byte SortOfCharE
+		{
+			get => (byte)comboBoxCharE.SelectedIndex;
+			set => comboBoxCharE.SelectedIndex = value;
+		}
+
+		public byte SortOfCharF
+		{
+			get => (byte)comboBoxCharF.SelectedIndex;
+			set => comboBoxCharF.SelectedIndex = value;
+		}
+
+		public byte SortOfCharG
+		{
+			get => (byte)comboBoxCharG.SelectedIndex;
+			set => comboBoxCharG.SelectedIndex = value;
+		}
+
+		public byte SortOfCharH
+		{
+			get => (byte)comboBoxCharH.SelectedIndex;
+			set => comboBoxCharH.SelectedIndex = value;
+		}
+
+		public byte SortOfCharI
+		{
+			get => (byte)comboBoxCharI.SelectedIndex;
+			set => comboBoxCharI.SelectedIndex = value;
+		}
+
+		public byte SortOfCharJ
+		{
+			get => (byte)comboBoxCharJ.SelectedIndex;
+			set => comboBoxCharJ.SelectedIndex = value;
+		}
+
+		public byte SortOfCharK
+		{
+			get => (byte)comboBoxCharK.SelectedIndex;
+			set => comboBoxCharK.SelectedIndex = value;
+		}
+
+		public byte SortOfCharL
+		{
+			get => (byte)comboBoxCharL.SelectedIndex;
+			set => comboBoxCharL.SelectedIndex = value;
+		}
+
+		public byte SortOfCharM
+		{
+			get => (byte)comboBoxCharM.SelectedIndex;
+			set => comboBoxCharM.SelectedIndex = value;
+		}
+
+		public byte SortOfCharN
+		{
+			get => (byte)comboBoxCharN.SelectedIndex;
+			set => comboBoxCharN.SelectedIndex = value;
+		}
+
+		public byte SortOfCharO
+		{
+			get => (byte)comboBoxCharO.SelectedIndex;
+			set => comboBoxCharO.SelectedIndex = value;
+		}
+
+		public byte SortOfCharP
+		{
+			get => (byte)comboBoxCharP.SelectedIndex;
+			set => comboBoxCharP.SelectedIndex = value;
+		}
+
+		public byte SortOfCharQ
+		{
+			get => (byte)comboBoxCharQ.SelectedIndex;
+			set => comboBoxCharQ.SelectedIndex = value;
+		}
+
+		public byte SortOfCharR
+		{
+			get => (byte)comboBoxCharR.SelectedIndex;
+			set => comboBoxCharR.SelectedIndex = value;
+		}
+
+		public byte SortOfCharS
+		{
+			get => (byte)comboBoxCharS.SelectedIndex;
+			set => comboBoxCharS.SelectedIndex = value;
+		}
+
+		public byte SortOfCharT
+		{
+			get => (byte)comboBoxCharT.SelectedIndex;
+			set => comboBoxCharT.SelectedIndex = value;
+		}
+
+		public byte SortOfCharU
+		{
+			get => (byte)comboBoxCharU.SelectedIndex;
+			set => comboBoxCharU.SelectedIndex = value;
+		}
+
+		public byte SortOfCharV
+		{
+			get => (byte)comboBoxCharV.SelectedIndex;
+			set => comboBoxCharV.SelectedIndex = value;
+		}
+
+		public byte SortOfCharW
+		{
+			get => (byte)comboBoxCharW.SelectedIndex;
+			set => comboBoxCharW.SelectedIndex = value;
+		}
+
+		public byte SortOfCharX
+		{
+			get => (byte)comboBoxCharX.SelectedIndex;
+			set => comboBoxCharX.SelectedIndex = value;
+		}
+
+		public byte SortOfCharY
+		{
+			get => (byte)comboBoxCharY.SelectedIndex;
+			set => comboBoxCharY.SelectedIndex = value;
+		}
+
+		public byte SortOfCharZ
+		{
+			get => (byte)comboBoxCharZ.SelectedIndex;
+			set => comboBoxCharZ.SelectedIndex = value;
+		}
+
 		private void CopyToClipboard(string text, bool showMessage)
 		{
 			Clipboard.SetText(text: text);
@@ -99,6 +411,7 @@ namespace Yarng
 				numericUpDownCharM.Value +
 				numericUpDownCharN.Value +
 				numericUpDownCharO.Value +
+				numericUpDownCharP.Value +
 				numericUpDownCharQ.Value +
 				numericUpDownCharR.Value +
 				numericUpDownCharS.Value +
@@ -148,33 +461,111 @@ namespace Yarng
 		{
 			ClearStatusText();
 			toolStripProgressBar.Visible = false;
-			comboBoxCharA.SelectedIndex = (byte)Letter.Vowel;
-			comboBoxCharB.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharC.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharD.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharE.SelectedIndex = (byte)Letter.Vowel;
-			comboBoxCharF.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharG.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharH.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharI.SelectedIndex = (byte)Letter.Vowel;
-			comboBoxCharJ.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharK.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharL.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharM.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharN.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharO.SelectedIndex = (byte)Letter.Vowel;
-			comboBoxCharP.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharQ.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharR.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharS.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharT.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharU.SelectedIndex = (byte)Letter.Vowel;
-			comboBoxCharV.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharW.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharX.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharY.SelectedIndex = (byte)Letter.Consonant;
-			comboBoxCharZ.SelectedIndex = (byte)Letter.Consonant;
-			UpdatePercentLabels();
+			if (comboBoxCharA.SelectedIndex == -1)
+			{
+				comboBoxCharA.SelectedIndex = (byte)Letter.Vowel;
+			}
+			if (comboBoxCharB.SelectedIndex == -1)
+			{
+				comboBoxCharB.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharC.SelectedIndex == -1)
+			{
+				comboBoxCharC.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharD.SelectedIndex == -1)
+			{
+				comboBoxCharD.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharE.SelectedIndex == -1)
+			{
+				comboBoxCharE.SelectedIndex = (byte)Letter.Vowel;
+			}
+			if (comboBoxCharF.SelectedIndex == -1)
+			{
+				comboBoxCharF.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharG.SelectedIndex == -1)
+			{
+				comboBoxCharG.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharH.SelectedIndex == -1)
+			{
+				comboBoxCharH.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharI.SelectedIndex == -1)
+			{
+				comboBoxCharI.SelectedIndex = (byte)Letter.Vowel;
+			}
+			if (comboBoxCharJ.SelectedIndex == -1)
+			{
+				comboBoxCharJ.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharK.SelectedIndex == -1)
+			{
+				comboBoxCharK.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharL.SelectedIndex == -1)
+			{
+				comboBoxCharL.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharM.SelectedIndex == -1)
+			{
+				comboBoxCharM.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharN.SelectedIndex == -1)
+			{
+				comboBoxCharN.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharO.SelectedIndex == -1)
+			{
+				comboBoxCharO.SelectedIndex = (byte)Letter.Vowel;
+			}
+			if (comboBoxCharP.SelectedIndex == -1)
+			{
+				comboBoxCharP.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharQ.SelectedIndex == -1)
+			{
+				comboBoxCharQ.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharR.SelectedIndex == -1)
+			{
+				comboBoxCharR.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharS.SelectedIndex == -1)
+			{
+				comboBoxCharS.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharT.SelectedIndex == -1)
+			{
+				comboBoxCharT.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharU.SelectedIndex == -1)
+			{
+				comboBoxCharU.SelectedIndex = (byte)Letter.Vowel;
+			}
+			if (comboBoxCharV.SelectedIndex == -1)
+			{
+				comboBoxCharV.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharW.SelectedIndex == -1)
+			{
+				comboBoxCharW.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharX.SelectedIndex == -1)
+			{
+				comboBoxCharX.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharY.SelectedIndex == -1)
+			{
+				comboBoxCharY.SelectedIndex = (byte)Letter.Consonant;
+			}
+			if (comboBoxCharZ.SelectedIndex == -1)
+			{
+				comboBoxCharZ.SelectedIndex = (byte)Letter.Consonant;
+			}
+			//UpdatePercentLabels();
 		}
 
 		#region Click handlers
@@ -182,6 +573,8 @@ namespace Yarng
 		private void ButtonApply_Click(object sender, EventArgs e)
 		{
 			ClearStatusText();
+			strConsonants = "";
+			strVowels = "";
 			strConsonantPool = "";
 			strVowelPool = "";
 			toolStripProgressBar.Visible = true;
@@ -200,6 +593,7 @@ namespace Yarng
 				(int)numericUpDownCharM.Value +
 				(int)numericUpDownCharN.Value +
 				(int)numericUpDownCharO.Value +
+				(int)numericUpDownCharP.Value +
 				(int)numericUpDownCharQ.Value +
 				(int)numericUpDownCharR.Value +
 				(int)numericUpDownCharS.Value +
@@ -213,93 +607,201 @@ namespace Yarng
 			toolStripProgressBar.Minimum = 0;
 			switch (comboBoxCharA.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.a; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.a; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.a; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.a; break;
+					}
 			}
 			switch (comboBoxCharB.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.b; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.b; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.b; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.b; break;
+					}
 			}
 			switch (comboBoxCharC.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.c; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.c; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.c; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.c; break;
+					}
 			}
 			switch (comboBoxCharD.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.d; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.d; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.d; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.d; break;
+					}
 			}
 			switch (comboBoxCharE.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.e; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.e; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.e; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.e; break;
+					}
 			}
 			switch (comboBoxCharF.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.f; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.f; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.f; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.f; break;
+					}
 			}
 			switch (comboBoxCharG.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.g; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.g; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.g; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.g; break;
+					}
 			}
 			switch (comboBoxCharH.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.h; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.h; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.h; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.h; break;
+					}
 			}
 			switch (comboBoxCharI.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.i; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.i; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.i; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.i; break;
+					}
 			}
 			switch (comboBoxCharJ.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.j; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.j; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.j; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.j; break;
+					}
 			}
 			switch (comboBoxCharK.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.k; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.k; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.k; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.k; break;
+					}
 			}
 			switch (comboBoxCharL.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.l; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.l; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.l; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.l; break;
+					}
 			}
 			switch (comboBoxCharM.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.m; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.m; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.m; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.m; break;
+					}
 			}
 			switch (comboBoxCharN.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.n; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.n; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.n; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.n; break;
+					}
 			}
 			switch (comboBoxCharO.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.o; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.o; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.o; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.o; break;
+					}
 			}
 			switch (comboBoxCharP.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.p; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.p; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.p; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.p; break;
+					}
 			}
 			switch (comboBoxCharQ.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.q; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.q; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.q; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.q; break;
+					}
 			}
 			switch (comboBoxCharR.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.r; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.r; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.r; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.r; break;
+					}
 			}
 			switch (comboBoxCharS.SelectedIndex)
 			{
@@ -308,47 +810,93 @@ namespace Yarng
 			}
 			switch (comboBoxCharT.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.t; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.t; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.t; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.t; break;
+					}
 			}
 			switch (comboBoxCharU.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.u; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.u; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.u; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.u; break;
+					}
 			}
 			switch (comboBoxCharV.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.v; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.v; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.v; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.v; break;
+					}
 			}
 			switch (comboBoxCharW.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.w; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.w; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.w; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.w; break;
+					}
 			}
 			switch (comboBoxCharX.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.x; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.x; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.x; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.x; break;
+					}
 			}
 			switch (comboBoxCharY.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.y; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.y; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.y; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.y; break;
+					}
 			}
 			switch (comboBoxCharZ.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.z; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.z; break;
+				case (byte)Letter.Vowel:
+					{
+						strVowels += Properties.CharacterResources.z; break;
+					}
+				case (byte)Letter.Consonant:
+					{
+						strConsonants += Properties.CharacterResources.z; break;
+					}
 			}
-
-
 			for (byte i = 0; i < numericUpDownCharA.Value; i++)
 			{
 				switch (comboBoxCharA.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.a; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.a; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.a; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.a; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -356,8 +904,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharB.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.b; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.b; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.b; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.b; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -365,8 +919,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharC.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.c; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.c; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.c; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.c; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -374,8 +934,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharD.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.d; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.d; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.d; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.d; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -383,8 +949,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharE.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.e; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.e; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.e; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.e; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -392,8 +964,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharF.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.f; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.f; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.f; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.f; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -401,8 +979,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharG.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.g; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.g; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.g; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.g; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -410,8 +994,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharH.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.h; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.h; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.h; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.h; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -419,8 +1009,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharI.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.i; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.i; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.i; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.i; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -428,8 +1024,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharJ.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.j; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.j; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.j; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.j; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -437,8 +1039,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharK.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.k; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.k; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.k; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.k; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -446,8 +1054,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharL.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.l; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.l; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.l; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.l; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -455,8 +1069,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharM.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.m; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.m; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.m; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.m; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -464,8 +1084,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharN.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.n; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.n; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.n; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.n; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -473,8 +1099,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharO.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.o; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.o; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.o; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.o; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -482,8 +1114,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharP.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.p; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.p; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.p; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.p; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -491,8 +1129,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharQ.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.q; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.q; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.q; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.q; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -500,8 +1144,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharR.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.r; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.r; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.r; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.r; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -509,8 +1159,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharS.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.s; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.s; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.s; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.s; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -518,8 +1174,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharT.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.t; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.t; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.t; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.t; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -527,8 +1189,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharU.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.u; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.u; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.u; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.u; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -536,8 +1204,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharV.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.v; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.v; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.v; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.v; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -545,8 +1219,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharW.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.w; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.w; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.w; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.w; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -554,8 +1234,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharX.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.x; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.x; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.x; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.x; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -563,8 +1249,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharY.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.y; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.y; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.y; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.y; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -572,8 +1264,14 @@ namespace Yarng
 			{
 				switch (comboBoxCharZ.SelectedIndex)
 				{
-					case (byte)Letter.Vowel: strVowelPool += Properties.CharacterResources.z; break;
-					case (byte)Letter.Consonant: strConsonantPool += Properties.CharacterResources.z; break;
+					case (byte)Letter.Vowel:
+						{
+							strVowelPool += Properties.CharacterResources.z; break;
+						}
+					case (byte)Letter.Consonant:
+						{
+							strConsonantPool += Properties.CharacterResources.z; break;
+						}
 				}
 				toolStripProgressBar.PerformStep();
 			}

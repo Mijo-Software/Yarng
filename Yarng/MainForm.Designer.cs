@@ -439,6 +439,7 @@
             resources.GetString("comboLanguage.Items9")});
 			resources.ApplyResources(this.comboLanguage, "comboLanguage");
 			this.comboLanguage.Name = "comboLanguage";
+			this.comboLanguage.SelectedIndexChanged += new System.EventHandler(this.ComboLanguage_SelectedIndexChanged);
 			this.comboLanguage.Enter += new System.EventHandler(this.ComboLanguage_Enter);
 			this.comboLanguage.Leave += new System.EventHandler(this.ComboLanguage_Leave);
 			this.comboLanguage.MouseEnter += new System.EventHandler(this.ComboLanguage_MouseEnter);

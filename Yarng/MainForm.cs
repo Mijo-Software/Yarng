@@ -8,23 +8,27 @@ namespace Yarng
 	public partial class MainForm : Form
 	{
 		private readonly string
-			strVowels = "aeiou",
-			strConsonants = "bcdfghjklmnpqrstvwxyz";
+			strDefaultVowels = "aeiou",
+			strDefaultConsonants = "bcdfghjklmnpqrstvwxyz",
+			strDefaultAlphabet = "abcdefghijklmnopqrstuvwxyz";
 
 		private string
 			strVowelPool,
 			strConsonantPool;
 
+		private enum Letter : byte { Consonant = 0, Vowel /*Syllable, Semivowel, DoubleConsonant, DoubleVowel*/ };
+		private enum LetterLanguage : byte { Default = 0, English, German, Frence, Spanish, Portuguese, Italian, Dutch, Latin, UserDefined };
+
 		private void ResetSettings()
 		{
-			strVowelPool = strVowels;
-			strConsonantPool = strConsonants;
+			strVowelPool = strDefaultVowels;
+			strConsonantPool = strDefaultConsonants;
 			numericNumberOfNames.Value = 10;
 			numericCharacterLenghtsMin.Value = 3;
 			numericCharacterLenghtsMax.Value = 10;
-			textVowels.Text = strVowels;
-			textConsonants.Text = strConsonants;
-			comboLanguage.SelectedIndex = 0;
+			textVowels.Text = strDefaultVowels;
+			textConsonants.Text = strDefaultConsonants;
+			comboLanguage.SelectedIndex = (byte)LetterLanguage.Default;
 		}
 
 		private void SetStatusText(object sender, EventArgs e)
@@ -63,6 +67,102 @@ namespace Yarng
 		private void ClearStatusText()
 		{
 			SetStatusText(text: "");
+		}
+
+		private uint CountChar(string text, char searchChar)
+		{
+			uint tmp = 0;
+			if (!string.IsNullOrEmpty(value: text))
+			{
+				for (int i = 0; i < text.Length; i++)
+				{
+					if (text[index: i] == searchChar)
+					{
+						tmp++;
+					}
+				}
+			}
+			return tmp;
+		}
+
+		private byte GetValueCharfromPools(char chr)
+		{
+			if ((byte)CountChar(text: strConsonantPool, searchChar: chr) != 0)
+			{
+				return (byte)CountChar(text: strConsonantPool, searchChar: chr);
+			}
+			else if ((byte)CountChar(text: strVowelPool, searchChar: chr) != 0)
+			{
+				return (byte)CountChar(text: strVowelPool, searchChar: chr);
+			}
+			return 1;
+		}
+
+		private bool IsVowel(string letter)
+		{
+			return textVowels.Text.Contains(value: letter);
+		}
+
+		private bool IsConsonant(string letter)
+		{
+			return textConsonants.Text.Contains(value: letter);
+		}
+
+		private bool IsVowelDefault(string letter)
+		{
+			return strDefaultVowels.Contains(value: letter);
+		}
+
+		private bool IsConsonantDefault(string letter)
+		{
+			return strDefaultConsonants.Contains(value: letter);
+		}
+
+		private byte GetSortOfChar(string letter)
+		{
+			if (IsVowel(letter: letter))
+			{
+				return (byte)Letter.Vowel;
+			}
+			else if (IsConsonant(letter: letter))
+			{
+				return (byte)Letter.Consonant;
+			}
+			else
+			{
+				switch (letter)
+				{
+					case "a": return (byte)Letter.Vowel;
+					case "b": return (byte)Letter.Consonant;
+					case "c": return (byte)Letter.Consonant;
+					case "d": return (byte)Letter.Consonant;
+					case "e": return (byte)Letter.Vowel;
+					case "f": return (byte)Letter.Consonant;
+					case "g": return (byte)Letter.Consonant;
+					case "h": return (byte)Letter.Consonant;
+					case "i": return (byte)Letter.Vowel;
+					case "j": return (byte)Letter.Consonant;
+					case "k": return (byte)Letter.Consonant;
+					case "l": return (byte)Letter.Consonant;
+					case "m": return (byte)Letter.Consonant;
+					case "n": return (byte)Letter.Consonant;
+					case "o": return (byte)Letter.Vowel;
+					case "p": return (byte)Letter.Consonant;
+					case "q": return (byte)Letter.Consonant;
+					case "r": return (byte)Letter.Consonant;
+					case "s": return (byte)Letter.Consonant;
+					case "t": return (byte)Letter.Consonant;
+					case "u": return (byte)Letter.Vowel;
+					case "v": return (byte)Letter.Consonant;
+					case "w": return (byte)Letter.Consonant;
+					case "x": return (byte)Letter.Consonant;
+					case "y": return (byte)Letter.Consonant;
+					case "z": return (byte)Letter.Consonant;
+					default: break;
+				}
+			}
+
+			return (byte)Letter.Consonant;
 		}
 
 		private void NumericCharacterLenghtsMin(object sender, MouseEventArgs e)
@@ -117,22 +217,74 @@ namespace Yarng
 		#region Click handlers
 
 		private void ButtonShowProbabilityTable_Click(object sender, EventArgs e)
-		{																																																											
+		{
 			//new ProbabilityTableForm().ShowDialog();
 			ProbabilityTableForm formProbabilityTable = new ProbabilityTableForm
 			{
 				Consonants = textConsonants.Text,
 				Vowels = textVowels.Text,
 				ConsonantPool = strConsonantPool,
-				VowelPool = strVowelPool
+				VowelPool = strVowelPool,
+				NumericValueCharA = GetValueCharfromPools(chr: Properties.CharacterResources.a[index: 0]),
+				NumericValueCharB = GetValueCharfromPools(chr: Properties.CharacterResources.b[index: 0]),
+				NumericValueCharC = GetValueCharfromPools(chr: Properties.CharacterResources.c[index: 0]),
+				NumericValueCharD = GetValueCharfromPools(chr: Properties.CharacterResources.d[index: 0]),
+				NumericValueCharE = GetValueCharfromPools(chr: Properties.CharacterResources.e[index: 0]),
+				NumericValueCharF = GetValueCharfromPools(chr: Properties.CharacterResources.f[index: 0]),
+				NumericValueCharG = GetValueCharfromPools(chr: Properties.CharacterResources.g[index: 0]),
+				NumericValueCharH = GetValueCharfromPools(chr: Properties.CharacterResources.h[index: 0]),
+				NumericValueCharI = GetValueCharfromPools(chr: Properties.CharacterResources.i[index: 0]),
+				NumericValueCharJ = GetValueCharfromPools(chr: Properties.CharacterResources.j[index: 0]),
+				NumericValueCharK = GetValueCharfromPools(chr: Properties.CharacterResources.k[index: 0]),
+				NumericValueCharL = GetValueCharfromPools(chr: Properties.CharacterResources.l[index: 0]),
+				NumericValueCharM = GetValueCharfromPools(chr: Properties.CharacterResources.m[index: 0]),
+				NumericValueCharN = GetValueCharfromPools(chr: Properties.CharacterResources.n[index: 0]),
+				NumericValueCharO = GetValueCharfromPools(chr: Properties.CharacterResources.o[index: 0]),
+				NumericValueCharP = GetValueCharfromPools(chr: Properties.CharacterResources.p[index: 0]),
+				NumericValueCharQ = GetValueCharfromPools(chr: Properties.CharacterResources.q[index: 0]),
+				NumericValueCharR = GetValueCharfromPools(chr: Properties.CharacterResources.r[index: 0]),
+				NumericValueCharS = GetValueCharfromPools(chr: Properties.CharacterResources.s[index: 0]),
+				NumericValueCharT = GetValueCharfromPools(chr: Properties.CharacterResources.t[index: 0]),
+				NumericValueCharU = GetValueCharfromPools(chr: Properties.CharacterResources.u[index: 0]),
+				NumericValueCharV = GetValueCharfromPools(chr: Properties.CharacterResources.v[index: 0]),
+				NumericValueCharW = GetValueCharfromPools(chr: Properties.CharacterResources.w[index: 0]),
+				NumericValueCharX = GetValueCharfromPools(chr: Properties.CharacterResources.x[index: 0]),
+				NumericValueCharY = GetValueCharfromPools(chr: Properties.CharacterResources.y[index: 0]),
+				NumericValueCharZ = GetValueCharfromPools(chr: Properties.CharacterResources.z[index: 0]),
+				SortOfCharA = GetSortOfChar(letter: Properties.CharacterResources.a),
+				SortOfCharB = GetSortOfChar(letter: Properties.CharacterResources.b),
+				SortOfCharC = GetSortOfChar(letter: Properties.CharacterResources.c),
+				SortOfCharD = GetSortOfChar(letter: Properties.CharacterResources.d),
+				SortOfCharE = GetSortOfChar(letter: Properties.CharacterResources.e),
+				SortOfCharF = GetSortOfChar(letter: Properties.CharacterResources.f),
+				SortOfCharG = GetSortOfChar(letter: Properties.CharacterResources.g),
+				SortOfCharH = GetSortOfChar(letter: Properties.CharacterResources.h),
+				SortOfCharI = GetSortOfChar(letter: Properties.CharacterResources.i),
+				SortOfCharJ = GetSortOfChar(letter: Properties.CharacterResources.j),
+				SortOfCharK = GetSortOfChar(letter: Properties.CharacterResources.k),
+				SortOfCharL = GetSortOfChar(letter: Properties.CharacterResources.l),
+				SortOfCharM = GetSortOfChar(letter: Properties.CharacterResources.m),
+				SortOfCharN = GetSortOfChar(letter: Properties.CharacterResources.n),
+				SortOfCharO = GetSortOfChar(letter: Properties.CharacterResources.o),
+				SortOfCharP = GetSortOfChar(letter: Properties.CharacterResources.p),
+				SortOfCharQ = GetSortOfChar(letter: Properties.CharacterResources.q),
+				SortOfCharR = GetSortOfChar(letter: Properties.CharacterResources.r),
+				SortOfCharS = GetSortOfChar(letter: Properties.CharacterResources.s),
+				SortOfCharT = GetSortOfChar(letter: Properties.CharacterResources.t),
+				SortOfCharU = GetSortOfChar(letter: Properties.CharacterResources.u),
+				SortOfCharV = GetSortOfChar(letter: Properties.CharacterResources.v),
+				SortOfCharW = GetSortOfChar(letter: Properties.CharacterResources.w),
+				SortOfCharX = GetSortOfChar(letter: Properties.CharacterResources.x),
+				SortOfCharY = GetSortOfChar(letter: Properties.CharacterResources.y),
+				SortOfCharZ = GetSortOfChar(letter: Properties.CharacterResources.z)
 			};
 			if (formProbabilityTable.ShowDialog() == DialogResult.OK)
 			{
-				textConsonants.Text = "";
 				textConsonants.Text = formProbabilityTable.Consonants;
 				textVowels.Text = formProbabilityTable.Vowels;
 				strConsonantPool = formProbabilityTable.ConsonantPool;
 				strVowelPool = formProbabilityTable.VowelPool;
+				comboLanguage.SelectedIndex = (byte)LetterLanguage.UserDefined;
 			}
 		}
 
@@ -201,11 +353,11 @@ namespace Yarng
 				{
 					if (isEven)
 					{
-						ch = strVowelPool[_r.Next(maxValue: strVowelPool.Length)];
+						ch = strVowelPool[index: _r.Next(maxValue: strVowelPool.Length)];
 					}
 					else
 					{
-						ch = strConsonantPool[_r.Next(maxValue: strConsonantPool.Length)];
+						ch = strConsonantPool[index: _r.Next(maxValue: strConsonantPool.Length)];
 					}
 					isEven = !isEven;
 					if (n == 0)
@@ -586,7 +738,7 @@ namespace Yarng
 			if (textVowels.TextLength == 0)
 			{
 				MessageBox.Show(text: "The text field must include not less than one vowel.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
-				textVowels.Text = strVowels;
+				textVowels.Text = strDefaultVowels;
 			}
 		}
 
@@ -596,7 +748,7 @@ namespace Yarng
 			if (textConsonants.TextLength == 0)
 			{
 				MessageBox.Show(text: "The text field must include not less than one consonant.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
-				textConsonants.Text = strConsonants;
+				textConsonants.Text = strDefaultConsonants;
 			}
 		}
 
@@ -840,5 +992,89 @@ namespace Yarng
 		}
 
 		#endregion
+
+		#region SelectedIndexChanged handlers
+
+		private void ComboLanguage_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			switch (comboLanguage.SelectedIndex)
+			{
+				default:
+				case (byte)LetterLanguage.Default:
+					{
+						strVowelPool = strDefaultVowels;
+						strConsonantPool = strDefaultConsonants;
+						break;
+					}
+				case (byte)LetterLanguage.English:
+					{
+						int[] arrLanguageValueEnglish = { 11, 2, 2, 6, 13, 2, 2, 9, 6, 1, 1, 3, 3, 7, 7, 1, 0, 5, 6, 9, 2, 1, 2, 0, 2, 0 };
+						strConsonantPool = "";
+						strVowelPool = "";
+
+						foreach (int value in arrLanguageValueEnglish)
+						{
+							for (int i = 0; i < arrLanguageValueEnglish.Length; i++)
+							{
+								if (IsVowelDefault(strDefaultAlphabet[index: i].ToString()))
+								{
+									strVowelPool += strDefaultAlphabet[index: i];								 
+								}
+								else if (IsConsonantDefault(strDefaultAlphabet[index: i].ToString()))
+								{
+									strConsonantPool += strDefaultAlphabet[index: i];
+								}
+							}
+						}
+
+						break;
+					}
+				case (byte)LetterLanguage.German:
+					{
+						strConsonantPool = "";
+						strVowelPool = "";
+						break;
+					}
+				case (byte)LetterLanguage.Frence:
+					{
+						strConsonantPool = "";
+						strVowelPool = "";
+						break;
+					}
+				case (byte)LetterLanguage.Spanish:
+					{
+						strConsonantPool = "";
+						strVowelPool = "";
+						break;
+					}
+				case (byte)LetterLanguage.Portuguese:
+					{
+						strConsonantPool = "";
+						strVowelPool = "";
+						break;
+					}
+				case (byte)LetterLanguage.Italian:
+					{
+						strConsonantPool = "";
+						strVowelPool = "";
+						break;
+					}
+				case (byte)LetterLanguage.Dutch:
+					{
+						strConsonantPool = "";
+						strVowelPool = "";
+						break;
+					}
+				case (byte)LetterLanguage.Latin:
+					{
+						strConsonantPool = "";
+						strVowelPool = "";
+						break;
+					}
+			}
+		}
+
+		#endregion
+
 	}
 }

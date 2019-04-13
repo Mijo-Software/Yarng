@@ -139,8 +139,8 @@
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.textInfo = new System.Windows.Forms.ToolStripStatusLabel();
-			this.labelCharPool = new System.Windows.Forms.Label();
 			this.toolStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+			this.labelCharPool = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharA)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharB)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharD)).BeginInit();
@@ -1884,6 +1884,14 @@
 			this.textInfo.Size = new System.Drawing.Size(92, 17);
 			this.textInfo.Text = "information text";
 			// 
+			// toolStripProgressBar
+			// 
+			this.toolStripProgressBar.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar;
+			this.toolStripProgressBar.Name = "toolStripProgressBar";
+			this.toolStripProgressBar.Size = new System.Drawing.Size(100, 16);
+			this.toolStripProgressBar.Step = 1;
+			this.toolStripProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+			// 
 			// labelCharPool
 			// 
 			this.labelCharPool.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
@@ -1898,14 +1906,6 @@
 			this.labelCharPool.Leave += new System.EventHandler(this.LabelCharPool_Leave);
 			this.labelCharPool.MouseEnter += new System.EventHandler(this.LabelCharPool_MouseEnter);
 			this.labelCharPool.MouseLeave += new System.EventHandler(this.LabelCharPool_MouseLeave);
-			// 
-			// toolStripProgressBar
-			// 
-			this.toolStripProgressBar.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar;
-			this.toolStripProgressBar.Name = "toolStripProgressBar";
-			this.toolStripProgressBar.Size = new System.Drawing.Size(100, 16);
-			this.toolStripProgressBar.Step = 1;
-			this.toolStripProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
 			// 
 			// ProbabilityTableForm
 			// 
