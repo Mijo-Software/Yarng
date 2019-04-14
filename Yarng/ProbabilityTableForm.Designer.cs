@@ -172,6 +172,8 @@
 			// 
 			// buttonApply
 			// 
+			this.buttonApply.AccessibleDescription = "Applies the probability table";
+			this.buttonApply.AccessibleName = "Apply probability table button";
 			this.buttonApply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonApply.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.buttonApply.Image = global::Yarng.Properties.Resources.accept_16;
@@ -182,6 +184,7 @@
 			this.buttonApply.Text = "&Apply";
 			this.buttonApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.buttonApply.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.toolTip.SetToolTip(this.buttonApply, "Applies the probability table");
 			this.buttonApply.UseVisualStyleBackColor = true;
 			this.buttonApply.Click += new System.EventHandler(this.ButtonApply_Click);
 			this.buttonApply.Enter += new System.EventHandler(this.ButtonApply_Enter);
@@ -191,6 +194,8 @@
 			// 
 			// buttonCancel
 			// 
+			this.buttonCancel.AccessibleDescription = "Cancels the probability table";
+			this.buttonCancel.AccessibleName = "Cancel probability table button";
 			this.buttonCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.buttonCancel.Image = global::Yarng.Properties.Resources.cancel_16;
@@ -201,6 +206,7 @@
 			this.buttonCancel.Text = "&Cancel";
 			this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.toolTip.SetToolTip(this.buttonCancel, "Cancels the probability table");
 			this.buttonCancel.UseVisualStyleBackColor = true;
 			this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
 			this.buttonCancel.Enter += new System.EventHandler(this.ButtonCancel_Enter);
@@ -210,6 +216,8 @@
 			// 
 			// buttonRandomize
 			// 
+			this.buttonRandomize.AccessibleDescription = "Randomizes the probability table";
+			this.buttonRandomize.AccessibleName = "Random probability table button";
 			this.buttonRandomize.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRandomize.Image = global::Yarng.Properties.Resources.dice_16;
 			this.buttonRandomize.Location = new System.Drawing.Point(283, 257);
@@ -219,6 +227,7 @@
 			this.buttonRandomize.Text = "&Random";
 			this.buttonRandomize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.buttonRandomize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.toolTip.SetToolTip(this.buttonRandomize, "Randomizes the probability table");
 			this.buttonRandomize.UseVisualStyleBackColor = true;
 			this.buttonRandomize.Click += new System.EventHandler(this.ButtonRandomize_Click);
 			this.buttonRandomize.Enter += new System.EventHandler(this.ButtonRandomize_Enter);
@@ -228,6 +237,8 @@
 			// 
 			// labelCharA
 			// 
+			this.labelCharA.AccessibleDescription = "Displays information of the letter A";
+			this.labelCharA.AccessibleName = "Label char A";
 			this.labelCharA.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharA.AutoSize = true;
 			this.labelCharA.Location = new System.Drawing.Point(12, 9);
@@ -235,6 +246,7 @@
 			this.labelCharA.Size = new System.Drawing.Size(17, 13);
 			this.labelCharA.TabIndex = 0;
 			this.labelCharA.Text = "A:";
+			this.toolTip.SetToolTip(this.labelCharA, "Displays information of the letter A");
 			this.labelCharA.Enter += new System.EventHandler(this.LabelCharA_Enter);
 			this.labelCharA.Leave += new System.EventHandler(this.LabelCharA_Leave);
 			this.labelCharA.MouseEnter += new System.EventHandler(this.LabelCharA_MouseEnter);
@@ -242,12 +254,14 @@
 			// 
 			// numericUpDownCharA
 			// 
+			this.numericUpDownCharA.AccessibleDescription = "Shows the value of the letter A";
 			this.numericUpDownCharA.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharA.Location = new System.Drawing.Point(79, 6);
 			this.numericUpDownCharA.Name = "numericUpDownCharA";
 			this.numericUpDownCharA.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharA.TabIndex = 2;
 			this.numericUpDownCharA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharA, "Shows the value of the letter A");
 			this.numericUpDownCharA.Value = new decimal(new int[] {
             50,
             0,
@@ -259,6 +273,8 @@
 			// 
 			// comboBoxCharA
 			// 
+			this.comboBoxCharA.AccessibleDescription = "Indicates whether the letter A is a consonant or a vowel";
+			this.comboBoxCharA.AccessibleName = "Classification of the letter A";
 			this.comboBoxCharA.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharA.FormattingEnabled = true;
@@ -269,6 +285,7 @@
 			this.comboBoxCharA.Name = "comboBoxCharA";
 			this.comboBoxCharA.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharA.TabIndex = 1;
+			this.toolTip.SetToolTip(this.comboBoxCharA, "Indicates whether the letter A is a consonant or a vowel");
 			this.comboBoxCharA.Enter += new System.EventHandler(this.ComboBoxCharA_Enter);
 			this.comboBoxCharA.Leave += new System.EventHandler(this.ComboBoxCharA_Leave);
 			this.comboBoxCharA.MouseEnter += new System.EventHandler(this.ComboBoxCharA_MouseEnter);
@@ -276,6 +293,7 @@
 			// 
 			// labelPercentCharA
 			// 
+			this.labelPercentCharA.AccessibleDescription = "Shows the percent of the letter A";
 			this.labelPercentCharA.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharA.AutoSize = true;
 			this.labelPercentCharA.Location = new System.Drawing.Point(124, 9);
@@ -283,6 +301,7 @@
 			this.labelPercentCharA.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharA.TabIndex = 3;
 			this.labelPercentCharA.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharA, "Shows the percent of the letter A");
 			this.labelPercentCharA.DoubleClick += new System.EventHandler(this.LabelPercentCharA_DoubleClick);
 			this.labelPercentCharA.Enter += new System.EventHandler(this.LabelPercentCharA_Enter);
 			this.labelPercentCharA.Leave += new System.EventHandler(this.LabelPercentCharA_Leave);
@@ -291,6 +310,7 @@
 			// 
 			// labelPercentCharB
 			// 
+			this.labelPercentCharB.AccessibleDescription = "Shows the percent of the letter B";
 			this.labelPercentCharB.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharB.AutoSize = true;
 			this.labelPercentCharB.Location = new System.Drawing.Point(124, 36);
@@ -298,6 +318,7 @@
 			this.labelPercentCharB.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharB.TabIndex = 7;
 			this.labelPercentCharB.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharB, "Shows the percent of the letter B");
 			this.labelPercentCharB.DoubleClick += new System.EventHandler(this.LabelPercentCharB_DoubleClick);
 			this.labelPercentCharB.Enter += new System.EventHandler(this.LabelPercentCharB_Enter);
 			this.labelPercentCharB.Leave += new System.EventHandler(this.LabelPercentCharB_Leave);
@@ -306,6 +327,8 @@
 			// 
 			// comboBoxCharB
 			// 
+			this.comboBoxCharB.AccessibleDescription = "Indicates whether the letter B is a consonant or a vowel";
+			this.comboBoxCharB.AccessibleName = "Classification of the letter B";
 			this.comboBoxCharB.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharB.FormattingEnabled = true;
@@ -316,6 +339,7 @@
 			this.comboBoxCharB.Name = "comboBoxCharB";
 			this.comboBoxCharB.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharB.TabIndex = 5;
+			this.toolTip.SetToolTip(this.comboBoxCharB, "Indicates whether the letter B is a consonant or a vowel");
 			this.comboBoxCharB.Enter += new System.EventHandler(this.ComboBoxCharB_Enter);
 			this.comboBoxCharB.Leave += new System.EventHandler(this.ComboBoxCharB_Leave);
 			this.comboBoxCharB.MouseEnter += new System.EventHandler(this.ComboBoxCharB_MouseEnter);
@@ -323,12 +347,14 @@
 			// 
 			// numericUpDownCharB
 			// 
+			this.numericUpDownCharB.AccessibleDescription = "Shows the value of the letter B";
 			this.numericUpDownCharB.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharB.Location = new System.Drawing.Point(79, 33);
 			this.numericUpDownCharB.Name = "numericUpDownCharB";
 			this.numericUpDownCharB.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharB.TabIndex = 6;
 			this.numericUpDownCharB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharB, "Shows the value of the letter B");
 			this.numericUpDownCharB.Value = new decimal(new int[] {
             50,
             0,
@@ -340,6 +366,8 @@
 			// 
 			// labelCharB
 			// 
+			this.labelCharB.AccessibleDescription = "Displays information of the letter B";
+			this.labelCharB.AccessibleName = "Label char B";
 			this.labelCharB.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharB.AutoSize = true;
 			this.labelCharB.Location = new System.Drawing.Point(12, 36);
@@ -347,6 +375,7 @@
 			this.labelCharB.Size = new System.Drawing.Size(17, 13);
 			this.labelCharB.TabIndex = 4;
 			this.labelCharB.Text = "B:";
+			this.toolTip.SetToolTip(this.labelCharB, "Displays information of the letter B");
 			this.labelCharB.Enter += new System.EventHandler(this.LabelCharB_Enter);
 			this.labelCharB.Leave += new System.EventHandler(this.LabelCharB_Leave);
 			this.labelCharB.MouseEnter += new System.EventHandler(this.LabelCharB_MouseEnter);
@@ -354,6 +383,7 @@
 			// 
 			// labelPercentCharD
 			// 
+			this.labelPercentCharD.AccessibleDescription = "Shows the percent of the letter D";
 			this.labelPercentCharD.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharD.AutoSize = true;
 			this.labelPercentCharD.Location = new System.Drawing.Point(124, 90);
@@ -361,6 +391,7 @@
 			this.labelPercentCharD.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharD.TabIndex = 15;
 			this.labelPercentCharD.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharD, "Shows the percent of the letter D");
 			this.labelPercentCharD.DoubleClick += new System.EventHandler(this.LabelPercentCharD_DoubleClick);
 			this.labelPercentCharD.Enter += new System.EventHandler(this.LabelPercentCharD_Enter);
 			this.labelPercentCharD.Leave += new System.EventHandler(this.LabelPercentCharD_Leave);
@@ -369,6 +400,8 @@
 			// 
 			// comboBoxCharD
 			// 
+			this.comboBoxCharD.AccessibleDescription = "Indicates whether the letter D is a consonant or a vowel";
+			this.comboBoxCharD.AccessibleName = "Classification of the letter D";
 			this.comboBoxCharD.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharD.FormattingEnabled = true;
@@ -379,6 +412,7 @@
 			this.comboBoxCharD.Name = "comboBoxCharD";
 			this.comboBoxCharD.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharD.TabIndex = 13;
+			this.toolTip.SetToolTip(this.comboBoxCharD, "Indicates whether the letter D is a consonant or a vowel");
 			this.comboBoxCharD.Enter += new System.EventHandler(this.ComboBoxCharD_Enter);
 			this.comboBoxCharD.Leave += new System.EventHandler(this.ComboBoxCharD_Leave);
 			this.comboBoxCharD.MouseEnter += new System.EventHandler(this.ComboBoxCharD_MouseEnter);
@@ -386,12 +420,14 @@
 			// 
 			// numericUpDownCharD
 			// 
+			this.numericUpDownCharD.AccessibleDescription = "Shows the value of the letter D";
 			this.numericUpDownCharD.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharD.Location = new System.Drawing.Point(79, 87);
 			this.numericUpDownCharD.Name = "numericUpDownCharD";
 			this.numericUpDownCharD.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharD.TabIndex = 14;
 			this.numericUpDownCharD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharD, "Shows the value of the letter D");
 			this.numericUpDownCharD.Value = new decimal(new int[] {
             50,
             0,
@@ -403,6 +439,8 @@
 			// 
 			// labelCharD
 			// 
+			this.labelCharD.AccessibleDescription = "Displays information of the letter D";
+			this.labelCharD.AccessibleName = "Label char D";
 			this.labelCharD.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharD.AutoSize = true;
 			this.labelCharD.Location = new System.Drawing.Point(12, 90);
@@ -410,6 +448,7 @@
 			this.labelCharD.Size = new System.Drawing.Size(18, 13);
 			this.labelCharD.TabIndex = 12;
 			this.labelCharD.Text = "D:";
+			this.toolTip.SetToolTip(this.labelCharD, "Displays information of the letter D");
 			this.labelCharD.Enter += new System.EventHandler(this.LabelCharD_Enter);
 			this.labelCharD.Leave += new System.EventHandler(this.LabelCharD_Leave);
 			this.labelCharD.MouseEnter += new System.EventHandler(this.LabelCharD_MouseEnter);
@@ -417,6 +456,7 @@
 			// 
 			// labelPercentCharC
 			// 
+			this.labelPercentCharC.AccessibleDescription = "Shows the percent of the letter C";
 			this.labelPercentCharC.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharC.AutoSize = true;
 			this.labelPercentCharC.Location = new System.Drawing.Point(124, 63);
@@ -424,6 +464,7 @@
 			this.labelPercentCharC.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharC.TabIndex = 11;
 			this.labelPercentCharC.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharC, "Shows the percent of the letter C");
 			this.labelPercentCharC.DoubleClick += new System.EventHandler(this.LabelPercentCharC_DoubleClick);
 			this.labelPercentCharC.Enter += new System.EventHandler(this.LabelPercentCharC_Enter);
 			this.labelPercentCharC.Leave += new System.EventHandler(this.LabelPercentCharC_Leave);
@@ -432,6 +473,8 @@
 			// 
 			// comboBoxCharC
 			// 
+			this.comboBoxCharC.AccessibleDescription = "Indicates whether the letter C is a consonant or a vowel";
+			this.comboBoxCharC.AccessibleName = "Classification of the letter C";
 			this.comboBoxCharC.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharC.FormattingEnabled = true;
@@ -442,6 +485,7 @@
 			this.comboBoxCharC.Name = "comboBoxCharC";
 			this.comboBoxCharC.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharC.TabIndex = 9;
+			this.toolTip.SetToolTip(this.comboBoxCharC, "Indicates whether the letter C is a consonant or a vowel");
 			this.comboBoxCharC.Enter += new System.EventHandler(this.ComboBoxCharC_Enter);
 			this.comboBoxCharC.Leave += new System.EventHandler(this.ComboBoxCharC_Leave);
 			this.comboBoxCharC.MouseEnter += new System.EventHandler(this.ComboBoxCharC_MouseEnter);
@@ -449,12 +493,14 @@
 			// 
 			// numericUpDownCharC
 			// 
+			this.numericUpDownCharC.AccessibleDescription = "Shows the value of the letter C";
 			this.numericUpDownCharC.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharC.Location = new System.Drawing.Point(79, 60);
 			this.numericUpDownCharC.Name = "numericUpDownCharC";
 			this.numericUpDownCharC.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharC.TabIndex = 10;
 			this.numericUpDownCharC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharC, "Shows the value of the letter C");
 			this.numericUpDownCharC.Value = new decimal(new int[] {
             50,
             0,
@@ -466,6 +512,8 @@
 			// 
 			// labelCharC
 			// 
+			this.labelCharC.AccessibleDescription = "Displays information of the letter C";
+			this.labelCharC.AccessibleName = "Label char C";
 			this.labelCharC.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharC.AutoSize = true;
 			this.labelCharC.Location = new System.Drawing.Point(12, 63);
@@ -473,6 +521,7 @@
 			this.labelCharC.Size = new System.Drawing.Size(17, 13);
 			this.labelCharC.TabIndex = 8;
 			this.labelCharC.Text = "C:";
+			this.toolTip.SetToolTip(this.labelCharC, "Displays information of the letter C");
 			this.labelCharC.Enter += new System.EventHandler(this.LabelCharC_Enter);
 			this.labelCharC.Leave += new System.EventHandler(this.LabelCharC_Leave);
 			this.labelCharC.MouseEnter += new System.EventHandler(this.LabelCharC_MouseEnter);
@@ -480,6 +529,7 @@
 			// 
 			// labelPercentCharF
 			// 
+			this.labelPercentCharF.AccessibleDescription = "Shows the percent of the letter F";
 			this.labelPercentCharF.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharF.AutoSize = true;
 			this.labelPercentCharF.Location = new System.Drawing.Point(124, 144);
@@ -487,6 +537,7 @@
 			this.labelPercentCharF.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharF.TabIndex = 23;
 			this.labelPercentCharF.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharF, "Shows the percent of the letter F");
 			this.labelPercentCharF.DoubleClick += new System.EventHandler(this.LabelPercentCharF_DoubleClick);
 			this.labelPercentCharF.Enter += new System.EventHandler(this.LabelPercentCharF_Enter);
 			this.labelPercentCharF.Leave += new System.EventHandler(this.LabelPercentCharF_Leave);
@@ -495,6 +546,8 @@
 			// 
 			// comboBoxCharF
 			// 
+			this.comboBoxCharF.AccessibleDescription = "Indicates whether the letter F is a consonant or a vowel";
+			this.comboBoxCharF.AccessibleName = "Classification of the letter F";
 			this.comboBoxCharF.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharF.FormattingEnabled = true;
@@ -505,6 +558,7 @@
 			this.comboBoxCharF.Name = "comboBoxCharF";
 			this.comboBoxCharF.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharF.TabIndex = 21;
+			this.toolTip.SetToolTip(this.comboBoxCharF, "Indicates whether the letter F is a consonant or a vowel");
 			this.comboBoxCharF.Enter += new System.EventHandler(this.ComboBoxCharF_Enter);
 			this.comboBoxCharF.Leave += new System.EventHandler(this.ComboBoxCharF_Leave);
 			this.comboBoxCharF.MouseEnter += new System.EventHandler(this.ComboBoxCharF_MouseEnter);
@@ -512,12 +566,14 @@
 			// 
 			// numericUpDownCharF
 			// 
+			this.numericUpDownCharF.AccessibleDescription = "Shows the value of the letter F";
 			this.numericUpDownCharF.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharF.Location = new System.Drawing.Point(79, 141);
 			this.numericUpDownCharF.Name = "numericUpDownCharF";
 			this.numericUpDownCharF.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharF.TabIndex = 22;
 			this.numericUpDownCharF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharF, "Shows the value of the letter F");
 			this.numericUpDownCharF.Value = new decimal(new int[] {
             50,
             0,
@@ -529,6 +585,8 @@
 			// 
 			// labelCharF
 			// 
+			this.labelCharF.AccessibleDescription = "Displays information of the letter F";
+			this.labelCharF.AccessibleName = "Label char F";
 			this.labelCharF.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharF.AutoSize = true;
 			this.labelCharF.Location = new System.Drawing.Point(12, 144);
@@ -536,6 +594,7 @@
 			this.labelCharF.Size = new System.Drawing.Size(16, 13);
 			this.labelCharF.TabIndex = 20;
 			this.labelCharF.Text = "F:";
+			this.toolTip.SetToolTip(this.labelCharF, "Displays information of the letter F");
 			this.labelCharF.Enter += new System.EventHandler(this.LabelCharF_Enter);
 			this.labelCharF.Leave += new System.EventHandler(this.LabelCharF_Leave);
 			this.labelCharF.MouseEnter += new System.EventHandler(this.LabelCharF_MouseEnter);
@@ -543,6 +602,7 @@
 			// 
 			// labelPercentCharE
 			// 
+			this.labelPercentCharE.AccessibleDescription = "Shows the percent of the letter E";
 			this.labelPercentCharE.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharE.AutoSize = true;
 			this.labelPercentCharE.Location = new System.Drawing.Point(124, 117);
@@ -550,6 +610,7 @@
 			this.labelPercentCharE.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharE.TabIndex = 19;
 			this.labelPercentCharE.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharE, "Shows the percent of the letter E");
 			this.labelPercentCharE.DoubleClick += new System.EventHandler(this.LabelPercentCharE_DoubleClick);
 			this.labelPercentCharE.Enter += new System.EventHandler(this.LabelPercentCharE_Enter);
 			this.labelPercentCharE.Leave += new System.EventHandler(this.LabelPercentCharE_Leave);
@@ -558,6 +619,8 @@
 			// 
 			// comboBoxCharE
 			// 
+			this.comboBoxCharE.AccessibleDescription = "Indicates whether the letter E is a consonant or a vowel";
+			this.comboBoxCharE.AccessibleName = "Classification of the letter E";
 			this.comboBoxCharE.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharE.FormattingEnabled = true;
@@ -568,6 +631,7 @@
 			this.comboBoxCharE.Name = "comboBoxCharE";
 			this.comboBoxCharE.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharE.TabIndex = 17;
+			this.toolTip.SetToolTip(this.comboBoxCharE, "Indicates whether the letter E is a consonant or a vowel");
 			this.comboBoxCharE.Enter += new System.EventHandler(this.ComboBoxCharE_Enter);
 			this.comboBoxCharE.Leave += new System.EventHandler(this.ComboBoxCharE_Leave);
 			this.comboBoxCharE.MouseEnter += new System.EventHandler(this.ComboBoxCharE_MouseEnter);
@@ -575,12 +639,14 @@
 			// 
 			// numericUpDownCharE
 			// 
+			this.numericUpDownCharE.AccessibleDescription = "Shows the value of the letter E";
 			this.numericUpDownCharE.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharE.Location = new System.Drawing.Point(79, 114);
 			this.numericUpDownCharE.Name = "numericUpDownCharE";
 			this.numericUpDownCharE.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharE.TabIndex = 18;
 			this.numericUpDownCharE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharE, "Shows the value of the letter E");
 			this.numericUpDownCharE.Value = new decimal(new int[] {
             50,
             0,
@@ -592,6 +658,8 @@
 			// 
 			// labelCharE
 			// 
+			this.labelCharE.AccessibleDescription = "Displays information of the letter E";
+			this.labelCharE.AccessibleName = "Label char E";
 			this.labelCharE.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharE.AutoSize = true;
 			this.labelCharE.Location = new System.Drawing.Point(12, 117);
@@ -599,6 +667,7 @@
 			this.labelCharE.Size = new System.Drawing.Size(17, 13);
 			this.labelCharE.TabIndex = 16;
 			this.labelCharE.Text = "E:";
+			this.toolTip.SetToolTip(this.labelCharE, "Displays information of the letter E");
 			this.labelCharE.Enter += new System.EventHandler(this.LabelCharE_Enter);
 			this.labelCharE.Leave += new System.EventHandler(this.LabelCharE_Leave);
 			this.labelCharE.MouseEnter += new System.EventHandler(this.LabelCharE_MouseEnter);
@@ -606,6 +675,7 @@
 			// 
 			// labelPercentCharH
 			// 
+			this.labelPercentCharH.AccessibleDescription = "Shows the percent of the letter H";
 			this.labelPercentCharH.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharH.AutoSize = true;
 			this.labelPercentCharH.Location = new System.Drawing.Point(124, 198);
@@ -613,6 +683,7 @@
 			this.labelPercentCharH.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharH.TabIndex = 31;
 			this.labelPercentCharH.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharH, "Shows the percent of the letter H");
 			this.labelPercentCharH.DoubleClick += new System.EventHandler(this.LabelPercentCharH_DoubleClick);
 			this.labelPercentCharH.Enter += new System.EventHandler(this.LabelPercentCharH_Enter);
 			this.labelPercentCharH.Leave += new System.EventHandler(this.LabelPercentCharH_Leave);
@@ -621,6 +692,8 @@
 			// 
 			// comboBoxCharH
 			// 
+			this.comboBoxCharH.AccessibleDescription = "Indicates whether the letter H is a consonant or a vowel";
+			this.comboBoxCharH.AccessibleName = "Classification of the letter H";
 			this.comboBoxCharH.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharH.FormattingEnabled = true;
@@ -631,6 +704,7 @@
 			this.comboBoxCharH.Name = "comboBoxCharH";
 			this.comboBoxCharH.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharH.TabIndex = 29;
+			this.toolTip.SetToolTip(this.comboBoxCharH, "Indicates whether the letter H is a consonant or a vowel");
 			this.comboBoxCharH.Enter += new System.EventHandler(this.ComboBoxCharH_Enter);
 			this.comboBoxCharH.Leave += new System.EventHandler(this.ComboBoxCharH_Leave);
 			this.comboBoxCharH.MouseEnter += new System.EventHandler(this.ComboBoxCharH_MouseEnter);
@@ -638,12 +712,14 @@
 			// 
 			// numericUpDownCharH
 			// 
+			this.numericUpDownCharH.AccessibleDescription = "Shows the value of the letter H";
 			this.numericUpDownCharH.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharH.Location = new System.Drawing.Point(79, 195);
 			this.numericUpDownCharH.Name = "numericUpDownCharH";
 			this.numericUpDownCharH.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharH.TabIndex = 30;
 			this.numericUpDownCharH.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharH, "Shows the value of the letter H");
 			this.numericUpDownCharH.Value = new decimal(new int[] {
             50,
             0,
@@ -655,6 +731,8 @@
 			// 
 			// labelCharH
 			// 
+			this.labelCharH.AccessibleDescription = "Displays information of the letter H";
+			this.labelCharH.AccessibleName = "Label char H";
 			this.labelCharH.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharH.AutoSize = true;
 			this.labelCharH.Location = new System.Drawing.Point(12, 198);
@@ -662,6 +740,7 @@
 			this.labelCharH.Size = new System.Drawing.Size(18, 13);
 			this.labelCharH.TabIndex = 28;
 			this.labelCharH.Text = "H:";
+			this.toolTip.SetToolTip(this.labelCharH, "Displays information of the letter H");
 			this.labelCharH.Enter += new System.EventHandler(this.LabelCharH_Enter);
 			this.labelCharH.Leave += new System.EventHandler(this.LabelCharH_Leave);
 			this.labelCharH.MouseEnter += new System.EventHandler(this.LabelCharH_MouseEnter);
@@ -669,6 +748,7 @@
 			// 
 			// labelPercentCharG
 			// 
+			this.labelPercentCharG.AccessibleDescription = "Shows the percent of the letter G";
 			this.labelPercentCharG.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharG.AutoSize = true;
 			this.labelPercentCharG.Location = new System.Drawing.Point(124, 171);
@@ -676,6 +756,7 @@
 			this.labelPercentCharG.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharG.TabIndex = 27;
 			this.labelPercentCharG.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharG, "Shows the percent of the letter G");
 			this.labelPercentCharG.DoubleClick += new System.EventHandler(this.LabelPercentCharG_DoubleClick);
 			this.labelPercentCharG.Enter += new System.EventHandler(this.LabelPercentCharG_Enter);
 			this.labelPercentCharG.Leave += new System.EventHandler(this.LabelPercentCharG_Leave);
@@ -684,6 +765,8 @@
 			// 
 			// comboBoxCharG
 			// 
+			this.comboBoxCharG.AccessibleDescription = "Indicates whether the letter G is a consonant or a vowel";
+			this.comboBoxCharG.AccessibleName = "Classification of the letter G";
 			this.comboBoxCharG.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharG.FormattingEnabled = true;
@@ -694,6 +777,7 @@
 			this.comboBoxCharG.Name = "comboBoxCharG";
 			this.comboBoxCharG.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharG.TabIndex = 25;
+			this.toolTip.SetToolTip(this.comboBoxCharG, "Indicates whether the letter G is a consonant or a vowel");
 			this.comboBoxCharG.Enter += new System.EventHandler(this.ComboBoxCharG_Enter);
 			this.comboBoxCharG.Leave += new System.EventHandler(this.ComboBoxCharG_Leave);
 			this.comboBoxCharG.MouseEnter += new System.EventHandler(this.ComboBoxCharG_MouseEnter);
@@ -701,12 +785,14 @@
 			// 
 			// numericUpDownCharG
 			// 
+			this.numericUpDownCharG.AccessibleDescription = "Shows the value of the letter G";
 			this.numericUpDownCharG.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharG.Location = new System.Drawing.Point(79, 168);
 			this.numericUpDownCharG.Name = "numericUpDownCharG";
 			this.numericUpDownCharG.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharG.TabIndex = 26;
 			this.numericUpDownCharG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharG, "Shows the value of the letter G");
 			this.numericUpDownCharG.Value = new decimal(new int[] {
             50,
             0,
@@ -718,6 +804,8 @@
 			// 
 			// labelCharG
 			// 
+			this.labelCharG.AccessibleDescription = "Displays information of the letter G";
+			this.labelCharG.AccessibleName = "Label char G";
 			this.labelCharG.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharG.AutoSize = true;
 			this.labelCharG.Location = new System.Drawing.Point(12, 171);
@@ -725,6 +813,7 @@
 			this.labelCharG.Size = new System.Drawing.Size(18, 13);
 			this.labelCharG.TabIndex = 24;
 			this.labelCharG.Text = "G:";
+			this.toolTip.SetToolTip(this.labelCharG, "Displays information of the letter G");
 			this.labelCharG.Enter += new System.EventHandler(this.LabelCharG_Enter);
 			this.labelCharG.Leave += new System.EventHandler(this.LabelCharG_Leave);
 			this.labelCharG.MouseEnter += new System.EventHandler(this.LabelCharG_MouseEnter);
@@ -732,6 +821,7 @@
 			// 
 			// labelPercentCharI
 			// 
+			this.labelPercentCharI.AccessibleDescription = "Shows the percent of the letter I";
 			this.labelPercentCharI.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharI.AutoSize = true;
 			this.labelPercentCharI.Location = new System.Drawing.Point(124, 225);
@@ -739,6 +829,7 @@
 			this.labelPercentCharI.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharI.TabIndex = 35;
 			this.labelPercentCharI.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharI, "Shows the percent of the letter I");
 			this.labelPercentCharI.DoubleClick += new System.EventHandler(this.LabelPercentCharI_DoubleClick);
 			this.labelPercentCharI.Enter += new System.EventHandler(this.LabelPercentCharI_Enter);
 			this.labelPercentCharI.Leave += new System.EventHandler(this.LabelPercentCharI_Leave);
@@ -747,6 +838,8 @@
 			// 
 			// comboBoxCharI
 			// 
+			this.comboBoxCharI.AccessibleDescription = "Indicates whether the letter I is a consonant or a vowel";
+			this.comboBoxCharI.AccessibleName = "Classification of the letter I";
 			this.comboBoxCharI.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharI.FormattingEnabled = true;
@@ -757,6 +850,7 @@
 			this.comboBoxCharI.Name = "comboBoxCharI";
 			this.comboBoxCharI.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharI.TabIndex = 33;
+			this.toolTip.SetToolTip(this.comboBoxCharI, "Indicates whether the letter I is a consonant or a vowel");
 			this.comboBoxCharI.Enter += new System.EventHandler(this.ComboBoxCharI_Enter);
 			this.comboBoxCharI.Leave += new System.EventHandler(this.ComboBoxCharI_Leave);
 			this.comboBoxCharI.MouseEnter += new System.EventHandler(this.ComboBoxCharI_MouseEnter);
@@ -764,12 +858,14 @@
 			// 
 			// numericUpDownCharI
 			// 
+			this.numericUpDownCharI.AccessibleDescription = "Shows the value of the letter I";
 			this.numericUpDownCharI.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharI.Location = new System.Drawing.Point(79, 222);
 			this.numericUpDownCharI.Name = "numericUpDownCharI";
 			this.numericUpDownCharI.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharI.TabIndex = 34;
 			this.numericUpDownCharI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharI, "Shows the value of the letter I");
 			this.numericUpDownCharI.Value = new decimal(new int[] {
             50,
             0,
@@ -781,6 +877,8 @@
 			// 
 			// labelCharI
 			// 
+			this.labelCharI.AccessibleDescription = "Displays information of the letter I";
+			this.labelCharI.AccessibleName = "Label char I";
 			this.labelCharI.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharI.AutoSize = true;
 			this.labelCharI.Location = new System.Drawing.Point(12, 225);
@@ -788,6 +886,7 @@
 			this.labelCharI.Size = new System.Drawing.Size(13, 13);
 			this.labelCharI.TabIndex = 32;
 			this.labelCharI.Text = "I:";
+			this.toolTip.SetToolTip(this.labelCharI, "Displays information of the letter I");
 			this.labelCharI.Enter += new System.EventHandler(this.LabelCharI_Enter);
 			this.labelCharI.Leave += new System.EventHandler(this.LabelCharI_Leave);
 			this.labelCharI.MouseEnter += new System.EventHandler(this.LabelCharI_MouseEnter);
@@ -795,6 +894,7 @@
 			// 
 			// labelPercentCharR
 			// 
+			this.labelPercentCharR.AccessibleDescription = "Shows the percent of the letter R";
 			this.labelPercentCharR.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharR.AutoSize = true;
 			this.labelPercentCharR.Location = new System.Drawing.Point(291, 225);
@@ -802,6 +902,7 @@
 			this.labelPercentCharR.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharR.TabIndex = 71;
 			this.labelPercentCharR.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharR, "Shows the percent of the letter R");
 			this.labelPercentCharR.DoubleClick += new System.EventHandler(this.LabelPercentCharR_DoubleClick);
 			this.labelPercentCharR.Enter += new System.EventHandler(this.LabelPercentCharR_Enter);
 			this.labelPercentCharR.Leave += new System.EventHandler(this.LabelPercentCharR_Leave);
@@ -810,6 +911,8 @@
 			// 
 			// comboBoxCharR
 			// 
+			this.comboBoxCharR.AccessibleDescription = "Indicates whether the letter R is a consonant or a vowel";
+			this.comboBoxCharR.AccessibleName = "Classification of the letter R";
 			this.comboBoxCharR.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharR.FormattingEnabled = true;
@@ -820,6 +923,7 @@
 			this.comboBoxCharR.Name = "comboBoxCharR";
 			this.comboBoxCharR.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharR.TabIndex = 69;
+			this.toolTip.SetToolTip(this.comboBoxCharR, "Indicates whether the letter R is a consonant or a vowel");
 			this.comboBoxCharR.Enter += new System.EventHandler(this.ComboBoxCharR_Enter);
 			this.comboBoxCharR.Leave += new System.EventHandler(this.ComboBoxCharR_Leave);
 			this.comboBoxCharR.MouseEnter += new System.EventHandler(this.ComboBoxCharR_MouseEnter);
@@ -827,12 +931,14 @@
 			// 
 			// numericUpDownCharR
 			// 
+			this.numericUpDownCharR.AccessibleDescription = "Shows the value of the letter R";
 			this.numericUpDownCharR.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharR.Location = new System.Drawing.Point(246, 222);
 			this.numericUpDownCharR.Name = "numericUpDownCharR";
 			this.numericUpDownCharR.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharR.TabIndex = 70;
 			this.numericUpDownCharR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharR, "Shows the value of the letter R");
 			this.numericUpDownCharR.Value = new decimal(new int[] {
             50,
             0,
@@ -844,6 +950,8 @@
 			// 
 			// labelCharR
 			// 
+			this.labelCharR.AccessibleDescription = "Displays information of the letter R";
+			this.labelCharR.AccessibleName = "Label char R";
 			this.labelCharR.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharR.AutoSize = true;
 			this.labelCharR.Location = new System.Drawing.Point(179, 225);
@@ -851,6 +959,7 @@
 			this.labelCharR.Size = new System.Drawing.Size(18, 13);
 			this.labelCharR.TabIndex = 68;
 			this.labelCharR.Text = "R:";
+			this.toolTip.SetToolTip(this.labelCharR, "Displays information of the letter R");
 			this.labelCharR.Enter += new System.EventHandler(this.LabelCharR_Enter);
 			this.labelCharR.Leave += new System.EventHandler(this.LabelCharR_Leave);
 			this.labelCharR.MouseEnter += new System.EventHandler(this.LabelCharR_MouseEnter);
@@ -858,6 +967,7 @@
 			// 
 			// labelPercentCharQ
 			// 
+			this.labelPercentCharQ.AccessibleDescription = "Shows the percent of the letter Q";
 			this.labelPercentCharQ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharQ.AutoSize = true;
 			this.labelPercentCharQ.Location = new System.Drawing.Point(291, 198);
@@ -865,6 +975,7 @@
 			this.labelPercentCharQ.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharQ.TabIndex = 67;
 			this.labelPercentCharQ.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharQ, "Shows the percent of the letter Q");
 			this.labelPercentCharQ.DoubleClick += new System.EventHandler(this.LabelPercentCharQ_DoubleClick);
 			this.labelPercentCharQ.Enter += new System.EventHandler(this.LabelPercentCharQ_Enter);
 			this.labelPercentCharQ.Leave += new System.EventHandler(this.LabelPercentCharQ_Leave);
@@ -873,6 +984,8 @@
 			// 
 			// comboBoxCharQ
 			// 
+			this.comboBoxCharQ.AccessibleDescription = "Indicates whether the letter Q is a consonant or a vowel";
+			this.comboBoxCharQ.AccessibleName = "Classification of the letter Q";
 			this.comboBoxCharQ.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharQ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharQ.FormattingEnabled = true;
@@ -883,6 +996,7 @@
 			this.comboBoxCharQ.Name = "comboBoxCharQ";
 			this.comboBoxCharQ.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharQ.TabIndex = 65;
+			this.toolTip.SetToolTip(this.comboBoxCharQ, "Indicates whether the letter Q is a consonant or a vowel");
 			this.comboBoxCharQ.Enter += new System.EventHandler(this.ComboBoxCharQ_Enter);
 			this.comboBoxCharQ.Leave += new System.EventHandler(this.ComboBoxCharQ_Leave);
 			this.comboBoxCharQ.MouseEnter += new System.EventHandler(this.ComboBoxCharQ_MouseEnter);
@@ -890,12 +1004,14 @@
 			// 
 			// numericUpDownCharQ
 			// 
+			this.numericUpDownCharQ.AccessibleDescription = "Shows the value of the letter Q";
 			this.numericUpDownCharQ.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharQ.Location = new System.Drawing.Point(246, 195);
 			this.numericUpDownCharQ.Name = "numericUpDownCharQ";
 			this.numericUpDownCharQ.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharQ.TabIndex = 66;
 			this.numericUpDownCharQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharQ, "Shows the value of the letter Q");
 			this.numericUpDownCharQ.Value = new decimal(new int[] {
             50,
             0,
@@ -907,6 +1023,8 @@
 			// 
 			// labelCharQ
 			// 
+			this.labelCharQ.AccessibleDescription = "Displays information of the letter Q";
+			this.labelCharQ.AccessibleName = "Label char Q";
 			this.labelCharQ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharQ.AutoSize = true;
 			this.labelCharQ.Location = new System.Drawing.Point(179, 198);
@@ -914,6 +1032,7 @@
 			this.labelCharQ.Size = new System.Drawing.Size(18, 13);
 			this.labelCharQ.TabIndex = 64;
 			this.labelCharQ.Text = "Q:";
+			this.toolTip.SetToolTip(this.labelCharQ, "Displays information of the letter Q");
 			this.labelCharQ.Enter += new System.EventHandler(this.LabelCharQ_Enter);
 			this.labelCharQ.Leave += new System.EventHandler(this.LabelCharQ_Leave);
 			this.labelCharQ.MouseEnter += new System.EventHandler(this.LabelCharQ_MouseEnter);
@@ -921,6 +1040,7 @@
 			// 
 			// labelPercentCharP
 			// 
+			this.labelPercentCharP.AccessibleDescription = "Shows the percent of the letter P";
 			this.labelPercentCharP.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharP.AutoSize = true;
 			this.labelPercentCharP.Location = new System.Drawing.Point(291, 171);
@@ -928,6 +1048,7 @@
 			this.labelPercentCharP.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharP.TabIndex = 63;
 			this.labelPercentCharP.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharP, "Shows the percent of the letter P");
 			this.labelPercentCharP.DoubleClick += new System.EventHandler(this.LabelPercentCharP_DoubleClick);
 			this.labelPercentCharP.Enter += new System.EventHandler(this.LabelPercentCharP_Enter);
 			this.labelPercentCharP.Leave += new System.EventHandler(this.LabelPercentCharP_Leave);
@@ -936,6 +1057,8 @@
 			// 
 			// comboBoxCharP
 			// 
+			this.comboBoxCharP.AccessibleDescription = "Indicates whether the letter P is a consonant or a vowel";
+			this.comboBoxCharP.AccessibleName = "Classification of the letter P";
 			this.comboBoxCharP.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharP.FormattingEnabled = true;
@@ -946,6 +1069,7 @@
 			this.comboBoxCharP.Name = "comboBoxCharP";
 			this.comboBoxCharP.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharP.TabIndex = 61;
+			this.toolTip.SetToolTip(this.comboBoxCharP, "Indicates whether the letter P is a consonant or a vowel");
 			this.comboBoxCharP.Enter += new System.EventHandler(this.ComboBoxCharP_Enter);
 			this.comboBoxCharP.Leave += new System.EventHandler(this.ComboBoxCharP_Leave);
 			this.comboBoxCharP.MouseEnter += new System.EventHandler(this.ComboBoxCharP_MouseEnter);
@@ -953,12 +1077,14 @@
 			// 
 			// numericUpDownCharP
 			// 
+			this.numericUpDownCharP.AccessibleDescription = "Shows the value of the letter P";
 			this.numericUpDownCharP.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharP.Location = new System.Drawing.Point(246, 168);
 			this.numericUpDownCharP.Name = "numericUpDownCharP";
 			this.numericUpDownCharP.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharP.TabIndex = 62;
 			this.numericUpDownCharP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharP, "Shows the value of the letter P");
 			this.numericUpDownCharP.Value = new decimal(new int[] {
             50,
             0,
@@ -970,6 +1096,8 @@
 			// 
 			// labelCharP
 			// 
+			this.labelCharP.AccessibleDescription = "Displays information of the letter P";
+			this.labelCharP.AccessibleName = "Label char P";
 			this.labelCharP.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharP.AutoSize = true;
 			this.labelCharP.Location = new System.Drawing.Point(179, 171);
@@ -977,6 +1105,7 @@
 			this.labelCharP.Size = new System.Drawing.Size(17, 13);
 			this.labelCharP.TabIndex = 60;
 			this.labelCharP.Text = "P:";
+			this.toolTip.SetToolTip(this.labelCharP, "Displays information of the letter P");
 			this.labelCharP.Enter += new System.EventHandler(this.LabelCharP_Enter);
 			this.labelCharP.Leave += new System.EventHandler(this.LabelCharP_Leave);
 			this.labelCharP.MouseEnter += new System.EventHandler(this.LabelCharP_MouseEnter);
@@ -984,6 +1113,7 @@
 			// 
 			// labelPercentCharO
 			// 
+			this.labelPercentCharO.AccessibleDescription = "Shows the percent of the letter O";
 			this.labelPercentCharO.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharO.AutoSize = true;
 			this.labelPercentCharO.Location = new System.Drawing.Point(291, 144);
@@ -991,6 +1121,7 @@
 			this.labelPercentCharO.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharO.TabIndex = 59;
 			this.labelPercentCharO.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharO, "Shows the percent of the letter O");
 			this.labelPercentCharO.DoubleClick += new System.EventHandler(this.LabelPercentCharO_DoubleClick);
 			this.labelPercentCharO.Enter += new System.EventHandler(this.LabelPercentCharO_Enter);
 			this.labelPercentCharO.Leave += new System.EventHandler(this.LabelPercentCharO_Leave);
@@ -999,6 +1130,8 @@
 			// 
 			// comboBoxCharO
 			// 
+			this.comboBoxCharO.AccessibleDescription = "Indicates whether the letter O is a consonant or a vowel";
+			this.comboBoxCharO.AccessibleName = "Classification of the letter O";
 			this.comboBoxCharO.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharO.FormattingEnabled = true;
@@ -1009,6 +1142,7 @@
 			this.comboBoxCharO.Name = "comboBoxCharO";
 			this.comboBoxCharO.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharO.TabIndex = 57;
+			this.toolTip.SetToolTip(this.comboBoxCharO, "Indicates whether the letter O is a consonant or a vowel");
 			this.comboBoxCharO.Enter += new System.EventHandler(this.ComboBoxCharO_Enter);
 			this.comboBoxCharO.Leave += new System.EventHandler(this.ComboBoxCharO_Leave);
 			this.comboBoxCharO.MouseEnter += new System.EventHandler(this.ComboBoxCharO_MouseEnter);
@@ -1016,12 +1150,14 @@
 			// 
 			// numericUpDownCharO
 			// 
+			this.numericUpDownCharO.AccessibleDescription = "Shows the value of the letter O";
 			this.numericUpDownCharO.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharO.Location = new System.Drawing.Point(246, 141);
 			this.numericUpDownCharO.Name = "numericUpDownCharO";
 			this.numericUpDownCharO.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharO.TabIndex = 58;
 			this.numericUpDownCharO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharO, "Shows the value of the letter O");
 			this.numericUpDownCharO.Value = new decimal(new int[] {
             50,
             0,
@@ -1033,6 +1169,8 @@
 			// 
 			// labelCharO
 			// 
+			this.labelCharO.AccessibleDescription = "Displays information of the letter O";
+			this.labelCharO.AccessibleName = "Label char O";
 			this.labelCharO.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharO.AutoSize = true;
 			this.labelCharO.Location = new System.Drawing.Point(179, 144);
@@ -1040,6 +1178,7 @@
 			this.labelCharO.Size = new System.Drawing.Size(18, 13);
 			this.labelCharO.TabIndex = 56;
 			this.labelCharO.Text = "O:";
+			this.toolTip.SetToolTip(this.labelCharO, "Displays information of the letter O");
 			this.labelCharO.Enter += new System.EventHandler(this.LabelCharO_Enter);
 			this.labelCharO.Leave += new System.EventHandler(this.LabelCharO_Leave);
 			this.labelCharO.MouseEnter += new System.EventHandler(this.LabelCharO_MouseEnter);
@@ -1047,6 +1186,7 @@
 			// 
 			// labelPercentCharN
 			// 
+			this.labelPercentCharN.AccessibleDescription = "Shows the percent of the letter N";
 			this.labelPercentCharN.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharN.AutoSize = true;
 			this.labelPercentCharN.Location = new System.Drawing.Point(291, 117);
@@ -1054,6 +1194,7 @@
 			this.labelPercentCharN.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharN.TabIndex = 55;
 			this.labelPercentCharN.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharN, "Shows the percent of the letter N");
 			this.labelPercentCharN.DoubleClick += new System.EventHandler(this.LabelPercentCharN_DoubleClick);
 			this.labelPercentCharN.Enter += new System.EventHandler(this.LabelPercentCharN_Enter);
 			this.labelPercentCharN.Leave += new System.EventHandler(this.LabelPercentCharN_Leave);
@@ -1062,6 +1203,8 @@
 			// 
 			// comboBoxCharN
 			// 
+			this.comboBoxCharN.AccessibleDescription = "Indicates whether the letter N is a consonant or a vowel";
+			this.comboBoxCharN.AccessibleName = "Classification of the letter N";
 			this.comboBoxCharN.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharN.FormattingEnabled = true;
@@ -1072,6 +1215,7 @@
 			this.comboBoxCharN.Name = "comboBoxCharN";
 			this.comboBoxCharN.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharN.TabIndex = 53;
+			this.toolTip.SetToolTip(this.comboBoxCharN, "Indicates whether the letter N is a consonant or a vowel");
 			this.comboBoxCharN.Enter += new System.EventHandler(this.ComboBoxCharN_Enter);
 			this.comboBoxCharN.Leave += new System.EventHandler(this.ComboBoxCharN_Leave);
 			this.comboBoxCharN.MouseEnter += new System.EventHandler(this.ComboBoxCharN_MouseEnter);
@@ -1079,12 +1223,14 @@
 			// 
 			// numericUpDownCharN
 			// 
+			this.numericUpDownCharN.AccessibleDescription = "Shows the value of the letter N";
 			this.numericUpDownCharN.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharN.Location = new System.Drawing.Point(246, 114);
 			this.numericUpDownCharN.Name = "numericUpDownCharN";
 			this.numericUpDownCharN.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharN.TabIndex = 54;
 			this.numericUpDownCharN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharN, "Shows the value of the letter N");
 			this.numericUpDownCharN.Value = new decimal(new int[] {
             50,
             0,
@@ -1096,6 +1242,8 @@
 			// 
 			// labelCharN
 			// 
+			this.labelCharN.AccessibleDescription = "Displays information of the letter N";
+			this.labelCharN.AccessibleName = "Label char N";
 			this.labelCharN.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharN.AutoSize = true;
 			this.labelCharN.Location = new System.Drawing.Point(179, 117);
@@ -1103,6 +1251,7 @@
 			this.labelCharN.Size = new System.Drawing.Size(18, 13);
 			this.labelCharN.TabIndex = 52;
 			this.labelCharN.Text = "N:";
+			this.toolTip.SetToolTip(this.labelCharN, "Displays information of the letter N");
 			this.labelCharN.Enter += new System.EventHandler(this.LabelCharN_Enter);
 			this.labelCharN.Leave += new System.EventHandler(this.LabelCharN_Leave);
 			this.labelCharN.MouseEnter += new System.EventHandler(this.LabelCharN_MouseEnter);
@@ -1110,6 +1259,7 @@
 			// 
 			// labelPercentCharM
 			// 
+			this.labelPercentCharM.AccessibleDescription = "Shows the percent of the letter M";
 			this.labelPercentCharM.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharM.AutoSize = true;
 			this.labelPercentCharM.Location = new System.Drawing.Point(291, 90);
@@ -1117,6 +1267,7 @@
 			this.labelPercentCharM.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharM.TabIndex = 51;
 			this.labelPercentCharM.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharM, "Shows the percent of the letter M");
 			this.labelPercentCharM.DoubleClick += new System.EventHandler(this.LabelPercentCharM_DoubleClick);
 			this.labelPercentCharM.Enter += new System.EventHandler(this.LabelPercentCharM_Enter);
 			this.labelPercentCharM.Leave += new System.EventHandler(this.LabelPercentCharM_Leave);
@@ -1125,6 +1276,8 @@
 			// 
 			// comboBoxCharM
 			// 
+			this.comboBoxCharM.AccessibleDescription = "Indicates whether the letter M is a consonant or a vowel";
+			this.comboBoxCharM.AccessibleName = "Classification of the letter M";
 			this.comboBoxCharM.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharM.FormattingEnabled = true;
@@ -1135,6 +1288,7 @@
 			this.comboBoxCharM.Name = "comboBoxCharM";
 			this.comboBoxCharM.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharM.TabIndex = 49;
+			this.toolTip.SetToolTip(this.comboBoxCharM, "Indicates whether the letter M is a consonant or a vowel");
 			this.comboBoxCharM.Enter += new System.EventHandler(this.ComboBoxCharM_Enter);
 			this.comboBoxCharM.Leave += new System.EventHandler(this.ComboBoxCharM_Leave);
 			this.comboBoxCharM.MouseEnter += new System.EventHandler(this.ComboBoxCharM_MouseEnter);
@@ -1142,12 +1296,14 @@
 			// 
 			// numericUpDownCharM
 			// 
+			this.numericUpDownCharM.AccessibleDescription = "Shows the value of the letter M";
 			this.numericUpDownCharM.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharM.Location = new System.Drawing.Point(246, 87);
 			this.numericUpDownCharM.Name = "numericUpDownCharM";
 			this.numericUpDownCharM.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharM.TabIndex = 50;
 			this.numericUpDownCharM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharM, "Shows the value of the letter M");
 			this.numericUpDownCharM.Value = new decimal(new int[] {
             50,
             0,
@@ -1159,6 +1315,8 @@
 			// 
 			// labelCharM
 			// 
+			this.labelCharM.AccessibleDescription = "Displays information of the letter M";
+			this.labelCharM.AccessibleName = "Label char M";
 			this.labelCharM.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharM.AutoSize = true;
 			this.labelCharM.Location = new System.Drawing.Point(179, 90);
@@ -1166,6 +1324,7 @@
 			this.labelCharM.Size = new System.Drawing.Size(19, 13);
 			this.labelCharM.TabIndex = 48;
 			this.labelCharM.Text = "M:";
+			this.toolTip.SetToolTip(this.labelCharM, "Displays information of the letter M");
 			this.labelCharM.Enter += new System.EventHandler(this.LabelCharM_Enter);
 			this.labelCharM.Leave += new System.EventHandler(this.LabelCharM_Leave);
 			this.labelCharM.MouseEnter += new System.EventHandler(this.LabelCharM_MouseEnter);
@@ -1173,6 +1332,7 @@
 			// 
 			// labelPercentCharL
 			// 
+			this.labelPercentCharL.AccessibleDescription = "Shows the percent of the letter L";
 			this.labelPercentCharL.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharL.AutoSize = true;
 			this.labelPercentCharL.Location = new System.Drawing.Point(291, 63);
@@ -1180,6 +1340,7 @@
 			this.labelPercentCharL.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharL.TabIndex = 47;
 			this.labelPercentCharL.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharL, "Shows the percent of the letter L");
 			this.labelPercentCharL.DoubleClick += new System.EventHandler(this.LabelPercentCharL_DoubleClick);
 			this.labelPercentCharL.Enter += new System.EventHandler(this.LabelPercentCharL_Enter);
 			this.labelPercentCharL.Leave += new System.EventHandler(this.LabelPercentCharL_Leave);
@@ -1188,6 +1349,8 @@
 			// 
 			// comboBoxCharL
 			// 
+			this.comboBoxCharL.AccessibleDescription = "Indicates whether the letter L is a consonant or a vowel";
+			this.comboBoxCharL.AccessibleName = "Classification of the letter L";
 			this.comboBoxCharL.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharL.FormattingEnabled = true;
@@ -1198,6 +1361,7 @@
 			this.comboBoxCharL.Name = "comboBoxCharL";
 			this.comboBoxCharL.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharL.TabIndex = 45;
+			this.toolTip.SetToolTip(this.comboBoxCharL, "Indicates whether the letter L is a consonant or a vowel");
 			this.comboBoxCharL.Enter += new System.EventHandler(this.ComboBoxCharL_Enter);
 			this.comboBoxCharL.Leave += new System.EventHandler(this.ComboBoxCharL_Leave);
 			this.comboBoxCharL.MouseEnter += new System.EventHandler(this.ComboBoxCharL_MouseEnter);
@@ -1205,12 +1369,14 @@
 			// 
 			// numericUpDownCharL
 			// 
+			this.numericUpDownCharL.AccessibleDescription = "Shows the value of the letter L";
 			this.numericUpDownCharL.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharL.Location = new System.Drawing.Point(246, 60);
 			this.numericUpDownCharL.Name = "numericUpDownCharL";
 			this.numericUpDownCharL.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharL.TabIndex = 46;
 			this.numericUpDownCharL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharL, "Shows the value of the letter L");
 			this.numericUpDownCharL.Value = new decimal(new int[] {
             50,
             0,
@@ -1222,6 +1388,8 @@
 			// 
 			// labelCharL
 			// 
+			this.labelCharL.AccessibleDescription = "Displays information of the letter L";
+			this.labelCharL.AccessibleName = "Label char L";
 			this.labelCharL.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharL.AutoSize = true;
 			this.labelCharL.Location = new System.Drawing.Point(179, 63);
@@ -1229,6 +1397,7 @@
 			this.labelCharL.Size = new System.Drawing.Size(16, 13);
 			this.labelCharL.TabIndex = 44;
 			this.labelCharL.Text = "L:";
+			this.toolTip.SetToolTip(this.labelCharL, "Displays information of the letter L");
 			this.labelCharL.Enter += new System.EventHandler(this.LabelCharL_Enter);
 			this.labelCharL.Leave += new System.EventHandler(this.LabelCharL_Leave);
 			this.labelCharL.MouseEnter += new System.EventHandler(this.LabelCharL_MouseEnter);
@@ -1236,6 +1405,7 @@
 			// 
 			// labelPercentCharK
 			// 
+			this.labelPercentCharK.AccessibleDescription = "Shows the percent of the letter K";
 			this.labelPercentCharK.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharK.AutoSize = true;
 			this.labelPercentCharK.Location = new System.Drawing.Point(291, 36);
@@ -1243,6 +1413,7 @@
 			this.labelPercentCharK.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharK.TabIndex = 43;
 			this.labelPercentCharK.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharK, "Shows the percent of the letter K");
 			this.labelPercentCharK.DoubleClick += new System.EventHandler(this.LabelPercentCharK_DoubleClick);
 			this.labelPercentCharK.Enter += new System.EventHandler(this.LabelPercentCharK_Enter);
 			this.labelPercentCharK.Leave += new System.EventHandler(this.LabelPercentCharK_Leave);
@@ -1251,6 +1422,8 @@
 			// 
 			// comboBoxCharK
 			// 
+			this.comboBoxCharK.AccessibleDescription = "Indicates whether the letter K is a consonant or a vowel";
+			this.comboBoxCharK.AccessibleName = "Classification of the letter K";
 			this.comboBoxCharK.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharK.FormattingEnabled = true;
@@ -1261,6 +1434,7 @@
 			this.comboBoxCharK.Name = "comboBoxCharK";
 			this.comboBoxCharK.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharK.TabIndex = 41;
+			this.toolTip.SetToolTip(this.comboBoxCharK, "Indicates whether the letter K is a consonant or a vowel");
 			this.comboBoxCharK.Enter += new System.EventHandler(this.ComboBoxCharK_Enter);
 			this.comboBoxCharK.Leave += new System.EventHandler(this.ComboBoxCharK_Leave);
 			this.comboBoxCharK.MouseEnter += new System.EventHandler(this.ComboBoxCharK_MouseEnter);
@@ -1268,12 +1442,14 @@
 			// 
 			// numericUpDownCharK
 			// 
+			this.numericUpDownCharK.AccessibleDescription = "Shows the value of the letter K";
 			this.numericUpDownCharK.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharK.Location = new System.Drawing.Point(246, 33);
 			this.numericUpDownCharK.Name = "numericUpDownCharK";
 			this.numericUpDownCharK.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharK.TabIndex = 42;
 			this.numericUpDownCharK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharK, "Shows the value of the letter K");
 			this.numericUpDownCharK.Value = new decimal(new int[] {
             50,
             0,
@@ -1285,6 +1461,8 @@
 			// 
 			// labelCharK
 			// 
+			this.labelCharK.AccessibleDescription = "Displays information of the letter K";
+			this.labelCharK.AccessibleName = "Label char K";
 			this.labelCharK.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharK.AutoSize = true;
 			this.labelCharK.Location = new System.Drawing.Point(179, 36);
@@ -1292,6 +1470,7 @@
 			this.labelCharK.Size = new System.Drawing.Size(17, 13);
 			this.labelCharK.TabIndex = 40;
 			this.labelCharK.Text = "K:";
+			this.toolTip.SetToolTip(this.labelCharK, "Displays information of the letter K");
 			this.labelCharK.Enter += new System.EventHandler(this.LabelCharK_Enter);
 			this.labelCharK.Leave += new System.EventHandler(this.LabelCharK_Leave);
 			this.labelCharK.MouseEnter += new System.EventHandler(this.LabelCharK_MouseEnter);
@@ -1299,6 +1478,7 @@
 			// 
 			// labelPercentCharJ
 			// 
+			this.labelPercentCharJ.AccessibleDescription = "Shows the percent of the letter J";
 			this.labelPercentCharJ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharJ.AutoSize = true;
 			this.labelPercentCharJ.Location = new System.Drawing.Point(291, 9);
@@ -1306,6 +1486,7 @@
 			this.labelPercentCharJ.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharJ.TabIndex = 39;
 			this.labelPercentCharJ.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharJ, "Shows the percent of the letter J");
 			this.labelPercentCharJ.DoubleClick += new System.EventHandler(this.LabelPercentCharJ_DoubleClick);
 			this.labelPercentCharJ.Enter += new System.EventHandler(this.LabelPercentCharJ_Enter);
 			this.labelPercentCharJ.Leave += new System.EventHandler(this.LabelPercentCharJ_Leave);
@@ -1314,6 +1495,8 @@
 			// 
 			// comboBoxCharJ
 			// 
+			this.comboBoxCharJ.AccessibleDescription = "Indicates whether the letter J is a consonant or a vowel";
+			this.comboBoxCharJ.AccessibleName = "Classification of the letter J";
 			this.comboBoxCharJ.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharJ.FormattingEnabled = true;
@@ -1324,6 +1507,7 @@
 			this.comboBoxCharJ.Name = "comboBoxCharJ";
 			this.comboBoxCharJ.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharJ.TabIndex = 37;
+			this.toolTip.SetToolTip(this.comboBoxCharJ, "Indicates whether the letter J is a consonant or a vowel");
 			this.comboBoxCharJ.Enter += new System.EventHandler(this.ComboBoxCharJ_Enter);
 			this.comboBoxCharJ.Leave += new System.EventHandler(this.ComboBoxCharJ_Leave);
 			this.comboBoxCharJ.MouseEnter += new System.EventHandler(this.ComboBoxCharJ_MouseEnter);
@@ -1331,12 +1515,14 @@
 			// 
 			// numericUpDownCharJ
 			// 
+			this.numericUpDownCharJ.AccessibleDescription = "Shows the value of the letter J";
 			this.numericUpDownCharJ.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharJ.Location = new System.Drawing.Point(246, 6);
 			this.numericUpDownCharJ.Name = "numericUpDownCharJ";
 			this.numericUpDownCharJ.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharJ.TabIndex = 38;
 			this.numericUpDownCharJ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharJ, "Shows the value of the letter J");
 			this.numericUpDownCharJ.Value = new decimal(new int[] {
             50,
             0,
@@ -1348,6 +1534,8 @@
 			// 
 			// labelCharJ
 			// 
+			this.labelCharJ.AccessibleDescription = "Displays information of the letter J";
+			this.labelCharJ.AccessibleName = "Label char J";
 			this.labelCharJ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharJ.AutoSize = true;
 			this.labelCharJ.Location = new System.Drawing.Point(179, 9);
@@ -1355,6 +1543,7 @@
 			this.labelCharJ.Size = new System.Drawing.Size(15, 13);
 			this.labelCharJ.TabIndex = 36;
 			this.labelCharJ.Text = "J:";
+			this.toolTip.SetToolTip(this.labelCharJ, "Displays information of the letter J");
 			this.labelCharJ.Enter += new System.EventHandler(this.LabelCharJ_Enter);
 			this.labelCharJ.Leave += new System.EventHandler(this.LabelCharJ_Leave);
 			this.labelCharJ.MouseEnter += new System.EventHandler(this.LabelCharJ_MouseEnter);
@@ -1362,6 +1551,7 @@
 			// 
 			// labelPercentCharZ
 			// 
+			this.labelPercentCharZ.AccessibleDescription = "Shows the percent of the letter Z";
 			this.labelPercentCharZ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharZ.AutoSize = true;
 			this.labelPercentCharZ.Location = new System.Drawing.Point(457, 197);
@@ -1369,6 +1559,7 @@
 			this.labelPercentCharZ.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharZ.TabIndex = 103;
 			this.labelPercentCharZ.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharZ, "Shows the percent of the letter Z");
 			this.labelPercentCharZ.DoubleClick += new System.EventHandler(this.LabelPercentCharZ_DoubleClick);
 			this.labelPercentCharZ.Enter += new System.EventHandler(this.LabelPercentCharZ_Enter);
 			this.labelPercentCharZ.Leave += new System.EventHandler(this.LabelPercentCharZ_Leave);
@@ -1377,6 +1568,8 @@
 			// 
 			// comboBoxCharZ
 			// 
+			this.comboBoxCharZ.AccessibleDescription = "Indicates whether the letter Z is a consonant or a vowel";
+			this.comboBoxCharZ.AccessibleName = "Classification of the letter Z";
 			this.comboBoxCharZ.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharZ.FormattingEnabled = true;
@@ -1387,6 +1580,7 @@
 			this.comboBoxCharZ.Name = "comboBoxCharZ";
 			this.comboBoxCharZ.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharZ.TabIndex = 101;
+			this.toolTip.SetToolTip(this.comboBoxCharZ, "Indicates whether the letter Z is a consonant or a vowel");
 			this.comboBoxCharZ.Enter += new System.EventHandler(this.ComboBoxCharZ_Enter);
 			this.comboBoxCharZ.Leave += new System.EventHandler(this.ComboBoxCharZ_Leave);
 			this.comboBoxCharZ.MouseEnter += new System.EventHandler(this.ComboBoxCharZ_MouseEnter);
@@ -1394,12 +1588,14 @@
 			// 
 			// numericUpDownCharZ
 			// 
+			this.numericUpDownCharZ.AccessibleDescription = "Shows the value of the letter Z";
 			this.numericUpDownCharZ.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharZ.Location = new System.Drawing.Point(412, 194);
 			this.numericUpDownCharZ.Name = "numericUpDownCharZ";
 			this.numericUpDownCharZ.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharZ.TabIndex = 102;
 			this.numericUpDownCharZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharZ, "Shows the value of the letter Z");
 			this.numericUpDownCharZ.Value = new decimal(new int[] {
             50,
             0,
@@ -1411,6 +1607,8 @@
 			// 
 			// labelCharZ
 			// 
+			this.labelCharZ.AccessibleDescription = "Displays information of the letter Z";
+			this.labelCharZ.AccessibleName = "Label char Z";
 			this.labelCharZ.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharZ.AutoSize = true;
 			this.labelCharZ.Location = new System.Drawing.Point(345, 197);
@@ -1418,6 +1616,7 @@
 			this.labelCharZ.Size = new System.Drawing.Size(17, 13);
 			this.labelCharZ.TabIndex = 100;
 			this.labelCharZ.Text = "Z:";
+			this.toolTip.SetToolTip(this.labelCharZ, "Displays information of the letter Z");
 			this.labelCharZ.Enter += new System.EventHandler(this.LabelCharZ_Enter);
 			this.labelCharZ.Leave += new System.EventHandler(this.LabelCharZ_Leave);
 			this.labelCharZ.MouseEnter += new System.EventHandler(this.LabelCharZ_MouseEnter);
@@ -1425,6 +1624,7 @@
 			// 
 			// labelPercentCharY
 			// 
+			this.labelPercentCharY.AccessibleDescription = "Shows the percent of the letter Y";
 			this.labelPercentCharY.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharY.AutoSize = true;
 			this.labelPercentCharY.Location = new System.Drawing.Point(457, 170);
@@ -1432,6 +1632,7 @@
 			this.labelPercentCharY.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharY.TabIndex = 99;
 			this.labelPercentCharY.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharY, "Shows the percent of the letter Y");
 			this.labelPercentCharY.DoubleClick += new System.EventHandler(this.LabelPercentCharY_DoubleClick);
 			this.labelPercentCharY.Enter += new System.EventHandler(this.LabelPercentCharY_Enter);
 			this.labelPercentCharY.Leave += new System.EventHandler(this.LabelPercentCharY_Leave);
@@ -1440,6 +1641,8 @@
 			// 
 			// comboBoxCharY
 			// 
+			this.comboBoxCharY.AccessibleDescription = "Indicates whether the letter Y is a consonant or a vowel";
+			this.comboBoxCharY.AccessibleName = "Classification of the letter Y";
 			this.comboBoxCharY.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharY.FormattingEnabled = true;
@@ -1450,6 +1653,7 @@
 			this.comboBoxCharY.Name = "comboBoxCharY";
 			this.comboBoxCharY.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharY.TabIndex = 97;
+			this.toolTip.SetToolTip(this.comboBoxCharY, "Indicates whether the letter Y is a consonant or a vowel");
 			this.comboBoxCharY.Enter += new System.EventHandler(this.ComboBoxCharY_Enter);
 			this.comboBoxCharY.Leave += new System.EventHandler(this.ComboBoxCharY_Leave);
 			this.comboBoxCharY.MouseEnter += new System.EventHandler(this.ComboBoxCharY_MouseEnter);
@@ -1457,12 +1661,14 @@
 			// 
 			// numericUpDownCharY
 			// 
+			this.numericUpDownCharY.AccessibleDescription = "Shows the value of the letter Y";
 			this.numericUpDownCharY.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharY.Location = new System.Drawing.Point(413, 167);
 			this.numericUpDownCharY.Name = "numericUpDownCharY";
 			this.numericUpDownCharY.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharY.TabIndex = 98;
 			this.numericUpDownCharY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharY, "Shows the value of the letter Y");
 			this.numericUpDownCharY.Value = new decimal(new int[] {
             50,
             0,
@@ -1474,6 +1680,8 @@
 			// 
 			// labelCharY
 			// 
+			this.labelCharY.AccessibleDescription = "Displays information of the letter Y";
+			this.labelCharY.AccessibleName = "Label char Y";
 			this.labelCharY.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharY.AutoSize = true;
 			this.labelCharY.Location = new System.Drawing.Point(345, 170);
@@ -1481,6 +1689,7 @@
 			this.labelCharY.Size = new System.Drawing.Size(17, 13);
 			this.labelCharY.TabIndex = 96;
 			this.labelCharY.Text = "Y:";
+			this.toolTip.SetToolTip(this.labelCharY, "Displays information of the letter Y");
 			this.labelCharY.Enter += new System.EventHandler(this.LabelCharY_Enter);
 			this.labelCharY.Leave += new System.EventHandler(this.LabelCharY_Leave);
 			this.labelCharY.MouseEnter += new System.EventHandler(this.LabelCharY_MouseEnter);
@@ -1488,6 +1697,7 @@
 			// 
 			// labelPercentCharX
 			// 
+			this.labelPercentCharX.AccessibleDescription = "Shows the percent of the letter X";
 			this.labelPercentCharX.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharX.AutoSize = true;
 			this.labelPercentCharX.Location = new System.Drawing.Point(457, 143);
@@ -1495,6 +1705,7 @@
 			this.labelPercentCharX.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharX.TabIndex = 95;
 			this.labelPercentCharX.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharX, "Shows the percent of the letter X");
 			this.labelPercentCharX.DoubleClick += new System.EventHandler(this.LabelPercentCharX_DoubleClick);
 			this.labelPercentCharX.Enter += new System.EventHandler(this.LabelPercentCharX_Enter);
 			this.labelPercentCharX.Leave += new System.EventHandler(this.LabelPercentCharX_Leave);
@@ -1503,6 +1714,8 @@
 			// 
 			// comboBoxCharX
 			// 
+			this.comboBoxCharX.AccessibleDescription = "Indicates whether the letter X is a consonant or a vowel";
+			this.comboBoxCharX.AccessibleName = "Classification of the letter X";
 			this.comboBoxCharX.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharX.FormattingEnabled = true;
@@ -1513,6 +1726,7 @@
 			this.comboBoxCharX.Name = "comboBoxCharX";
 			this.comboBoxCharX.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharX.TabIndex = 93;
+			this.toolTip.SetToolTip(this.comboBoxCharX, "Indicates whether the letter X is a consonant or a vowel");
 			this.comboBoxCharX.Enter += new System.EventHandler(this.ComboBoxCharX_Enter);
 			this.comboBoxCharX.Leave += new System.EventHandler(this.ComboBoxCharX_Leave);
 			this.comboBoxCharX.MouseEnter += new System.EventHandler(this.ComboBoxCharX_MouseEnter);
@@ -1520,12 +1734,14 @@
 			// 
 			// numericUpDownCharX
 			// 
+			this.numericUpDownCharX.AccessibleDescription = "Shows the value of the letter X";
 			this.numericUpDownCharX.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharX.Location = new System.Drawing.Point(412, 140);
 			this.numericUpDownCharX.Name = "numericUpDownCharX";
 			this.numericUpDownCharX.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharX.TabIndex = 94;
 			this.numericUpDownCharX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharX, "Shows the value of the letter X");
 			this.numericUpDownCharX.Value = new decimal(new int[] {
             50,
             0,
@@ -1537,6 +1753,8 @@
 			// 
 			// labelCharX
 			// 
+			this.labelCharX.AccessibleDescription = "Displays information of the letter X";
+			this.labelCharX.AccessibleName = "Label char X";
 			this.labelCharX.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharX.AutoSize = true;
 			this.labelCharX.Location = new System.Drawing.Point(345, 143);
@@ -1544,6 +1762,7 @@
 			this.labelCharX.Size = new System.Drawing.Size(17, 13);
 			this.labelCharX.TabIndex = 92;
 			this.labelCharX.Text = "X:";
+			this.toolTip.SetToolTip(this.labelCharX, "Displays information of the letter X");
 			this.labelCharX.Enter += new System.EventHandler(this.LabelCharX_Enter);
 			this.labelCharX.Leave += new System.EventHandler(this.LabelCharX_Leave);
 			this.labelCharX.MouseEnter += new System.EventHandler(this.LabelCharX_MouseEnter);
@@ -1551,6 +1770,7 @@
 			// 
 			// labelPercentCharW
 			// 
+			this.labelPercentCharW.AccessibleDescription = "Shows the percent of the letter W";
 			this.labelPercentCharW.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharW.AutoSize = true;
 			this.labelPercentCharW.Location = new System.Drawing.Point(457, 116);
@@ -1558,6 +1778,7 @@
 			this.labelPercentCharW.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharW.TabIndex = 91;
 			this.labelPercentCharW.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharW, "Shows the percent of the letter W");
 			this.labelPercentCharW.DoubleClick += new System.EventHandler(this.LabelPercentCharW_DoubleClick);
 			this.labelPercentCharW.Enter += new System.EventHandler(this.LabelPercentCharW_Enter);
 			this.labelPercentCharW.Leave += new System.EventHandler(this.LabelPercentCharW_Leave);
@@ -1566,6 +1787,8 @@
 			// 
 			// comboBoxCharW
 			// 
+			this.comboBoxCharW.AccessibleDescription = "Indicates whether the letter W is a consonant or a vowel";
+			this.comboBoxCharW.AccessibleName = "Classification of the letter W";
 			this.comboBoxCharW.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharW.FormattingEnabled = true;
@@ -1576,6 +1799,7 @@
 			this.comboBoxCharW.Name = "comboBoxCharW";
 			this.comboBoxCharW.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharW.TabIndex = 89;
+			this.toolTip.SetToolTip(this.comboBoxCharW, "Indicates whether the letter W is a consonant or a vowel");
 			this.comboBoxCharW.Enter += new System.EventHandler(this.ComboBoxCharW_Enter);
 			this.comboBoxCharW.Leave += new System.EventHandler(this.ComboBoxCharW_Leave);
 			this.comboBoxCharW.MouseEnter += new System.EventHandler(this.ComboBoxCharW_MouseEnter);
@@ -1583,12 +1807,14 @@
 			// 
 			// numericUpDownCharW
 			// 
+			this.numericUpDownCharW.AccessibleDescription = "Shows the value of the letter W";
 			this.numericUpDownCharW.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharW.Location = new System.Drawing.Point(412, 113);
 			this.numericUpDownCharW.Name = "numericUpDownCharW";
 			this.numericUpDownCharW.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharW.TabIndex = 90;
 			this.numericUpDownCharW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharW, "Shows the value of the letter W");
 			this.numericUpDownCharW.Value = new decimal(new int[] {
             50,
             0,
@@ -1600,6 +1826,8 @@
 			// 
 			// labelCharW
 			// 
+			this.labelCharW.AccessibleDescription = "Displays information of the letter W";
+			this.labelCharW.AccessibleName = "Label char W";
 			this.labelCharW.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharW.AutoSize = true;
 			this.labelCharW.Location = new System.Drawing.Point(345, 116);
@@ -1607,6 +1835,7 @@
 			this.labelCharW.Size = new System.Drawing.Size(21, 13);
 			this.labelCharW.TabIndex = 88;
 			this.labelCharW.Text = "W:";
+			this.toolTip.SetToolTip(this.labelCharW, "Displays information of the letter W");
 			this.labelCharW.Enter += new System.EventHandler(this.LabelCharW_Enter);
 			this.labelCharW.Leave += new System.EventHandler(this.LabelCharW_Leave);
 			this.labelCharW.MouseEnter += new System.EventHandler(this.LabelCharW_MouseEnter);
@@ -1614,6 +1843,7 @@
 			// 
 			// labelPercentCharV
 			// 
+			this.labelPercentCharV.AccessibleDescription = "Shows the percent of the letter V";
 			this.labelPercentCharV.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharV.AutoSize = true;
 			this.labelPercentCharV.Location = new System.Drawing.Point(457, 89);
@@ -1621,6 +1851,7 @@
 			this.labelPercentCharV.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharV.TabIndex = 87;
 			this.labelPercentCharV.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharV, "Shows the percent of the letter V");
 			this.labelPercentCharV.DoubleClick += new System.EventHandler(this.LabelPercentCharV_DoubleClick);
 			this.labelPercentCharV.Enter += new System.EventHandler(this.LabelPercentCharV_Enter);
 			this.labelPercentCharV.Leave += new System.EventHandler(this.LabelPercentCharV_Leave);
@@ -1629,6 +1860,8 @@
 			// 
 			// comboBoxCharV
 			// 
+			this.comboBoxCharV.AccessibleDescription = "Indicates whether the letter V is a consonant or a vowel";
+			this.comboBoxCharV.AccessibleName = "Classification of the letter V";
 			this.comboBoxCharV.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharV.FormattingEnabled = true;
@@ -1639,6 +1872,7 @@
 			this.comboBoxCharV.Name = "comboBoxCharV";
 			this.comboBoxCharV.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharV.TabIndex = 85;
+			this.toolTip.SetToolTip(this.comboBoxCharV, "Indicates whether the letter V is a consonant or a vowel");
 			this.comboBoxCharV.Enter += new System.EventHandler(this.ComboBoxCharV_Enter);
 			this.comboBoxCharV.Leave += new System.EventHandler(this.ComboBoxCharV_Leave);
 			this.comboBoxCharV.MouseEnter += new System.EventHandler(this.ComboBoxCharV_MouseEnter);
@@ -1646,12 +1880,14 @@
 			// 
 			// numericUpDownCharV
 			// 
+			this.numericUpDownCharV.AccessibleDescription = "Shows the value of the letter V";
 			this.numericUpDownCharV.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharV.Location = new System.Drawing.Point(412, 86);
 			this.numericUpDownCharV.Name = "numericUpDownCharV";
 			this.numericUpDownCharV.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharV.TabIndex = 86;
 			this.numericUpDownCharV.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharV, "Shows the value of the letter V");
 			this.numericUpDownCharV.Value = new decimal(new int[] {
             50,
             0,
@@ -1663,6 +1899,8 @@
 			// 
 			// labelCharV
 			// 
+			this.labelCharV.AccessibleDescription = "Displays information of the letter V";
+			this.labelCharV.AccessibleName = "Label char V";
 			this.labelCharV.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharV.AutoSize = true;
 			this.labelCharV.Location = new System.Drawing.Point(345, 89);
@@ -1670,6 +1908,7 @@
 			this.labelCharV.Size = new System.Drawing.Size(17, 13);
 			this.labelCharV.TabIndex = 84;
 			this.labelCharV.Text = "V:";
+			this.toolTip.SetToolTip(this.labelCharV, "Displays information of the letter U");
 			this.labelCharV.Enter += new System.EventHandler(this.LabelCharV_Enter);
 			this.labelCharV.Leave += new System.EventHandler(this.LabelCharV_Leave);
 			this.labelCharV.MouseEnter += new System.EventHandler(this.LabelCharV_MouseEnter);
@@ -1677,6 +1916,7 @@
 			// 
 			// labelPercentCharU
 			// 
+			this.labelPercentCharU.AccessibleDescription = "Shows the percent of the letter U";
 			this.labelPercentCharU.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharU.AutoSize = true;
 			this.labelPercentCharU.Location = new System.Drawing.Point(457, 62);
@@ -1684,6 +1924,7 @@
 			this.labelPercentCharU.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharU.TabIndex = 83;
 			this.labelPercentCharU.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharU, "Shows the percent of the letter U");
 			this.labelPercentCharU.DoubleClick += new System.EventHandler(this.LabelPercentCharU_DoubleClick);
 			this.labelPercentCharU.Enter += new System.EventHandler(this.LabelPercentCharU_Enter);
 			this.labelPercentCharU.Leave += new System.EventHandler(this.LabelPercentCharU_Leave);
@@ -1692,6 +1933,8 @@
 			// 
 			// comboBoxCharU
 			// 
+			this.comboBoxCharU.AccessibleDescription = "Indicates whether the letter U is a consonant or a vowel";
+			this.comboBoxCharU.AccessibleName = "Classification of the letter U";
 			this.comboBoxCharU.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharU.FormattingEnabled = true;
@@ -1702,6 +1945,7 @@
 			this.comboBoxCharU.Name = "comboBoxCharU";
 			this.comboBoxCharU.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharU.TabIndex = 81;
+			this.toolTip.SetToolTip(this.comboBoxCharU, "Indicates whether the letter U is a consonant or a vowel");
 			this.comboBoxCharU.Enter += new System.EventHandler(this.ComboBoxCharU_Enter);
 			this.comboBoxCharU.Leave += new System.EventHandler(this.ComboBoxCharU_Leave);
 			this.comboBoxCharU.MouseEnter += new System.EventHandler(this.ComboBoxCharU_MouseEnter);
@@ -1709,12 +1953,14 @@
 			// 
 			// numericUpDownCharU
 			// 
+			this.numericUpDownCharU.AccessibleDescription = "Shows the value of the letter U";
 			this.numericUpDownCharU.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharU.Location = new System.Drawing.Point(412, 59);
 			this.numericUpDownCharU.Name = "numericUpDownCharU";
 			this.numericUpDownCharU.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharU.TabIndex = 82;
 			this.numericUpDownCharU.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharU, "Shows the value of the letter U");
 			this.numericUpDownCharU.Value = new decimal(new int[] {
             50,
             0,
@@ -1726,6 +1972,8 @@
 			// 
 			// labelCharU
 			// 
+			this.labelCharU.AccessibleDescription = "Displays information of the letter U";
+			this.labelCharU.AccessibleName = "Label char U";
 			this.labelCharU.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharU.AutoSize = true;
 			this.labelCharU.Location = new System.Drawing.Point(345, 62);
@@ -1733,6 +1981,7 @@
 			this.labelCharU.Size = new System.Drawing.Size(18, 13);
 			this.labelCharU.TabIndex = 80;
 			this.labelCharU.Text = "U:";
+			this.toolTip.SetToolTip(this.labelCharU, "Displays information of the letter U");
 			this.labelCharU.Enter += new System.EventHandler(this.LabelCharU_Enter);
 			this.labelCharU.Leave += new System.EventHandler(this.LabelCharU_Leave);
 			this.labelCharU.MouseEnter += new System.EventHandler(this.LabelCharU_MouseEnter);
@@ -1740,6 +1989,7 @@
 			// 
 			// labelPercentCharT
 			// 
+			this.labelPercentCharT.AccessibleDescription = "Shows the percent of the letter T";
 			this.labelPercentCharT.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharT.AutoSize = true;
 			this.labelPercentCharT.Location = new System.Drawing.Point(457, 35);
@@ -1747,6 +1997,7 @@
 			this.labelPercentCharT.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharT.TabIndex = 79;
 			this.labelPercentCharT.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharT, "Shows the percent of the letter T");
 			this.labelPercentCharT.DoubleClick += new System.EventHandler(this.LabelPercentCharT_DoubleClick);
 			this.labelPercentCharT.Enter += new System.EventHandler(this.LabelPercentCharT_Enter);
 			this.labelPercentCharT.Leave += new System.EventHandler(this.LabelPercentCharT_Leave);
@@ -1755,6 +2006,8 @@
 			// 
 			// comboBoxCharT
 			// 
+			this.comboBoxCharT.AccessibleDescription = "Indicates whether the letter T is a consonant or a vowel";
+			this.comboBoxCharT.AccessibleName = "Classification of the letter T";
 			this.comboBoxCharT.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharT.FormattingEnabled = true;
@@ -1765,6 +2018,7 @@
 			this.comboBoxCharT.Name = "comboBoxCharT";
 			this.comboBoxCharT.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharT.TabIndex = 77;
+			this.toolTip.SetToolTip(this.comboBoxCharT, "Indicates whether the letter T is a consonant or a vowel");
 			this.comboBoxCharT.Enter += new System.EventHandler(this.ComboBoxCharT_Enter);
 			this.comboBoxCharT.Leave += new System.EventHandler(this.ComboBoxCharT_Leave);
 			this.comboBoxCharT.MouseEnter += new System.EventHandler(this.ComboBoxCharT_MouseEnter);
@@ -1772,12 +2026,14 @@
 			// 
 			// numericUpDownCharT
 			// 
+			this.numericUpDownCharT.AccessibleDescription = "Shows the value of the letter T";
 			this.numericUpDownCharT.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharT.Location = new System.Drawing.Point(412, 32);
 			this.numericUpDownCharT.Name = "numericUpDownCharT";
 			this.numericUpDownCharT.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharT.TabIndex = 78;
 			this.numericUpDownCharT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharT, "T");
 			this.numericUpDownCharT.Value = new decimal(new int[] {
             50,
             0,
@@ -1789,6 +2045,8 @@
 			// 
 			// labelCharT
 			// 
+			this.labelCharT.AccessibleDescription = "Displays information of the letter T";
+			this.labelCharT.AccessibleName = "Label char T";
 			this.labelCharT.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharT.AutoSize = true;
 			this.labelCharT.Location = new System.Drawing.Point(345, 35);
@@ -1796,6 +2054,7 @@
 			this.labelCharT.Size = new System.Drawing.Size(17, 13);
 			this.labelCharT.TabIndex = 76;
 			this.labelCharT.Text = "T:";
+			this.toolTip.SetToolTip(this.labelCharT, "Displays information of the letter T");
 			this.labelCharT.Enter += new System.EventHandler(this.LabelCharT_Enter);
 			this.labelCharT.Leave += new System.EventHandler(this.LabelCharT_Leave);
 			this.labelCharT.MouseEnter += new System.EventHandler(this.LabelCharT_MouseEnter);
@@ -1803,6 +2062,7 @@
 			// 
 			// labelPercentCharS
 			// 
+			this.labelPercentCharS.AccessibleDescription = "Shows the percent of the letter S";
 			this.labelPercentCharS.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelPercentCharS.AutoSize = true;
 			this.labelPercentCharS.Location = new System.Drawing.Point(457, 8);
@@ -1810,6 +2070,7 @@
 			this.labelPercentCharS.Size = new System.Drawing.Size(42, 13);
 			this.labelPercentCharS.TabIndex = 75;
 			this.labelPercentCharS.Text = "00.00%";
+			this.toolTip.SetToolTip(this.labelPercentCharS, "Shows the percent of the letter S");
 			this.labelPercentCharS.DoubleClick += new System.EventHandler(this.LabelPercentCharS_DoubleClick);
 			this.labelPercentCharS.Enter += new System.EventHandler(this.LabelPercentCharS_Enter);
 			this.labelPercentCharS.Leave += new System.EventHandler(this.LabelPercentCharS_Leave);
@@ -1818,6 +2079,8 @@
 			// 
 			// comboBoxCharS
 			// 
+			this.comboBoxCharS.AccessibleDescription = "Indicates whether the letter S is a consonant or a vowel";
+			this.comboBoxCharS.AccessibleName = "Classification of the letter S";
 			this.comboBoxCharS.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
 			this.comboBoxCharS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBoxCharS.FormattingEnabled = true;
@@ -1828,6 +2091,7 @@
 			this.comboBoxCharS.Name = "comboBoxCharS";
 			this.comboBoxCharS.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharS.TabIndex = 73;
+			this.toolTip.SetToolTip(this.comboBoxCharS, "Indicates whether the letter S is a consonant or a vowel");
 			this.comboBoxCharS.Enter += new System.EventHandler(this.ComboBoxCharS_Enter);
 			this.comboBoxCharS.Leave += new System.EventHandler(this.ComboBoxCharS_Leave);
 			this.comboBoxCharS.MouseEnter += new System.EventHandler(this.ComboBoxCharS_MouseEnter);
@@ -1835,12 +2099,14 @@
 			// 
 			// numericUpDownCharS
 			// 
+			this.numericUpDownCharS.AccessibleDescription = "Shows the value of the letter S";
 			this.numericUpDownCharS.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
 			this.numericUpDownCharS.Location = new System.Drawing.Point(412, 5);
 			this.numericUpDownCharS.Name = "numericUpDownCharS";
 			this.numericUpDownCharS.Size = new System.Drawing.Size(39, 20);
 			this.numericUpDownCharS.TabIndex = 74;
 			this.numericUpDownCharS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.toolTip.SetToolTip(this.numericUpDownCharS, "Shows the value of the letter S");
 			this.numericUpDownCharS.Value = new decimal(new int[] {
             50,
             0,
@@ -1852,6 +2118,8 @@
 			// 
 			// labelCharS
 			// 
+			this.labelCharS.AccessibleDescription = "Displays information of the letter S";
+			this.labelCharS.AccessibleName = "Label char S";
 			this.labelCharS.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharS.AutoSize = true;
 			this.labelCharS.Location = new System.Drawing.Point(345, 8);
@@ -1859,6 +2127,7 @@
 			this.labelCharS.Size = new System.Drawing.Size(17, 13);
 			this.labelCharS.TabIndex = 72;
 			this.labelCharS.Text = "S:";
+			this.toolTip.SetToolTip(this.labelCharS, "Displays information of the letter S");
 			this.labelCharS.Enter += new System.EventHandler(this.LabelCharS_Enter);
 			this.labelCharS.Leave += new System.EventHandler(this.LabelCharS_Leave);
 			this.labelCharS.MouseEnter += new System.EventHandler(this.LabelCharS_MouseEnter);
@@ -1879,21 +2148,29 @@
 			// 
 			// textInfo
 			// 
+			this.textInfo.AccessibleDescription = "Shows some information";
+			this.textInfo.AccessibleName = "information label";
 			this.textInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.textInfo.Name = "textInfo";
 			this.textInfo.Size = new System.Drawing.Size(92, 17);
 			this.textInfo.Text = "information text";
+			this.textInfo.ToolTipText = "Shows some information";
 			// 
 			// toolStripProgressBar
 			// 
+			this.toolStripProgressBar.AccessibleDescription = "Shows the progress of the application";
+			this.toolStripProgressBar.AccessibleName = "Apply progress bar";
 			this.toolStripProgressBar.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar;
 			this.toolStripProgressBar.Name = "toolStripProgressBar";
 			this.toolStripProgressBar.Size = new System.Drawing.Size(100, 16);
 			this.toolStripProgressBar.Step = 1;
 			this.toolStripProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+			this.toolStripProgressBar.ToolTipText = "Shows the progress of the application";
 			// 
 			// labelCharPool
 			// 
+			this.labelCharPool.AccessibleDescription = "Double-click the show the char pool";
+			this.labelCharPool.AccessibleName = "Label char pool";
 			this.labelCharPool.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.labelCharPool.AutoSize = true;
 			this.labelCharPool.Location = new System.Drawing.Point(365, 225);
@@ -1901,6 +2178,7 @@
 			this.labelCharPool.Size = new System.Drawing.Size(57, 13);
 			this.labelCharPool.TabIndex = 104;
 			this.labelCharPool.Text = "char pool: ";
+			this.toolTip.SetToolTip(this.labelCharPool, "Double-click the show the char pool");
 			this.labelCharPool.DoubleClick += new System.EventHandler(this.LabelCharPool_DoubleClick);
 			this.labelCharPool.Enter += new System.EventHandler(this.LabelCharPool_Enter);
 			this.labelCharPool.Leave += new System.EventHandler(this.LabelCharPool_Leave);
@@ -1910,6 +2188,7 @@
 			// ProbabilityTableForm
 			// 
 			this.AcceptButton = this.buttonApply;
+			this.AccessibleName = "";
 			this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

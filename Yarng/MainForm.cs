@@ -1012,13 +1012,14 @@ namespace Yarng
 						strConsonantPool = "";
 						strVowelPool = "";
 
-						foreach (int value in arrLanguageValueEnglish)
+						for (int n = 0; n < arrLanguageValueEnglish.Length; n++)
 						{
-							for (int i = 0; i < arrLanguageValueEnglish.Length; i++)
+							MessageBox.Show(n.ToString());
+							for (int i = 0; i < arrLanguageValueEnglish[n]; i++)
 							{
 								if (IsVowelDefault(strDefaultAlphabet[index: i].ToString()))
 								{
-									strVowelPool += strDefaultAlphabet[index: i];								 
+									strVowelPool += strDefaultAlphabet[index: i];
 								}
 								else if (IsConsonantDefault(strDefaultAlphabet[index: i].ToString()))
 								{
