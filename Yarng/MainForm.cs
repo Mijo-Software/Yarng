@@ -53,17 +53,22 @@ namespace Yarng
 		/// <summary>
 		/// Count the specific chars of the string
 		/// </summary>
-		/// <param name="text"></param>
-		/// <param name="searchChar">char to count</param>
+		/// <param name="text">text</param>
+		/// <param name="chr">char to count</param>
 		/// <returns>number of chars</returns>
-		private static uint CountChar(string text, char searchChar)
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
+		private static uint CountChar(string text, char chr = '\0')
 		{
 			uint tmp = 0;
-			if (!string.IsNullOrEmpty(value: text))
+			if (string.IsNullOrEmpty(value: text))
 			{
-				for (int i = 0; i < text.Length; i++)
+				throw new ArgumentException(message: "message", paramName: nameof(text));
+			}
+			else 
+			{				
+				foreach (var item in text)
 				{
-					if (text[index: i] == searchChar)
+					if (item == chr)
 					{
 						tmp++;
 					}
@@ -73,58 +78,96 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
+		/// Get the value of a specific char from a pool
 		/// </summary>
-		/// <param name="chr"></param>
-		/// <returns></returns>
-		private byte GetValueCharfromPools(char chr)
+		/// <param name="chr">char</param>
+		/// <returns>value of a specific char</returns>
+		private byte GetValueCharfromPools(char chr = '\0')
 		{
-			if ((byte)CountChar(text: strConsonantPool, searchChar: chr) != 0)
+			if ((byte)CountChar(text: strConsonantPool, chr: chr) != 0)
 			{
-				return (byte)CountChar(text: strConsonantPool, searchChar: chr);
+				return (byte)CountChar(text: strConsonantPool, chr: chr);
 			}
-			else if ((byte)CountChar(text: strVowelPool, searchChar: chr) != 0)
+			else if ((byte)CountChar(text: strVowelPool, chr: chr) != 0)
 			{
-				return (byte)CountChar(text: strVowelPool, searchChar: chr);
+				return (byte)CountChar(text: strVowelPool, chr: chr);
 			}
 			return 1;
 		}
 
 		/// <summary>
-		/// 
+		/// Check if a letter as string is a vowel
 		/// </summary>
 		/// <param name="letter"></param>
-		/// <returns></returns>
-		private bool IsVowel(string letter) => textVowels.Text.Contains(value: letter);
+		/// <returns>true if is a vowel</returns>
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
+		private bool IsVowel(string letter)
+		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: "message", paramName: nameof(letter));
+			}
+			return textVowels.Text.Contains(value: letter);
+		}
 
 		/// <summary>
-		/// 
+		/// Check if a letter as string is a consonant
 		/// </summary>
 		/// <param name="letter"></param>
-		/// <returns></returns>
-		private bool IsConsonant(string letter) => textConsonants.Text.Contains(value: letter);
+		/// <returns>true if is a consonant</returns>
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
+		private bool IsConsonant(string letter)
+		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: "message", paramName: nameof(letter));
+			}
+			return textConsonants.Text.Contains(value: letter);
+		}
 
 		/// <summary>
-		/// 
+		/// Check if a letter as string is a default vowel
 		/// </summary>
 		/// <param name="letter"></param>
-		/// <returns></returns>
-		private bool IsVowelDefault(string letter) => strDefaultVowels.Contains(value: letter);
+		/// <returns>true if is a default vowel</returns>
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
+		private bool IsVowelDefault(string letter)
+		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: "message", paramName: nameof(letter));
+			}
+			return strDefaultVowels.Contains(value: letter);
+		}
 
 		/// <summary>
-		/// 
+		/// Check if a letter as string is a default consonant
 		/// </summary>
 		/// <param name="letter"></param>
-		/// <returns></returns>
-		private bool IsConsonantDefault(string letter) => strDefaultConsonants.Contains(value: letter);
+		/// <returns>true if is a default consonant</returns>
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
+		private bool IsConsonantDefault(string letter)
+		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: "message", paramName: nameof(letter));
+			}
+
+			return strDefaultConsonants.Contains(value: letter);
+		}
 
 		/// <summary>
-		/// 
+		/// Get the sort of a the	char
 		/// </summary>
-		/// <param name="letter"></param>
-		/// <returns></returns>
+		/// <param name="letter">char</param>
+		/// <returns>value</returns>
+		/// <exception cref="ArgumentException">text must not null or empty</exception>
 		private byte GetSortOfChar(string letter)
 		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: "message", paramName: nameof(letter));
+			}
 			if (IsVowel(letter: letter))
 			{
 				return (byte)Letter.Vowel;
@@ -163,20 +206,24 @@ namespace Yarng
 					case "x":
 					case "y":
 					case "z": return (byte)Letter.Consonant;
-					default: break;
 				}
 			}
-
 			return (byte)Letter.Consonant;
 		}
 
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		/// <exception cref="ArgumentNullException">moue event argument must not null</exception>
 		private void NumericCharacterLenghtsMin(object sender, MouseEventArgs e)
 		{
+			if (e is null)
+			{
+				throw new ArgumentNullException(paramName: nameof(e));
+			}
 			((HandledMouseEventArgs)e).Handled = true;
 			bool up = true;
 			if (e.Delta < 0)
