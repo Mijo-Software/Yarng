@@ -422,34 +422,33 @@ namespace Yarng
 				numericUpDownCharX.Value +
 				numericUpDownCharY.Value +
 				numericUpDownCharZ.Value);
-			//labelPercentCharA.Text = (numericUpDownCharA.Value / sumChars * 100).ToString() + "%";
-			labelPercentCharA.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharA.Value / sumChars * 100);
-			labelPercentCharB.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharB.Value / sumChars * 100);
-			labelPercentCharC.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharC.Value / sumChars * 100);
-			labelPercentCharD.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharD.Value / sumChars * 100);
-			labelPercentCharE.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharE.Value / sumChars * 100);
-			labelPercentCharF.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharF.Value / sumChars * 100);
-			labelPercentCharG.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharG.Value / sumChars * 100);
-			labelPercentCharH.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharH.Value / sumChars * 100);
-			labelPercentCharI.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharI.Value / sumChars * 100);
-			labelPercentCharJ.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharJ.Value / sumChars * 100);
-			labelPercentCharK.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharK.Value / sumChars * 100);
-			labelPercentCharL.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharL.Value / sumChars * 100);
-			labelPercentCharM.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharM.Value / sumChars * 100);
-			labelPercentCharN.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharN.Value / sumChars * 100);
-			labelPercentCharO.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharO.Value / sumChars * 100);
-			labelPercentCharP.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharP.Value / sumChars * 100);
-			labelPercentCharQ.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharQ.Value / sumChars * 100);
-			labelPercentCharR.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharR.Value / sumChars * 100);
-			labelPercentCharS.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharS.Value / sumChars * 100);
-			labelPercentCharT.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharT.Value / sumChars * 100);
-			labelPercentCharU.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharU.Value / sumChars * 100);
-			labelPercentCharV.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharV.Value / sumChars * 100);
-			labelPercentCharW.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharW.Value / sumChars * 100);
-			labelPercentCharX.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharX.Value / sumChars * 100);
-			labelPercentCharY.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharY.Value / sumChars * 100);
-			labelPercentCharZ.Text = string.Format(format: "{0,0:0.00}%", arg0: numericUpDownCharZ.Value / sumChars * 100);
-			labelCharPool.Text = "char pool: " + sumChars.ToString();
+			labelPercentCharA.Text = $"{numericUpDownCharA.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharB.Text = $"{numericUpDownCharB.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharC.Text = $"{numericUpDownCharC.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharD.Text = $"{numericUpDownCharD.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharE.Text = $"{numericUpDownCharE.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharF.Text = $"{numericUpDownCharF.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharG.Text = $"{numericUpDownCharG.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharH.Text = $"{numericUpDownCharH.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharI.Text = $"{numericUpDownCharI.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharJ.Text = $"{numericUpDownCharJ.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharK.Text = $"{numericUpDownCharK.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharL.Text = $"{numericUpDownCharL.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharM.Text = $"{numericUpDownCharM.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharN.Text = $"{numericUpDownCharN.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharO.Text = $"{numericUpDownCharO.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharP.Text = $"{numericUpDownCharP.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharQ.Text = $"{numericUpDownCharQ.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharR.Text = $"{numericUpDownCharR.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharS.Text = $"{numericUpDownCharS.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharT.Text = $"{numericUpDownCharT.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharU.Text = $"{numericUpDownCharU.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharV.Text = $"{numericUpDownCharV.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharW.Text = $"{numericUpDownCharW.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharX.Text = $"{numericUpDownCharX.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharY.Text = $"{numericUpDownCharY.Value / sumChars * 100,0:0.00}%";
+			labelPercentCharZ.Text = $"{numericUpDownCharZ.Value / sumChars * 100,0:0.00}%";
+			labelCharPool.Text = $"char pool: {sumChars}";
 		}
 
 		public ProbabilityTableForm()
