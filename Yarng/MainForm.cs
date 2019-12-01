@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Globalization;
 using System.Speech.Synthesis;
 using System.Text;
 using System.Windows.Forms;
+using Yarng.Properties;
 
 namespace Yarng
 {
@@ -36,6 +38,11 @@ namespace Yarng
 		private enum LetterLanguage : byte { Default = 0, English, German, Frence, Spanish, Portuguese, Italian, Dutch, Latin, UserDefined };
 
 		/// <summary>
+		/// culture info for the date
+		/// </summary>
+		private readonly CultureInfo culture = CultureInfo.CurrentUICulture;
+
+		/// <summary>
 		/// Reset the settings
 		/// </summary>
 		private void ResetSettings()
@@ -64,8 +71,8 @@ namespace Yarng
 			{
 				throw new ArgumentException(message: "message", paramName: nameof(text));
 			}
-			else 
-			{				
+			else
+			{
 				foreach (var item in text)
 				{
 					if (item == chr)
@@ -105,7 +112,7 @@ namespace Yarng
 		{
 			if (string.IsNullOrEmpty(value: letter))
 			{
-				throw new ArgumentException(message: "message", paramName: nameof(letter));
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
 			}
 			return textVowels.Text.Contains(value: letter);
 		}
@@ -120,7 +127,7 @@ namespace Yarng
 		{
 			if (string.IsNullOrEmpty(value: letter))
 			{
-				throw new ArgumentException(message: "message", paramName: nameof(letter));
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
 			}
 			return textConsonants.Text.Contains(value: letter);
 		}
@@ -135,7 +142,7 @@ namespace Yarng
 		{
 			if (string.IsNullOrEmpty(value: letter))
 			{
-				throw new ArgumentException(message: "message", paramName: nameof(letter));
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
 			}
 			return strDefaultVowels.Contains(value: letter);
 		}
@@ -150,9 +157,8 @@ namespace Yarng
 		{
 			if (string.IsNullOrEmpty(value: letter))
 			{
-				throw new ArgumentException(message: "message", paramName: nameof(letter));
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
 			}
-
 			return strDefaultConsonants.Contains(value: letter);
 		}
 
@@ -166,7 +172,7 @@ namespace Yarng
 		{
 			if (string.IsNullOrEmpty(value: letter))
 			{
-				throw new ArgumentException(message: "message", paramName: nameof(letter));
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
 			}
 			if (IsVowel(letter: letter))
 			{
@@ -212,12 +218,12 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
+		/// ???
 		/// </summary>
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		/// <exception cref="ArgumentNullException">moue event argument must not null</exception>
+		/// <exception cref="ArgumentNullException">mouse event arguments must not null</exception>
 		private void NumericCharacterLenghtsMin(object sender, MouseEventArgs e)
 		{
 			if (e is null)
@@ -241,12 +247,18 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
+		/// ???
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		/// <exception cref="ArgumentNullException">mouse event arguments must not null</exception>
 		private void NumericCharacterLenghtsMax(object sender, MouseEventArgs e)
 		{
+			if (e is null)
+			{
+				throw new ArgumentNullException(paramName: nameof(e));
+			}
 			((HandledMouseEventArgs)e).Handled = true;
 			bool up = true;
 			if (e.Delta < 0)
@@ -269,10 +281,11 @@ namespace Yarng
 		public MainForm() => InitializeComponent();
 
 		/// <summary>
-		/// 
+		/// Load the main form
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			ClearStatusbar_Leave(sender: null, EventArgs.Empty);
@@ -284,10 +297,11 @@ namespace Yarng
 		#region Click handlers
 
 		/// <summary>
-		/// 
+		/// Show the probability table form
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonShowProbabilityTable_Click(object sender, EventArgs e)
 		{
 			using ProbabilityTableForm formProbabilityTable = new ProbabilityTableForm();
@@ -295,58 +309,58 @@ namespace Yarng
 			formProbabilityTable.Vowels = textVowels.Text;
 			formProbabilityTable.ConsonantPool = strConsonantPool;
 			formProbabilityTable.VowelPool = strVowelPool;
-			formProbabilityTable.NumericValueCharA = GetValueCharfromPools(chr: Properties.CharacterResources.a[index: 0]);
-			formProbabilityTable.NumericValueCharB = GetValueCharfromPools(chr: Properties.CharacterResources.b[index: 0]);
-			formProbabilityTable.NumericValueCharC = GetValueCharfromPools(chr: Properties.CharacterResources.c[index: 0]);
-			formProbabilityTable.NumericValueCharD = GetValueCharfromPools(chr: Properties.CharacterResources.d[index: 0]);
-			formProbabilityTable.NumericValueCharE = GetValueCharfromPools(chr: Properties.CharacterResources.e[index: 0]);
-			formProbabilityTable.NumericValueCharF = GetValueCharfromPools(chr: Properties.CharacterResources.f[index: 0]);
-			formProbabilityTable.NumericValueCharG = GetValueCharfromPools(chr: Properties.CharacterResources.g[index: 0]);
-			formProbabilityTable.NumericValueCharH = GetValueCharfromPools(chr: Properties.CharacterResources.h[index: 0]);
-			formProbabilityTable.NumericValueCharI = GetValueCharfromPools(chr: Properties.CharacterResources.i[index: 0]);
-			formProbabilityTable.NumericValueCharJ = GetValueCharfromPools(chr: Properties.CharacterResources.j[index: 0]);
-			formProbabilityTable.NumericValueCharK = GetValueCharfromPools(chr: Properties.CharacterResources.k[index: 0]);
-			formProbabilityTable.NumericValueCharL = GetValueCharfromPools(chr: Properties.CharacterResources.l[index: 0]);
-			formProbabilityTable.NumericValueCharM = GetValueCharfromPools(chr: Properties.CharacterResources.m[index: 0]);
-			formProbabilityTable.NumericValueCharN = GetValueCharfromPools(chr: Properties.CharacterResources.n[index: 0]);
-			formProbabilityTable.NumericValueCharO = GetValueCharfromPools(chr: Properties.CharacterResources.o[index: 0]);
-			formProbabilityTable.NumericValueCharP = GetValueCharfromPools(chr: Properties.CharacterResources.p[index: 0]);
-			formProbabilityTable.NumericValueCharQ = GetValueCharfromPools(chr: Properties.CharacterResources.q[index: 0]);
-			formProbabilityTable.NumericValueCharR = GetValueCharfromPools(chr: Properties.CharacterResources.r[index: 0]);
-			formProbabilityTable.NumericValueCharS = GetValueCharfromPools(chr: Properties.CharacterResources.s[index: 0]);
-			formProbabilityTable.NumericValueCharT = GetValueCharfromPools(chr: Properties.CharacterResources.t[index: 0]);
-			formProbabilityTable.NumericValueCharU = GetValueCharfromPools(chr: Properties.CharacterResources.u[index: 0]);
-			formProbabilityTable.NumericValueCharV = GetValueCharfromPools(chr: Properties.CharacterResources.v[index: 0]);
-			formProbabilityTable.NumericValueCharW = GetValueCharfromPools(chr: Properties.CharacterResources.w[index: 0]);
-			formProbabilityTable.NumericValueCharX = GetValueCharfromPools(chr: Properties.CharacterResources.x[index: 0]);
-			formProbabilityTable.NumericValueCharY = GetValueCharfromPools(chr: Properties.CharacterResources.y[index: 0]);
-			formProbabilityTable.NumericValueCharZ = GetValueCharfromPools(chr: Properties.CharacterResources.z[index: 0]);
-			formProbabilityTable.SortOfCharA = GetSortOfChar(letter: Properties.CharacterResources.a);
-			formProbabilityTable.SortOfCharB = GetSortOfChar(letter: Properties.CharacterResources.b);
-			formProbabilityTable.SortOfCharC = GetSortOfChar(letter: Properties.CharacterResources.c);
-			formProbabilityTable.SortOfCharD = GetSortOfChar(letter: Properties.CharacterResources.d);
-			formProbabilityTable.SortOfCharE = GetSortOfChar(letter: Properties.CharacterResources.e);
-			formProbabilityTable.SortOfCharF = GetSortOfChar(letter: Properties.CharacterResources.f);
-			formProbabilityTable.SortOfCharG = GetSortOfChar(letter: Properties.CharacterResources.g);
-			formProbabilityTable.SortOfCharH = GetSortOfChar(letter: Properties.CharacterResources.h);
-			formProbabilityTable.SortOfCharI = GetSortOfChar(letter: Properties.CharacterResources.i);
-			formProbabilityTable.SortOfCharJ = GetSortOfChar(letter: Properties.CharacterResources.j);
-			formProbabilityTable.SortOfCharK = GetSortOfChar(letter: Properties.CharacterResources.k);
-			formProbabilityTable.SortOfCharL = GetSortOfChar(letter: Properties.CharacterResources.l);
-			formProbabilityTable.SortOfCharM = GetSortOfChar(letter: Properties.CharacterResources.m);
-			formProbabilityTable.SortOfCharN = GetSortOfChar(letter: Properties.CharacterResources.n);
-			formProbabilityTable.SortOfCharO = GetSortOfChar(letter: Properties.CharacterResources.o);
-			formProbabilityTable.SortOfCharP = GetSortOfChar(letter: Properties.CharacterResources.p);
-			formProbabilityTable.SortOfCharQ = GetSortOfChar(letter: Properties.CharacterResources.q);
-			formProbabilityTable.SortOfCharR = GetSortOfChar(letter: Properties.CharacterResources.r);
-			formProbabilityTable.SortOfCharS = GetSortOfChar(letter: Properties.CharacterResources.s);
-			formProbabilityTable.SortOfCharT = GetSortOfChar(letter: Properties.CharacterResources.t);
-			formProbabilityTable.SortOfCharU = GetSortOfChar(letter: Properties.CharacterResources.u);
-			formProbabilityTable.SortOfCharV = GetSortOfChar(letter: Properties.CharacterResources.v);
-			formProbabilityTable.SortOfCharW = GetSortOfChar(letter: Properties.CharacterResources.w);
-			formProbabilityTable.SortOfCharX = GetSortOfChar(letter: Properties.CharacterResources.x);
-			formProbabilityTable.SortOfCharY = GetSortOfChar(letter: Properties.CharacterResources.y);
-			formProbabilityTable.SortOfCharZ = GetSortOfChar(letter: Properties.CharacterResources.z);
+			formProbabilityTable.NumericValueCharA = GetValueCharfromPools(chr: CharacterResources.a[index: 0]);
+			formProbabilityTable.NumericValueCharB = GetValueCharfromPools(chr: CharacterResources.b[index: 0]);
+			formProbabilityTable.NumericValueCharC = GetValueCharfromPools(chr: CharacterResources.c[index: 0]);
+			formProbabilityTable.NumericValueCharD = GetValueCharfromPools(chr: CharacterResources.d[index: 0]);
+			formProbabilityTable.NumericValueCharE = GetValueCharfromPools(chr: CharacterResources.e[index: 0]);
+			formProbabilityTable.NumericValueCharF = GetValueCharfromPools(chr: CharacterResources.f[index: 0]);
+			formProbabilityTable.NumericValueCharG = GetValueCharfromPools(chr: CharacterResources.g[index: 0]);
+			formProbabilityTable.NumericValueCharH = GetValueCharfromPools(chr: CharacterResources.h[index: 0]);
+			formProbabilityTable.NumericValueCharI = GetValueCharfromPools(chr: CharacterResources.i[index: 0]);
+			formProbabilityTable.NumericValueCharJ = GetValueCharfromPools(chr: CharacterResources.j[index: 0]);
+			formProbabilityTable.NumericValueCharK = GetValueCharfromPools(chr: CharacterResources.k[index: 0]);
+			formProbabilityTable.NumericValueCharL = GetValueCharfromPools(chr: CharacterResources.l[index: 0]);
+			formProbabilityTable.NumericValueCharM = GetValueCharfromPools(chr: CharacterResources.m[index: 0]);
+			formProbabilityTable.NumericValueCharN = GetValueCharfromPools(chr: CharacterResources.n[index: 0]);
+			formProbabilityTable.NumericValueCharO = GetValueCharfromPools(chr: CharacterResources.o[index: 0]);
+			formProbabilityTable.NumericValueCharP = GetValueCharfromPools(chr: CharacterResources.p[index: 0]);
+			formProbabilityTable.NumericValueCharQ = GetValueCharfromPools(chr: CharacterResources.q[index: 0]);
+			formProbabilityTable.NumericValueCharR = GetValueCharfromPools(chr: CharacterResources.r[index: 0]);
+			formProbabilityTable.NumericValueCharS = GetValueCharfromPools(chr: CharacterResources.s[index: 0]);
+			formProbabilityTable.NumericValueCharT = GetValueCharfromPools(chr: CharacterResources.t[index: 0]);
+			formProbabilityTable.NumericValueCharU = GetValueCharfromPools(chr: CharacterResources.u[index: 0]);
+			formProbabilityTable.NumericValueCharV = GetValueCharfromPools(chr: CharacterResources.v[index: 0]);
+			formProbabilityTable.NumericValueCharW = GetValueCharfromPools(chr: CharacterResources.w[index: 0]);
+			formProbabilityTable.NumericValueCharX = GetValueCharfromPools(chr: CharacterResources.x[index: 0]);
+			formProbabilityTable.NumericValueCharY = GetValueCharfromPools(chr: CharacterResources.y[index: 0]);
+			formProbabilityTable.NumericValueCharZ = GetValueCharfromPools(chr: CharacterResources.z[index: 0]);
+			formProbabilityTable.SortOfCharA = GetSortOfChar(letter: CharacterResources.a);
+			formProbabilityTable.SortOfCharB = GetSortOfChar(letter: CharacterResources.b);
+			formProbabilityTable.SortOfCharC = GetSortOfChar(letter: CharacterResources.c);
+			formProbabilityTable.SortOfCharD = GetSortOfChar(letter: CharacterResources.d);
+			formProbabilityTable.SortOfCharE = GetSortOfChar(letter: CharacterResources.e);
+			formProbabilityTable.SortOfCharF = GetSortOfChar(letter: CharacterResources.f);
+			formProbabilityTable.SortOfCharG = GetSortOfChar(letter: CharacterResources.g);
+			formProbabilityTable.SortOfCharH = GetSortOfChar(letter: CharacterResources.h);
+			formProbabilityTable.SortOfCharI = GetSortOfChar(letter: CharacterResources.i);
+			formProbabilityTable.SortOfCharJ = GetSortOfChar(letter: CharacterResources.j);
+			formProbabilityTable.SortOfCharK = GetSortOfChar(letter: CharacterResources.k);
+			formProbabilityTable.SortOfCharL = GetSortOfChar(letter: CharacterResources.l);
+			formProbabilityTable.SortOfCharM = GetSortOfChar(letter: CharacterResources.m);
+			formProbabilityTable.SortOfCharN = GetSortOfChar(letter: CharacterResources.n);
+			formProbabilityTable.SortOfCharO = GetSortOfChar(letter: CharacterResources.o);
+			formProbabilityTable.SortOfCharP = GetSortOfChar(letter: CharacterResources.p);
+			formProbabilityTable.SortOfCharQ = GetSortOfChar(letter: CharacterResources.q);
+			formProbabilityTable.SortOfCharR = GetSortOfChar(letter: CharacterResources.r);
+			formProbabilityTable.SortOfCharS = GetSortOfChar(letter: CharacterResources.s);
+			formProbabilityTable.SortOfCharT = GetSortOfChar(letter: CharacterResources.t);
+			formProbabilityTable.SortOfCharU = GetSortOfChar(letter: CharacterResources.u);
+			formProbabilityTable.SortOfCharV = GetSortOfChar(letter: CharacterResources.v);
+			formProbabilityTable.SortOfCharW = GetSortOfChar(letter: CharacterResources.w);
+			formProbabilityTable.SortOfCharX = GetSortOfChar(letter: CharacterResources.x);
+			formProbabilityTable.SortOfCharY = GetSortOfChar(letter: CharacterResources.y);
+			formProbabilityTable.SortOfCharZ = GetSortOfChar(letter: CharacterResources.z);
 			if (formProbabilityTable.ShowDialog() == DialogResult.OK)
 			{
 				textConsonants.Text = formProbabilityTable.Consonants;
@@ -357,32 +371,40 @@ namespace Yarng
 			}
 		}
 
+		/// <summary>
+		/// Load the default settings
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonLoadDefaultSettings_Click(object sender, EventArgs e)
 		{
 			ResetSettings();
-			MessageBox.Show(text: "The settings were resetted", caption: "", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+			MessageBox.Show(text: Strings.settingsResetted, caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
 		}
 
 		/// <summary>
-		/// 
+		/// Load a specific template
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonLoadTemplate_Click(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
-		/// 
+		/// Savea specific template
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonSaveTemplate_Click(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
-		/// 
+		/// Open the about form
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
@@ -393,10 +415,11 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
+		/// Open the history form
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonHistory_Click(object sender, EventArgs e)
 		{
 			using HistoryForm history = new HistoryForm();
@@ -404,10 +427,11 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
+		/// Open the howTo form
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonHowTo_Click(object sender, EventArgs e)
 		{
 			using HowToForm how = new HowToForm();
@@ -415,26 +439,26 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
+		/// Exit the application
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonExit_Click(object sender, EventArgs e) => Close();
 
 		/// <summary>
-		/// 
+		/// Generate the name list
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonGenerate_Click(object sender, EventArgs e)
 		{
-			int nLengthOfName;
-			char ch;
-			Random _r = new Random();
+			Random random = new Random();
 			StringBuilder
 				sbName = new StringBuilder(value: ""),
 				sbNames = new StringBuilder(value: "");
-			bool isEven = _r.Next(minValue: 0, maxValue: 10) % 2 == 0;
+			bool isEven = random.Next(minValue: 0, maxValue: 10) % 2 == 0;
 			textList.Clear();
 			progressGenerate.Value = 0;
 			progressGenerate.Maximum = (int)numericNumberOfNames.Value - 1;
@@ -443,40 +467,36 @@ namespace Yarng
 			{
 				//progressGenerate.Value = i;
 				progressGenerate.PerformStep();
-				nLengthOfName = _r.Next(minValue: (int)numericCharacterLenghtsMin.Value, maxValue: (int)numericCharacterLenghtsMax.Value + 1);
+				int nLengthOfName = random.Next(minValue: (int)numericCharacterLenghtsMin.Value, maxValue: (int)numericCharacterLenghtsMax.Value + 1);
 				sbNames.Length = 0;
 				for (int n = 0; n < nLengthOfName; n++)
 				{
-					if (isEven)
-					{
-						ch = strVowelPool[index: _r.Next(maxValue: strVowelPool.Length)];
-					}
-					else
-					{
-						ch = strConsonantPool[index: _r.Next(maxValue: strConsonantPool.Length)];
-					}
+					char chr = isEven
+						? strVowelPool[index: random.Next(maxValue: strVowelPool.Length)]
+						: strConsonantPool[index: random.Next(maxValue: strConsonantPool.Length)];
 					isEven = !isEven;
 					if (n == 0)
 					{
-						ch = char.ToUpper(c: ch);
+						chr = char.ToUpper(c: chr, culture: culture);
 					}
 					sbName.Length = 0;
-					sbName.Append(value: ch);
+					sbName.Append(value: chr);
 					sbNames.Append(value: sbName);
 				}
 				textList.AppendText(text: sbNames.ToString());
 				if (i < numericNumberOfNames.Value - 1)
 				{
-					textList.AppendText(text: ", \r\n");
+					textList.AppendText(text: Strings.commaSpaceEnter);
 				}
 			}
 		}
 
 		/// <summary>
-		/// 
+		/// Speech the name list
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonSpeechText_Click(object sender, EventArgs e)
 		{
 			using SpeechSynthesizer speaker = new SpeechSynthesizer();
@@ -494,17 +514,19 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
+		/// Clear the name list
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonClearList_Click(object sender, EventArgs e) => textList.Clear();
 
 		/// <summary>
-		/// 
+		/// Copy the name list to the clipboard
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonCopyList_Click(object sender, EventArgs e)
 		{
 			if (!string.IsNullOrEmpty(value: textList.Text))
@@ -514,64 +536,71 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
+		/// Export the name list
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonExportList_Click(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
 		/// 
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// </summary>Print the name list
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonPrintList_Click(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
-		/// 
+		/// Step left
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonStepLeft_Click(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
-		/// 
+		/// Step right
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonStepRight_Click(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
-		/// 
+		/// Mirror
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonMirror_Click(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
-		/// 
+		/// Sort
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonSort_Click(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
-		/// 
+		/// Scramble
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonScramble_Click(object sender, EventArgs e)
 		{
 		}
@@ -581,48 +610,46 @@ namespace Yarng
 		#region DoubleClick handlers
 
 		/// <summary>
-		/// 
+		/// Show the vowel pool
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void LabelVowels_DoubleClick(object sender, EventArgs e)
-		{
-			MessageBox.Show(text: "vowel pool: " + strVowelPool, caption: "information", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-		}
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelVowels_DoubleClick(object sender, EventArgs e) => MessageBox.Show(text: $"vowel pool: {strVowelPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
 
 		/// <summary>
-		/// 
+		/// Show the consonant pool
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void LabelConsonants_DoubleClick(object sender, EventArgs e)
-		{
-			MessageBox.Show(text: "consonant pool: " + strConsonantPool, caption: "information", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-		}
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelConsonants_DoubleClick(object sender, EventArgs e) => MessageBox.Show(text: $"consonant pool: {strConsonantPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
 
 		#endregion
 
 		#region ValueChanged handlers
 
 		/// <summary>
-		/// 
+		/// ???
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void NumericNumberOfNames_ValueChanged(object sender, EventArgs e)
 		{
 		}
 
 		/// <summary>
-		/// 
+		/// ??
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void NumericCharacterLenghtsMin_ValueChanged(object sender, EventArgs e)
 		{
 			if (numericCharacterLenghtsMin.Value > numericCharacterLenghtsMax.Value)
 			{
-				MessageBox.Show(text: "The min-value mustn't be bigger than the max-value.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.minValueMustBigger, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
 				numericCharacterLenghtsMin.Value = numericCharacterLenghtsMax.Value;
 			}
 		}
@@ -630,13 +657,14 @@ namespace Yarng
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void NumericCharacterLenghtsMax_ValueChanged(object sender, EventArgs e)
 		{
 			if (numericCharacterLenghtsMax.Value < numericCharacterLenghtsMin.Value)
 			{
-				MessageBox.Show(text: "The max-value mustn't be lesser than the min-value.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.maxValueMustLesser, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
 				numericCharacterLenghtsMax.Value = numericCharacterLenghtsMin.Value;
 			}
 		}
@@ -650,7 +678,7 @@ namespace Yarng
 		/// </summary>
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
-		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
 		private void SetStatusbar_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
 
 		/// <summary>
@@ -658,7 +686,7 @@ namespace Yarng
 		/// </summary>
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
-		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
 		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
 
 		#endregion
@@ -673,22 +701,34 @@ namespace Yarng
 		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ClearStatusbar_Leave(object sender, EventArgs e) => toolStripStatusLabel.Text = string.Empty;
 
+		/// <summary>
+		/// Clear the information text in the status bar while check if the text box of vowels is not empty
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void TextVowels_Leave(object sender, EventArgs e)
 		{
-			ClearStatusbar_Leave(sender: null, EventArgs.Empty);
+			toolStripStatusLabel.Text = string.Empty;
 			if (textVowels.TextLength == 0)
 			{
-				MessageBox.Show(text: "The text field must include not less than one vowel.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.mustHaveVowels, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
 				textVowels.Text = strDefaultVowels;
 			}
 		}
 
+		/// <summary>
+		/// Clear the information text in the status bar while check if the text box of consonants is not empty
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void TextConsonants_Leave(object sender, EventArgs e)
 		{
-			ClearStatusbar_Leave(sender: null, EventArgs.Empty);
+			toolStripStatusLabel.Text = string.Empty;
 			if (textConsonants.TextLength == 0)
 			{
-				MessageBox.Show(text: "The text field must include not less than one consonant.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.mustHaveConsonants, Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
 				textConsonants.Text = strDefaultConsonants;
 			}
 		}
