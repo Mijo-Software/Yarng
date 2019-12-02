@@ -273,10 +273,7 @@ namespace Yarng
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		public MainForm()
-		{
-			InitializeComponent();
-		}
+		public MainForm() => InitializeComponent();
 
 		/// <summary>
 		/// Load the main form
@@ -300,9 +297,10 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "<Ausstehend>")]
 		private void ButtonShowProbabilityTable_Click(object sender, EventArgs e)
 		{
-			using (ProbabilityTableForm probabilityTableForm = new ProbabilityTableForm
+			using ProbabilityTableForm probabilityTableForm = new ProbabilityTableForm
 			{
 				Consonants = textConsonants.Text,
 				Vowels = textVowels.Text,
@@ -360,16 +358,14 @@ namespace Yarng
 				SortOfCharX = GetSortOfChar(letter: CharacterResources.x),
 				SortOfCharY = GetSortOfChar(letter: CharacterResources.y),
 				SortOfCharZ = GetSortOfChar(letter: CharacterResources.z)
-			})
+			};
+			if (probabilityTableForm.ShowDialog() == DialogResult.OK)
 			{
-				if (probabilityTableForm.ShowDialog() == DialogResult.OK)
-				{
-					textConsonants.Text = probabilityTableForm.Consonants;
-					textVowels.Text = probabilityTableForm.Vowels;
-					strConsonantPool = probabilityTableForm.ConsonantPool;
-					strVowelPool = probabilityTableForm.VowelPool;
-					comboLanguage.SelectedIndex = (byte)LetterLanguage.UserDefined;
-				}
+				textConsonants.Text = probabilityTableForm.Consonants;
+				textVowels.Text = probabilityTableForm.Vowels;
+				strConsonantPool = probabilityTableForm.ConsonantPool;
+				strVowelPool = probabilityTableForm.VowelPool;
+				comboLanguage.SelectedIndex = (byte)LetterLanguage.UserDefined;
 			}
 		}
 
@@ -446,10 +442,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void ButtonExit_Click(object sender, EventArgs e)
-		{
-			Close();
-		}
+		private void ButtonExit_Click(object sender, EventArgs e) => Close();
 
 		/// <summary>
 		/// Generate the name list
@@ -491,7 +484,7 @@ namespace Yarng
 				textList.AppendText(text: sbNames.ToString());
 				if (i < numericNumberOfNames.Value - 1)
 				{
-					textList.AppendText(text: Strings.commaSpaceEnter);
+					textList.AppendText(text: Environment.NewLine);
 				}
 			}
 		}
@@ -524,10 +517,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void ButtonClearList_Click(object sender, EventArgs e)
-		{
-			textList.Clear();
-		}
+		private void ButtonClearList_Click(object sender, EventArgs e) => textList.Clear();
 
 		/// <summary>
 		/// Copy the name list to the clipboard
@@ -623,10 +613,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void LabelVowels_DoubleClick(object sender, EventArgs e)
-		{
-			MessageBox.Show(text: $"vowel pool: {strVowelPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
-		}
+		private void LabelVowels_DoubleClick(object sender, EventArgs e) => MessageBox.Show(text: $"vowel pool: {strVowelPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 
 		/// <summary>
 		/// Show the consonant pool
@@ -634,10 +621,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void LabelConsonants_DoubleClick(object sender, EventArgs e)
-		{
-			MessageBox.Show(text: $"consonant pool: {strConsonantPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
-		}
+		private void LabelConsonants_DoubleClick(object sender, EventArgs e) => MessageBox.Show(text: $"consonant pool: {strConsonantPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 
 		#endregion
 
@@ -693,10 +677,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
-		private void SetStatusbar_Enter(object sender, EventArgs e)
-		{
-			toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
-		}
+		private void SetStatusbar_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
 
 		/// <summary>
 		/// Set the information text of a ToolStripMenuItem in the status bar
@@ -704,10 +685,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
-		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e)
-		{
-			toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
-		}
+		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
 
 		#endregion
 
@@ -719,10 +697,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
-		private void ClearStatusbar_Leave(object sender, EventArgs e)
-		{
-			toolStripStatusLabel.Text = string.Empty;
-		}
+		private void ClearStatusbar_Leave(object sender, EventArgs e) => toolStripStatusLabel.Text = string.Empty;
 
 		/// <summary>
 		/// Clear the information text in the status bar while check if the text box of vowels is not empty
