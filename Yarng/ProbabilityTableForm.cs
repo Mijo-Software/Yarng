@@ -609,10 +609,7 @@ namespace Yarng
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		public ProbabilityTableForm()
-		{
-			InitializeComponent();
-		}
+		public ProbabilityTableForm() => InitializeComponent();
 
 		/// <summary>
 		/// Load the main window
@@ -1520,10 +1517,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void UpdatePercentLabels_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
+		private void UpdatePercentLabels_ValueChanged(object sender, EventArgs e) => UpdatePercentLabels();
 
 		#endregion
 
@@ -1535,10 +1529,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
-		private void SetStatusbar_Enter(object sender, EventArgs e)
-		{
-			toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
-		}
+		private void SetStatusbar_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
 
 		/// <summary>
 		/// Set the information text of a ToolStripMenuItem in the status bar
@@ -1546,10 +1537,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
-		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e)
-		{
-			toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
-		}
+		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
 
 		#endregion
 
@@ -1561,10 +1549,7 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
-		private void ClearStatusbar_Leave(object sender, EventArgs e)
-		{
-			toolStripStatusLabel.Text = string.Empty;
-		}
+		private void ClearStatusbar_Leave(object sender, EventArgs e) => toolStripStatusLabel.Text = string.Empty;
 
 		#endregion
 	}
