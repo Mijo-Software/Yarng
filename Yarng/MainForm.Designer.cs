@@ -525,6 +525,7 @@
 			// toolStripStatusLabel
 			// 
 			this.toolStripStatusLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
+			this.toolStripStatusLabel.AutoToolTip = true;
 			this.toolStripStatusLabel.Name = "toolStripStatusLabel";
 			resources.ApplyResources(this.toolStripStatusLabel, "toolStripStatusLabel");
 			// 

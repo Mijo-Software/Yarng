@@ -120,6 +120,9 @@
   <data name="commaSpaceEnter" xml:space="preserve">
     <value>, \r\n</value>
   </data>
+  <data name="copiedToClipboard" xml:space="preserve">
+    <value>Copied to clipboard</value>
+  </data>
   <data name="information" xml:space="preserve">
     <value>information</value>
   </data>
@@ -133,12 +136,12 @@
     <value>The min-value mustn't be bigger than the max-value.</value>
   </data>
   <data name="mustHaveConsonants" xml:space="preserve">
-    <value />
+    <value>The text field must include not less than one consonant.</value>
   </data>
   <data name="mustHaveVowels" xml:space="preserve">
     <value>The text field must include not less than one vowel.</value>
   </data>
-  <data name="settingsResetted" xml:space="preserve">
+  <data name="settingsReset" xml:space="preserve">
     <value>The settings were resetted.</value>
   </data>
   <data name="vowelPool" xml:space="preserve">

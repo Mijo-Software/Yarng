@@ -70,6 +70,15 @@ namespace Yarng {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copied to clipboard ähnelt.
+        /// </summary>
+        internal static string copiedToClipboard {
+            get {
+                return ResourceManager.GetString("copiedToClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die information ähnelt.
         /// </summary>
         internal static string information {
@@ -106,7 +115,7 @@ namespace Yarng {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The text field must include not less than one consonant. ähnelt.
         /// </summary>
         internal static string mustHaveConsonants {
             get {
@@ -126,9 +135,9 @@ namespace Yarng {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The settings were resetted. ähnelt.
         /// </summary>
-        internal static string settingsResetted {
+        internal static string settingsReset {
             get {
-                return ResourceManager.GetString("settingsResetted", resourceCulture);
+                return ResourceManager.GetString("settingsReset", resourceCulture);
             }
         }
         

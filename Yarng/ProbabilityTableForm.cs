@@ -1,398 +1,553 @@
 ﻿using System;
 using System.Windows.Forms;
+using Yarng.Properties;
 
 namespace Yarng
 {
+	/// <summary>
+	/// ProbabilityTableForm
+	/// </summary>
 	public partial class ProbabilityTableForm : Form
 	{
+		/// <summary>
+		/// Sum of all chararcters
+		/// </summary>
 		private uint sumChars = 0;
+
+		/// <summary>
+		/// strings
+		/// </summary>
 		private string strConsonants, strConsonantPool, strVowels, strVowelPool;
 
-		private enum Letter : byte { Consonant = 0, Vowel /*Syllable, Semivowel, DoubleConsonant, DoubleVowel*/ };
+		/// <summary>
+		/// Letter types
+		/// </summary>
+		private enum Letter : byte { Consonant = 0, Vowel /*Syllable, Semivowel, DoubleConsonant, DoubleVowel*/ }
 
+		/// <summary>
+		/// Consonants
+		/// </summary>
 		public string Consonants
 		{
 			get => strConsonants;
 			set => strConsonants = value;
 		}
 
+		/// <summary>
+		/// Vowels
+		/// </summary>
 		public string Vowels
 		{
 			get => strVowels;
 			set => strVowels = value;
 		}
 
+		/// <summary>
+		/// ConsonantPool
+		/// </summary>
 		public string ConsonantPool
 		{
 			get => strConsonantPool;
 			set => strConsonantPool = value;
 		}
 
+		/// <summary>
+		/// VowelPool
+		/// </summary>
 		public string VowelPool
 		{
 			get => strVowelPool;
 			set => strVowelPool = value;
 		}
 
+		/// <summary>
+		/// value of the character A
+		/// </summary>
 		public byte NumericValueCharA
 		{
 			get => (byte)numericUpDownCharA.Value;
 			set => numericUpDownCharA.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character B
+		/// </summary>
 		public byte NumericValueCharB
 		{
 			get => (byte)numericUpDownCharB.Value;
 			set => numericUpDownCharB.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character C
+		/// </summary>
 		public byte NumericValueCharC
 		{
 			get => (byte)numericUpDownCharC.Value;
 			set => numericUpDownCharC.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character D
+		/// </summary>
 		public byte NumericValueCharD
 		{
 			get => (byte)numericUpDownCharD.Value;
 			set => numericUpDownCharD.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character E
+		/// </summary>
 		public byte NumericValueCharE
 		{
 			get => (byte)numericUpDownCharE.Value;
 			set => numericUpDownCharE.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character F
+		/// </summary>
 		public byte NumericValueCharF
 		{
 			get => (byte)numericUpDownCharF.Value;
 			set => numericUpDownCharF.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character G
+		/// </summary>
 		public byte NumericValueCharG
 		{
 			get => (byte)numericUpDownCharG.Value;
 			set => numericUpDownCharG.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character F
+		/// </summary>
 		public byte NumericValueCharH
 		{
 			get => (byte)numericUpDownCharH.Value;
 			set => numericUpDownCharH.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character I
+		/// </summary>
 		public byte NumericValueCharI
 		{
 			get => (byte)numericUpDownCharI.Value;
 			set => numericUpDownCharI.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character J
+		/// </summary>
 		public byte NumericValueCharJ
 		{
 			get => (byte)numericUpDownCharJ.Value;
 			set => numericUpDownCharJ.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character K
+		/// </summary>
 		public byte NumericValueCharK
 		{
 			get => (byte)numericUpDownCharK.Value;
 			set => numericUpDownCharK.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character L
+		/// </summary>
 		public byte NumericValueCharL
 		{
 			get => (byte)numericUpDownCharL.Value;
 			set => numericUpDownCharL.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character M
+		/// </summary>
 		public byte NumericValueCharM
 		{
 			get => (byte)numericUpDownCharM.Value;
 			set => numericUpDownCharM.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character N
+		/// </summary>
 		public byte NumericValueCharN
 		{
 			get => (byte)numericUpDownCharN.Value;
 			set => numericUpDownCharN.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character O
+		/// </summary>
 		public byte NumericValueCharO
 		{
 			get => (byte)numericUpDownCharO.Value;
 			set => numericUpDownCharO.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character P
+		/// </summary>
 		public byte NumericValueCharP
 		{
 			get => (byte)numericUpDownCharP.Value;
 			set => numericUpDownCharP.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character Q
+		/// </summary>
 		public byte NumericValueCharQ
 		{
 			get => (byte)numericUpDownCharQ.Value;
 			set => numericUpDownCharQ.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character R
+		/// </summary>
 		public byte NumericValueCharR
 		{
 			get => (byte)numericUpDownCharR.Value;
 			set => numericUpDownCharR.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character S
+		/// </summary>
 		public byte NumericValueCharS
 		{
 			get => (byte)numericUpDownCharS.Value;
 			set => numericUpDownCharS.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character T
+		/// </summary>
 		public byte NumericValueCharT
 		{
 			get => (byte)numericUpDownCharT.Value;
 			set => numericUpDownCharT.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character U
+		/// </summary>
 		public byte NumericValueCharU
 		{
 			get => (byte)numericUpDownCharU.Value;
 			set => numericUpDownCharU.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character V
+		/// </summary>
 		public byte NumericValueCharV
 		{
 			get => (byte)numericUpDownCharV.Value;
 			set => numericUpDownCharV.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character W
+		/// </summary>
 		public byte NumericValueCharW
 		{
 			get => (byte)numericUpDownCharW.Value;
 			set => numericUpDownCharW.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character X
+		/// </summary>
 		public byte NumericValueCharX
 		{
 			get => (byte)numericUpDownCharX.Value;
 			set => numericUpDownCharX.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character Y
+		/// </summary>
 		public byte NumericValueCharY
 		{
 			get => (byte)numericUpDownCharY.Value;
 			set => numericUpDownCharY.Value = value;
 		}
 
+		/// <summary>
+		/// value of the character Z
+		/// </summary>
 		public byte NumericValueCharZ
 		{
 			get => (byte)numericUpDownCharZ.Value;
 			set => numericUpDownCharZ.Value = value;
 		}
 
+		/// <summary>
+		/// sort of the character A
+		/// </summary>
 		public byte SortOfCharA
 		{
 			get => (byte)comboBoxCharA.SelectedIndex;
 			set => comboBoxCharA.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character B
+		/// </summary>
 		public byte SortOfCharB
 		{
 			get => (byte)comboBoxCharB.SelectedIndex;
 			set => comboBoxCharB.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character C
+		/// </summary>
 		public byte SortOfCharC
 		{
 			get => (byte)comboBoxCharC.SelectedIndex;
 			set => comboBoxCharC.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character D
+		/// </summary>
 		public byte SortOfCharD
 		{
 			get => (byte)comboBoxCharD.SelectedIndex;
 			set => comboBoxCharD.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character E
+		/// </summary>
 		public byte SortOfCharE
 		{
 			get => (byte)comboBoxCharE.SelectedIndex;
 			set => comboBoxCharE.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character F
+		/// </summary>
 		public byte SortOfCharF
 		{
 			get => (byte)comboBoxCharF.SelectedIndex;
 			set => comboBoxCharF.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character G
+		/// </summary>
 		public byte SortOfCharG
 		{
 			get => (byte)comboBoxCharG.SelectedIndex;
 			set => comboBoxCharG.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character H
+		/// </summary>
 		public byte SortOfCharH
 		{
 			get => (byte)comboBoxCharH.SelectedIndex;
 			set => comboBoxCharH.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character I
+		/// </summary>
 		public byte SortOfCharI
 		{
 			get => (byte)comboBoxCharI.SelectedIndex;
 			set => comboBoxCharI.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character J
+		/// </summary>
 		public byte SortOfCharJ
 		{
 			get => (byte)comboBoxCharJ.SelectedIndex;
 			set => comboBoxCharJ.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character K
+		/// </summary>
 		public byte SortOfCharK
 		{
 			get => (byte)comboBoxCharK.SelectedIndex;
 			set => comboBoxCharK.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character L
+		/// </summary>
 		public byte SortOfCharL
 		{
 			get => (byte)comboBoxCharL.SelectedIndex;
 			set => comboBoxCharL.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character M
+		/// </summary>
 		public byte SortOfCharM
 		{
 			get => (byte)comboBoxCharM.SelectedIndex;
 			set => comboBoxCharM.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character N
+		/// </summary>
 		public byte SortOfCharN
 		{
 			get => (byte)comboBoxCharN.SelectedIndex;
 			set => comboBoxCharN.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character O
+		/// </summary>
 		public byte SortOfCharO
 		{
 			get => (byte)comboBoxCharO.SelectedIndex;
 			set => comboBoxCharO.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character P
+		/// </summary>
 		public byte SortOfCharP
 		{
 			get => (byte)comboBoxCharP.SelectedIndex;
 			set => comboBoxCharP.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character Q
+		/// </summary>
 		public byte SortOfCharQ
 		{
 			get => (byte)comboBoxCharQ.SelectedIndex;
 			set => comboBoxCharQ.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character R
+		/// </summary>
 		public byte SortOfCharR
 		{
 			get => (byte)comboBoxCharR.SelectedIndex;
 			set => comboBoxCharR.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character S
+		/// </summary>
 		public byte SortOfCharS
 		{
 			get => (byte)comboBoxCharS.SelectedIndex;
 			set => comboBoxCharS.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character T
+		/// </summary>
 		public byte SortOfCharT
 		{
 			get => (byte)comboBoxCharT.SelectedIndex;
 			set => comboBoxCharT.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character U
+		/// </summary>
 		public byte SortOfCharU
 		{
 			get => (byte)comboBoxCharU.SelectedIndex;
 			set => comboBoxCharU.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character V
+		/// </summary>
 		public byte SortOfCharV
 		{
 			get => (byte)comboBoxCharV.SelectedIndex;
 			set => comboBoxCharV.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character W
+		/// </summary>
 		public byte SortOfCharW
 		{
 			get => (byte)comboBoxCharW.SelectedIndex;
 			set => comboBoxCharW.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character X
+		/// </summary>
 		public byte SortOfCharX
 		{
 			get => (byte)comboBoxCharX.SelectedIndex;
 			set => comboBoxCharX.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character Y
+		/// </summary>
 		public byte SortOfCharY
 		{
 			get => (byte)comboBoxCharY.SelectedIndex;
 			set => comboBoxCharY.SelectedIndex = value;
 		}
 
+		/// <summary>
+		/// sort of the character Z
+		/// </summary>
 		public byte SortOfCharZ
 		{
 			get => (byte)comboBoxCharZ.SelectedIndex;
 			set => comboBoxCharZ.SelectedIndex = value;
 		}
 
-		private void CopyToClipboard(string text, bool showMessage)
+		/// <summary>
+		/// Copy to clipboard
+		/// </summary>
+		/// <param name="text">text to copy</param>
+		/// <param name="showMessage">true if show a message</param>
+		private void CopyToClipboard(string text, bool showMessage = false)
 		{
-			Clipboard.SetText(text: text);
-			if (showMessage)
+			if (string.IsNullOrWhiteSpace(value: text))
 			{
-				MessageBox.Show(text: "Copied to clipboard", caption: "Information", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+				Clipboard.SetText(text: text);
+				if (showMessage)
+				{
+					MessageBox.Show(text: Strings.copiedToClipboard, caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+				}
 			}
 		}
 
-		private void SetStatusText(object sender, EventArgs e)
-		{
-			if (sender is Button button)
-			{
-				textInfo.Text = button.AccessibleDescription;
-			}
-			else if (sender is Label label)
-			{
-				textInfo.Text = label.AccessibleDescription;
-			}
-			else if (sender is ComboBox comboBox)
-			{
-				textInfo.Text = comboBox.AccessibleDescription;
-			}
-			else if (sender is TextBox textBox)
-			{
-				textInfo.Text = textBox.AccessibleDescription;
-			}
-			else if (sender is ProgressBar progressBar)
-			{
-				textInfo.Text = progressBar.AccessibleDescription;
-			}
-			else if (sender is NumericUpDown numericUpDown)
-			{
-				textInfo.Text = numericUpDown.AccessibleDescription;
-			}
-		}
-
-		private void SetStatusText(string text)
-		{
-			textInfo.Text = text;
-		}
-
-		private void ClearStatusText()
-		{
-			SetStatusText(text: "");
-		}
-
+		/// <summary>
+		/// Update all percent labels
+		/// </summary>
 		private void UpdatePercentLabels()
 		{
 			sumChars = decimal.ToUInt32(d:
@@ -451,14 +606,23 @@ namespace Yarng
 			labelCharPool.Text = $"char pool: {sumChars}";
 		}
 
+		/// <summary>
+		/// Constructor
+		/// </summary>
 		public ProbabilityTableForm()
 		{
 			InitializeComponent();
 		}
 
+		/// <summary>
+		/// Load the main window
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ProbabilityTableForm_Load(object sender, EventArgs e)
 		{
-			ClearStatusText();
+			toolStripStatusLabel.Text = string.Empty;
 			toolStripProgressBar.Visible = false;
 			if (comboBoxCharA.SelectedIndex == -1)
 			{
@@ -569,13 +733,19 @@ namespace Yarng
 
 		#region Click handlers
 
+		/// <summary>
+		/// Apply the changes of the characters
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonApply_Click(object sender, EventArgs e)
 		{
-			ClearStatusText();
-			strConsonants = "";
-			strVowels = "";
-			strConsonantPool = "";
-			strVowelPool = "";
+			toolStripStatusLabel.Text = string.Empty;
+			strConsonants = string.Empty;
+			strVowels = string.Empty;
+			strConsonantPool = string.Empty;
+			strVowelPool = string.Empty;
 			toolStripProgressBar.Visible = true;
 			toolStripProgressBar.Maximum = (int)numericUpDownCharA.Value +
 				(int)numericUpDownCharB.Value +
@@ -607,295 +777,193 @@ namespace Yarng
 			switch (comboBoxCharA.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.a; break;
-					}
+					strVowels += CharacterResources.a; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.a; break;
-					}
+					strConsonants += CharacterResources.a; break;
 			}
 			switch (comboBoxCharB.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.b; break;
-					}
+					strVowels += CharacterResources.b; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.b; break;
-					}
+					strConsonants += CharacterResources.b; break;
 			}
 			switch (comboBoxCharC.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.c; break;
-					}
+					strVowels += CharacterResources.c; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.c; break;
-					}
+					strConsonants += CharacterResources.c; break;
 			}
 			switch (comboBoxCharD.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.d; break;
-					}
+					strVowels += CharacterResources.d; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.d; break;
-					}
+					strConsonants += CharacterResources.d; break;
 			}
 			switch (comboBoxCharE.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.e; break;
-					}
+					strVowels += CharacterResources.e; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.e; break;
-					}
+					strConsonants += CharacterResources.e; break;
 			}
 			switch (comboBoxCharF.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.f; break;
-					}
+					strVowels += CharacterResources.f; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.f; break;
-					}
+					strConsonants += CharacterResources.f; break;
 			}
 			switch (comboBoxCharG.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.g; break;
-					}
+					strVowels += CharacterResources.g; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.g; break;
-					}
+					strConsonants += CharacterResources.g; break;
 			}
 			switch (comboBoxCharH.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.h; break;
-					}
+					strVowels += CharacterResources.h; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.h; break;
-					}
+					strConsonants += CharacterResources.h; break;
 			}
 			switch (comboBoxCharI.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.i; break;
-					}
+					strVowels += CharacterResources.i; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.i; break;
-					}
+					strConsonants += CharacterResources.i; break;
 			}
 			switch (comboBoxCharJ.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.j; break;
-					}
+					strVowels += CharacterResources.j; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.j; break;
-					}
+					strConsonants += CharacterResources.j; break;
 			}
 			switch (comboBoxCharK.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.k; break;
-					}
+					strVowels += CharacterResources.k; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.k; break;
-					}
+					strConsonants += CharacterResources.k; break;
 			}
 			switch (comboBoxCharL.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.l; break;
-					}
+					strVowels += CharacterResources.l; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.l; break;
-					}
+					strConsonants += CharacterResources.l; break;
 			}
 			switch (comboBoxCharM.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.m; break;
-					}
+					strVowels += CharacterResources.m; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.m; break;
-					}
+					strConsonants += CharacterResources.m; break;
 			}
 			switch (comboBoxCharN.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.n; break;
-					}
+					strVowels += CharacterResources.n; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.n; break;
-					}
+					strConsonants += CharacterResources.n; break;
 			}
 			switch (comboBoxCharO.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.o; break;
-					}
+					strVowels += CharacterResources.o; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.o; break;
-					}
+					strConsonants += CharacterResources.o; break;
 			}
 			switch (comboBoxCharP.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.p; break;
-					}
+					strVowels += CharacterResources.p; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.p; break;
-					}
+					strConsonants += CharacterResources.p; break;
 			}
 			switch (comboBoxCharQ.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.q; break;
-					}
+					strVowels += CharacterResources.q; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.q; break;
-					}
+					strConsonants += CharacterResources.q; break;
 			}
 			switch (comboBoxCharR.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.r; break;
-					}
+					strVowels += CharacterResources.r; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.r; break;
-					}
+					strConsonants += CharacterResources.r; break;
 			}
 			switch (comboBoxCharS.SelectedIndex)
 			{
-				case (byte)Letter.Vowel: strVowels += Properties.CharacterResources.s; break;
-				case (byte)Letter.Consonant: strConsonants += Properties.CharacterResources.s; break;
+				case (byte)Letter.Vowel:
+					strVowels += CharacterResources.s; break;
+				case (byte)Letter.Consonant:
+					strConsonants += CharacterResources.s; break;
 			}
 			switch (comboBoxCharT.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.t; break;
-					}
+					strVowels += CharacterResources.t; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.t; break;
-					}
+					strConsonants += CharacterResources.t; break;
 			}
 			switch (comboBoxCharU.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.u; break;
-					}
+					strVowels += CharacterResources.u; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.u; break;
-					}
+					strConsonants += CharacterResources.u; break;
 			}
 			switch (comboBoxCharV.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.v; break;
-					}
+					strVowels += CharacterResources.v; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.v; break;
-					}
+					strConsonants += CharacterResources.v; break;
 			}
 			switch (comboBoxCharW.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.w; break;
-					}
+					strVowels += CharacterResources.w; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.w; break;
-					}
+					strConsonants += CharacterResources.w; break;
 			}
 			switch (comboBoxCharX.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.x; break;
-					}
+					strVowels += CharacterResources.x; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.x; break;
-					}
+					strConsonants += CharacterResources.x; break;
 			}
 			switch (comboBoxCharY.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.y; break;
-					}
+					strVowels += CharacterResources.y; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.y; break;
-					}
+					strConsonants += CharacterResources.y; break;
 			}
 			switch (comboBoxCharZ.SelectedIndex)
 			{
 				case (byte)Letter.Vowel:
-					{
-						strVowels += Properties.CharacterResources.z; break;
-					}
+					strVowels += CharacterResources.z; break;
 				case (byte)Letter.Consonant:
-					{
-						strConsonants += Properties.CharacterResources.z; break;
-					}
+					strConsonants += CharacterResources.z; break;
 			}
 			for (byte i = 0; i < numericUpDownCharA.Value; i++)
 			{
 				switch (comboBoxCharA.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.a; break;
-						}
+						strVowelPool += CharacterResources.a; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.a; break;
-						}
+						strConsonantPool += CharacterResources.a; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -904,13 +972,9 @@ namespace Yarng
 				switch (comboBoxCharB.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.b; break;
-						}
+						strVowelPool += CharacterResources.b; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.b; break;
-						}
+						strConsonantPool += CharacterResources.b; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -919,13 +983,9 @@ namespace Yarng
 				switch (comboBoxCharC.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.c; break;
-						}
+						strVowelPool += CharacterResources.c; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.c; break;
-						}
+						strConsonantPool += CharacterResources.c; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -934,13 +994,9 @@ namespace Yarng
 				switch (comboBoxCharD.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.d; break;
-						}
+						strVowelPool += CharacterResources.d; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.d; break;
-						}
+						strConsonantPool += CharacterResources.d; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -949,13 +1005,9 @@ namespace Yarng
 				switch (comboBoxCharE.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.e; break;
-						}
+						strVowelPool += CharacterResources.e; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.e; break;
-						}
+						strConsonantPool += CharacterResources.e; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -964,13 +1016,9 @@ namespace Yarng
 				switch (comboBoxCharF.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.f; break;
-						}
+						strVowelPool += CharacterResources.f; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.f; break;
-						}
+						strConsonantPool += CharacterResources.f; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -979,13 +1027,9 @@ namespace Yarng
 				switch (comboBoxCharG.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.g; break;
-						}
+						strVowelPool += CharacterResources.g; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.g; break;
-						}
+						strConsonantPool += CharacterResources.g; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -994,13 +1038,9 @@ namespace Yarng
 				switch (comboBoxCharH.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.h; break;
-						}
+						strVowelPool += CharacterResources.h; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.h; break;
-						}
+						strConsonantPool += CharacterResources.h; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1009,13 +1049,9 @@ namespace Yarng
 				switch (comboBoxCharI.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.i; break;
-						}
+						strVowelPool += CharacterResources.i; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.i; break;
-						}
+						strConsonantPool += CharacterResources.i; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1024,13 +1060,9 @@ namespace Yarng
 				switch (comboBoxCharJ.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.j; break;
-						}
+						strVowelPool += CharacterResources.j; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.j; break;
-						}
+						strConsonantPool += CharacterResources.j; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1039,13 +1071,9 @@ namespace Yarng
 				switch (comboBoxCharK.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.k; break;
-						}
+						strVowelPool += CharacterResources.k; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.k; break;
-						}
+						strConsonantPool += CharacterResources.k; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1054,13 +1082,9 @@ namespace Yarng
 				switch (comboBoxCharL.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.l; break;
-						}
+						strVowelPool += CharacterResources.l; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.l; break;
-						}
+						strConsonantPool += CharacterResources.l; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1069,13 +1093,9 @@ namespace Yarng
 				switch (comboBoxCharM.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.m; break;
-						}
+						strVowelPool += CharacterResources.m; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.m; break;
-						}
+						strConsonantPool += CharacterResources.m; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1084,13 +1104,9 @@ namespace Yarng
 				switch (comboBoxCharN.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.n; break;
-						}
+						strVowelPool += CharacterResources.n; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.n; break;
-						}
+						strConsonantPool += CharacterResources.n; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1099,13 +1115,9 @@ namespace Yarng
 				switch (comboBoxCharO.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.o; break;
-						}
+						strVowelPool += CharacterResources.o; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.o; break;
-						}
+						strConsonantPool += CharacterResources.o; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1114,13 +1126,9 @@ namespace Yarng
 				switch (comboBoxCharP.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.p; break;
-						}
+						strVowelPool += CharacterResources.p; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.p; break;
-						}
+						strConsonantPool += CharacterResources.p; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1129,13 +1137,9 @@ namespace Yarng
 				switch (comboBoxCharQ.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.q; break;
-						}
+						strVowelPool += CharacterResources.q; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.q; break;
-						}
+						strConsonantPool += CharacterResources.q; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1144,13 +1148,9 @@ namespace Yarng
 				switch (comboBoxCharR.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.r; break;
-						}
+						strVowelPool += CharacterResources.r; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.r; break;
-						}
+						strConsonantPool += CharacterResources.r; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1159,13 +1159,9 @@ namespace Yarng
 				switch (comboBoxCharS.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.s; break;
-						}
+						strVowelPool += CharacterResources.s; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.s; break;
-						}
+						strConsonantPool += CharacterResources.s; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1174,13 +1170,9 @@ namespace Yarng
 				switch (comboBoxCharT.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.t; break;
-						}
+						strVowelPool += CharacterResources.t; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.t; break;
-						}
+						strConsonantPool += CharacterResources.t; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1189,13 +1181,9 @@ namespace Yarng
 				switch (comboBoxCharU.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.u; break;
-						}
+						strVowelPool += CharacterResources.u; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.u; break;
-						}
+						strConsonantPool += CharacterResources.u; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1204,13 +1192,9 @@ namespace Yarng
 				switch (comboBoxCharV.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.v; break;
-						}
+						strVowelPool += CharacterResources.v; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.v; break;
-						}
+						strConsonantPool += CharacterResources.v; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1219,13 +1203,9 @@ namespace Yarng
 				switch (comboBoxCharW.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.w; break;
-						}
+						strVowelPool += CharacterResources.w; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.w; break;
-						}
+						strConsonantPool += CharacterResources.w; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1234,13 +1214,9 @@ namespace Yarng
 				switch (comboBoxCharX.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.x; break;
-						}
+						strVowelPool += CharacterResources.x; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.x; break;
-						}
+						strConsonantPool += CharacterResources.x; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1249,13 +1225,9 @@ namespace Yarng
 				switch (comboBoxCharY.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.y; break;
-						}
+						strVowelPool += CharacterResources.y; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.y; break;
-						}
+						strConsonantPool += CharacterResources.y; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
@@ -1264,24 +1236,29 @@ namespace Yarng
 				switch (comboBoxCharZ.SelectedIndex)
 				{
 					case (byte)Letter.Vowel:
-						{
-							strVowelPool += Properties.CharacterResources.z; break;
-						}
+						strVowelPool += CharacterResources.z; break;
 					case (byte)Letter.Consonant:
-						{
-							strConsonantPool += Properties.CharacterResources.z; break;
-						}
+						strConsonantPool += CharacterResources.z; break;
 				}
 				toolStripProgressBar.PerformStep();
 			}
 			Close();
 		}
 
-		private void ButtonCancel_Click(object sender, EventArgs e)
-		{
-			Close();
-		}
+		/// <summary>
+		/// Cancel the changes of the characters
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void ButtonCancel_Click(object sender, EventArgs e) => Close();
 
+		/// <summary>
+		/// Randomize the changes of the characters
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonRandomize_Click(object sender, EventArgs e)
 		{
 			Random rnd = new Random();
@@ -1315,134 +1292,235 @@ namespace Yarng
 
 		#endregion
 
+		#region DoubleClick handlers
+
+		/// <summary>
+		/// Copy the percent of the character A to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharA_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharA.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character B to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharB_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharB.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character C to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharC_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharC.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character D to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharD_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharD.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character E to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharE_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharE.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character F to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharF_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharF.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character G to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharG_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharG.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character H to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharH_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharH.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character I to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharI_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharI.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character J to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharJ_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharJ.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character K to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharK_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharK.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character L to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharL_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharL.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character M to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharM_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharM.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character N to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharN_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharN.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character O to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharO_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharO.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character P to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharP_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharP.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character Q to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharQ_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharQ.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character R to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharR_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharR.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character S to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharS_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharS.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character T to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharT_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharT.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character U to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharU_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharU.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character V to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharV_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharV.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character W to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharW_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharW.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character X to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharX_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharX.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character Y to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharY_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharY.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the percent of the character Z to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelPercentCharZ_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelPercentCharZ.Text, showMessage: true);
+
+		/// <summary>
+		/// Copy the char pool to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void LabelCharPool_DoubleClick(object sender, EventArgs e) => CopyToClipboard(text: labelCharPool.Text, showMessage: true);
+
+		#endregion
+
 		#region ValueChanged handlers
 
-		private void NumericUpDownCharA_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharB_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharC_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharD_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharE_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharF_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharG_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharH_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharI_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharJ_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharK_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharL_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharM_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharN_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharO_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharP_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharQ_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharR_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharS_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharT_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharU_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharV_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharW_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharX_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharY_ValueChanged(object sender, EventArgs e)
-		{
-			UpdatePercentLabels();
-		}
-
-		private void NumericUpDownCharZ_ValueChanged(object sender, EventArgs e)
+		/// <summary>
+		/// Update the percent labels while changing the values of numeric spin buttons
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
+		private void UpdatePercentLabels_ValueChanged(object sender, EventArgs e)
 		{
 			UpdatePercentLabels();
 		}
@@ -1451,2055 +1529,41 @@ namespace Yarng
 
 		#region Enter handlers
 
-		private void LabelCharA_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharB_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharC_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharD_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharE_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharF_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharG_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharH_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharI_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharJ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharK_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharL_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharM_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharN_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharO_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharP_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharQ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharR_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharS_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharT_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharU_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharV_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharW_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharX_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharY_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharZ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharPool_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonApply_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonCancel_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonRandomize_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharA_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharB_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharC_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharD_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharE_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharF_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharG_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharH_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharI_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharJ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharK_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharL_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharM_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharN_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharO_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharP_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharQ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharR_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharS_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharT_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharU_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharV_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharW_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharX_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharY_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharZ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharA_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharB_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharC_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharD_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharE_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharF_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharG_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharH_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharI_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharJ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharK_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharL_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharM_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharN_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharO_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharP_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharQ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharR_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharS_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharT_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharU_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharV_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharW_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharX_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharY_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericUpDownCharZ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharA_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharB_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharC_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharD_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharE_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharF_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharG_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharH_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharI_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharJ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharK_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharL_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharM_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharN_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharO_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharP_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharQ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharR_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharS_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharT_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharU_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharV_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharW_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharX_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharY_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharZ_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
+		/// <summary>
+		/// Set the information text in the status bar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
+		private void SetStatusbar_Enter(object sender, EventArgs e)
+		{
+			toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
+		}
+
+		/// <summary>
+		/// Set the information text of a ToolStripMenuItem in the status bar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
+		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e)
+		{
+			toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
 		}
 
 		#endregion
 
 		#region Leave handlers
 
-		private void LabelCharA_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharB_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharC_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharD_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharE_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharF_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharG_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharH_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharI_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharJ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharK_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharL_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharM_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharN_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharO_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharP_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharQ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharR_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharS_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharT_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharU_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharV_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharW_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharX_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharY_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharZ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharPool_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonApply_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonCancel_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonRandomize_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharA_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharB_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharC_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharD_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharE_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharF_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharG_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharH_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharI_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharJ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharK_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharL_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharM_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharN_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharO_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharP_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharQ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharR_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharS_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharT_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharU_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharV_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharW_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharX_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharY_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharZ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharA_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharB_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharC_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharD_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharE_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharF_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharG_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharH_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharI_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharJ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharK_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharL_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharM_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharN_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharO_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharP_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharQ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharR_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharS_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharT_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharU_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharV_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharW_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharX_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharY_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericUpDownCharZ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharA_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharB_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharC_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharD_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharE_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharF_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharG_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharH_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharI_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharJ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharK_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharL_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharM_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharN_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharO_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharP_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharQ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharR_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharS_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharT_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharU_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharV_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharW_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharX_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharY_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharZ_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		#endregion
-
-		#region MouseEnter handlers
-
-		private void LabelCharA_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharB_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharC_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharD_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharE_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharF_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharG_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharH_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharI_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharJ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharK_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharL_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharM_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharN_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharO_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharP_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharQ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharR_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharS_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharT_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharU_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharV_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharW_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharX_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharY_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharZ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelCharPool_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonApply_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonCancel_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonRandomize_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharA_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharB_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharC_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharD_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharE_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharF_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharG_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharH_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharI_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharJ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharK_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharL_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharM_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharN_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharO_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharP_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharQ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharR_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharS_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharT_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharU_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharV_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharW_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharX_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharY_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboBoxCharZ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharA_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharB_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharC_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharD_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharE_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharF_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharG_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharH_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharI_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharJ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharK_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharL_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharM_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharN_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharO_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharP_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharQ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharR_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharS_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharT_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharU_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharV_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharW_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharX_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharY_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void LabelPercentCharZ_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		#endregion
-
-		#region MouseLeave handlers
-
-		private void LabelCharA_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharB_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharC_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharD_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharE_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharF_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharG_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharH_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharI_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharJ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharK_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharL_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharM_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharN_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharO_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharP_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharQ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharR_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharS_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharT_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharU_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharV_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharW_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharX_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharY_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharZ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelCharPool_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonApply_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonCancel_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonRandomize_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharA_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharB_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharC_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharD_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharE_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharF_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharG_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharH_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharI_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharJ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharK_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharL_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharM_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharN_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharO_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharP_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharQ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharR_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharS_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharT_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharU_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharV_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharW_MouseMove(object sender, MouseEventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharX_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharY_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboBoxCharZ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharA_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharB_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharC_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharD_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharE_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharF_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharG_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharH_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharI_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharJ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharK_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharL_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharM_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharN_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharO_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharP_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharQ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharR_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharS_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharT_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharU_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharV_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharW_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharX_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharY_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void LabelPercentCharZ_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		#endregion
-
-		#region DoubleClick handlers
-
-		private void LabelPercentCharA_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharA.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharB_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharB.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharC_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharC.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharD_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharD.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharE_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharE.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharF_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharF.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharG_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharG.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharH_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharH.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharI_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharI.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharJ_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharJ.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharK_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharK.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharL_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharL.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharM_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharM.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharN_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharN.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharO_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharO.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharP_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharP.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharQ_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharQ.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharR_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharR.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharS_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharS.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharT_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharT.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharU_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharU.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharV_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharV.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharW_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharW.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharX_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharX.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharY_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharY.Text, showMessage: true);
-		}
-
-		private void LabelPercentCharZ_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelPercentCharZ.Text, showMessage: true);
-		}
-
-		private void LabelCharPool_DoubleClick(object sender, EventArgs e)
-		{
-			CopyToClipboard(text: labelCharPool.Text, showMessage: true);
+		/// <summary>
+		/// Clear the information text in the status bar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void ClearStatusbar_Leave(object sender, EventArgs e)
+		{
+			toolStripStatusLabel.Text = string.Empty;
 		}
 
 		#endregion

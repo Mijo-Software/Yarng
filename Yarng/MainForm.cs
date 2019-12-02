@@ -38,7 +38,7 @@ namespace Yarng
 		private enum LetterLanguage : byte { Default = 0, English, German, Frence, Spanish, Portuguese, Italian, Dutch, Latin, UserDefined };
 
 		/// <summary>
-		/// culture info for the date
+		/// Culture info for the date
 		/// </summary>
 		private readonly CultureInfo culture = CultureInfo.CurrentUICulture;
 
@@ -61,19 +61,14 @@ namespace Yarng
 		/// Count the specific chars of the string
 		/// </summary>
 		/// <param name="text">text</param>
-		/// <param name="chr">char to count</param>
-		/// <returns>number of chars</returns>
-		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
+		/// <param name="chr">character to count</param>
+		/// <returns>number of chararcters</returns>
 		private static uint CountChar(string text, char chr = '\0')
 		{
 			uint tmp = 0;
-			if (string.IsNullOrEmpty(value: text))
+			if (!string.IsNullOrEmpty(value: text))
 			{
-				throw new ArgumentException(message: "message", paramName: nameof(text));
-			}
-			else
-			{
-				foreach (var item in text)
+				foreach (char item in text)
 				{
 					if (item == chr)
 					{
@@ -278,7 +273,10 @@ namespace Yarng
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		public MainForm() => InitializeComponent();
+		public MainForm()
+		{
+			InitializeComponent();
+		}
 
 		/// <summary>
 		/// Load the main form
@@ -304,70 +302,74 @@ namespace Yarng
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
 		private void ButtonShowProbabilityTable_Click(object sender, EventArgs e)
 		{
-			using ProbabilityTableForm formProbabilityTable = new ProbabilityTableForm();
-			formProbabilityTable.Consonants = textConsonants.Text;
-			formProbabilityTable.Vowels = textVowels.Text;
-			formProbabilityTable.ConsonantPool = strConsonantPool;
-			formProbabilityTable.VowelPool = strVowelPool;
-			formProbabilityTable.NumericValueCharA = GetValueCharfromPools(chr: CharacterResources.a[index: 0]);
-			formProbabilityTable.NumericValueCharB = GetValueCharfromPools(chr: CharacterResources.b[index: 0]);
-			formProbabilityTable.NumericValueCharC = GetValueCharfromPools(chr: CharacterResources.c[index: 0]);
-			formProbabilityTable.NumericValueCharD = GetValueCharfromPools(chr: CharacterResources.d[index: 0]);
-			formProbabilityTable.NumericValueCharE = GetValueCharfromPools(chr: CharacterResources.e[index: 0]);
-			formProbabilityTable.NumericValueCharF = GetValueCharfromPools(chr: CharacterResources.f[index: 0]);
-			formProbabilityTable.NumericValueCharG = GetValueCharfromPools(chr: CharacterResources.g[index: 0]);
-			formProbabilityTable.NumericValueCharH = GetValueCharfromPools(chr: CharacterResources.h[index: 0]);
-			formProbabilityTable.NumericValueCharI = GetValueCharfromPools(chr: CharacterResources.i[index: 0]);
-			formProbabilityTable.NumericValueCharJ = GetValueCharfromPools(chr: CharacterResources.j[index: 0]);
-			formProbabilityTable.NumericValueCharK = GetValueCharfromPools(chr: CharacterResources.k[index: 0]);
-			formProbabilityTable.NumericValueCharL = GetValueCharfromPools(chr: CharacterResources.l[index: 0]);
-			formProbabilityTable.NumericValueCharM = GetValueCharfromPools(chr: CharacterResources.m[index: 0]);
-			formProbabilityTable.NumericValueCharN = GetValueCharfromPools(chr: CharacterResources.n[index: 0]);
-			formProbabilityTable.NumericValueCharO = GetValueCharfromPools(chr: CharacterResources.o[index: 0]);
-			formProbabilityTable.NumericValueCharP = GetValueCharfromPools(chr: CharacterResources.p[index: 0]);
-			formProbabilityTable.NumericValueCharQ = GetValueCharfromPools(chr: CharacterResources.q[index: 0]);
-			formProbabilityTable.NumericValueCharR = GetValueCharfromPools(chr: CharacterResources.r[index: 0]);
-			formProbabilityTable.NumericValueCharS = GetValueCharfromPools(chr: CharacterResources.s[index: 0]);
-			formProbabilityTable.NumericValueCharT = GetValueCharfromPools(chr: CharacterResources.t[index: 0]);
-			formProbabilityTable.NumericValueCharU = GetValueCharfromPools(chr: CharacterResources.u[index: 0]);
-			formProbabilityTable.NumericValueCharV = GetValueCharfromPools(chr: CharacterResources.v[index: 0]);
-			formProbabilityTable.NumericValueCharW = GetValueCharfromPools(chr: CharacterResources.w[index: 0]);
-			formProbabilityTable.NumericValueCharX = GetValueCharfromPools(chr: CharacterResources.x[index: 0]);
-			formProbabilityTable.NumericValueCharY = GetValueCharfromPools(chr: CharacterResources.y[index: 0]);
-			formProbabilityTable.NumericValueCharZ = GetValueCharfromPools(chr: CharacterResources.z[index: 0]);
-			formProbabilityTable.SortOfCharA = GetSortOfChar(letter: CharacterResources.a);
-			formProbabilityTable.SortOfCharB = GetSortOfChar(letter: CharacterResources.b);
-			formProbabilityTable.SortOfCharC = GetSortOfChar(letter: CharacterResources.c);
-			formProbabilityTable.SortOfCharD = GetSortOfChar(letter: CharacterResources.d);
-			formProbabilityTable.SortOfCharE = GetSortOfChar(letter: CharacterResources.e);
-			formProbabilityTable.SortOfCharF = GetSortOfChar(letter: CharacterResources.f);
-			formProbabilityTable.SortOfCharG = GetSortOfChar(letter: CharacterResources.g);
-			formProbabilityTable.SortOfCharH = GetSortOfChar(letter: CharacterResources.h);
-			formProbabilityTable.SortOfCharI = GetSortOfChar(letter: CharacterResources.i);
-			formProbabilityTable.SortOfCharJ = GetSortOfChar(letter: CharacterResources.j);
-			formProbabilityTable.SortOfCharK = GetSortOfChar(letter: CharacterResources.k);
-			formProbabilityTable.SortOfCharL = GetSortOfChar(letter: CharacterResources.l);
-			formProbabilityTable.SortOfCharM = GetSortOfChar(letter: CharacterResources.m);
-			formProbabilityTable.SortOfCharN = GetSortOfChar(letter: CharacterResources.n);
-			formProbabilityTable.SortOfCharO = GetSortOfChar(letter: CharacterResources.o);
-			formProbabilityTable.SortOfCharP = GetSortOfChar(letter: CharacterResources.p);
-			formProbabilityTable.SortOfCharQ = GetSortOfChar(letter: CharacterResources.q);
-			formProbabilityTable.SortOfCharR = GetSortOfChar(letter: CharacterResources.r);
-			formProbabilityTable.SortOfCharS = GetSortOfChar(letter: CharacterResources.s);
-			formProbabilityTable.SortOfCharT = GetSortOfChar(letter: CharacterResources.t);
-			formProbabilityTable.SortOfCharU = GetSortOfChar(letter: CharacterResources.u);
-			formProbabilityTable.SortOfCharV = GetSortOfChar(letter: CharacterResources.v);
-			formProbabilityTable.SortOfCharW = GetSortOfChar(letter: CharacterResources.w);
-			formProbabilityTable.SortOfCharX = GetSortOfChar(letter: CharacterResources.x);
-			formProbabilityTable.SortOfCharY = GetSortOfChar(letter: CharacterResources.y);
-			formProbabilityTable.SortOfCharZ = GetSortOfChar(letter: CharacterResources.z);
-			if (formProbabilityTable.ShowDialog() == DialogResult.OK)
+			using (ProbabilityTableForm probabilityTableForm = new ProbabilityTableForm
 			{
-				textConsonants.Text = formProbabilityTable.Consonants;
-				textVowels.Text = formProbabilityTable.Vowels;
-				strConsonantPool = formProbabilityTable.ConsonantPool;
-				strVowelPool = formProbabilityTable.VowelPool;
-				comboLanguage.SelectedIndex = (byte)LetterLanguage.UserDefined;
+				Consonants = textConsonants.Text,
+				Vowels = textVowels.Text,
+				ConsonantPool = strConsonantPool,
+				VowelPool = strVowelPool,
+				NumericValueCharA = GetValueCharfromPools(chr: CharacterResources.a[index: 0]),
+				NumericValueCharB = GetValueCharfromPools(chr: CharacterResources.b[index: 0]),
+				NumericValueCharC = GetValueCharfromPools(chr: CharacterResources.c[index: 0]),
+				NumericValueCharD = GetValueCharfromPools(chr: CharacterResources.d[index: 0]),
+				NumericValueCharE = GetValueCharfromPools(chr: CharacterResources.e[index: 0]),
+				NumericValueCharF = GetValueCharfromPools(chr: CharacterResources.f[index: 0]),
+				NumericValueCharG = GetValueCharfromPools(chr: CharacterResources.g[index: 0]),
+				NumericValueCharH = GetValueCharfromPools(chr: CharacterResources.h[index: 0]),
+				NumericValueCharI = GetValueCharfromPools(chr: CharacterResources.i[index: 0]),
+				NumericValueCharJ = GetValueCharfromPools(chr: CharacterResources.j[index: 0]),
+				NumericValueCharK = GetValueCharfromPools(chr: CharacterResources.k[index: 0]),
+				NumericValueCharL = GetValueCharfromPools(chr: CharacterResources.l[index: 0]),
+				NumericValueCharM = GetValueCharfromPools(chr: CharacterResources.m[index: 0]),
+				NumericValueCharN = GetValueCharfromPools(chr: CharacterResources.n[index: 0]),
+				NumericValueCharO = GetValueCharfromPools(chr: CharacterResources.o[index: 0]),
+				NumericValueCharP = GetValueCharfromPools(chr: CharacterResources.p[index: 0]),
+				NumericValueCharQ = GetValueCharfromPools(chr: CharacterResources.q[index: 0]),
+				NumericValueCharR = GetValueCharfromPools(chr: CharacterResources.r[index: 0]),
+				NumericValueCharS = GetValueCharfromPools(chr: CharacterResources.s[index: 0]),
+				NumericValueCharT = GetValueCharfromPools(chr: CharacterResources.t[index: 0]),
+				NumericValueCharU = GetValueCharfromPools(chr: CharacterResources.u[index: 0]),
+				NumericValueCharV = GetValueCharfromPools(chr: CharacterResources.v[index: 0]),
+				NumericValueCharW = GetValueCharfromPools(chr: CharacterResources.w[index: 0]),
+				NumericValueCharX = GetValueCharfromPools(chr: CharacterResources.x[index: 0]),
+				NumericValueCharY = GetValueCharfromPools(chr: CharacterResources.y[index: 0]),
+				NumericValueCharZ = GetValueCharfromPools(chr: CharacterResources.z[index: 0]),
+				SortOfCharA = GetSortOfChar(letter: CharacterResources.a),
+				SortOfCharB = GetSortOfChar(letter: CharacterResources.b),
+				SortOfCharC = GetSortOfChar(letter: CharacterResources.c),
+				SortOfCharD = GetSortOfChar(letter: CharacterResources.d),
+				SortOfCharE = GetSortOfChar(letter: CharacterResources.e),
+				SortOfCharF = GetSortOfChar(letter: CharacterResources.f),
+				SortOfCharG = GetSortOfChar(letter: CharacterResources.g),
+				SortOfCharH = GetSortOfChar(letter: CharacterResources.h),
+				SortOfCharI = GetSortOfChar(letter: CharacterResources.i),
+				SortOfCharJ = GetSortOfChar(letter: CharacterResources.j),
+				SortOfCharK = GetSortOfChar(letter: CharacterResources.k),
+				SortOfCharL = GetSortOfChar(letter: CharacterResources.l),
+				SortOfCharM = GetSortOfChar(letter: CharacterResources.m),
+				SortOfCharN = GetSortOfChar(letter: CharacterResources.n),
+				SortOfCharO = GetSortOfChar(letter: CharacterResources.o),
+				SortOfCharP = GetSortOfChar(letter: CharacterResources.p),
+				SortOfCharQ = GetSortOfChar(letter: CharacterResources.q),
+				SortOfCharR = GetSortOfChar(letter: CharacterResources.r),
+				SortOfCharS = GetSortOfChar(letter: CharacterResources.s),
+				SortOfCharT = GetSortOfChar(letter: CharacterResources.t),
+				SortOfCharU = GetSortOfChar(letter: CharacterResources.u),
+				SortOfCharV = GetSortOfChar(letter: CharacterResources.v),
+				SortOfCharW = GetSortOfChar(letter: CharacterResources.w),
+				SortOfCharX = GetSortOfChar(letter: CharacterResources.x),
+				SortOfCharY = GetSortOfChar(letter: CharacterResources.y),
+				SortOfCharZ = GetSortOfChar(letter: CharacterResources.z)
+			})
+			{
+				if (probabilityTableForm.ShowDialog() == DialogResult.OK)
+				{
+					textConsonants.Text = probabilityTableForm.Consonants;
+					textVowels.Text = probabilityTableForm.Vowels;
+					strConsonantPool = probabilityTableForm.ConsonantPool;
+					strVowelPool = probabilityTableForm.VowelPool;
+					comboLanguage.SelectedIndex = (byte)LetterLanguage.UserDefined;
+				}
 			}
 		}
 
@@ -380,7 +382,7 @@ namespace Yarng
 		private void ButtonLoadDefaultSettings_Click(object sender, EventArgs e)
 		{
 			ResetSettings();
-			MessageBox.Show(text: Strings.settingsResetted, caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+			MessageBox.Show(text: Strings.settingsReset, caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 		}
 
 		/// <summary>
@@ -444,7 +446,10 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void ButtonExit_Click(object sender, EventArgs e) => Close();
+		private void ButtonExit_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 
 		/// <summary>
 		/// Generate the name list
@@ -519,7 +524,10 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void ButtonClearList_Click(object sender, EventArgs e) => textList.Clear();
+		private void ButtonClearList_Click(object sender, EventArgs e)
+		{
+			textList.Clear();
+		}
 
 		/// <summary>
 		/// Copy the name list to the clipboard
@@ -546,8 +554,8 @@ namespace Yarng
 		}
 
 		/// <summary>
-		/// 
-		/// </summary>Print the name list
+		/// Print the name list
+		/// </summary>
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
@@ -615,7 +623,10 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void LabelVowels_DoubleClick(object sender, EventArgs e) => MessageBox.Show(text: $"vowel pool: {strVowelPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+		private void LabelVowels_DoubleClick(object sender, EventArgs e)
+		{
+			MessageBox.Show(text: $"vowel pool: {strVowelPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+		}
 
 		/// <summary>
 		/// Show the consonant pool
@@ -623,7 +634,10 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>	
-		private void LabelConsonants_DoubleClick(object sender, EventArgs e) => MessageBox.Show(text: $"consonant pool: {strConsonantPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+		private void LabelConsonants_DoubleClick(object sender, EventArgs e)
+		{
+			MessageBox.Show(text: $"consonant pool: {strConsonantPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+		}
 
 		#endregion
 
@@ -649,13 +663,13 @@ namespace Yarng
 		{
 			if (numericCharacterLenghtsMin.Value > numericCharacterLenghtsMax.Value)
 			{
-				MessageBox.Show(text: Strings.minValueMustBigger, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.minValueMustBigger, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 				numericCharacterLenghtsMin.Value = numericCharacterLenghtsMax.Value;
 			}
 		}
 
 		/// <summary>
-		/// 
+		/// ??
 		/// </summary>
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
@@ -664,7 +678,7 @@ namespace Yarng
 		{
 			if (numericCharacterLenghtsMax.Value < numericCharacterLenghtsMin.Value)
 			{
-				MessageBox.Show(text: Strings.maxValueMustLesser, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.maxValueMustLesser, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 				numericCharacterLenghtsMax.Value = numericCharacterLenghtsMin.Value;
 			}
 		}
@@ -679,7 +693,10 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
-		private void SetStatusbar_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
+		private void SetStatusbar_Enter(object sender, EventArgs e)
+		{
+			toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
+		}
 
 		/// <summary>
 		/// Set the information text of a ToolStripMenuItem in the status bar
@@ -687,7 +704,10 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
-		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
+		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e)
+		{
+			toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
+		}
 
 		#endregion
 
@@ -699,7 +719,10 @@ namespace Yarng
 		/// <param name="sender">object sender</param>
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
-		private void ClearStatusbar_Leave(object sender, EventArgs e) => toolStripStatusLabel.Text = string.Empty;
+		private void ClearStatusbar_Leave(object sender, EventArgs e)
+		{
+			toolStripStatusLabel.Text = string.Empty;
+		}
 
 		/// <summary>
 		/// Clear the information text in the status bar while check if the text box of vowels is not empty
@@ -712,7 +735,7 @@ namespace Yarng
 			toolStripStatusLabel.Text = string.Empty;
 			if (textVowels.TextLength == 0)
 			{
-				MessageBox.Show(text: Strings.mustHaveVowels, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.mustHaveVowels, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 				textVowels.Text = strDefaultVowels;
 			}
 		}
@@ -728,7 +751,7 @@ namespace Yarng
 			toolStripStatusLabel.Text = string.Empty;
 			if (textConsonants.TextLength == 0)
 			{
-				MessageBox.Show(text: Strings.mustHaveConsonants, Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.mustHaveConsonants, Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 				textConsonants.Text = strDefaultConsonants;
 			}
 		}
@@ -738,84 +761,67 @@ namespace Yarng
 		#region SelectedIndexChanged handlers
 
 		/// <summary>
-		/// 
+		/// Adjust the letters of the choosen language
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ComboLanguage_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			switch (comboLanguage.SelectedIndex)
 			{
 				default:
-				{
 					strVowelPool = strDefaultVowels;
 					strConsonantPool = strDefaultConsonants;
 					break;
-				}
 				case (byte)LetterLanguage.English:
-				{
 					int[] arrLanguageValueEnglish = { 11, 2, 2, 6, 13, 2, 2, 9, 6, 1, 1, 3, 3, 7, 7, 1, 0, 5, 6, 9, 2, 1, 2, 0, 2, 0 };
 					strConsonantPool = "";
 					strVowelPool = "";
 					for (int n = 0; n < arrLanguageValueEnglish.Length; n++)
 					{
-						MessageBox.Show(n.ToString());
+						MessageBox.Show(text: n.ToString(culture));
 						for (int i = 0; i < arrLanguageValueEnglish[n]; i++)
 						{
-							if (IsVowelDefault(strDefaultAlphabet[index: i].ToString()))
+							if (IsVowelDefault(letter: strDefaultAlphabet[index: i].ToString(culture)))
 							{
 								strVowelPool += strDefaultAlphabet[index: i];
 							}
-							else if (IsConsonantDefault(strDefaultAlphabet[index: i].ToString()))
+							else if (IsConsonantDefault(letter: strDefaultAlphabet[index: i].ToString(culture)))
 							{
-							strConsonantPool += strDefaultAlphabet[index: i];
+								strConsonantPool += strDefaultAlphabet[index: i];
 							}
 						}
 					}
 					break;
-				}
 				case (byte)LetterLanguage.German:
-				{
 					strConsonantPool = "";
 					strVowelPool = "";
 					break;
-				}
 				case (byte)LetterLanguage.Frence:
-				{
 					strConsonantPool = "";
 					strVowelPool = "";
 					break;
-				}
 				case (byte)LetterLanguage.Spanish:
-				{
 					strConsonantPool = "";
 					strVowelPool = "";
 					break;
-				}
 				case (byte)LetterLanguage.Portuguese:
-				{
 					strConsonantPool = "";
 					strVowelPool = "";
 					break;
-				}
 				case (byte)LetterLanguage.Italian:
-				{
 					strConsonantPool = "";
 					strVowelPool = "";
 					break;
-				}
 				case (byte)LetterLanguage.Dutch:
-				{
 					strConsonantPool = "";
 					strVowelPool = "";
 					break;
-				}
 				case (byte)LetterLanguage.Latin:
-				{
 					strConsonantPool = "";
 					strVowelPool = "";
 					break;
-				}
 			}
 		}
 
