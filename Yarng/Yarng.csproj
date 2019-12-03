@@ -99,29 +99,37 @@
     <DocumentationFile>bin\x64\Release\Yarng.xml</DocumentationFile>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release x32|AnyCPU'">
-    <OutputPath>bin\Release x32\</OutputPath>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Release x32\Yarng.xml</DocumentationFile>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <LangVersion>8.0</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release x32|x64'">
-    <OutputPath>bin\x64\Release x32\</OutputPath>
-    <Prefer32Bit>false</Prefer32Bit>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <DocumentationFile>bin\x64\Release x32\Yarng.xml</DocumentationFile>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <LangVersion>8.0</LangVersion>
-  </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Yarng.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DocumentationFile>bin\x64\Debug\Yarng.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DocumentationFile>bin\x64\Release\Yarng.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -173,6 +181,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Strings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -201,18 +214,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="Properties\CharacterResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CharacterResources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -231,38 +239,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arrow_left_16.png" />
-    <None Include="Resources\arrow_right_16.png" />
-    <None Include="Resources\accept_16.png" />
-    <None Include="Resources\arrow_refresh_16.png" />
     <None Include="Resources\history.rtf" />
     <None Include="Resources\howto.rtf" />
-    <None Include="Resources\resultset_next.png" />
-    <None Include="Resources\printer_16.png" />
-    <None Include="Resources\clipboard_empty_16.png" />
-    <None Include="Resources\document_export_16.png" />
     <None Include="Resources\world_32.png" />
-    <None Include="Resources\cancel_16.png" />
-    <None Include="Resources\dice_16.png" />
-    <None Include="Resources\disk_16.png" />
-    <None Include="Resources\exclamation_16.png" />
-    <None Include="Resources\folder_16.png" />
-    <None Include="Resources\help_16.png" />
-    <None Include="Resources\hourglass_16.png" />
-    <None Include="Resources\information_16.png" />
-    <None Include="Resources\lightbulb_16.png" />
-    <None Include="Resources\page_paste_16.png" />
-    <None Include="Resources\page_save_16.png" />
-    <None Include="Resources\page_white_16.png" />
-    <None Include="Resources\paste_plain_16.png" />
-    <None Include="Resources\pencil_16.png" />
-    <None Include="Resources\question_16.png" />
-    <None Include="Resources\shape_align_center_16.png" />
-    <None Include="Resources\text_replace_16.png" />
-    <None Include="Resources\tick_16.png" />
-    <None Include="Resources\time_16.png" />
-    <None Include="Resources\door_16.png" />
-    <None Include="Resources\table_16.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
@@ -292,8 +271,93 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sound.png" />
-    <None Include="Resources\resultset_next1.png" />
+    <None Include="Resources\fatcow_accept_16.png" />
+    <None Include="Resources\fatcow_arrow_left_16.png" />
+    <None Include="Resources\fatcow_arrow_refresh_16.png" />
+    <None Include="Resources\fatcow_arrow_right_16.png" />
+    <None Include="Resources\fatcow_cancel_16.png" />
+    <None Include="Resources\fatcow_clipboard_empty_16.png" />
+    <None Include="Resources\fatcow_dice_16.png" />
+    <None Include="Resources\fatcow_disk_16.png" />
+    <None Include="Resources\fatcow_document_export_16.png" />
+    <None Include="Resources\fatcow_door_16.png" />
+    <None Include="Resources\fatcow_exclamation_16.png" />
+    <None Include="Resources\fatcow_folder_16.png" />
+    <None Include="Resources\fatcow_help_16.png" />
+    <None Include="Resources\fatcow_hourglass_16.png" />
+    <None Include="Resources\fatcow_information_16.png" />
+    <None Include="Resources\fatcow_lightbulb_16.png" />
+    <None Include="Resources\fatcow_page_paste_16.png" />
+    <None Include="Resources\fatcow_page_save_16.png" />
+    <None Include="Resources\fatcow_page_white_16.png" />
+    <None Include="Resources\fatcow_paste_plain_16.png" />
+    <None Include="Resources\fatcow_pencil_16.png" />
+    <None Include="Resources\fatcow_printer_16.png" />
+    <None Include="Resources\fatcow_question_16.png" />
+    <None Include="Resources\fatcow_resultset_next_16.png" />
+    <None Include="Resources\fatcow_resultset_next_32.png" />
+    <None Include="Resources\fatcow_shape_align_center_16.png" />
+    <None Include="Resources\fatcow_sound_16.png" />
+    <None Include="Resources\fatcow_table_16.png" />
+    <None Include="Resources\fatcow_text_replace_16.png" />
+    <None Include="Resources\fatcow_tick_16.png" />
+    <None Include="Resources\fatcow_time_16.png" />
+    <None Include="Resources\fugue_arrow_16.png" />
+    <None Include="Resources\fugue_arrow-180_16.png" />
+    <None Include="Resources\fugue_arrow-circle-double-135_16.png" />
+    <None Include="Resources\fugue_arrow-switch_16.png" />
+    <None Include="Resources\fugue_clipboard-empty_16.png" />
+    <None Include="Resources\fugue_clipboard-paste_16.png" />
+    <None Include="Resources\fugue_control_16.png" />
+    <None Include="Resources\fugue_cross-circle_16.png" />
+    <None Include="Resources\fugue_disk_16.png" />
+    <None Include="Resources\fugue_document_16.png" />
+    <None Include="Resources\fugue_document-export_16.png" />
+    <None Include="Resources\fugue_door_16.png" />
+    <None Include="Resources\fugue_edit-replace_16.png" />
+    <None Include="Resources\fugue_exclamation-red_16.png" />
+    <None Include="Resources\fugue_folder_16.png" />
+    <None Include="Resources\fugue_hourglass_16.png" />
+    <None Include="Resources\fugue_information_16.png" />
+    <None Include="Resources\fugue_layers-alignment-center_16.png" />
+    <None Include="Resources\fugue_light-bulb_16.png" />
+    <None Include="Resources\fugue_navigation_16.png" />
+    <None Include="Resources\fugue_pencil_16.png" />
+    <None Include="Resources\fugue_printer_16.png" />
+    <None Include="Resources\fugue_question_16.png" />
+    <None Include="Resources\fugue_speaker-volume_16.png" />
+    <None Include="Resources\fugue_table_16.png" />
+    <None Include="Resources\fugue_tick_16.png" />
+    <None Include="Resources\fugue_tick-circle_16.png" />
+    <None Include="Resources\fugue_clock_16.png" />
+    <None Include="Resources\silk_accept_16.png" />
+    <None Include="Resources\silk_arrow_left_16.png" />
+    <None Include="Resources\silk_arrow_right_16.png" />
+    <None Include="Resources\silk_arrow_switch_16.png" />
+    <None Include="Resources\silk_cancel_16.png" />
+    <None Include="Resources\silk_clipboard_16.png" />
+    <None Include="Resources\silk_disk_16.png" />
+    <None Include="Resources\silk_door_16.png" />
+    <None Include="Resources\silk_exclamation_16.png" />
+    <None Include="Resources\silk_folder_16.png" />
+    <None Include="Resources\silk_help_16.png" />
+    <None Include="Resources\silk_hourglass_16.png" />
+    <None Include="Resources\silk_information_16.png" />
+    <None Include="Resources\silk_lightbulb_16.png" />
+    <None Include="Resources\silk_page_save_16.png" />
+    <None Include="Resources\silk_page_white_16.png" />
+    <None Include="Resources\silk_page_white_paste_16.png" />
+    <None Include="Resources\silk_page_white_put_16.png" />
+    <None Include="Resources\silk_pencil_16.png" />
+    <None Include="Resources\silk_play_blue_16.png" />
+    <None Include="Resources\silk_printer_16.png" />
+    <None Include="Resources\silk_shape_align_center_16.png" />
+    <None Include="Resources\silk_sound_16.png" />
+    <None Include="Resources\silk_table_16.png" />
+    <None Include="Resources\silk_text_replace_16.png" />
+    <None Include="Resources\silk_tick_16.png" />
+    <None Include="Resources\silk_time_16.png" />
+    <None Include="Resources\silk_arrow_refresh_16.png" />
     <Content Include="Yarng_New.ico" />
   </ItemGroup>
   <ItemGroup>
