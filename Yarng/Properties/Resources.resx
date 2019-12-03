@@ -118,109 +118,274 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="door_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\door_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="text_replace_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\text_replace_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="disk_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\disk_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lightbulb_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lightbulb_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="resultset_next_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resultset_next_32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clipboard_empty_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clipboard_empty_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="page_white_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\page_white_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pencil_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pencil_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="time_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\time_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="world_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\world_32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shape_align_center_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shape_align_center_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="page_save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\page_save_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clipboard_empty_161" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clipboard_empty_161.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dice_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dice_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sound_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sound_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_left_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_left_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="accept_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\accept_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="question_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\question_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_right_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_right_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document_export_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_export_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_refresh_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_refresh_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exclamation_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exclamation_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="page_paste_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\page_paste_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="table_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\table_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tick_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tick_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hourglass_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hourglass_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="printer_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="information_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\information_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paste_plain_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paste_plain_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="resultset_next_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resultset_next_16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="history" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\history.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="howto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\howto.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="fatcow_accept_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_accept_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_arrow_left_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_arrow_left_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_arrow_refresh_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_arrow_refresh_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_arrow_right_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_arrow_right_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_cancel_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_cancel_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_clipboard_empty_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_clipboard_empty_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_dice_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_dice_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_disk_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_disk_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_document_export_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_document_export_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_door_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_door_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_exclamation_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_exclamation_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_folder_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_help_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_help_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_hourglass_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_hourglass_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_information_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_information_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_lightbulb_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_lightbulb_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_page_paste_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_page_paste_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_page_save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_page_save_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_page_white_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_page_white_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_paste_plain_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_paste_plain_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_pencil_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_pencil_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_printer_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_printer_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_question_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_question_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_resultset_next_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_resultset_next_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_resultset_next_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_resultset_next_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_shape_align_center_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_shape_align_center_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_sound_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_sound_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_table_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_table_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_text_replace_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_text_replace_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_tick_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_tick_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatcow_time_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatcow_time_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_arrow_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_arrow_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_arrow_180_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_arrow-180_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_arrow_circle_double_135_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_arrow-circle-double-135_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_arrow_switch_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_arrow-switch_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_clipboard_empty_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_clipboard-empty_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_clipboard_paste_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_clipboard-paste_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_control_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_control_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_cross_circle_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_cross-circle_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_disk_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_disk_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_document_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_document_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_document_export_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_document-export_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_door_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_door_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_edit_replace_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_edit-replace_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_exclamation_red_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_exclamation-red_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_folder_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_hourglass_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_hourglass_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_information_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_information_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_layers_alignment_center_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_layers-alignment-center_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_light_bulb_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_light-bulb_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_navigation_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_navigation_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_pencil_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_pencil_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_printer_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_printer_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_question_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_question_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_speaker_volume_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_speaker-volume_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_table_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_table_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_tick_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_tick_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_tick_circle_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_tick-circle_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fugue_clock_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fugue_clock_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_accept_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_accept_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_arrow_left_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_arrow_left_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_arrow_right_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_arrow_right_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_arrow_switch_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_arrow_switch_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_cancel_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_cancel_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_clipboard_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_clipboard_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_disk_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_disk_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_door_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_door_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_exclamation_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_exclamation_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_folder_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_help_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_help_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_hourglass_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_hourglass_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_information_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_information_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_lightbulb_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_lightbulb_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_page_save_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_page_save_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_page_white_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_page_white_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_page_white_paste_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_page_white_paste_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_page_white_put_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_page_white_put_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_pencil_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_pencil_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_play_blue_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_play_blue_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_printer_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_printer_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_shape_align_center_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_shape_align_center_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_sound_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_sound_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_table_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_table_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_text_replace_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_text_replace_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_tick_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_tick_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_time_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_time_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silk_arrow_refresh_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silk_arrow_refresh_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

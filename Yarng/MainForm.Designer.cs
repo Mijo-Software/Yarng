@@ -65,6 +65,9 @@
 			this.buttonLoadTemplate = new System.Windows.Forms.Button();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
+			this.contextMenuStripIconThemes = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.toolStripMenuItemFatcowIcons = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemFugueIcons = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.buttonSpeechText = new System.Windows.Forms.Button();
 			this.buttonPrintList = new System.Windows.Forms.Button();
@@ -74,6 +77,7 @@
 			this.buttonGenerate = new System.Windows.Forms.Button();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+			this.toolStripMenuItemSilkIcons = new System.Windows.Forms.ToolStripMenuItem();
 			this.groupMiscellaneous.SuspendLayout();
 			this.groupPostProcessing.SuspendLayout();
 			this.groupSettings.SuspendLayout();
@@ -81,6 +85,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericCharacterLenghtsMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericNumberOfNames)).BeginInit();
 			this.statusStrip.SuspendLayout();
+			this.contextMenuStripIconThemes.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupMiscellaneous
@@ -97,7 +102,7 @@
 			// buttonAbout
 			// 
 			this.buttonAbout.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonAbout.Image = global::Yarng.Properties.Resources.information_16;
+			this.buttonAbout.Image = global::Yarng.Properties.Resources.fatcow_information_16;
 			resources.ApplyResources(this.buttonAbout, "buttonAbout");
 			this.buttonAbout.Name = "buttonAbout";
 			this.buttonAbout.UseVisualStyleBackColor = true;
@@ -110,7 +115,7 @@
 			// buttonExit
 			// 
 			this.buttonExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonExit.Image = global::Yarng.Properties.Resources.door_16;
+			this.buttonExit.Image = global::Yarng.Properties.Resources.fatcow_door_16;
 			resources.ApplyResources(this.buttonExit, "buttonExit");
 			this.buttonExit.Name = "buttonExit";
 			this.buttonExit.UseVisualStyleBackColor = true;
@@ -123,7 +128,7 @@
 			// buttonHistory
 			// 
 			this.buttonHistory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonHistory.Image = global::Yarng.Properties.Resources.time_16;
+			this.buttonHistory.Image = global::Yarng.Properties.Resources.fatcow_time_16;
 			resources.ApplyResources(this.buttonHistory, "buttonHistory");
 			this.buttonHistory.Name = "buttonHistory";
 			this.buttonHistory.UseVisualStyleBackColor = true;
@@ -136,7 +141,7 @@
 			// buttonHowTo
 			// 
 			this.buttonHowTo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonHowTo.Image = global::Yarng.Properties.Resources.lightbulb_16;
+			this.buttonHowTo.Image = global::Yarng.Properties.Resources.fatcow_lightbulb_16;
 			resources.ApplyResources(this.buttonHowTo, "buttonHowTo");
 			this.buttonHowTo.Name = "buttonHowTo";
 			this.buttonHowTo.UseVisualStyleBackColor = true;
@@ -161,7 +166,7 @@
 			// buttonStepLeft
 			// 
 			this.buttonStepLeft.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonStepLeft.Image = global::Yarng.Properties.Resources.arrow_left_16;
+			this.buttonStepLeft.Image = global::Yarng.Properties.Resources.fatcow_arrow_left_16;
 			resources.ApplyResources(this.buttonStepLeft, "buttonStepLeft");
 			this.buttonStepLeft.Name = "buttonStepLeft";
 			this.buttonStepLeft.UseVisualStyleBackColor = true;
@@ -174,7 +179,7 @@
 			// buttonStepRight
 			// 
 			this.buttonStepRight.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonStepRight.Image = global::Yarng.Properties.Resources.arrow_right_16;
+			this.buttonStepRight.Image = global::Yarng.Properties.Resources.fatcow_arrow_right_16;
 			resources.ApplyResources(this.buttonStepRight, "buttonStepRight");
 			this.buttonStepRight.Name = "buttonStepRight";
 			this.buttonStepRight.UseVisualStyleBackColor = true;
@@ -187,7 +192,7 @@
 			// buttonScramble
 			// 
 			this.buttonScramble.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonScramble.Image = global::Yarng.Properties.Resources.dice_16;
+			this.buttonScramble.Image = global::Yarng.Properties.Resources.fatcow_dice_16;
 			resources.ApplyResources(this.buttonScramble, "buttonScramble");
 			this.buttonScramble.Name = "buttonScramble";
 			this.buttonScramble.UseVisualStyleBackColor = true;
@@ -200,7 +205,7 @@
 			// buttonSort
 			// 
 			this.buttonSort.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonSort.Image = global::Yarng.Properties.Resources.text_replace_16;
+			this.buttonSort.Image = global::Yarng.Properties.Resources.fatcow_text_replace_16;
 			resources.ApplyResources(this.buttonSort, "buttonSort");
 			this.buttonSort.Name = "buttonSort";
 			this.buttonSort.UseVisualStyleBackColor = true;
@@ -213,7 +218,7 @@
 			// buttonMirror
 			// 
 			this.buttonMirror.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonMirror.Image = global::Yarng.Properties.Resources.shape_align_center_16;
+			this.buttonMirror.Image = global::Yarng.Properties.Resources.fatcow_shape_align_center_16;
 			resources.ApplyResources(this.buttonMirror, "buttonMirror");
 			this.buttonMirror.Name = "buttonMirror";
 			this.buttonMirror.UseVisualStyleBackColor = true;
@@ -420,7 +425,7 @@
 			// buttonShowProbabilityTable
 			// 
 			this.buttonShowProbabilityTable.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShowProbabilityTable.Image = global::Yarng.Properties.Resources.table_16;
+			this.buttonShowProbabilityTable.Image = global::Yarng.Properties.Resources.fatcow_table_16;
 			resources.ApplyResources(this.buttonShowProbabilityTable, "buttonShowProbabilityTable");
 			this.buttonShowProbabilityTable.Name = "buttonShowProbabilityTable";
 			this.buttonShowProbabilityTable.UseVisualStyleBackColor = true;
@@ -433,7 +438,7 @@
 			// buttonLoadDefaultSettings
 			// 
 			this.buttonLoadDefaultSettings.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonLoadDefaultSettings.Image = global::Yarng.Properties.Resources.arrow_refresh_16;
+			this.buttonLoadDefaultSettings.Image = global::Yarng.Properties.Resources.fatcow_arrow_refresh_16;
 			resources.ApplyResources(this.buttonLoadDefaultSettings, "buttonLoadDefaultSettings");
 			this.buttonLoadDefaultSettings.Name = "buttonLoadDefaultSettings";
 			this.buttonLoadDefaultSettings.UseVisualStyleBackColor = true;
@@ -490,7 +495,7 @@
 			// buttonSaveTemplate
 			// 
 			this.buttonSaveTemplate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonSaveTemplate.Image = global::Yarng.Properties.Resources.disk_16;
+			this.buttonSaveTemplate.Image = global::Yarng.Properties.Resources.fatcow_disk_16;
 			resources.ApplyResources(this.buttonSaveTemplate, "buttonSaveTemplate");
 			this.buttonSaveTemplate.Name = "buttonSaveTemplate";
 			this.buttonSaveTemplate.UseVisualStyleBackColor = true;
@@ -503,7 +508,7 @@
 			// buttonLoadTemplate
 			// 
 			this.buttonLoadTemplate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonLoadTemplate.Image = global::Yarng.Properties.Resources.folder_16;
+			this.buttonLoadTemplate.Image = global::Yarng.Properties.Resources.fatcow_folder_16;
 			resources.ApplyResources(this.buttonLoadTemplate, "buttonLoadTemplate");
 			this.buttonLoadTemplate.Name = "buttonLoadTemplate";
 			this.buttonLoadTemplate.UseVisualStyleBackColor = true;
@@ -516,11 +521,41 @@
 			// statusStrip
 			// 
 			this.statusStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.StatusBar;
+			this.statusStrip.ContextMenuStrip = this.contextMenuStripIconThemes;
 			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
 			resources.ApplyResources(this.statusStrip, "statusStrip");
 			this.statusStrip.Name = "statusStrip";
 			this.statusStrip.SizingGrip = false;
+			// 
+			// contextMenuStripIconThemes
+			// 
+			this.contextMenuStripIconThemes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemFatcowIcons,
+            this.toolStripMenuItemFugueIcons,
+            this.toolStripMenuItemSilkIcons});
+			this.contextMenuStripIconThemes.Name = "contextMenuStrip1";
+			this.contextMenuStripIconThemes.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+			this.contextMenuStripIconThemes.ShowCheckMargin = true;
+			this.contextMenuStripIconThemes.ShowImageMargin = false;
+			resources.ApplyResources(this.contextMenuStripIconThemes, "contextMenuStripIconThemes");
+			this.contextMenuStripIconThemes.TabStop = true;
+			// 
+			// toolStripMenuItemFatcowIcons
+			// 
+			this.toolStripMenuItemFatcowIcons.AutoToolTip = true;
+			this.toolStripMenuItemFatcowIcons.Checked = true;
+			this.toolStripMenuItemFatcowIcons.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripMenuItemFatcowIcons.Name = "toolStripMenuItemFatcowIcons";
+			resources.ApplyResources(this.toolStripMenuItemFatcowIcons, "toolStripMenuItemFatcowIcons");
+			this.toolStripMenuItemFatcowIcons.MouseHover += new System.EventHandler(this.ToolStripMenuItemFatcowIcons_MouseHover);
+			// 
+			// toolStripMenuItemFugueIcons
+			// 
+			this.toolStripMenuItemFugueIcons.AutoToolTip = true;
+			this.toolStripMenuItemFugueIcons.Name = "toolStripMenuItemFugueIcons";
+			resources.ApplyResources(this.toolStripMenuItemFugueIcons, "toolStripMenuItemFugueIcons");
+			this.toolStripMenuItemFugueIcons.MouseEnter += new System.EventHandler(this.ToolStripMenuItemFugueIcons_MouseEnter);
 			// 
 			// toolStripStatusLabel
 			// 
@@ -532,7 +567,7 @@
 			// buttonSpeechText
 			// 
 			this.buttonSpeechText.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonSpeechText.Image = global::Yarng.Properties.Resources.sound_16;
+			this.buttonSpeechText.Image = global::Yarng.Properties.Resources.fatcow_sound_16;
 			resources.ApplyResources(this.buttonSpeechText, "buttonSpeechText");
 			this.buttonSpeechText.Name = "buttonSpeechText";
 			this.buttonSpeechText.UseVisualStyleBackColor = true;
@@ -545,7 +580,7 @@
 			// buttonPrintList
 			// 
 			this.buttonPrintList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonPrintList.Image = global::Yarng.Properties.Resources.printer_16;
+			this.buttonPrintList.Image = global::Yarng.Properties.Resources.fatcow_printer_16;
 			resources.ApplyResources(this.buttonPrintList, "buttonPrintList");
 			this.buttonPrintList.Name = "buttonPrintList";
 			this.buttonPrintList.UseVisualStyleBackColor = true;
@@ -558,7 +593,7 @@
 			// buttonExportList
 			// 
 			this.buttonExportList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonExportList.Image = global::Yarng.Properties.Resources.document_export_16;
+			this.buttonExportList.Image = global::Yarng.Properties.Resources.fatcow_document_export_16;
 			resources.ApplyResources(this.buttonExportList, "buttonExportList");
 			this.buttonExportList.Name = "buttonExportList";
 			this.buttonExportList.UseVisualStyleBackColor = true;
@@ -571,7 +606,7 @@
 			// buttonCopyList
 			// 
 			this.buttonCopyList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonCopyList.Image = global::Yarng.Properties.Resources.paste_plain_16;
+			this.buttonCopyList.Image = global::Yarng.Properties.Resources.fatcow_paste_plain_16;
 			resources.ApplyResources(this.buttonCopyList, "buttonCopyList");
 			this.buttonCopyList.Name = "buttonCopyList";
 			this.buttonCopyList.UseVisualStyleBackColor = true;
@@ -584,7 +619,7 @@
 			// buttonClearList
 			// 
 			this.buttonClearList.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonClearList.Image = global::Yarng.Properties.Resources.page_white_16;
+			this.buttonClearList.Image = global::Yarng.Properties.Resources.fatcow_page_white_16;
 			resources.ApplyResources(this.buttonClearList, "buttonClearList");
 			this.buttonClearList.Name = "buttonClearList";
 			this.buttonClearList.UseVisualStyleBackColor = true;
@@ -598,7 +633,7 @@
 			// 
 			this.buttonGenerate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			resources.ApplyResources(this.buttonGenerate, "buttonGenerate");
-			this.buttonGenerate.Image = global::Yarng.Properties.Resources.resultset_next_16;
+			this.buttonGenerate.Image = global::Yarng.Properties.Resources.fatcow_resultset_next_16;
 			this.buttonGenerate.Name = "buttonGenerate";
 			this.buttonGenerate.UseVisualStyleBackColor = true;
 			this.buttonGenerate.Click += new System.EventHandler(this.ButtonGenerate_Click);
@@ -606,6 +641,13 @@
 			this.buttonGenerate.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			this.buttonGenerate.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
 			this.buttonGenerate.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
+			// 
+			// toolStripMenuItemSilkIcons
+			// 
+			this.toolStripMenuItemSilkIcons.AutoToolTip = true;
+			this.toolStripMenuItemSilkIcons.Name = "toolStripMenuItemSilkIcons";
+			resources.ApplyResources(this.toolStripMenuItemSilkIcons, "toolStripMenuItemSilkIcons");
+			this.toolStripMenuItemSilkIcons.MouseHover += new System.EventHandler(this.ToolStripMenuItemSilkIcons_MouseHover);
 			// 
 			// MainForm
 			// 
@@ -638,6 +680,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericNumberOfNames)).EndInit();
 			this.statusStrip.ResumeLayout(false);
 			this.statusStrip.PerformLayout();
+			this.contextMenuStripIconThemes.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -689,6 +732,10 @@
 		private System.Windows.Forms.Button buttonSpeechText;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStripIconThemes;
+		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFatcowIcons;
+		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFugueIcons;
+		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSilkIcons;
 	}
 }
 
