@@ -10,6 +10,11 @@ namespace Yarng
 	public partial class ProbabilityTableForm : Form
 	{
 		/// <summary>
+		/// Settings
+		/// </summary>
+		private readonly Settings settings = new Settings();
+
+		/// <summary>
 		/// Sum of all chararcters
 		/// </summary>
 		private uint sumChars = 0;
@@ -529,6 +534,36 @@ namespace Yarng
 		}
 
 		/// <summary>
+		/// Load the Fatcow icon theme
+		/// </summary>
+		private void LoadFatcowIcons()
+		{
+			buttonApply.Image = Resources.fatcow_accept_16;
+			buttonCancel.Image = Resources.fatcow_cancel_16;
+			buttonRandomize.Image = Resources.fatcow_arrow_switch_16;
+		}
+
+		/// <summary>
+		/// Load the Fugue icon theme
+		/// </summary>
+		private void LoadFugueIcons()
+		{
+			buttonApply.Image = Resources.fugue_tick_circle_16;
+			buttonCancel.Image = Resources.fugue_cross_circle_16;
+			buttonRandomize.Image = Resources.fugue_arrow_switch_16;
+		}
+
+		/// <summary>
+		/// Load the Silk icon theme
+		/// </summary>
+		private void LoadSilkIcons()
+		{
+			buttonApply.Image = Resources.silk_accept_16;
+			buttonCancel.Image = Resources.silk_cancel_16;
+			buttonRandomize.Image = Resources.silk_arrow_switch_16;
+		}
+
+		/// <summary>
 		/// Copy to clipboard
 		/// </summary>
 		/// <param name="text">text to copy</param>
@@ -621,6 +656,12 @@ namespace Yarng
 		{
 			toolStripStatusLabel.Text = string.Empty;
 			toolStripProgressBar.Visible = false;
+			switch (settings.userIconSet)
+			{
+				default: LoadFatcowIcons(); break;
+				case "fugue": LoadFugueIcons(); break;
+				case "silk": LoadSilkIcons(); break;
+			}
 			if (comboBoxCharA.SelectedIndex == -1)
 			{
 				comboBoxCharA.SelectedIndex = (byte)Letter.Vowel;

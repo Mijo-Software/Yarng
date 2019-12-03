@@ -358,6 +358,7 @@
     <None Include="Resources\silk_tick_16.png" />
     <None Include="Resources\silk_time_16.png" />
     <None Include="Resources\silk_arrow_refresh_16.png" />
+    <None Include="Resources\fatcow_arrow_switch_16.png" />
     <Content Include="Yarng_New.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -13,6 +13,11 @@ namespace Yarng
 	public partial class MainForm : Form
 	{
 		/// <summary>
+		/// Settings
+		/// </summary>
+		private readonly Settings settings = new Settings();
+
+		/// <summary>
 		/// Default strings
 		/// </summary>
 		private readonly string
@@ -41,6 +46,99 @@ namespace Yarng
 		/// Culture info for the date
 		/// </summary>
 		private readonly CultureInfo culture = CultureInfo.CurrentUICulture;
+
+		/// <summary>
+		/// Load the Fatcow icon theme
+		/// </summary>
+		private void LoadFatcowIcons()
+		{
+			toolStripMenuItemFatcowIcons.Checked = true;
+			toolStripMenuItemFugueIcons.Checked = false;
+			toolStripMenuItemSilkIcons.Checked = false;
+			buttonShowProbabilityTable.Image = Resources.fatcow_table_16;
+			buttonLoadDefaultSettings.Image = Resources.fatcow_arrow_refresh_16;
+			buttonLoadTemplate.Image = Resources.fatcow_folder_16;
+			buttonSaveTemplate.Image = Resources.fatcow_disk_16;
+			buttonAbout.Image = Resources.fatcow_information_16;
+			buttonHistory.Image = Resources.fatcow_time_16;
+			buttonHowTo.Image = Resources.fatcow_lightbulb_16;
+			buttonExit.Image = Resources.fatcow_door_16;
+			buttonGenerate.Image = Resources.fatcow_resultset_next_16;
+			buttonSpeechText.Image = Resources.fatcow_sound_16;
+			buttonClearList.Image = Resources.fatcow_page_white_16;
+			buttonCopyList.Image = Resources.fatcow_paste_plain_16;
+			buttonExportList.Image = Resources.fatcow_document_export_16;
+			buttonPrintList.Image = Resources.fatcow_printer_16;
+			buttonStepLeft.Image = Resources.fatcow_arrow_left_16;
+			buttonStepRight.Image = Resources.fatcow_arrow_right_16;
+			buttonMirror.Image = Resources.fatcow_shape_align_center_16;
+			buttonSort.Image = Resources.fatcow_text_replace_16;
+			buttonScramble.Image = Resources.fatcow_arrow_switch_16;
+			settings.userIconSet = "fatcow";
+			settings.Save();
+		}
+
+		/// <summary>
+		/// Load the Fugue icon theme
+		/// </summary>
+		private void LoadFugueIcons()
+		{
+			toolStripMenuItemFatcowIcons.Checked = false;
+			toolStripMenuItemFugueIcons.Checked = true;
+			toolStripMenuItemSilkIcons.Checked = false;
+			buttonShowProbabilityTable.Image = Resources.fugue_table_16;
+			buttonLoadDefaultSettings.Image = Resources.fugue_arrow_circle_double_135_16;
+			buttonLoadTemplate.Image = Resources.fugue_folder_16;
+			buttonSaveTemplate.Image = Resources.fugue_disk_16;
+			buttonAbout.Image = Resources.fugue_information_16;
+			buttonHistory.Image = Resources.fugue_clock_16;
+			buttonHowTo.Image = Resources.fugue_light_bulb_16;
+			buttonExit.Image = Resources.fugue_door_16;
+			buttonGenerate.Image = Resources.fugue_control_16;
+			buttonSpeechText.Image = Resources.fugue_speaker_volume_16;
+			buttonClearList.Image = Resources.fugue_document_16;
+			buttonCopyList.Image = Resources.fugue_clipboard_paste_16;
+			buttonExportList.Image = Resources.fugue_document_export_16;
+			buttonPrintList.Image = Resources.fugue_printer_16;
+			buttonStepLeft.Image = Resources.fugue_arrow_180_16;
+			buttonStepRight.Image = Resources.fugue_arrow_16;
+			buttonMirror.Image = Resources.fugue_layers_alignment_center_16;
+			buttonSort.Image = Resources.fugue_edit_replace_16;
+			buttonScramble.Image = Resources.fugue_arrow_switch_16;
+			settings.userIconSet = "fugue";
+			settings.Save();
+		}
+
+		/// <summary>
+		/// Load the Silk icon theme
+		/// </summary>
+		private void LoadSilkIcons()
+		{
+			toolStripMenuItemFatcowIcons.Checked = false;
+			toolStripMenuItemFugueIcons.Checked = false;
+			toolStripMenuItemSilkIcons.Checked = true;
+			buttonShowProbabilityTable.Image = Resources.silk_table_16;
+			buttonLoadDefaultSettings.Image = Resources.silk_arrow_refresh_16;
+			buttonLoadTemplate.Image = Resources.silk_folder_16;
+			buttonSaveTemplate.Image = Resources.silk_disk_16;
+			buttonAbout.Image = Resources.silk_information_16;
+			buttonHistory.Image = Resources.silk_time_16;
+			buttonHowTo.Image = Resources.silk_lightbulb_16;
+			buttonExit.Image = Resources.silk_door_16;
+			buttonGenerate.Image = Resources.silk_play_blue_16;
+			buttonSpeechText.Image = Resources.silk_sound_16;
+			buttonClearList.Image = Resources.silk_page_white_16;
+			buttonCopyList.Image = Resources.silk_page_white_paste_16;
+			buttonExportList.Image = Resources.silk_page_white_put_16;
+			buttonPrintList.Image = Resources.silk_printer_16;
+			buttonStepLeft.Image = Resources.silk_arrow_left_16;
+			buttonStepRight.Image = Resources.silk_arrow_right_16;
+			buttonMirror.Image = Resources.silk_shape_align_center_16;
+			buttonSort.Image = Resources.silk_text_replace_16;
+			buttonScramble.Image = Resources.silk_arrow_switch_16;
+			settings.userIconSet = "silk";
+			settings.Save();
+		}
 
 		/// <summary>
 		/// Reset the settings
@@ -287,6 +385,12 @@ namespace Yarng
 			numericCharacterLenghtsMin.MouseWheel += NumericCharacterLenghtsMin;
 			numericCharacterLenghtsMax.MouseWheel += NumericCharacterLenghtsMax;
 			ResetSettings();
+			switch (settings.userIconSet)
+			{
+				default: LoadFatcowIcons(); break;
+				case "fugue": LoadFugueIcons(); break;
+				case "silk": LoadSilkIcons(); break;
+			}
 		}
 
 		#region Click handlers
@@ -689,6 +793,34 @@ namespace Yarng
 
 		#endregion
 
+		#region MouseEnter handlers
+
+		/// <summary>
+		/// Load the Fatcow icon theme by right-clicking on the statusbar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void ToolStripMenuItemFatcowIcons_MouseEnter(object sender, EventArgs e) => LoadFatcowIcons();
+
+		/// <summary>
+		/// Load the Fugue icon theme by right-clicking on the statusbar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void ToolStripMenuItemFugueIcons_MouseEnter(object sender, EventArgs e) => LoadFugueIcons();
+
+		/// <summary>
+		/// Load the Silk icon theme by right-clicking on the statusbar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void ToolStripMenuItemSilkIcons_MouseEnter(object sender, EventArgs e) => LoadSilkIcons();
+
+		#endregion
+
 		#region Leave handlers
 
 		/// <summary>
@@ -698,84 +830,6 @@ namespace Yarng
 		/// <param name="e">event arguments</param>
 		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ClearStatusbar_Leave(object sender, EventArgs e) => toolStripStatusLabel.Text = string.Empty;
-
-		private void ToolStripMenuItemFatcowIcons_MouseHover(object sender, EventArgs e)
-		{
-			toolStripMenuItemFatcowIcons.Checked = true;
-			toolStripMenuItemFugueIcons.Checked = false;
-			toolStripMenuItemSilkIcons.Checked = false;
-			buttonShowProbabilityTable.Image = Resources.fatcow_table_16;
-			buttonLoadDefaultSettings.Image = Resources.fatcow_arrow_refresh_16;
-			buttonLoadTemplate.Image = Resources.fatcow_folder_16;
-			buttonSaveTemplate.Image = Resources.fatcow_disk_16;
-			buttonAbout.Image = Resources.fatcow_information_16;
-			buttonHistory.Image = Resources.fatcow_time_16;
-			buttonHowTo.Image = Resources.fatcow_lightbulb_16;
-			buttonExit.Image = Resources.fatcow_door_16;
-			buttonGenerate.Image = Resources.fatcow_resultset_next_16;
-			buttonSpeechText.Image = Resources.fatcow_sound_16;
-			buttonClearList.Image = Resources.fatcow_page_white_16;
-			buttonCopyList.Image = Resources.fatcow_paste_plain_16;
-			buttonExportList.Image = Resources.fatcow_document_export_16;
-			buttonPrintList.Image = Resources.fatcow_printer_16;
-			buttonStepLeft.Image = Resources.fatcow_arrow_left_16;
-			buttonStepRight.Image = Resources.fatcow_arrow_right_16;
-			buttonMirror.Image = Resources.fatcow_shape_align_center_16;
-			buttonSort.Image = Resources.fatcow_text_replace_16;
-			buttonScramble.Image = Resources.fatcow_dice_16;
-		}
-
-		private void ToolStripMenuItemFugueIcons_MouseEnter(object sender, EventArgs e)
-		{
-			toolStripMenuItemFatcowIcons.Checked = false;
-			toolStripMenuItemFugueIcons.Checked = true;
-			toolStripMenuItemSilkIcons.Checked = false;
-			buttonShowProbabilityTable.Image = Resources.fugue_table_16;
-			buttonLoadDefaultSettings.Image = Resources.fugue_arrow_circle_double_135_16;
-			buttonLoadTemplate.Image = Resources.fugue_folder_16;
-			buttonSaveTemplate.Image = Resources.fugue_disk_16;
-			buttonAbout.Image = Resources.fugue_information_16;
-			buttonHistory.Image = Resources.fugue_clock_16;
-			buttonHowTo.Image = Resources.fugue_light_bulb_16;
-			buttonExit.Image = Resources.fugue_door_16;
-			buttonGenerate.Image = Resources.fugue_control_16;
-			buttonSpeechText.Image = Resources.fugue_speaker_volume_16;
-			buttonClearList.Image = Resources.fugue_document_16;
-			buttonCopyList.Image = Resources.fugue_clipboard_paste_16;
-			buttonExportList.Image = Resources.fugue_document_export_16;
-			buttonPrintList.Image = Resources.fugue_printer_16;
-			buttonStepLeft.Image = Resources.fugue_arrow_180_16;
-			buttonStepRight.Image = Resources.fugue_arrow_16;
-			buttonMirror.Image = Resources.fugue_layers_alignment_center_16;
-			buttonSort.Image = Resources.fugue_edit_replace_16;
-			buttonScramble.Image = Resources.fugue_arrow_switch_16;
-		}
-
-		private void ToolStripMenuItemSilkIcons_MouseHover(object sender, EventArgs e)
-		{
-			toolStripMenuItemFatcowIcons.Checked = false;
-			toolStripMenuItemFugueIcons.Checked = false;
-			toolStripMenuItemSilkIcons.Checked = true;
-			buttonShowProbabilityTable.Image = Resources.silk_table_16;
-			buttonLoadDefaultSettings.Image = Resources.silk_arrow_refresh_16;
-			buttonLoadTemplate.Image = Resources.silk_folder_16;
-			buttonSaveTemplate.Image = Resources.silk_disk_16;
-			buttonAbout.Image = Resources.silk_information_16;
-			buttonHistory.Image = Resources.silk_time_16;
-			buttonHowTo.Image = Resources.silk_lightbulb_16;
-			buttonExit.Image = Resources.silk_door_16;
-			buttonGenerate.Image = Resources.silk_play_blue_16;
-			buttonSpeechText.Image = Resources.silk_sound_16;
-			buttonClearList.Image = Resources.silk_page_white_16;
-			buttonCopyList.Image = Resources.silk_page_white_paste_16;
-			buttonExportList.Image = Resources.silk_page_white_put_16;
-			buttonPrintList.Image = Resources.silk_printer_16;
-			buttonStepLeft.Image = Resources.silk_arrow_left_16;
-			buttonStepRight.Image = Resources.silk_arrow_right_16;
-			buttonMirror.Image = Resources.silk_shape_align_center_16;
-			buttonSort.Image = Resources.silk_text_replace_16;
-			buttonScramble.Image = Resources.silk_arrow_switch_16;
-		}
 
 		/// <summary>
 		/// Clear the information text in the status bar while check if the text box of vowels is not empty

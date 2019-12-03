@@ -68,6 +68,7 @@
 			this.contextMenuStripIconThemes = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolStripMenuItemFatcowIcons = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemFugueIcons = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemSilkIcons = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.buttonSpeechText = new System.Windows.Forms.Button();
 			this.buttonPrintList = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@
 			this.buttonGenerate = new System.Windows.Forms.Button();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-			this.toolStripMenuItemSilkIcons = new System.Windows.Forms.ToolStripMenuItem();
 			this.groupMiscellaneous.SuspendLayout();
 			this.groupPostProcessing.SuspendLayout();
 			this.groupSettings.SuspendLayout();
@@ -192,7 +192,7 @@
 			// buttonScramble
 			// 
 			this.buttonScramble.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonScramble.Image = global::Yarng.Properties.Resources.fatcow_dice_16;
+			this.buttonScramble.Image = global::Yarng.Properties.Resources.fatcow_arrow_switch_16;
 			resources.ApplyResources(this.buttonScramble, "buttonScramble");
 			this.buttonScramble.Name = "buttonScramble";
 			this.buttonScramble.UseVisualStyleBackColor = true;
@@ -536,8 +536,6 @@
             this.toolStripMenuItemSilkIcons});
 			this.contextMenuStripIconThemes.Name = "contextMenuStrip1";
 			this.contextMenuStripIconThemes.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-			this.contextMenuStripIconThemes.ShowCheckMargin = true;
-			this.contextMenuStripIconThemes.ShowImageMargin = false;
 			resources.ApplyResources(this.contextMenuStripIconThemes, "contextMenuStripIconThemes");
 			this.contextMenuStripIconThemes.TabStop = true;
 			// 
@@ -548,7 +546,7 @@
 			this.toolStripMenuItemFatcowIcons.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.toolStripMenuItemFatcowIcons.Name = "toolStripMenuItemFatcowIcons";
 			resources.ApplyResources(this.toolStripMenuItemFatcowIcons, "toolStripMenuItemFatcowIcons");
-			this.toolStripMenuItemFatcowIcons.MouseHover += new System.EventHandler(this.ToolStripMenuItemFatcowIcons_MouseHover);
+			this.toolStripMenuItemFatcowIcons.MouseEnter += new System.EventHandler(this.ToolStripMenuItemFatcowIcons_MouseEnter);
 			// 
 			// toolStripMenuItemFugueIcons
 			// 
@@ -556,6 +554,13 @@
 			this.toolStripMenuItemFugueIcons.Name = "toolStripMenuItemFugueIcons";
 			resources.ApplyResources(this.toolStripMenuItemFugueIcons, "toolStripMenuItemFugueIcons");
 			this.toolStripMenuItemFugueIcons.MouseEnter += new System.EventHandler(this.ToolStripMenuItemFugueIcons_MouseEnter);
+			// 
+			// toolStripMenuItemSilkIcons
+			// 
+			this.toolStripMenuItemSilkIcons.AutoToolTip = true;
+			this.toolStripMenuItemSilkIcons.Name = "toolStripMenuItemSilkIcons";
+			resources.ApplyResources(this.toolStripMenuItemSilkIcons, "toolStripMenuItemSilkIcons");
+			this.toolStripMenuItemSilkIcons.MouseEnter += new System.EventHandler(this.ToolStripMenuItemSilkIcons_MouseEnter);
 			// 
 			// toolStripStatusLabel
 			// 
@@ -641,13 +646,6 @@
 			this.buttonGenerate.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			this.buttonGenerate.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
 			this.buttonGenerate.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
-			// 
-			// toolStripMenuItemSilkIcons
-			// 
-			this.toolStripMenuItemSilkIcons.AutoToolTip = true;
-			this.toolStripMenuItemSilkIcons.Name = "toolStripMenuItemSilkIcons";
-			resources.ApplyResources(this.toolStripMenuItemSilkIcons, "toolStripMenuItemSilkIcons");
-			this.toolStripMenuItemSilkIcons.MouseHover += new System.EventHandler(this.ToolStripMenuItemSilkIcons_MouseHover);
 			// 
 			// MainForm
 			// 

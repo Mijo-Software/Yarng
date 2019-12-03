@@ -219,7 +219,7 @@
 			this.buttonRandomize.AccessibleDescription = "Randomizes the probability table";
 			this.buttonRandomize.AccessibleName = "Random probability table button";
 			this.buttonRandomize.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRandomize.Image = global::Yarng.Properties.Resources.fatcow_dice_16;
+			this.buttonRandomize.Image = global::Yarng.Properties.Resources.fatcow_arrow_switch_16;
 			this.buttonRandomize.Location = new System.Drawing.Point(283, 257);
 			this.buttonRandomize.Name = "buttonRandomize";
 			this.buttonRandomize.Size = new System.Drawing.Size(75, 32);
