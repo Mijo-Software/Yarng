@@ -176,7 +176,7 @@
 			this.buttonApply.AccessibleName = "Apply probability table button";
 			this.buttonApply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonApply.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.buttonApply.Image = global::Yarng.Properties.Resources.accept_16;
+			this.buttonApply.Image = global::Yarng.Properties.Resources.fatcow_accept_16;
 			this.buttonApply.Location = new System.Drawing.Point(121, 257);
 			this.buttonApply.Name = "buttonApply";
 			this.buttonApply.Size = new System.Drawing.Size(75, 32);
@@ -198,7 +198,7 @@
 			this.buttonCancel.AccessibleName = "Cancel probability table button";
 			this.buttonCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.buttonCancel.Image = global::Yarng.Properties.Resources.cancel_16;
+			this.buttonCancel.Image = global::Yarng.Properties.Resources.fatcow_cancel_16;
 			this.buttonCancel.Location = new System.Drawing.Point(202, 257);
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.Size = new System.Drawing.Size(75, 32);
@@ -219,7 +219,7 @@
 			this.buttonRandomize.AccessibleDescription = "Randomizes the probability table";
 			this.buttonRandomize.AccessibleName = "Random probability table button";
 			this.buttonRandomize.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRandomize.Image = global::Yarng.Properties.Resources.dice_16;
+			this.buttonRandomize.Image = global::Yarng.Properties.Resources.fatcow_dice_16;
 			this.buttonRandomize.Location = new System.Drawing.Point(283, 257);
 			this.buttonRandomize.Name = "buttonRandomize";
 			this.buttonRandomize.Size = new System.Drawing.Size(75, 32);
@@ -2171,7 +2171,7 @@
 			this.toolStripStatusLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			this.toolStripStatusLabel.AutoToolTip = true;
 			this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-			this.toolStripStatusLabel.Size = new System.Drawing.Size(93, 17);
+			this.toolStripStatusLabel.Size = new System.Drawing.Size(92, 17);
 			this.toolStripStatusLabel.Text = "information text";
 			// 
 			// toolStripProgressBar

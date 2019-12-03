@@ -63,9 +63,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap accept_16 {
+        internal static System.Drawing.Bitmap fatcow_accept_16 {
             get {
-                object obj = ResourceManager.GetObject("accept_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_accept_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_left_16 {
+        internal static System.Drawing.Bitmap fatcow_arrow_left_16 {
             get {
-                object obj = ResourceManager.GetObject("arrow_left_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_arrow_left_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_refresh_16 {
+        internal static System.Drawing.Bitmap fatcow_arrow_refresh_16 {
             get {
-                object obj = ResourceManager.GetObject("arrow_refresh_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_arrow_refresh_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_right_16 {
+        internal static System.Drawing.Bitmap fatcow_arrow_right_16 {
             get {
-                object obj = ResourceManager.GetObject("arrow_right_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_arrow_right_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cancel_16 {
+        internal static System.Drawing.Bitmap fatcow_cancel_16 {
             get {
-                object obj = ResourceManager.GetObject("cancel_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_cancel_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap clipboard_empty_16 {
+        internal static System.Drawing.Bitmap fatcow_clipboard_empty_16 {
             get {
-                object obj = ResourceManager.GetObject("clipboard_empty_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_clipboard_empty_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap clipboard_empty_161 {
+        internal static System.Drawing.Bitmap fatcow_dice_16 {
             get {
-                object obj = ResourceManager.GetObject("clipboard_empty_161", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_dice_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dice_16 {
+        internal static System.Drawing.Bitmap fatcow_disk_16 {
             get {
-                object obj = ResourceManager.GetObject("dice_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_disk_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap disk_16 {
+        internal static System.Drawing.Bitmap fatcow_document_export_16 {
             get {
-                object obj = ResourceManager.GetObject("disk_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_document_export_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap document_export_16 {
+        internal static System.Drawing.Bitmap fatcow_door_16 {
             get {
-                object obj = ResourceManager.GetObject("document_export_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_door_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap door_16 {
+        internal static System.Drawing.Bitmap fatcow_exclamation_16 {
             get {
-                object obj = ResourceManager.GetObject("door_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_exclamation_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exclamation_16 {
+        internal static System.Drawing.Bitmap fatcow_folder_16 {
             get {
-                object obj = ResourceManager.GetObject("exclamation_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_folder_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap folder_16 {
+        internal static System.Drawing.Bitmap fatcow_help_16 {
             get {
-                object obj = ResourceManager.GetObject("folder_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_help_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,459 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap help_16 {
+        internal static System.Drawing.Bitmap fatcow_hourglass_16 {
             get {
-                object obj = ResourceManager.GetObject("help_16", resourceCulture);
+                object obj = ResourceManager.GetObject("fatcow_hourglass_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_information_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_information_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_lightbulb_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_lightbulb_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_page_paste_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_page_paste_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_page_save_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_page_save_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_page_white_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_page_white_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_paste_plain_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_paste_plain_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_pencil_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_pencil_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_printer_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_printer_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_question_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_question_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_resultset_next_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_resultset_next_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_resultset_next_32 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_resultset_next_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_shape_align_center_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_shape_align_center_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_sound_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_sound_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_table_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_table_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_text_replace_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_text_replace_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_tick_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_tick_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fatcow_time_16 {
+            get {
+                object obj = ResourceManager.GetObject("fatcow_time_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_arrow_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_arrow_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_arrow_180_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_arrow_180_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_arrow_circle_double_135_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_arrow_circle_double_135_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_arrow_switch_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_arrow_switch_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_clipboard_empty_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_clipboard_empty_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_clipboard_paste_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_clipboard_paste_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_clock_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_clock_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_control_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_control_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_cross_circle_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_cross_circle_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_disk_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_disk_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_document_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_document_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_document_export_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_document_export_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_door_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_door_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_edit_replace_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_edit_replace_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_exclamation_red_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_exclamation_red_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_folder_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_folder_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_hourglass_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_hourglass_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_information_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_information_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_layers_alignment_center_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_layers_alignment_center_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_light_bulb_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_light_bulb_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_navigation_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_navigation_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_pencil_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_pencil_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_printer_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_printer_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_question_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_question_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_speaker_volume_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_speaker_volume_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_table_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_table_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_tick_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_tick_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fugue_tick_circle_16 {
+            get {
+                object obj = ResourceManager.GetObject("fugue_tick_circle_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,16 +666,6 @@ namespace Yarng.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hourglass_16 {
-            get {
-                object obj = ResourceManager.GetObject("hourglass_16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die {\rtf1\ansi\ansicpg1252\deff0\deflang1031{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Consolas;}{\f2\fnil\fcharset2 Symbol;}}
         ///{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl240\slmult1\lang7\f0\fs40 How to generate random names\par
         ///\pard\sl240\slmult1\fs22\par
@@ -241,9 +681,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap information_16 {
+        internal static System.Drawing.Bitmap silk_accept_16 {
             get {
-                object obj = ResourceManager.GetObject("information_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_accept_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -251,9 +691,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap lightbulb_16 {
+        internal static System.Drawing.Bitmap silk_arrow_left_16 {
             get {
-                object obj = ResourceManager.GetObject("lightbulb_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_arrow_left_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -261,9 +701,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap page_paste_16 {
+        internal static System.Drawing.Bitmap silk_arrow_refresh_16 {
             get {
-                object obj = ResourceManager.GetObject("page_paste_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_arrow_refresh_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -271,9 +711,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap page_save_16 {
+        internal static System.Drawing.Bitmap silk_arrow_right_16 {
             get {
-                object obj = ResourceManager.GetObject("page_save_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_arrow_right_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -281,9 +721,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap page_white_16 {
+        internal static System.Drawing.Bitmap silk_arrow_switch_16 {
             get {
-                object obj = ResourceManager.GetObject("page_white_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_arrow_switch_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -291,9 +731,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap paste_plain_16 {
+        internal static System.Drawing.Bitmap silk_cancel_16 {
             get {
-                object obj = ResourceManager.GetObject("paste_plain_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_cancel_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -301,9 +741,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pencil_16 {
+        internal static System.Drawing.Bitmap silk_clipboard_16 {
             get {
-                object obj = ResourceManager.GetObject("pencil_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_clipboard_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -311,9 +751,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap printer_16 {
+        internal static System.Drawing.Bitmap silk_disk_16 {
             get {
-                object obj = ResourceManager.GetObject("printer_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_disk_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -321,9 +761,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap question_16 {
+        internal static System.Drawing.Bitmap silk_door_16 {
             get {
-                object obj = ResourceManager.GetObject("question_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_door_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -331,9 +771,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap resultset_next_16 {
+        internal static System.Drawing.Bitmap silk_exclamation_16 {
             get {
-                object obj = ResourceManager.GetObject("resultset_next_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_exclamation_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -341,9 +781,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap resultset_next_32 {
+        internal static System.Drawing.Bitmap silk_folder_16 {
             get {
-                object obj = ResourceManager.GetObject("resultset_next_32", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_folder_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -351,9 +791,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shape_align_center_16 {
+        internal static System.Drawing.Bitmap silk_help_16 {
             get {
-                object obj = ResourceManager.GetObject("shape_align_center_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_help_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -361,9 +801,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sound_16 {
+        internal static System.Drawing.Bitmap silk_hourglass_16 {
             get {
-                object obj = ResourceManager.GetObject("sound_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_hourglass_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -371,9 +811,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap table_16 {
+        internal static System.Drawing.Bitmap silk_information_16 {
             get {
-                object obj = ResourceManager.GetObject("table_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_information_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -381,9 +821,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap text_replace_16 {
+        internal static System.Drawing.Bitmap silk_lightbulb_16 {
             get {
-                object obj = ResourceManager.GetObject("text_replace_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_lightbulb_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -391,9 +831,9 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tick_16 {
+        internal static System.Drawing.Bitmap silk_page_save_16 {
             get {
-                object obj = ResourceManager.GetObject("tick_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_page_save_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -401,9 +841,119 @@ namespace Yarng.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap time_16 {
+        internal static System.Drawing.Bitmap silk_page_white_16 {
             get {
-                object obj = ResourceManager.GetObject("time_16", resourceCulture);
+                object obj = ResourceManager.GetObject("silk_page_white_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_page_white_paste_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_page_white_paste_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_page_white_put_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_page_white_put_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_pencil_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_pencil_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_play_blue_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_play_blue_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_printer_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_printer_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_shape_align_center_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_shape_align_center_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_sound_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_sound_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_table_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_table_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_text_replace_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_text_replace_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_tick_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_tick_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silk_time_16 {
+            get {
+                object obj = ResourceManager.GetObject("silk_time_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
