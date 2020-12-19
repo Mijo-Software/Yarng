@@ -65,7 +65,7 @@
 			this.buttonLoadTemplate = new System.Windows.Forms.Button();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
-			this.textInfo = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.buttonSpeechText = new System.Windows.Forms.Button();
 			this.buttonPrintList = new System.Windows.Forms.Button();
 			this.buttonExportList = new System.Windows.Forms.Button();
@@ -102,10 +102,10 @@
 			this.buttonAbout.Name = "buttonAbout";
 			this.buttonAbout.UseVisualStyleBackColor = true;
 			this.buttonAbout.Click += new System.EventHandler(this.ButtonAbout_Click);
-			this.buttonAbout.Enter += new System.EventHandler(this.ButtonAbout_Enter);
-			this.buttonAbout.Leave += new System.EventHandler(this.ButtonAbout_Leave);
-			this.buttonAbout.MouseEnter += new System.EventHandler(this.ButtonAbout_MouseEnter);
-			this.buttonAbout.MouseLeave += new System.EventHandler(this.ButtonAbout_MouseLeave);
+			this.buttonAbout.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonAbout.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonAbout.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonAbout.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonExit
 			// 
@@ -115,10 +115,10 @@
 			this.buttonExit.Name = "buttonExit";
 			this.buttonExit.UseVisualStyleBackColor = true;
 			this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
-			this.buttonExit.Enter += new System.EventHandler(this.ButtonExit_Enter);
-			this.buttonExit.Leave += new System.EventHandler(this.ButtonExit_Leave);
-			this.buttonExit.MouseEnter += new System.EventHandler(this.ButtonExit_MouseEnter);
-			this.buttonExit.MouseLeave += new System.EventHandler(this.ButtonExit_MouseLeave);
+			this.buttonExit.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonExit.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonExit.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonExit.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonHistory
 			// 
@@ -128,10 +128,10 @@
 			this.buttonHistory.Name = "buttonHistory";
 			this.buttonHistory.UseVisualStyleBackColor = true;
 			this.buttonHistory.Click += new System.EventHandler(this.ButtonHistory_Click);
-			this.buttonHistory.Enter += new System.EventHandler(this.ButtonHistory_Enter);
-			this.buttonHistory.Leave += new System.EventHandler(this.ButtonHistory_Leave);
-			this.buttonHistory.MouseEnter += new System.EventHandler(this.ButtonHistory_MouseEnter);
-			this.buttonHistory.MouseLeave += new System.EventHandler(this.ButtonHistory_MouseLeave);
+			this.buttonHistory.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonHistory.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonHistory.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonHistory.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonHowTo
 			// 
@@ -141,10 +141,10 @@
 			this.buttonHowTo.Name = "buttonHowTo";
 			this.buttonHowTo.UseVisualStyleBackColor = true;
 			this.buttonHowTo.Click += new System.EventHandler(this.ButtonHowTo_Click);
-			this.buttonHowTo.Enter += new System.EventHandler(this.ButtonHowTo_Enter);
-			this.buttonHowTo.Leave += new System.EventHandler(this.ButtonHowTo_Leave);
-			this.buttonHowTo.MouseEnter += new System.EventHandler(this.ButtonHowTo_MouseEnter);
-			this.buttonHowTo.MouseLeave += new System.EventHandler(this.ButtonHowTo_MouseLeave);
+			this.buttonHowTo.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonHowTo.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonHowTo.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonHowTo.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// groupPostProcessing
 			// 
@@ -166,10 +166,10 @@
 			this.buttonStepLeft.Name = "buttonStepLeft";
 			this.buttonStepLeft.UseVisualStyleBackColor = true;
 			this.buttonStepLeft.Click += new System.EventHandler(this.ButtonStepLeft_Click);
-			this.buttonStepLeft.Enter += new System.EventHandler(this.ButtonStepLeft_Enter);
-			this.buttonStepLeft.Leave += new System.EventHandler(this.ButtonStepLeft_Leave);
-			this.buttonStepLeft.MouseEnter += new System.EventHandler(this.ButtonStepLeft_MouseEnter);
-			this.buttonStepLeft.MouseLeave += new System.EventHandler(this.ButtonStepLeft_MouseLeave);
+			this.buttonStepLeft.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonStepLeft.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonStepLeft.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonStepLeft.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonStepRight
 			// 
@@ -179,10 +179,10 @@
 			this.buttonStepRight.Name = "buttonStepRight";
 			this.buttonStepRight.UseVisualStyleBackColor = true;
 			this.buttonStepRight.Click += new System.EventHandler(this.ButtonStepRight_Click);
-			this.buttonStepRight.Enter += new System.EventHandler(this.ButtonStepRight_Enter);
-			this.buttonStepRight.Leave += new System.EventHandler(this.ButtonStepRight_Leave);
-			this.buttonStepRight.MouseEnter += new System.EventHandler(this.ButtonStepRight_MouseEnter);
-			this.buttonStepRight.MouseLeave += new System.EventHandler(this.ButtonStepRight_MouseLeave);
+			this.buttonStepRight.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonStepRight.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonStepRight.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonStepRight.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonScramble
 			// 
@@ -192,10 +192,10 @@
 			this.buttonScramble.Name = "buttonScramble";
 			this.buttonScramble.UseVisualStyleBackColor = true;
 			this.buttonScramble.Click += new System.EventHandler(this.ButtonScramble_Click);
-			this.buttonScramble.Enter += new System.EventHandler(this.ButtonScramble_Enter);
-			this.buttonScramble.Leave += new System.EventHandler(this.ButtonScramble_Leave);
-			this.buttonScramble.MouseEnter += new System.EventHandler(this.ButtonScramble_MouseEnter);
-			this.buttonScramble.MouseLeave += new System.EventHandler(this.ButtonScramble_MouseLeave);
+			this.buttonScramble.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonScramble.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonScramble.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonScramble.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonSort
 			// 
@@ -205,10 +205,10 @@
 			this.buttonSort.Name = "buttonSort";
 			this.buttonSort.UseVisualStyleBackColor = true;
 			this.buttonSort.Click += new System.EventHandler(this.ButtonSort_Click);
-			this.buttonSort.Enter += new System.EventHandler(this.ButtonSort_Enter);
-			this.buttonSort.Leave += new System.EventHandler(this.ButtonSort_Leave);
-			this.buttonSort.MouseEnter += new System.EventHandler(this.ButtonSort_MouseEnter);
-			this.buttonSort.MouseLeave += new System.EventHandler(this.ButtonSort_MouseLeave);
+			this.buttonSort.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonSort.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonSort.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonSort.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonMirror
 			// 
@@ -218,10 +218,10 @@
 			this.buttonMirror.Name = "buttonMirror";
 			this.buttonMirror.UseVisualStyleBackColor = true;
 			this.buttonMirror.Click += new System.EventHandler(this.ButtonMirror_Click);
-			this.buttonMirror.Enter += new System.EventHandler(this.ButtonMirror_Enter);
-			this.buttonMirror.Leave += new System.EventHandler(this.ButtonMirror_Leave);
-			this.buttonMirror.MouseEnter += new System.EventHandler(this.ButtonMirror_MouseEnter);
-			this.buttonMirror.MouseLeave += new System.EventHandler(this.ButtonMirror_MouseLeave);
+			this.buttonMirror.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonMirror.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonMirror.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonMirror.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// progressGenerate
 			// 
@@ -234,10 +234,10 @@
 			this.textList.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
 			resources.ApplyResources(this.textList, "textList");
 			this.textList.Name = "textList";
-			this.textList.Enter += new System.EventHandler(this.TextList_Enter);
-			this.textList.Leave += new System.EventHandler(this.TextList_Leave);
-			this.textList.MouseEnter += new System.EventHandler(this.TextList_MouseEnter);
-			this.textList.MouseLeave += new System.EventHandler(this.TextList_MouseLeave);
+			this.textList.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.textList.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.textList.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.textList.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// groupSettings
 			// 
@@ -269,10 +269,10 @@
 			// 
 			resources.ApplyResources(this.textConsonants, "textConsonants");
 			this.textConsonants.Name = "textConsonants";
-			this.textConsonants.Enter += new System.EventHandler(this.TextConsonants_Enter);
+			this.textConsonants.Enter += new System.EventHandler(this.SetStatusbar_Enter);
 			this.textConsonants.Leave += new System.EventHandler(this.TextConsonants_Leave);
-			this.textConsonants.MouseEnter += new System.EventHandler(this.TextConsonants_MouseEnter);
-			this.textConsonants.MouseLeave += new System.EventHandler(this.TextConsonants_MouseLeave);
+			this.textConsonants.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.textConsonants.MouseLeave += new System.EventHandler(this.TextConsonants_Leave);
 			// 
 			// labelConsonants
 			// 
@@ -280,15 +280,19 @@
 			resources.ApplyResources(this.labelConsonants, "labelConsonants");
 			this.labelConsonants.Name = "labelConsonants";
 			this.labelConsonants.DoubleClick += new System.EventHandler(this.LabelConsonants_DoubleClick);
+			this.labelConsonants.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelConsonants.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelConsonants.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelConsonants.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// textVowels
 			// 
 			resources.ApplyResources(this.textVowels, "textVowels");
 			this.textVowels.Name = "textVowels";
-			this.textVowels.Enter += new System.EventHandler(this.TextVowels_Enter);
+			this.textVowels.Enter += new System.EventHandler(this.SetStatusbar_Enter);
 			this.textVowels.Leave += new System.EventHandler(this.TextVowels_Leave);
-			this.textVowels.MouseEnter += new System.EventHandler(this.TextVowels_MouseEnter);
-			this.textVowels.MouseLeave += new System.EventHandler(this.TextVowels_MouseLeave);
+			this.textVowels.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.textVowels.MouseLeave += new System.EventHandler(this.TextVowels_Leave);
 			// 
 			// labelVowels
 			// 
@@ -296,12 +300,20 @@
 			resources.ApplyResources(this.labelVowels, "labelVowels");
 			this.labelVowels.Name = "labelVowels";
 			this.labelVowels.DoubleClick += new System.EventHandler(this.LabelVowels_DoubleClick);
+			this.labelVowels.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelVowels.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelVowels.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelVowels.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharacters
 			// 
 			this.labelCharacters.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelCharacters, "labelCharacters");
 			this.labelCharacters.Name = "labelCharacters";
+			this.labelCharacters.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharacters.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharacters.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharacters.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericCharacterLenghtsMax
 			// 
@@ -319,14 +331,18 @@
             0,
             0});
 			this.numericCharacterLenghtsMax.ValueChanged += new System.EventHandler(this.NumericCharacterLenghtsMax_ValueChanged);
-			this.numericCharacterLenghtsMax.Enter += new System.EventHandler(this.NumericCharacterLenghtsMax_Enter);
-			this.numericCharacterLenghtsMax.Leave += new System.EventHandler(this.NumericCharacterLenghtsMax_Leave);
+			this.numericCharacterLenghtsMax.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericCharacterLenghtsMax.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharacterLenghtsMax
 			// 
 			this.labelCharacterLenghtsMax.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelCharacterLenghtsMax, "labelCharacterLenghtsMax");
 			this.labelCharacterLenghtsMax.Name = "labelCharacterLenghtsMax";
+			this.labelCharacterLenghtsMax.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharacterLenghtsMax.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharacterLenghtsMax.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharacterLenghtsMax.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericCharacterLenghtsMin
 			// 
@@ -344,26 +360,38 @@
             0,
             0});
 			this.numericCharacterLenghtsMin.ValueChanged += new System.EventHandler(this.NumericCharacterLenghtsMin_ValueChanged);
-			this.numericCharacterLenghtsMin.Enter += new System.EventHandler(this.NumericCharacterLenghtsMin_Enter);
-			this.numericCharacterLenghtsMin.Leave += new System.EventHandler(this.NumericCharacterLenghtsMin_Leave);
+			this.numericCharacterLenghtsMin.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericCharacterLenghtsMin.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharacterLenghtsMin
 			// 
 			this.labelCharacterLenghtsMin.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelCharacterLenghtsMin, "labelCharacterLenghtsMin");
 			this.labelCharacterLenghtsMin.Name = "labelCharacterLenghtsMin";
+			this.labelCharacterLenghtsMin.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharacterLenghtsMin.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharacterLenghtsMin.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharacterLenghtsMin.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharacterLenghts
 			// 
 			this.labelCharacterLenghts.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelCharacterLenghts, "labelCharacterLenghts");
 			this.labelCharacterLenghts.Name = "labelCharacterLenghts";
+			this.labelCharacterLenghts.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharacterLenghts.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharacterLenghts.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharacterLenghts.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelNumberOfNames
 			// 
 			this.labelNumberOfNames.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelNumberOfNames, "labelNumberOfNames");
 			this.labelNumberOfNames.Name = "labelNumberOfNames";
+			this.labelNumberOfNames.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelNumberOfNames.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelNumberOfNames.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelNumberOfNames.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericNumberOfNames
 			// 
@@ -386,8 +414,8 @@
             0,
             0});
 			this.numericNumberOfNames.ValueChanged += new System.EventHandler(this.NumericNumberOfNames_ValueChanged);
-			this.numericNumberOfNames.Enter += new System.EventHandler(this.NumericNumberOfNames_Enter);
-			this.numericNumberOfNames.Leave += new System.EventHandler(this.NumericNumberOfNames_Leave);
+			this.numericNumberOfNames.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericNumberOfNames.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonShowProbabilityTable
 			// 
@@ -397,10 +425,10 @@
 			this.buttonShowProbabilityTable.Name = "buttonShowProbabilityTable";
 			this.buttonShowProbabilityTable.UseVisualStyleBackColor = true;
 			this.buttonShowProbabilityTable.Click += new System.EventHandler(this.ButtonShowProbabilityTable_Click);
-			this.buttonShowProbabilityTable.Enter += new System.EventHandler(this.ButtonShowProbabilityTable_Enter);
-			this.buttonShowProbabilityTable.Leave += new System.EventHandler(this.ButtonShowProbabilityTable_Leave);
-			this.buttonShowProbabilityTable.MouseEnter += new System.EventHandler(this.ButtonShowProbabilityTable_MouseEnter);
-			this.buttonShowProbabilityTable.MouseLeave += new System.EventHandler(this.ButtonShowProbabilityTable_MouseLeave);
+			this.buttonShowProbabilityTable.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonShowProbabilityTable.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonShowProbabilityTable.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonShowProbabilityTable.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonLoadDefaultSettings
 			// 
@@ -410,16 +438,20 @@
 			this.buttonLoadDefaultSettings.Name = "buttonLoadDefaultSettings";
 			this.buttonLoadDefaultSettings.UseVisualStyleBackColor = true;
 			this.buttonLoadDefaultSettings.Click += new System.EventHandler(this.ButtonLoadDefaultSettings_Click);
-			this.buttonLoadDefaultSettings.Enter += new System.EventHandler(this.ButtonLoadDefaultSettings_Enter);
-			this.buttonLoadDefaultSettings.Leave += new System.EventHandler(this.ButtonLoadDefaultSettings_Leave);
-			this.buttonLoadDefaultSettings.MouseEnter += new System.EventHandler(this.ButtonLoadDefaultSettings_MouseEnter);
-			this.buttonLoadDefaultSettings.MouseLeave += new System.EventHandler(this.ButtonLoadDefaultSettings_MouseLeave);
+			this.buttonLoadDefaultSettings.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonLoadDefaultSettings.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonLoadDefaultSettings.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonLoadDefaultSettings.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelLanguage
 			// 
 			this.labelLanguage.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelLanguage, "labelLanguage");
 			this.labelLanguage.Name = "labelLanguage";
+			this.labelLanguage.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelLanguage.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelLanguage.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelLanguage.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboLanguage
 			// 
@@ -440,16 +472,20 @@
 			resources.ApplyResources(this.comboLanguage, "comboLanguage");
 			this.comboLanguage.Name = "comboLanguage";
 			this.comboLanguage.SelectedIndexChanged += new System.EventHandler(this.ComboLanguage_SelectedIndexChanged);
-			this.comboLanguage.Enter += new System.EventHandler(this.ComboLanguage_Enter);
-			this.comboLanguage.Leave += new System.EventHandler(this.ComboLanguage_Leave);
-			this.comboLanguage.MouseEnter += new System.EventHandler(this.ComboLanguage_MouseEnter);
-			this.comboLanguage.MouseLeave += new System.EventHandler(this.ComboLanguage_MouseLeave);
+			this.comboLanguage.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboLanguage.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboLanguage.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboLanguage.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelTemplate
 			// 
 			this.labelTemplate.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
 			resources.ApplyResources(this.labelTemplate, "labelTemplate");
 			this.labelTemplate.Name = "labelTemplate";
+			this.labelTemplate.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelTemplate.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelTemplate.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelTemplate.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonSaveTemplate
 			// 
@@ -459,10 +495,10 @@
 			this.buttonSaveTemplate.Name = "buttonSaveTemplate";
 			this.buttonSaveTemplate.UseVisualStyleBackColor = true;
 			this.buttonSaveTemplate.Click += new System.EventHandler(this.ButtonSaveTemplate_Click);
-			this.buttonSaveTemplate.Enter += new System.EventHandler(this.ButtonSaveTemplate_Enter);
-			this.buttonSaveTemplate.Leave += new System.EventHandler(this.ButtonSaveTemplate_Leave);
-			this.buttonSaveTemplate.MouseEnter += new System.EventHandler(this.ButtonSaveTemplate_MouseEnter);
-			this.buttonSaveTemplate.MouseLeave += new System.EventHandler(this.ButtonSaveTemplate_MouseLeave);
+			this.buttonSaveTemplate.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonSaveTemplate.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonSaveTemplate.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonSaveTemplate.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonLoadTemplate
 			// 
@@ -472,25 +508,26 @@
 			this.buttonLoadTemplate.Name = "buttonLoadTemplate";
 			this.buttonLoadTemplate.UseVisualStyleBackColor = true;
 			this.buttonLoadTemplate.Click += new System.EventHandler(this.ButtonLoadTemplate_Click);
-			this.buttonLoadTemplate.Enter += new System.EventHandler(this.ButtonLoadTemplate_Enter);
-			this.buttonLoadTemplate.Leave += new System.EventHandler(this.ButtonLoadTemplate_Leave);
-			this.buttonLoadTemplate.MouseEnter += new System.EventHandler(this.ButtonLoadTemplate_MouseEnter);
-			this.buttonLoadTemplate.MouseLeave += new System.EventHandler(this.ButtonLoadTemplate_MouseLeave);
+			this.buttonLoadTemplate.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonLoadTemplate.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonLoadTemplate.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonLoadTemplate.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// statusStrip
 			// 
 			this.statusStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.StatusBar;
 			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.textInfo});
+            this.toolStripStatusLabel});
 			resources.ApplyResources(this.statusStrip, "statusStrip");
 			this.statusStrip.Name = "statusStrip";
 			this.statusStrip.SizingGrip = false;
 			// 
-			// textInfo
+			// toolStripStatusLabel
 			// 
-			this.textInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
-			this.textInfo.Name = "textInfo";
-			resources.ApplyResources(this.textInfo, "textInfo");
+			this.toolStripStatusLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
+			this.toolStripStatusLabel.AutoToolTip = true;
+			this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+			resources.ApplyResources(this.toolStripStatusLabel, "toolStripStatusLabel");
 			// 
 			// buttonSpeechText
 			// 
@@ -500,10 +537,10 @@
 			this.buttonSpeechText.Name = "buttonSpeechText";
 			this.buttonSpeechText.UseVisualStyleBackColor = true;
 			this.buttonSpeechText.Click += new System.EventHandler(this.ButtonSpeechText_Click);
-			this.buttonSpeechText.Enter += new System.EventHandler(this.ButtonSpeechText_Enter);
-			this.buttonSpeechText.Leave += new System.EventHandler(this.ButtonSpeechText_Leave);
-			this.buttonSpeechText.MouseEnter += new System.EventHandler(this.ButtonSpeechText_MouseEnter);
-			this.buttonSpeechText.MouseLeave += new System.EventHandler(this.ButtonSpeechText_MouseLeave);
+			this.buttonSpeechText.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonSpeechText.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonSpeechText.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonSpeechText.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonPrintList
 			// 
@@ -513,10 +550,10 @@
 			this.buttonPrintList.Name = "buttonPrintList";
 			this.buttonPrintList.UseVisualStyleBackColor = true;
 			this.buttonPrintList.Click += new System.EventHandler(this.ButtonPrintList_Click);
-			this.buttonPrintList.Enter += new System.EventHandler(this.ButtonPrintList_Enter);
-			this.buttonPrintList.Leave += new System.EventHandler(this.ButtonPrintList_Leave);
-			this.buttonPrintList.MouseEnter += new System.EventHandler(this.ButtonPrintList_MouseEnter);
-			this.buttonPrintList.MouseLeave += new System.EventHandler(this.ButtonPrintList_MouseLeave);
+			this.buttonPrintList.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonPrintList.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonPrintList.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonPrintList.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonExportList
 			// 
@@ -526,10 +563,10 @@
 			this.buttonExportList.Name = "buttonExportList";
 			this.buttonExportList.UseVisualStyleBackColor = true;
 			this.buttonExportList.Click += new System.EventHandler(this.ButtonExportList_Click);
-			this.buttonExportList.Enter += new System.EventHandler(this.ButtonExportList_Enter);
-			this.buttonExportList.Leave += new System.EventHandler(this.ButtonExportList_Leave);
-			this.buttonExportList.MouseEnter += new System.EventHandler(this.ButtonExportList_MouseEnter);
-			this.buttonExportList.MouseLeave += new System.EventHandler(this.ButtonExportList_MouseLeave);
+			this.buttonExportList.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonExportList.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonExportList.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonExportList.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonCopyList
 			// 
@@ -539,10 +576,10 @@
 			this.buttonCopyList.Name = "buttonCopyList";
 			this.buttonCopyList.UseVisualStyleBackColor = true;
 			this.buttonCopyList.Click += new System.EventHandler(this.ButtonCopyList_Click);
-			this.buttonCopyList.Enter += new System.EventHandler(this.ButtonCopyList_Enter);
-			this.buttonCopyList.Leave += new System.EventHandler(this.ButtonCopyList_Leave);
-			this.buttonCopyList.MouseEnter += new System.EventHandler(this.ButtonCopyList_MouseEnter);
-			this.buttonCopyList.MouseLeave += new System.EventHandler(this.ButtonCopyList_MouseLeave);
+			this.buttonCopyList.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonCopyList.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonCopyList.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonCopyList.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonClearList
 			// 
@@ -552,10 +589,10 @@
 			this.buttonClearList.Name = "buttonClearList";
 			this.buttonClearList.UseVisualStyleBackColor = true;
 			this.buttonClearList.Click += new System.EventHandler(this.ButtonClearList_Click);
-			this.buttonClearList.Enter += new System.EventHandler(this.ButtonClearList_Enter);
-			this.buttonClearList.Leave += new System.EventHandler(this.ButtonClearList_Leave);
-			this.buttonClearList.MouseEnter += new System.EventHandler(this.ButtonClearList_MouseEnter);
-			this.buttonClearList.MouseLeave += new System.EventHandler(this.ButtonClearList_MouseLeave);
+			this.buttonClearList.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonClearList.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonClearList.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonClearList.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonGenerate
 			// 
@@ -565,10 +602,10 @@
 			this.buttonGenerate.Name = "buttonGenerate";
 			this.buttonGenerate.UseVisualStyleBackColor = true;
 			this.buttonGenerate.Click += new System.EventHandler(this.ButtonGenerate_Click);
-			this.buttonGenerate.Enter += new System.EventHandler(this.ButtonGenerate_Enter);
-			this.buttonGenerate.Leave += new System.EventHandler(this.ButtonGenerate_Leave);
-			this.buttonGenerate.MouseEnter += new System.EventHandler(this.ButtonGenerate_MouseEnter);
-			this.buttonGenerate.MouseLeave += new System.EventHandler(this.ButtonGenerate_MouseLeave);
+			this.buttonGenerate.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonGenerate.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonGenerate.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonGenerate.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// MainForm
 			// 
@@ -648,7 +685,7 @@
         private System.Windows.Forms.Label labelCharacters;
 		private System.Windows.Forms.ToolTip toolTip;
 		private System.Windows.Forms.StatusStrip statusStrip;
-		private System.Windows.Forms.ToolStripStatusLabel textInfo;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
 		private System.Windows.Forms.Button buttonSpeechText;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog;

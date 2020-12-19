@@ -1,6 +1,6 @@
 ﻿namespace Yarng
 {
-	partial class HistoryForm
+	internal partial class HistoryForm
 	{
 		/// <summary>
 		/// Required designer variable.

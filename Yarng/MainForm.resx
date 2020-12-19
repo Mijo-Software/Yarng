@@ -427,10 +427,13 @@
     <value>359, 172</value>
   </data>
   <data name="progressGenerate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 10</value>
+    <value>184, 10</value>
   </data>
   <data name="progressGenerate.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="progressGenerate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;progressGenerate.Name" xml:space="preserve">
     <value>progressGenerate</value>
@@ -454,7 +457,7 @@
     <value>Both</value>
   </data>
   <data name="textList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 154</value>
+    <value>184, 154</value>
   </data>
   <data name="textList.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1077,17 +1080,17 @@
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>107, 17</value>
   </metadata>
-  <data name="textInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
+  <data name="toolStripStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 17</value>
   </data>
-  <data name="textInfo.Text" xml:space="preserve">
+  <data name="toolStripStatusLabel.Text" xml:space="preserve">
     <value>information text</value>
   </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 332</value>
   </data>
   <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>563, 22</value>
+    <value>565, 22</value>
   </data>
   <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1281,11 +1284,14 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>56</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>563, 354</value>
+    <value>565, 354</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1551,10 +1557,10 @@
   <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textInfo.Name" xml:space="preserve">
-    <value>textInfo</value>
+  <data name="&gt;&gt;toolStripStatusLabel.Name" xml:space="preserve">
+    <value>toolStripStatusLabel</value>
   </data>
-  <data name="&gt;&gt;textInfo.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripStatusLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">

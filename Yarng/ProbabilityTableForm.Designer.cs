@@ -137,10 +137,9 @@
 			this.numericUpDownCharS = new System.Windows.Forms.NumericUpDown();
 			this.labelCharS = new System.Windows.Forms.Label();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-			this.statusStrip = new System.Windows.Forms.StatusStrip();
-			this.textInfo = new System.Windows.Forms.ToolStripStatusLabel();
-			this.toolStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
 			this.labelCharPool = new System.Windows.Forms.Label();
+			this.statusStrip = new System.Windows.Forms.StatusStrip();
+			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharA)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharB)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownCharD)).BeginInit();
@@ -187,10 +186,10 @@
 			this.toolTip.SetToolTip(this.buttonApply, "Applies the probability table");
 			this.buttonApply.UseVisualStyleBackColor = true;
 			this.buttonApply.Click += new System.EventHandler(this.ButtonApply_Click);
-			this.buttonApply.Enter += new System.EventHandler(this.ButtonApply_Enter);
-			this.buttonApply.Leave += new System.EventHandler(this.ButtonApply_Leave);
-			this.buttonApply.MouseEnter += new System.EventHandler(this.ButtonApply_MouseEnter);
-			this.buttonApply.MouseLeave += new System.EventHandler(this.ButtonApply_MouseLeave);
+			this.buttonApply.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonApply.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonApply.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonApply.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonCancel
 			// 
@@ -209,10 +208,10 @@
 			this.toolTip.SetToolTip(this.buttonCancel, "Cancels the probability table");
 			this.buttonCancel.UseVisualStyleBackColor = true;
 			this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
-			this.buttonCancel.Enter += new System.EventHandler(this.ButtonCancel_Enter);
-			this.buttonCancel.Leave += new System.EventHandler(this.ButtonCancel_Leave);
-			this.buttonCancel.MouseEnter += new System.EventHandler(this.ButtonCancel_MouseEnter);
-			this.buttonCancel.MouseLeave += new System.EventHandler(this.ButtonCancel_MouseLeave);
+			this.buttonCancel.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonCancel.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonCancel.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonCancel.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// buttonRandomize
 			// 
@@ -230,10 +229,10 @@
 			this.toolTip.SetToolTip(this.buttonRandomize, "Randomizes the probability table");
 			this.buttonRandomize.UseVisualStyleBackColor = true;
 			this.buttonRandomize.Click += new System.EventHandler(this.ButtonRandomize_Click);
-			this.buttonRandomize.Enter += new System.EventHandler(this.ButtonRandomize_Enter);
-			this.buttonRandomize.Leave += new System.EventHandler(this.ButtonRandomize_Leave);
-			this.buttonRandomize.MouseEnter += new System.EventHandler(this.ButtonRandomize_MouseEnter);
-			this.buttonRandomize.MouseLeave += new System.EventHandler(this.ButtonRandomize_MouseLeave);
+			this.buttonRandomize.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonRandomize.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.buttonRandomize.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.buttonRandomize.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharA
 			// 
@@ -247,10 +246,10 @@
 			this.labelCharA.TabIndex = 0;
 			this.labelCharA.Text = "A:";
 			this.toolTip.SetToolTip(this.labelCharA, "Displays information of the letter A");
-			this.labelCharA.Enter += new System.EventHandler(this.LabelCharA_Enter);
-			this.labelCharA.Leave += new System.EventHandler(this.LabelCharA_Leave);
-			this.labelCharA.MouseEnter += new System.EventHandler(this.LabelCharA_MouseEnter);
-			this.labelCharA.MouseLeave += new System.EventHandler(this.LabelCharA_MouseLeave);
+			this.labelCharA.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharA.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharA.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharA.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharA
 			// 
@@ -267,9 +266,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharA.ValueChanged += new System.EventHandler(this.NumericUpDownCharA_ValueChanged);
-			this.numericUpDownCharA.Enter += new System.EventHandler(this.NumericUpDownCharA_Enter);
-			this.numericUpDownCharA.Leave += new System.EventHandler(this.NumericUpDownCharA_Leave);
+			this.numericUpDownCharA.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharA.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharA.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharA
 			// 
@@ -286,10 +285,10 @@
 			this.comboBoxCharA.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharA.TabIndex = 1;
 			this.toolTip.SetToolTip(this.comboBoxCharA, "Indicates whether the letter A is a consonant or a vowel");
-			this.comboBoxCharA.Enter += new System.EventHandler(this.ComboBoxCharA_Enter);
-			this.comboBoxCharA.Leave += new System.EventHandler(this.ComboBoxCharA_Leave);
-			this.comboBoxCharA.MouseEnter += new System.EventHandler(this.ComboBoxCharA_MouseEnter);
-			this.comboBoxCharA.MouseLeave += new System.EventHandler(this.ComboBoxCharA_MouseLeave);
+			this.comboBoxCharA.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharA.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharA.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharA.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharA
 			// 
@@ -303,10 +302,10 @@
 			this.labelPercentCharA.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharA, "Shows the percent of the letter A");
 			this.labelPercentCharA.DoubleClick += new System.EventHandler(this.LabelPercentCharA_DoubleClick);
-			this.labelPercentCharA.Enter += new System.EventHandler(this.LabelPercentCharA_Enter);
-			this.labelPercentCharA.Leave += new System.EventHandler(this.LabelPercentCharA_Leave);
-			this.labelPercentCharA.MouseEnter += new System.EventHandler(this.LabelPercentCharA_MouseEnter);
-			this.labelPercentCharA.MouseLeave += new System.EventHandler(this.LabelPercentCharA_MouseLeave);
+			this.labelPercentCharA.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharA.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharA.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharA.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharB
 			// 
@@ -320,10 +319,10 @@
 			this.labelPercentCharB.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharB, "Shows the percent of the letter B");
 			this.labelPercentCharB.DoubleClick += new System.EventHandler(this.LabelPercentCharB_DoubleClick);
-			this.labelPercentCharB.Enter += new System.EventHandler(this.LabelPercentCharB_Enter);
-			this.labelPercentCharB.Leave += new System.EventHandler(this.LabelPercentCharB_Leave);
-			this.labelPercentCharB.MouseEnter += new System.EventHandler(this.LabelPercentCharB_MouseEnter);
-			this.labelPercentCharB.MouseLeave += new System.EventHandler(this.LabelPercentCharB_MouseLeave);
+			this.labelPercentCharB.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharB.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharB.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharB.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharB
 			// 
@@ -340,10 +339,10 @@
 			this.comboBoxCharB.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharB.TabIndex = 5;
 			this.toolTip.SetToolTip(this.comboBoxCharB, "Indicates whether the letter B is a consonant or a vowel");
-			this.comboBoxCharB.Enter += new System.EventHandler(this.ComboBoxCharB_Enter);
-			this.comboBoxCharB.Leave += new System.EventHandler(this.ComboBoxCharB_Leave);
-			this.comboBoxCharB.MouseEnter += new System.EventHandler(this.ComboBoxCharB_MouseEnter);
-			this.comboBoxCharB.MouseLeave += new System.EventHandler(this.ComboBoxCharB_MouseLeave);
+			this.comboBoxCharB.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharB.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharB.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharB.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharB
 			// 
@@ -360,9 +359,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharB.ValueChanged += new System.EventHandler(this.NumericUpDownCharB_ValueChanged);
-			this.numericUpDownCharB.Enter += new System.EventHandler(this.NumericUpDownCharB_Enter);
-			this.numericUpDownCharB.Leave += new System.EventHandler(this.NumericUpDownCharB_Leave);
+			this.numericUpDownCharB.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharB.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharB.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharB
 			// 
@@ -376,10 +375,10 @@
 			this.labelCharB.TabIndex = 4;
 			this.labelCharB.Text = "B:";
 			this.toolTip.SetToolTip(this.labelCharB, "Displays information of the letter B");
-			this.labelCharB.Enter += new System.EventHandler(this.LabelCharB_Enter);
-			this.labelCharB.Leave += new System.EventHandler(this.LabelCharB_Leave);
-			this.labelCharB.MouseEnter += new System.EventHandler(this.LabelCharB_MouseEnter);
-			this.labelCharB.MouseLeave += new System.EventHandler(this.LabelCharB_MouseLeave);
+			this.labelCharB.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharB.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharB.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharB.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharD
 			// 
@@ -393,10 +392,10 @@
 			this.labelPercentCharD.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharD, "Shows the percent of the letter D");
 			this.labelPercentCharD.DoubleClick += new System.EventHandler(this.LabelPercentCharD_DoubleClick);
-			this.labelPercentCharD.Enter += new System.EventHandler(this.LabelPercentCharD_Enter);
-			this.labelPercentCharD.Leave += new System.EventHandler(this.LabelPercentCharD_Leave);
-			this.labelPercentCharD.MouseEnter += new System.EventHandler(this.LabelPercentCharD_MouseEnter);
-			this.labelPercentCharD.MouseLeave += new System.EventHandler(this.LabelPercentCharD_MouseLeave);
+			this.labelPercentCharD.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharD.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharD.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharD.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharD
 			// 
@@ -413,10 +412,10 @@
 			this.comboBoxCharD.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharD.TabIndex = 13;
 			this.toolTip.SetToolTip(this.comboBoxCharD, "Indicates whether the letter D is a consonant or a vowel");
-			this.comboBoxCharD.Enter += new System.EventHandler(this.ComboBoxCharD_Enter);
-			this.comboBoxCharD.Leave += new System.EventHandler(this.ComboBoxCharD_Leave);
-			this.comboBoxCharD.MouseEnter += new System.EventHandler(this.ComboBoxCharD_MouseEnter);
-			this.comboBoxCharD.MouseLeave += new System.EventHandler(this.ComboBoxCharD_MouseLeave);
+			this.comboBoxCharD.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharD.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharD.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharD.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharD
 			// 
@@ -433,9 +432,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharD.ValueChanged += new System.EventHandler(this.NumericUpDownCharD_ValueChanged);
-			this.numericUpDownCharD.Enter += new System.EventHandler(this.NumericUpDownCharD_Enter);
-			this.numericUpDownCharD.Leave += new System.EventHandler(this.NumericUpDownCharD_Leave);
+			this.numericUpDownCharD.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharD.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharD.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharD
 			// 
@@ -449,10 +448,10 @@
 			this.labelCharD.TabIndex = 12;
 			this.labelCharD.Text = "D:";
 			this.toolTip.SetToolTip(this.labelCharD, "Displays information of the letter D");
-			this.labelCharD.Enter += new System.EventHandler(this.LabelCharD_Enter);
-			this.labelCharD.Leave += new System.EventHandler(this.LabelCharD_Leave);
-			this.labelCharD.MouseEnter += new System.EventHandler(this.LabelCharD_MouseEnter);
-			this.labelCharD.MouseLeave += new System.EventHandler(this.LabelCharD_MouseLeave);
+			this.labelCharD.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharD.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharD.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharD.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharC
 			// 
@@ -466,10 +465,10 @@
 			this.labelPercentCharC.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharC, "Shows the percent of the letter C");
 			this.labelPercentCharC.DoubleClick += new System.EventHandler(this.LabelPercentCharC_DoubleClick);
-			this.labelPercentCharC.Enter += new System.EventHandler(this.LabelPercentCharC_Enter);
-			this.labelPercentCharC.Leave += new System.EventHandler(this.LabelPercentCharC_Leave);
-			this.labelPercentCharC.MouseEnter += new System.EventHandler(this.LabelPercentCharC_MouseEnter);
-			this.labelPercentCharC.MouseLeave += new System.EventHandler(this.LabelPercentCharC_MouseLeave);
+			this.labelPercentCharC.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharC.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharC.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharC.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharC
 			// 
@@ -486,10 +485,10 @@
 			this.comboBoxCharC.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharC.TabIndex = 9;
 			this.toolTip.SetToolTip(this.comboBoxCharC, "Indicates whether the letter C is a consonant or a vowel");
-			this.comboBoxCharC.Enter += new System.EventHandler(this.ComboBoxCharC_Enter);
-			this.comboBoxCharC.Leave += new System.EventHandler(this.ComboBoxCharC_Leave);
-			this.comboBoxCharC.MouseEnter += new System.EventHandler(this.ComboBoxCharC_MouseEnter);
-			this.comboBoxCharC.MouseLeave += new System.EventHandler(this.ComboBoxCharC_MouseLeave);
+			this.comboBoxCharC.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharC.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharC.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharC.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharC
 			// 
@@ -506,9 +505,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharC.ValueChanged += new System.EventHandler(this.NumericUpDownCharC_ValueChanged);
-			this.numericUpDownCharC.Enter += new System.EventHandler(this.NumericUpDownCharC_Enter);
-			this.numericUpDownCharC.Leave += new System.EventHandler(this.NumericUpDownCharC_Leave);
+			this.numericUpDownCharC.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharC.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharC.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharC
 			// 
@@ -522,10 +521,10 @@
 			this.labelCharC.TabIndex = 8;
 			this.labelCharC.Text = "C:";
 			this.toolTip.SetToolTip(this.labelCharC, "Displays information of the letter C");
-			this.labelCharC.Enter += new System.EventHandler(this.LabelCharC_Enter);
-			this.labelCharC.Leave += new System.EventHandler(this.LabelCharC_Leave);
-			this.labelCharC.MouseEnter += new System.EventHandler(this.LabelCharC_MouseEnter);
-			this.labelCharC.MouseLeave += new System.EventHandler(this.LabelCharC_MouseLeave);
+			this.labelCharC.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharC.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharC.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharC.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharF
 			// 
@@ -539,10 +538,10 @@
 			this.labelPercentCharF.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharF, "Shows the percent of the letter F");
 			this.labelPercentCharF.DoubleClick += new System.EventHandler(this.LabelPercentCharF_DoubleClick);
-			this.labelPercentCharF.Enter += new System.EventHandler(this.LabelPercentCharF_Enter);
-			this.labelPercentCharF.Leave += new System.EventHandler(this.LabelPercentCharF_Leave);
-			this.labelPercentCharF.MouseEnter += new System.EventHandler(this.LabelPercentCharF_MouseEnter);
-			this.labelPercentCharF.MouseLeave += new System.EventHandler(this.LabelPercentCharF_MouseLeave);
+			this.labelPercentCharF.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharF.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharF.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharF.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharF
 			// 
@@ -559,10 +558,10 @@
 			this.comboBoxCharF.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharF.TabIndex = 21;
 			this.toolTip.SetToolTip(this.comboBoxCharF, "Indicates whether the letter F is a consonant or a vowel");
-			this.comboBoxCharF.Enter += new System.EventHandler(this.ComboBoxCharF_Enter);
-			this.comboBoxCharF.Leave += new System.EventHandler(this.ComboBoxCharF_Leave);
-			this.comboBoxCharF.MouseEnter += new System.EventHandler(this.ComboBoxCharF_MouseEnter);
-			this.comboBoxCharF.MouseLeave += new System.EventHandler(this.ComboBoxCharF_MouseLeave);
+			this.comboBoxCharF.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharF.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharF.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharF.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharF
 			// 
@@ -579,9 +578,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharF.ValueChanged += new System.EventHandler(this.NumericUpDownCharF_ValueChanged);
-			this.numericUpDownCharF.Enter += new System.EventHandler(this.NumericUpDownCharF_Enter);
-			this.numericUpDownCharF.Leave += new System.EventHandler(this.NumericUpDownCharF_Leave);
+			this.numericUpDownCharF.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharF.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharF.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharF
 			// 
@@ -595,10 +594,10 @@
 			this.labelCharF.TabIndex = 20;
 			this.labelCharF.Text = "F:";
 			this.toolTip.SetToolTip(this.labelCharF, "Displays information of the letter F");
-			this.labelCharF.Enter += new System.EventHandler(this.LabelCharF_Enter);
-			this.labelCharF.Leave += new System.EventHandler(this.LabelCharF_Leave);
-			this.labelCharF.MouseEnter += new System.EventHandler(this.LabelCharF_MouseEnter);
-			this.labelCharF.MouseLeave += new System.EventHandler(this.LabelCharF_MouseLeave);
+			this.labelCharF.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharF.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharF.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharF.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharE
 			// 
@@ -612,10 +611,10 @@
 			this.labelPercentCharE.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharE, "Shows the percent of the letter E");
 			this.labelPercentCharE.DoubleClick += new System.EventHandler(this.LabelPercentCharE_DoubleClick);
-			this.labelPercentCharE.Enter += new System.EventHandler(this.LabelPercentCharE_Enter);
-			this.labelPercentCharE.Leave += new System.EventHandler(this.LabelPercentCharE_Leave);
-			this.labelPercentCharE.MouseEnter += new System.EventHandler(this.LabelPercentCharE_MouseEnter);
-			this.labelPercentCharE.MouseLeave += new System.EventHandler(this.LabelPercentCharE_MouseLeave);
+			this.labelPercentCharE.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharE.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharE.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharE.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharE
 			// 
@@ -632,10 +631,10 @@
 			this.comboBoxCharE.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharE.TabIndex = 17;
 			this.toolTip.SetToolTip(this.comboBoxCharE, "Indicates whether the letter E is a consonant or a vowel");
-			this.comboBoxCharE.Enter += new System.EventHandler(this.ComboBoxCharE_Enter);
-			this.comboBoxCharE.Leave += new System.EventHandler(this.ComboBoxCharE_Leave);
-			this.comboBoxCharE.MouseEnter += new System.EventHandler(this.ComboBoxCharE_MouseEnter);
-			this.comboBoxCharE.MouseLeave += new System.EventHandler(this.ComboBoxCharE_MouseLeave);
+			this.comboBoxCharE.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharE.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharE.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharE.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharE
 			// 
@@ -652,9 +651,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharE.ValueChanged += new System.EventHandler(this.NumericUpDownCharE_ValueChanged);
-			this.numericUpDownCharE.Enter += new System.EventHandler(this.NumericUpDownCharE_Enter);
-			this.numericUpDownCharE.Leave += new System.EventHandler(this.NumericUpDownCharE_Leave);
+			this.numericUpDownCharE.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharE.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharE.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharE
 			// 
@@ -668,10 +667,10 @@
 			this.labelCharE.TabIndex = 16;
 			this.labelCharE.Text = "E:";
 			this.toolTip.SetToolTip(this.labelCharE, "Displays information of the letter E");
-			this.labelCharE.Enter += new System.EventHandler(this.LabelCharE_Enter);
-			this.labelCharE.Leave += new System.EventHandler(this.LabelCharE_Leave);
-			this.labelCharE.MouseEnter += new System.EventHandler(this.LabelCharE_MouseEnter);
-			this.labelCharE.MouseLeave += new System.EventHandler(this.LabelCharE_MouseLeave);
+			this.labelCharE.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharE.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharE.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharE.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharH
 			// 
@@ -685,10 +684,10 @@
 			this.labelPercentCharH.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharH, "Shows the percent of the letter H");
 			this.labelPercentCharH.DoubleClick += new System.EventHandler(this.LabelPercentCharH_DoubleClick);
-			this.labelPercentCharH.Enter += new System.EventHandler(this.LabelPercentCharH_Enter);
-			this.labelPercentCharH.Leave += new System.EventHandler(this.LabelPercentCharH_Leave);
-			this.labelPercentCharH.MouseEnter += new System.EventHandler(this.LabelPercentCharH_MouseEnter);
-			this.labelPercentCharH.MouseLeave += new System.EventHandler(this.LabelPercentCharH_MouseLeave);
+			this.labelPercentCharH.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharH.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharH.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharH.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharH
 			// 
@@ -705,10 +704,10 @@
 			this.comboBoxCharH.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharH.TabIndex = 29;
 			this.toolTip.SetToolTip(this.comboBoxCharH, "Indicates whether the letter H is a consonant or a vowel");
-			this.comboBoxCharH.Enter += new System.EventHandler(this.ComboBoxCharH_Enter);
-			this.comboBoxCharH.Leave += new System.EventHandler(this.ComboBoxCharH_Leave);
-			this.comboBoxCharH.MouseEnter += new System.EventHandler(this.ComboBoxCharH_MouseEnter);
-			this.comboBoxCharH.MouseLeave += new System.EventHandler(this.ComboBoxCharH_MouseLeave);
+			this.comboBoxCharH.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharH.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharH.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharH.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharH
 			// 
@@ -725,9 +724,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharH.ValueChanged += new System.EventHandler(this.NumericUpDownCharH_ValueChanged);
-			this.numericUpDownCharH.Enter += new System.EventHandler(this.NumericUpDownCharH_Enter);
-			this.numericUpDownCharH.Leave += new System.EventHandler(this.NumericUpDownCharH_Leave);
+			this.numericUpDownCharH.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharH.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharH.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharH
 			// 
@@ -741,10 +740,10 @@
 			this.labelCharH.TabIndex = 28;
 			this.labelCharH.Text = "H:";
 			this.toolTip.SetToolTip(this.labelCharH, "Displays information of the letter H");
-			this.labelCharH.Enter += new System.EventHandler(this.LabelCharH_Enter);
-			this.labelCharH.Leave += new System.EventHandler(this.LabelCharH_Leave);
-			this.labelCharH.MouseEnter += new System.EventHandler(this.LabelCharH_MouseEnter);
-			this.labelCharH.MouseLeave += new System.EventHandler(this.LabelCharH_MouseLeave);
+			this.labelCharH.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharH.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharH.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharH.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharG
 			// 
@@ -758,10 +757,10 @@
 			this.labelPercentCharG.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharG, "Shows the percent of the letter G");
 			this.labelPercentCharG.DoubleClick += new System.EventHandler(this.LabelPercentCharG_DoubleClick);
-			this.labelPercentCharG.Enter += new System.EventHandler(this.LabelPercentCharG_Enter);
-			this.labelPercentCharG.Leave += new System.EventHandler(this.LabelPercentCharG_Leave);
-			this.labelPercentCharG.MouseEnter += new System.EventHandler(this.LabelPercentCharG_MouseEnter);
-			this.labelPercentCharG.MouseLeave += new System.EventHandler(this.LabelPercentCharG_MouseLeave);
+			this.labelPercentCharG.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharG.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharG.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharG.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharG
 			// 
@@ -778,10 +777,10 @@
 			this.comboBoxCharG.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharG.TabIndex = 25;
 			this.toolTip.SetToolTip(this.comboBoxCharG, "Indicates whether the letter G is a consonant or a vowel");
-			this.comboBoxCharG.Enter += new System.EventHandler(this.ComboBoxCharG_Enter);
-			this.comboBoxCharG.Leave += new System.EventHandler(this.ComboBoxCharG_Leave);
-			this.comboBoxCharG.MouseEnter += new System.EventHandler(this.ComboBoxCharG_MouseEnter);
-			this.comboBoxCharG.MouseLeave += new System.EventHandler(this.ComboBoxCharG_MouseLeave);
+			this.comboBoxCharG.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharG.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharG.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharG.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharG
 			// 
@@ -798,9 +797,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharG.ValueChanged += new System.EventHandler(this.NumericUpDownCharG_ValueChanged);
-			this.numericUpDownCharG.Enter += new System.EventHandler(this.NumericUpDownCharG_Enter);
-			this.numericUpDownCharG.Leave += new System.EventHandler(this.NumericUpDownCharG_Leave);
+			this.numericUpDownCharG.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharG.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharG.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharG
 			// 
@@ -814,10 +813,10 @@
 			this.labelCharG.TabIndex = 24;
 			this.labelCharG.Text = "G:";
 			this.toolTip.SetToolTip(this.labelCharG, "Displays information of the letter G");
-			this.labelCharG.Enter += new System.EventHandler(this.LabelCharG_Enter);
-			this.labelCharG.Leave += new System.EventHandler(this.LabelCharG_Leave);
-			this.labelCharG.MouseEnter += new System.EventHandler(this.LabelCharG_MouseEnter);
-			this.labelCharG.MouseLeave += new System.EventHandler(this.LabelCharG_MouseLeave);
+			this.labelCharG.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharG.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharG.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharG.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharI
 			// 
@@ -831,10 +830,10 @@
 			this.labelPercentCharI.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharI, "Shows the percent of the letter I");
 			this.labelPercentCharI.DoubleClick += new System.EventHandler(this.LabelPercentCharI_DoubleClick);
-			this.labelPercentCharI.Enter += new System.EventHandler(this.LabelPercentCharI_Enter);
-			this.labelPercentCharI.Leave += new System.EventHandler(this.LabelPercentCharI_Leave);
-			this.labelPercentCharI.MouseEnter += new System.EventHandler(this.LabelPercentCharI_MouseEnter);
-			this.labelPercentCharI.MouseLeave += new System.EventHandler(this.LabelPercentCharI_MouseLeave);
+			this.labelPercentCharI.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharI.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharI.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharI.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharI
 			// 
@@ -851,10 +850,10 @@
 			this.comboBoxCharI.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharI.TabIndex = 33;
 			this.toolTip.SetToolTip(this.comboBoxCharI, "Indicates whether the letter I is a consonant or a vowel");
-			this.comboBoxCharI.Enter += new System.EventHandler(this.ComboBoxCharI_Enter);
-			this.comboBoxCharI.Leave += new System.EventHandler(this.ComboBoxCharI_Leave);
-			this.comboBoxCharI.MouseEnter += new System.EventHandler(this.ComboBoxCharI_MouseEnter);
-			this.comboBoxCharI.MouseLeave += new System.EventHandler(this.ComboBoxCharI_MouseLeave);
+			this.comboBoxCharI.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharI.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharI.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharI.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharI
 			// 
@@ -871,9 +870,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharI.ValueChanged += new System.EventHandler(this.NumericUpDownCharI_ValueChanged);
-			this.numericUpDownCharI.Enter += new System.EventHandler(this.NumericUpDownCharI_Enter);
-			this.numericUpDownCharI.Leave += new System.EventHandler(this.NumericUpDownCharI_Leave);
+			this.numericUpDownCharI.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharI.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharI.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharI
 			// 
@@ -887,10 +886,10 @@
 			this.labelCharI.TabIndex = 32;
 			this.labelCharI.Text = "I:";
 			this.toolTip.SetToolTip(this.labelCharI, "Displays information of the letter I");
-			this.labelCharI.Enter += new System.EventHandler(this.LabelCharI_Enter);
-			this.labelCharI.Leave += new System.EventHandler(this.LabelCharI_Leave);
-			this.labelCharI.MouseEnter += new System.EventHandler(this.LabelCharI_MouseEnter);
-			this.labelCharI.MouseLeave += new System.EventHandler(this.LabelCharI_MouseLeave);
+			this.labelCharI.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharI.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharI.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharI.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharR
 			// 
@@ -904,10 +903,10 @@
 			this.labelPercentCharR.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharR, "Shows the percent of the letter R");
 			this.labelPercentCharR.DoubleClick += new System.EventHandler(this.LabelPercentCharR_DoubleClick);
-			this.labelPercentCharR.Enter += new System.EventHandler(this.LabelPercentCharR_Enter);
-			this.labelPercentCharR.Leave += new System.EventHandler(this.LabelPercentCharR_Leave);
-			this.labelPercentCharR.MouseEnter += new System.EventHandler(this.LabelPercentCharR_MouseEnter);
-			this.labelPercentCharR.MouseLeave += new System.EventHandler(this.LabelPercentCharR_MouseLeave);
+			this.labelPercentCharR.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharR.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharR.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharR.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharR
 			// 
@@ -924,10 +923,10 @@
 			this.comboBoxCharR.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharR.TabIndex = 69;
 			this.toolTip.SetToolTip(this.comboBoxCharR, "Indicates whether the letter R is a consonant or a vowel");
-			this.comboBoxCharR.Enter += new System.EventHandler(this.ComboBoxCharR_Enter);
-			this.comboBoxCharR.Leave += new System.EventHandler(this.ComboBoxCharR_Leave);
-			this.comboBoxCharR.MouseEnter += new System.EventHandler(this.ComboBoxCharR_MouseEnter);
-			this.comboBoxCharR.MouseLeave += new System.EventHandler(this.ComboBoxCharR_MouseLeave);
+			this.comboBoxCharR.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharR.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharR.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharR.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharR
 			// 
@@ -944,9 +943,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharR.ValueChanged += new System.EventHandler(this.NumericUpDownCharR_ValueChanged);
-			this.numericUpDownCharR.Enter += new System.EventHandler(this.NumericUpDownCharR_Enter);
-			this.numericUpDownCharR.Leave += new System.EventHandler(this.NumericUpDownCharR_Leave);
+			this.numericUpDownCharR.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharR.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharR.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharR
 			// 
@@ -960,10 +959,10 @@
 			this.labelCharR.TabIndex = 68;
 			this.labelCharR.Text = "R:";
 			this.toolTip.SetToolTip(this.labelCharR, "Displays information of the letter R");
-			this.labelCharR.Enter += new System.EventHandler(this.LabelCharR_Enter);
-			this.labelCharR.Leave += new System.EventHandler(this.LabelCharR_Leave);
-			this.labelCharR.MouseEnter += new System.EventHandler(this.LabelCharR_MouseEnter);
-			this.labelCharR.MouseLeave += new System.EventHandler(this.LabelCharR_MouseLeave);
+			this.labelCharR.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharR.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharR.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharR.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharQ
 			// 
@@ -977,10 +976,10 @@
 			this.labelPercentCharQ.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharQ, "Shows the percent of the letter Q");
 			this.labelPercentCharQ.DoubleClick += new System.EventHandler(this.LabelPercentCharQ_DoubleClick);
-			this.labelPercentCharQ.Enter += new System.EventHandler(this.LabelPercentCharQ_Enter);
-			this.labelPercentCharQ.Leave += new System.EventHandler(this.LabelPercentCharQ_Leave);
-			this.labelPercentCharQ.MouseEnter += new System.EventHandler(this.LabelPercentCharQ_MouseEnter);
-			this.labelPercentCharQ.MouseLeave += new System.EventHandler(this.LabelPercentCharQ_MouseLeave);
+			this.labelPercentCharQ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharQ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharQ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharQ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharQ
 			// 
@@ -997,10 +996,10 @@
 			this.comboBoxCharQ.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharQ.TabIndex = 65;
 			this.toolTip.SetToolTip(this.comboBoxCharQ, "Indicates whether the letter Q is a consonant or a vowel");
-			this.comboBoxCharQ.Enter += new System.EventHandler(this.ComboBoxCharQ_Enter);
-			this.comboBoxCharQ.Leave += new System.EventHandler(this.ComboBoxCharQ_Leave);
-			this.comboBoxCharQ.MouseEnter += new System.EventHandler(this.ComboBoxCharQ_MouseEnter);
-			this.comboBoxCharQ.MouseLeave += new System.EventHandler(this.ComboBoxCharQ_MouseLeave);
+			this.comboBoxCharQ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharQ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharQ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharQ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharQ
 			// 
@@ -1017,9 +1016,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharQ.ValueChanged += new System.EventHandler(this.NumericUpDownCharQ_ValueChanged);
-			this.numericUpDownCharQ.Enter += new System.EventHandler(this.NumericUpDownCharQ_Enter);
-			this.numericUpDownCharQ.Leave += new System.EventHandler(this.NumericUpDownCharQ_Leave);
+			this.numericUpDownCharQ.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharQ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharQ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharQ
 			// 
@@ -1033,10 +1032,10 @@
 			this.labelCharQ.TabIndex = 64;
 			this.labelCharQ.Text = "Q:";
 			this.toolTip.SetToolTip(this.labelCharQ, "Displays information of the letter Q");
-			this.labelCharQ.Enter += new System.EventHandler(this.LabelCharQ_Enter);
-			this.labelCharQ.Leave += new System.EventHandler(this.LabelCharQ_Leave);
-			this.labelCharQ.MouseEnter += new System.EventHandler(this.LabelCharQ_MouseEnter);
-			this.labelCharQ.MouseLeave += new System.EventHandler(this.LabelCharQ_MouseLeave);
+			this.labelCharQ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharQ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharQ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharQ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharP
 			// 
@@ -1050,10 +1049,10 @@
 			this.labelPercentCharP.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharP, "Shows the percent of the letter P");
 			this.labelPercentCharP.DoubleClick += new System.EventHandler(this.LabelPercentCharP_DoubleClick);
-			this.labelPercentCharP.Enter += new System.EventHandler(this.LabelPercentCharP_Enter);
-			this.labelPercentCharP.Leave += new System.EventHandler(this.LabelPercentCharP_Leave);
-			this.labelPercentCharP.MouseEnter += new System.EventHandler(this.LabelPercentCharP_MouseEnter);
-			this.labelPercentCharP.MouseLeave += new System.EventHandler(this.LabelPercentCharP_MouseLeave);
+			this.labelPercentCharP.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharP.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharP.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharP.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharP
 			// 
@@ -1070,10 +1069,10 @@
 			this.comboBoxCharP.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharP.TabIndex = 61;
 			this.toolTip.SetToolTip(this.comboBoxCharP, "Indicates whether the letter P is a consonant or a vowel");
-			this.comboBoxCharP.Enter += new System.EventHandler(this.ComboBoxCharP_Enter);
-			this.comboBoxCharP.Leave += new System.EventHandler(this.ComboBoxCharP_Leave);
-			this.comboBoxCharP.MouseEnter += new System.EventHandler(this.ComboBoxCharP_MouseEnter);
-			this.comboBoxCharP.MouseLeave += new System.EventHandler(this.ComboBoxCharP_MouseLeave);
+			this.comboBoxCharP.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharP.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharP.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharP.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharP
 			// 
@@ -1090,9 +1089,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharP.ValueChanged += new System.EventHandler(this.NumericUpDownCharP_ValueChanged);
-			this.numericUpDownCharP.Enter += new System.EventHandler(this.NumericUpDownCharP_Enter);
-			this.numericUpDownCharP.Leave += new System.EventHandler(this.NumericUpDownCharP_Leave);
+			this.numericUpDownCharP.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharP.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharP.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharP
 			// 
@@ -1106,10 +1105,10 @@
 			this.labelCharP.TabIndex = 60;
 			this.labelCharP.Text = "P:";
 			this.toolTip.SetToolTip(this.labelCharP, "Displays information of the letter P");
-			this.labelCharP.Enter += new System.EventHandler(this.LabelCharP_Enter);
-			this.labelCharP.Leave += new System.EventHandler(this.LabelCharP_Leave);
-			this.labelCharP.MouseEnter += new System.EventHandler(this.LabelCharP_MouseEnter);
-			this.labelCharP.MouseLeave += new System.EventHandler(this.LabelCharP_MouseLeave);
+			this.labelCharP.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharP.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharP.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharP.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharO
 			// 
@@ -1123,10 +1122,10 @@
 			this.labelPercentCharO.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharO, "Shows the percent of the letter O");
 			this.labelPercentCharO.DoubleClick += new System.EventHandler(this.LabelPercentCharO_DoubleClick);
-			this.labelPercentCharO.Enter += new System.EventHandler(this.LabelPercentCharO_Enter);
-			this.labelPercentCharO.Leave += new System.EventHandler(this.LabelPercentCharO_Leave);
-			this.labelPercentCharO.MouseEnter += new System.EventHandler(this.LabelPercentCharO_MouseEnter);
-			this.labelPercentCharO.MouseLeave += new System.EventHandler(this.LabelPercentCharO_MouseLeave);
+			this.labelPercentCharO.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharO.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharO.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharO.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharO
 			// 
@@ -1143,10 +1142,10 @@
 			this.comboBoxCharO.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharO.TabIndex = 57;
 			this.toolTip.SetToolTip(this.comboBoxCharO, "Indicates whether the letter O is a consonant or a vowel");
-			this.comboBoxCharO.Enter += new System.EventHandler(this.ComboBoxCharO_Enter);
-			this.comboBoxCharO.Leave += new System.EventHandler(this.ComboBoxCharO_Leave);
-			this.comboBoxCharO.MouseEnter += new System.EventHandler(this.ComboBoxCharO_MouseEnter);
-			this.comboBoxCharO.MouseLeave += new System.EventHandler(this.ComboBoxCharO_MouseLeave);
+			this.comboBoxCharO.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharO.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharO.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharO.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharO
 			// 
@@ -1163,9 +1162,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharO.ValueChanged += new System.EventHandler(this.NumericUpDownCharO_ValueChanged);
-			this.numericUpDownCharO.Enter += new System.EventHandler(this.NumericUpDownCharO_Enter);
-			this.numericUpDownCharO.Leave += new System.EventHandler(this.NumericUpDownCharO_Leave);
+			this.numericUpDownCharO.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharO.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharO.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharO
 			// 
@@ -1179,10 +1178,10 @@
 			this.labelCharO.TabIndex = 56;
 			this.labelCharO.Text = "O:";
 			this.toolTip.SetToolTip(this.labelCharO, "Displays information of the letter O");
-			this.labelCharO.Enter += new System.EventHandler(this.LabelCharO_Enter);
-			this.labelCharO.Leave += new System.EventHandler(this.LabelCharO_Leave);
-			this.labelCharO.MouseEnter += new System.EventHandler(this.LabelCharO_MouseEnter);
-			this.labelCharO.MouseLeave += new System.EventHandler(this.LabelCharO_MouseLeave);
+			this.labelCharO.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharO.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharO.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharO.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharN
 			// 
@@ -1196,10 +1195,10 @@
 			this.labelPercentCharN.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharN, "Shows the percent of the letter N");
 			this.labelPercentCharN.DoubleClick += new System.EventHandler(this.LabelPercentCharN_DoubleClick);
-			this.labelPercentCharN.Enter += new System.EventHandler(this.LabelPercentCharN_Enter);
-			this.labelPercentCharN.Leave += new System.EventHandler(this.LabelPercentCharN_Leave);
-			this.labelPercentCharN.MouseEnter += new System.EventHandler(this.LabelPercentCharN_MouseEnter);
-			this.labelPercentCharN.MouseLeave += new System.EventHandler(this.LabelPercentCharN_MouseLeave);
+			this.labelPercentCharN.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharN.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharN.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharN.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharN
 			// 
@@ -1216,10 +1215,10 @@
 			this.comboBoxCharN.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharN.TabIndex = 53;
 			this.toolTip.SetToolTip(this.comboBoxCharN, "Indicates whether the letter N is a consonant or a vowel");
-			this.comboBoxCharN.Enter += new System.EventHandler(this.ComboBoxCharN_Enter);
-			this.comboBoxCharN.Leave += new System.EventHandler(this.ComboBoxCharN_Leave);
-			this.comboBoxCharN.MouseEnter += new System.EventHandler(this.ComboBoxCharN_MouseEnter);
-			this.comboBoxCharN.MouseLeave += new System.EventHandler(this.ComboBoxCharN_MouseLeave);
+			this.comboBoxCharN.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharN.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharN.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharN.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharN
 			// 
@@ -1236,9 +1235,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharN.ValueChanged += new System.EventHandler(this.NumericUpDownCharN_ValueChanged);
-			this.numericUpDownCharN.Enter += new System.EventHandler(this.NumericUpDownCharN_Enter);
-			this.numericUpDownCharN.Leave += new System.EventHandler(this.NumericUpDownCharN_Leave);
+			this.numericUpDownCharN.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharN.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharN.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharN
 			// 
@@ -1252,10 +1251,10 @@
 			this.labelCharN.TabIndex = 52;
 			this.labelCharN.Text = "N:";
 			this.toolTip.SetToolTip(this.labelCharN, "Displays information of the letter N");
-			this.labelCharN.Enter += new System.EventHandler(this.LabelCharN_Enter);
-			this.labelCharN.Leave += new System.EventHandler(this.LabelCharN_Leave);
-			this.labelCharN.MouseEnter += new System.EventHandler(this.LabelCharN_MouseEnter);
-			this.labelCharN.MouseLeave += new System.EventHandler(this.LabelCharN_MouseLeave);
+			this.labelCharN.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharN.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharN.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharN.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharM
 			// 
@@ -1269,10 +1268,10 @@
 			this.labelPercentCharM.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharM, "Shows the percent of the letter M");
 			this.labelPercentCharM.DoubleClick += new System.EventHandler(this.LabelPercentCharM_DoubleClick);
-			this.labelPercentCharM.Enter += new System.EventHandler(this.LabelPercentCharM_Enter);
-			this.labelPercentCharM.Leave += new System.EventHandler(this.LabelPercentCharM_Leave);
-			this.labelPercentCharM.MouseEnter += new System.EventHandler(this.LabelPercentCharM_MouseEnter);
-			this.labelPercentCharM.MouseLeave += new System.EventHandler(this.LabelPercentCharM_MouseLeave);
+			this.labelPercentCharM.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharM.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharM.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharM.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharM
 			// 
@@ -1289,10 +1288,10 @@
 			this.comboBoxCharM.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharM.TabIndex = 49;
 			this.toolTip.SetToolTip(this.comboBoxCharM, "Indicates whether the letter M is a consonant or a vowel");
-			this.comboBoxCharM.Enter += new System.EventHandler(this.ComboBoxCharM_Enter);
-			this.comboBoxCharM.Leave += new System.EventHandler(this.ComboBoxCharM_Leave);
-			this.comboBoxCharM.MouseEnter += new System.EventHandler(this.ComboBoxCharM_MouseEnter);
-			this.comboBoxCharM.MouseLeave += new System.EventHandler(this.ComboBoxCharM_MouseLeave);
+			this.comboBoxCharM.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharM.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharM.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharM.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharM
 			// 
@@ -1309,9 +1308,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharM.ValueChanged += new System.EventHandler(this.NumericUpDownCharM_ValueChanged);
-			this.numericUpDownCharM.Enter += new System.EventHandler(this.NumericUpDownCharM_Enter);
-			this.numericUpDownCharM.Leave += new System.EventHandler(this.NumericUpDownCharM_Leave);
+			this.numericUpDownCharM.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharM.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharM.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharM
 			// 
@@ -1325,10 +1324,10 @@
 			this.labelCharM.TabIndex = 48;
 			this.labelCharM.Text = "M:";
 			this.toolTip.SetToolTip(this.labelCharM, "Displays information of the letter M");
-			this.labelCharM.Enter += new System.EventHandler(this.LabelCharM_Enter);
-			this.labelCharM.Leave += new System.EventHandler(this.LabelCharM_Leave);
-			this.labelCharM.MouseEnter += new System.EventHandler(this.LabelCharM_MouseEnter);
-			this.labelCharM.MouseLeave += new System.EventHandler(this.LabelCharM_MouseLeave);
+			this.labelCharM.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharM.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharM.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharM.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharL
 			// 
@@ -1342,10 +1341,10 @@
 			this.labelPercentCharL.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharL, "Shows the percent of the letter L");
 			this.labelPercentCharL.DoubleClick += new System.EventHandler(this.LabelPercentCharL_DoubleClick);
-			this.labelPercentCharL.Enter += new System.EventHandler(this.LabelPercentCharL_Enter);
-			this.labelPercentCharL.Leave += new System.EventHandler(this.LabelPercentCharL_Leave);
-			this.labelPercentCharL.MouseEnter += new System.EventHandler(this.LabelPercentCharL_MouseEnter);
-			this.labelPercentCharL.MouseLeave += new System.EventHandler(this.LabelPercentCharL_MouseLeave);
+			this.labelPercentCharL.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharL.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharL.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharL.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharL
 			// 
@@ -1362,10 +1361,10 @@
 			this.comboBoxCharL.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharL.TabIndex = 45;
 			this.toolTip.SetToolTip(this.comboBoxCharL, "Indicates whether the letter L is a consonant or a vowel");
-			this.comboBoxCharL.Enter += new System.EventHandler(this.ComboBoxCharL_Enter);
-			this.comboBoxCharL.Leave += new System.EventHandler(this.ComboBoxCharL_Leave);
-			this.comboBoxCharL.MouseEnter += new System.EventHandler(this.ComboBoxCharL_MouseEnter);
-			this.comboBoxCharL.MouseLeave += new System.EventHandler(this.ComboBoxCharL_MouseLeave);
+			this.comboBoxCharL.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharL.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharL.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharL.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharL
 			// 
@@ -1382,9 +1381,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharL.ValueChanged += new System.EventHandler(this.NumericUpDownCharL_ValueChanged);
-			this.numericUpDownCharL.Enter += new System.EventHandler(this.NumericUpDownCharL_Enter);
-			this.numericUpDownCharL.Leave += new System.EventHandler(this.NumericUpDownCharL_Leave);
+			this.numericUpDownCharL.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharL.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharL.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharL
 			// 
@@ -1398,10 +1397,10 @@
 			this.labelCharL.TabIndex = 44;
 			this.labelCharL.Text = "L:";
 			this.toolTip.SetToolTip(this.labelCharL, "Displays information of the letter L");
-			this.labelCharL.Enter += new System.EventHandler(this.LabelCharL_Enter);
-			this.labelCharL.Leave += new System.EventHandler(this.LabelCharL_Leave);
-			this.labelCharL.MouseEnter += new System.EventHandler(this.LabelCharL_MouseEnter);
-			this.labelCharL.MouseLeave += new System.EventHandler(this.LabelCharL_MouseLeave);
+			this.labelCharL.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharL.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharL.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharL.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharK
 			// 
@@ -1415,10 +1414,10 @@
 			this.labelPercentCharK.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharK, "Shows the percent of the letter K");
 			this.labelPercentCharK.DoubleClick += new System.EventHandler(this.LabelPercentCharK_DoubleClick);
-			this.labelPercentCharK.Enter += new System.EventHandler(this.LabelPercentCharK_Enter);
-			this.labelPercentCharK.Leave += new System.EventHandler(this.LabelPercentCharK_Leave);
-			this.labelPercentCharK.MouseEnter += new System.EventHandler(this.LabelPercentCharK_MouseEnter);
-			this.labelPercentCharK.MouseLeave += new System.EventHandler(this.LabelPercentCharK_MouseLeave);
+			this.labelPercentCharK.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharK.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharK.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharK.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharK
 			// 
@@ -1435,10 +1434,10 @@
 			this.comboBoxCharK.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharK.TabIndex = 41;
 			this.toolTip.SetToolTip(this.comboBoxCharK, "Indicates whether the letter K is a consonant or a vowel");
-			this.comboBoxCharK.Enter += new System.EventHandler(this.ComboBoxCharK_Enter);
-			this.comboBoxCharK.Leave += new System.EventHandler(this.ComboBoxCharK_Leave);
-			this.comboBoxCharK.MouseEnter += new System.EventHandler(this.ComboBoxCharK_MouseEnter);
-			this.comboBoxCharK.MouseLeave += new System.EventHandler(this.ComboBoxCharK_MouseLeave);
+			this.comboBoxCharK.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharK.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharK.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharK.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharK
 			// 
@@ -1455,9 +1454,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharK.ValueChanged += new System.EventHandler(this.NumericUpDownCharK_ValueChanged);
-			this.numericUpDownCharK.Enter += new System.EventHandler(this.NumericUpDownCharK_Enter);
-			this.numericUpDownCharK.Leave += new System.EventHandler(this.NumericUpDownCharK_Leave);
+			this.numericUpDownCharK.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharK.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharK.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharK
 			// 
@@ -1471,10 +1470,10 @@
 			this.labelCharK.TabIndex = 40;
 			this.labelCharK.Text = "K:";
 			this.toolTip.SetToolTip(this.labelCharK, "Displays information of the letter K");
-			this.labelCharK.Enter += new System.EventHandler(this.LabelCharK_Enter);
-			this.labelCharK.Leave += new System.EventHandler(this.LabelCharK_Leave);
-			this.labelCharK.MouseEnter += new System.EventHandler(this.LabelCharK_MouseEnter);
-			this.labelCharK.MouseLeave += new System.EventHandler(this.LabelCharK_MouseLeave);
+			this.labelCharK.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharK.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharK.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharK.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharJ
 			// 
@@ -1488,10 +1487,10 @@
 			this.labelPercentCharJ.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharJ, "Shows the percent of the letter J");
 			this.labelPercentCharJ.DoubleClick += new System.EventHandler(this.LabelPercentCharJ_DoubleClick);
-			this.labelPercentCharJ.Enter += new System.EventHandler(this.LabelPercentCharJ_Enter);
-			this.labelPercentCharJ.Leave += new System.EventHandler(this.LabelPercentCharJ_Leave);
-			this.labelPercentCharJ.MouseEnter += new System.EventHandler(this.LabelPercentCharJ_MouseEnter);
-			this.labelPercentCharJ.MouseLeave += new System.EventHandler(this.LabelPercentCharJ_MouseLeave);
+			this.labelPercentCharJ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharJ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharJ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharJ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharJ
 			// 
@@ -1508,10 +1507,10 @@
 			this.comboBoxCharJ.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharJ.TabIndex = 37;
 			this.toolTip.SetToolTip(this.comboBoxCharJ, "Indicates whether the letter J is a consonant or a vowel");
-			this.comboBoxCharJ.Enter += new System.EventHandler(this.ComboBoxCharJ_Enter);
-			this.comboBoxCharJ.Leave += new System.EventHandler(this.ComboBoxCharJ_Leave);
-			this.comboBoxCharJ.MouseEnter += new System.EventHandler(this.ComboBoxCharJ_MouseEnter);
-			this.comboBoxCharJ.MouseLeave += new System.EventHandler(this.ComboBoxCharJ_MouseLeave);
+			this.comboBoxCharJ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharJ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharJ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharJ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharJ
 			// 
@@ -1528,9 +1527,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharJ.ValueChanged += new System.EventHandler(this.NumericUpDownCharJ_ValueChanged);
-			this.numericUpDownCharJ.Enter += new System.EventHandler(this.NumericUpDownCharJ_Enter);
-			this.numericUpDownCharJ.Leave += new System.EventHandler(this.NumericUpDownCharJ_Leave);
+			this.numericUpDownCharJ.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharJ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharJ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharJ
 			// 
@@ -1544,10 +1543,10 @@
 			this.labelCharJ.TabIndex = 36;
 			this.labelCharJ.Text = "J:";
 			this.toolTip.SetToolTip(this.labelCharJ, "Displays information of the letter J");
-			this.labelCharJ.Enter += new System.EventHandler(this.LabelCharJ_Enter);
-			this.labelCharJ.Leave += new System.EventHandler(this.LabelCharJ_Leave);
-			this.labelCharJ.MouseEnter += new System.EventHandler(this.LabelCharJ_MouseEnter);
-			this.labelCharJ.MouseLeave += new System.EventHandler(this.LabelCharJ_MouseLeave);
+			this.labelCharJ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharJ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharJ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharJ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharZ
 			// 
@@ -1561,10 +1560,10 @@
 			this.labelPercentCharZ.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharZ, "Shows the percent of the letter Z");
 			this.labelPercentCharZ.DoubleClick += new System.EventHandler(this.LabelPercentCharZ_DoubleClick);
-			this.labelPercentCharZ.Enter += new System.EventHandler(this.LabelPercentCharZ_Enter);
-			this.labelPercentCharZ.Leave += new System.EventHandler(this.LabelPercentCharZ_Leave);
-			this.labelPercentCharZ.MouseEnter += new System.EventHandler(this.LabelPercentCharZ_MouseEnter);
-			this.labelPercentCharZ.MouseLeave += new System.EventHandler(this.LabelPercentCharZ_MouseLeave);
+			this.labelPercentCharZ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharZ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharZ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharZ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharZ
 			// 
@@ -1581,10 +1580,10 @@
 			this.comboBoxCharZ.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharZ.TabIndex = 101;
 			this.toolTip.SetToolTip(this.comboBoxCharZ, "Indicates whether the letter Z is a consonant or a vowel");
-			this.comboBoxCharZ.Enter += new System.EventHandler(this.ComboBoxCharZ_Enter);
-			this.comboBoxCharZ.Leave += new System.EventHandler(this.ComboBoxCharZ_Leave);
-			this.comboBoxCharZ.MouseEnter += new System.EventHandler(this.ComboBoxCharZ_MouseEnter);
-			this.comboBoxCharZ.MouseLeave += new System.EventHandler(this.ComboBoxCharZ_MouseLeave);
+			this.comboBoxCharZ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharZ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharZ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharZ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharZ
 			// 
@@ -1601,9 +1600,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharZ.ValueChanged += new System.EventHandler(this.NumericUpDownCharZ_ValueChanged);
-			this.numericUpDownCharZ.Enter += new System.EventHandler(this.NumericUpDownCharZ_Enter);
-			this.numericUpDownCharZ.Leave += new System.EventHandler(this.NumericUpDownCharZ_Leave);
+			this.numericUpDownCharZ.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharZ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharZ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharZ
 			// 
@@ -1617,10 +1616,10 @@
 			this.labelCharZ.TabIndex = 100;
 			this.labelCharZ.Text = "Z:";
 			this.toolTip.SetToolTip(this.labelCharZ, "Displays information of the letter Z");
-			this.labelCharZ.Enter += new System.EventHandler(this.LabelCharZ_Enter);
-			this.labelCharZ.Leave += new System.EventHandler(this.LabelCharZ_Leave);
-			this.labelCharZ.MouseEnter += new System.EventHandler(this.LabelCharZ_MouseEnter);
-			this.labelCharZ.MouseLeave += new System.EventHandler(this.LabelCharZ_MouseLeave);
+			this.labelCharZ.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharZ.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharZ.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharZ.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharY
 			// 
@@ -1634,10 +1633,10 @@
 			this.labelPercentCharY.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharY, "Shows the percent of the letter Y");
 			this.labelPercentCharY.DoubleClick += new System.EventHandler(this.LabelPercentCharY_DoubleClick);
-			this.labelPercentCharY.Enter += new System.EventHandler(this.LabelPercentCharY_Enter);
-			this.labelPercentCharY.Leave += new System.EventHandler(this.LabelPercentCharY_Leave);
-			this.labelPercentCharY.MouseEnter += new System.EventHandler(this.LabelPercentCharY_MouseEnter);
-			this.labelPercentCharY.MouseLeave += new System.EventHandler(this.LabelPercentCharY_MouseLeave);
+			this.labelPercentCharY.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharY.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharY.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharY.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharY
 			// 
@@ -1654,10 +1653,10 @@
 			this.comboBoxCharY.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharY.TabIndex = 97;
 			this.toolTip.SetToolTip(this.comboBoxCharY, "Indicates whether the letter Y is a consonant or a vowel");
-			this.comboBoxCharY.Enter += new System.EventHandler(this.ComboBoxCharY_Enter);
-			this.comboBoxCharY.Leave += new System.EventHandler(this.ComboBoxCharY_Leave);
-			this.comboBoxCharY.MouseEnter += new System.EventHandler(this.ComboBoxCharY_MouseEnter);
-			this.comboBoxCharY.MouseLeave += new System.EventHandler(this.ComboBoxCharY_MouseLeave);
+			this.comboBoxCharY.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharY.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharY.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharY.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharY
 			// 
@@ -1674,9 +1673,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharY.ValueChanged += new System.EventHandler(this.NumericUpDownCharY_ValueChanged);
-			this.numericUpDownCharY.Enter += new System.EventHandler(this.NumericUpDownCharY_Enter);
-			this.numericUpDownCharY.Leave += new System.EventHandler(this.NumericUpDownCharY_Leave);
+			this.numericUpDownCharY.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharY.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharY.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharY
 			// 
@@ -1690,10 +1689,10 @@
 			this.labelCharY.TabIndex = 96;
 			this.labelCharY.Text = "Y:";
 			this.toolTip.SetToolTip(this.labelCharY, "Displays information of the letter Y");
-			this.labelCharY.Enter += new System.EventHandler(this.LabelCharY_Enter);
-			this.labelCharY.Leave += new System.EventHandler(this.LabelCharY_Leave);
-			this.labelCharY.MouseEnter += new System.EventHandler(this.LabelCharY_MouseEnter);
-			this.labelCharY.MouseLeave += new System.EventHandler(this.LabelCharY_MouseLeave);
+			this.labelCharY.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharY.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharY.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharY.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharX
 			// 
@@ -1707,10 +1706,10 @@
 			this.labelPercentCharX.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharX, "Shows the percent of the letter X");
 			this.labelPercentCharX.DoubleClick += new System.EventHandler(this.LabelPercentCharX_DoubleClick);
-			this.labelPercentCharX.Enter += new System.EventHandler(this.LabelPercentCharX_Enter);
-			this.labelPercentCharX.Leave += new System.EventHandler(this.LabelPercentCharX_Leave);
-			this.labelPercentCharX.MouseEnter += new System.EventHandler(this.LabelPercentCharX_MouseEnter);
-			this.labelPercentCharX.MouseLeave += new System.EventHandler(this.LabelPercentCharX_MouseLeave);
+			this.labelPercentCharX.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharX.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharX.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharX.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharX
 			// 
@@ -1727,10 +1726,10 @@
 			this.comboBoxCharX.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharX.TabIndex = 93;
 			this.toolTip.SetToolTip(this.comboBoxCharX, "Indicates whether the letter X is a consonant or a vowel");
-			this.comboBoxCharX.Enter += new System.EventHandler(this.ComboBoxCharX_Enter);
-			this.comboBoxCharX.Leave += new System.EventHandler(this.ComboBoxCharX_Leave);
-			this.comboBoxCharX.MouseEnter += new System.EventHandler(this.ComboBoxCharX_MouseEnter);
-			this.comboBoxCharX.MouseLeave += new System.EventHandler(this.ComboBoxCharX_MouseLeave);
+			this.comboBoxCharX.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharX.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharX.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharX.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharX
 			// 
@@ -1747,9 +1746,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharX.ValueChanged += new System.EventHandler(this.NumericUpDownCharX_ValueChanged);
-			this.numericUpDownCharX.Enter += new System.EventHandler(this.NumericUpDownCharX_Enter);
-			this.numericUpDownCharX.Leave += new System.EventHandler(this.NumericUpDownCharX_Leave);
+			this.numericUpDownCharX.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharX.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharX.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharX
 			// 
@@ -1763,10 +1762,10 @@
 			this.labelCharX.TabIndex = 92;
 			this.labelCharX.Text = "X:";
 			this.toolTip.SetToolTip(this.labelCharX, "Displays information of the letter X");
-			this.labelCharX.Enter += new System.EventHandler(this.LabelCharX_Enter);
-			this.labelCharX.Leave += new System.EventHandler(this.LabelCharX_Leave);
-			this.labelCharX.MouseEnter += new System.EventHandler(this.LabelCharX_MouseEnter);
-			this.labelCharX.MouseLeave += new System.EventHandler(this.LabelCharX_MouseLeave);
+			this.labelCharX.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharX.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharX.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharX.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharW
 			// 
@@ -1780,10 +1779,10 @@
 			this.labelPercentCharW.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharW, "Shows the percent of the letter W");
 			this.labelPercentCharW.DoubleClick += new System.EventHandler(this.LabelPercentCharW_DoubleClick);
-			this.labelPercentCharW.Enter += new System.EventHandler(this.LabelPercentCharW_Enter);
-			this.labelPercentCharW.Leave += new System.EventHandler(this.LabelPercentCharW_Leave);
-			this.labelPercentCharW.MouseEnter += new System.EventHandler(this.LabelPercentCharW_MouseEnter);
-			this.labelPercentCharW.MouseLeave += new System.EventHandler(this.LabelPercentCharW_MouseLeave);
+			this.labelPercentCharW.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharW.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharW.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharW.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharW
 			// 
@@ -1800,10 +1799,10 @@
 			this.comboBoxCharW.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharW.TabIndex = 89;
 			this.toolTip.SetToolTip(this.comboBoxCharW, "Indicates whether the letter W is a consonant or a vowel");
-			this.comboBoxCharW.Enter += new System.EventHandler(this.ComboBoxCharW_Enter);
-			this.comboBoxCharW.Leave += new System.EventHandler(this.ComboBoxCharW_Leave);
-			this.comboBoxCharW.MouseEnter += new System.EventHandler(this.ComboBoxCharW_MouseEnter);
-			this.comboBoxCharW.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ComboBoxCharW_MouseMove);
+			this.comboBoxCharW.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharW.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharW.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharW.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharW
 			// 
@@ -1820,9 +1819,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharW.ValueChanged += new System.EventHandler(this.NumericUpDownCharW_ValueChanged);
-			this.numericUpDownCharW.Enter += new System.EventHandler(this.NumericUpDownCharW_Enter);
-			this.numericUpDownCharW.Leave += new System.EventHandler(this.NumericUpDownCharW_Leave);
+			this.numericUpDownCharW.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharW.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharW.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharW
 			// 
@@ -1836,10 +1835,10 @@
 			this.labelCharW.TabIndex = 88;
 			this.labelCharW.Text = "W:";
 			this.toolTip.SetToolTip(this.labelCharW, "Displays information of the letter W");
-			this.labelCharW.Enter += new System.EventHandler(this.LabelCharW_Enter);
-			this.labelCharW.Leave += new System.EventHandler(this.LabelCharW_Leave);
-			this.labelCharW.MouseEnter += new System.EventHandler(this.LabelCharW_MouseEnter);
-			this.labelCharW.MouseLeave += new System.EventHandler(this.LabelCharW_MouseLeave);
+			this.labelCharW.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharW.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharW.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharW.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharV
 			// 
@@ -1853,10 +1852,10 @@
 			this.labelPercentCharV.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharV, "Shows the percent of the letter V");
 			this.labelPercentCharV.DoubleClick += new System.EventHandler(this.LabelPercentCharV_DoubleClick);
-			this.labelPercentCharV.Enter += new System.EventHandler(this.LabelPercentCharV_Enter);
-			this.labelPercentCharV.Leave += new System.EventHandler(this.LabelPercentCharV_Leave);
-			this.labelPercentCharV.MouseEnter += new System.EventHandler(this.LabelPercentCharV_MouseEnter);
-			this.labelPercentCharV.MouseLeave += new System.EventHandler(this.LabelPercentCharV_MouseLeave);
+			this.labelPercentCharV.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharV.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharV.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharV.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharV
 			// 
@@ -1873,10 +1872,10 @@
 			this.comboBoxCharV.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharV.TabIndex = 85;
 			this.toolTip.SetToolTip(this.comboBoxCharV, "Indicates whether the letter V is a consonant or a vowel");
-			this.comboBoxCharV.Enter += new System.EventHandler(this.ComboBoxCharV_Enter);
-			this.comboBoxCharV.Leave += new System.EventHandler(this.ComboBoxCharV_Leave);
-			this.comboBoxCharV.MouseEnter += new System.EventHandler(this.ComboBoxCharV_MouseEnter);
-			this.comboBoxCharV.MouseLeave += new System.EventHandler(this.ComboBoxCharV_MouseLeave);
+			this.comboBoxCharV.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharV.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharV.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharV.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharV
 			// 
@@ -1893,9 +1892,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharV.ValueChanged += new System.EventHandler(this.NumericUpDownCharV_ValueChanged);
-			this.numericUpDownCharV.Enter += new System.EventHandler(this.NumericUpDownCharV_Enter);
-			this.numericUpDownCharV.Leave += new System.EventHandler(this.NumericUpDownCharV_Leave);
+			this.numericUpDownCharV.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharV.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharV.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharV
 			// 
@@ -1909,10 +1908,10 @@
 			this.labelCharV.TabIndex = 84;
 			this.labelCharV.Text = "V:";
 			this.toolTip.SetToolTip(this.labelCharV, "Displays information of the letter U");
-			this.labelCharV.Enter += new System.EventHandler(this.LabelCharV_Enter);
-			this.labelCharV.Leave += new System.EventHandler(this.LabelCharV_Leave);
-			this.labelCharV.MouseEnter += new System.EventHandler(this.LabelCharV_MouseEnter);
-			this.labelCharV.MouseLeave += new System.EventHandler(this.LabelCharV_MouseLeave);
+			this.labelCharV.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharV.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharV.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharV.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharU
 			// 
@@ -1926,10 +1925,10 @@
 			this.labelPercentCharU.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharU, "Shows the percent of the letter U");
 			this.labelPercentCharU.DoubleClick += new System.EventHandler(this.LabelPercentCharU_DoubleClick);
-			this.labelPercentCharU.Enter += new System.EventHandler(this.LabelPercentCharU_Enter);
-			this.labelPercentCharU.Leave += new System.EventHandler(this.LabelPercentCharU_Leave);
-			this.labelPercentCharU.MouseEnter += new System.EventHandler(this.LabelPercentCharU_MouseEnter);
-			this.labelPercentCharU.MouseLeave += new System.EventHandler(this.LabelPercentCharU_MouseLeave);
+			this.labelPercentCharU.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharU.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharU.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharU.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharU
 			// 
@@ -1946,10 +1945,10 @@
 			this.comboBoxCharU.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharU.TabIndex = 81;
 			this.toolTip.SetToolTip(this.comboBoxCharU, "Indicates whether the letter U is a consonant or a vowel");
-			this.comboBoxCharU.Enter += new System.EventHandler(this.ComboBoxCharU_Enter);
-			this.comboBoxCharU.Leave += new System.EventHandler(this.ComboBoxCharU_Leave);
-			this.comboBoxCharU.MouseEnter += new System.EventHandler(this.ComboBoxCharU_MouseEnter);
-			this.comboBoxCharU.MouseLeave += new System.EventHandler(this.ComboBoxCharU_MouseLeave);
+			this.comboBoxCharU.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharU.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharU.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharU.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharU
 			// 
@@ -1966,9 +1965,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharU.ValueChanged += new System.EventHandler(this.NumericUpDownCharU_ValueChanged);
-			this.numericUpDownCharU.Enter += new System.EventHandler(this.NumericUpDownCharU_Enter);
-			this.numericUpDownCharU.Leave += new System.EventHandler(this.NumericUpDownCharU_Leave);
+			this.numericUpDownCharU.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharU.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharU.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharU
 			// 
@@ -1982,10 +1981,10 @@
 			this.labelCharU.TabIndex = 80;
 			this.labelCharU.Text = "U:";
 			this.toolTip.SetToolTip(this.labelCharU, "Displays information of the letter U");
-			this.labelCharU.Enter += new System.EventHandler(this.LabelCharU_Enter);
-			this.labelCharU.Leave += new System.EventHandler(this.LabelCharU_Leave);
-			this.labelCharU.MouseEnter += new System.EventHandler(this.LabelCharU_MouseEnter);
-			this.labelCharU.MouseLeave += new System.EventHandler(this.LabelCharU_MouseLeave);
+			this.labelCharU.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharU.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharU.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharU.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharT
 			// 
@@ -1999,10 +1998,10 @@
 			this.labelPercentCharT.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharT, "Shows the percent of the letter T");
 			this.labelPercentCharT.DoubleClick += new System.EventHandler(this.LabelPercentCharT_DoubleClick);
-			this.labelPercentCharT.Enter += new System.EventHandler(this.LabelPercentCharT_Enter);
-			this.labelPercentCharT.Leave += new System.EventHandler(this.LabelPercentCharT_Leave);
-			this.labelPercentCharT.MouseEnter += new System.EventHandler(this.LabelPercentCharT_MouseEnter);
-			this.labelPercentCharT.MouseLeave += new System.EventHandler(this.LabelPercentCharT_MouseLeave);
+			this.labelPercentCharT.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharT.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharT.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharT.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharT
 			// 
@@ -2019,10 +2018,10 @@
 			this.comboBoxCharT.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharT.TabIndex = 77;
 			this.toolTip.SetToolTip(this.comboBoxCharT, "Indicates whether the letter T is a consonant or a vowel");
-			this.comboBoxCharT.Enter += new System.EventHandler(this.ComboBoxCharT_Enter);
-			this.comboBoxCharT.Leave += new System.EventHandler(this.ComboBoxCharT_Leave);
-			this.comboBoxCharT.MouseEnter += new System.EventHandler(this.ComboBoxCharT_MouseEnter);
-			this.comboBoxCharT.MouseLeave += new System.EventHandler(this.ComboBoxCharT_MouseLeave);
+			this.comboBoxCharT.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharT.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharT.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharT.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharT
 			// 
@@ -2039,9 +2038,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharT.ValueChanged += new System.EventHandler(this.NumericUpDownCharT_ValueChanged);
-			this.numericUpDownCharT.Enter += new System.EventHandler(this.NumericUpDownCharT_Enter);
-			this.numericUpDownCharT.Leave += new System.EventHandler(this.NumericUpDownCharT_Leave);
+			this.numericUpDownCharT.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharT.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharT.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharT
 			// 
@@ -2055,10 +2054,10 @@
 			this.labelCharT.TabIndex = 76;
 			this.labelCharT.Text = "T:";
 			this.toolTip.SetToolTip(this.labelCharT, "Displays information of the letter T");
-			this.labelCharT.Enter += new System.EventHandler(this.LabelCharT_Enter);
-			this.labelCharT.Leave += new System.EventHandler(this.LabelCharT_Leave);
-			this.labelCharT.MouseEnter += new System.EventHandler(this.LabelCharT_MouseEnter);
-			this.labelCharT.MouseLeave += new System.EventHandler(this.LabelCharT_MouseLeave);
+			this.labelCharT.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharT.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharT.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharT.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelPercentCharS
 			// 
@@ -2072,10 +2071,10 @@
 			this.labelPercentCharS.Text = "00.00%";
 			this.toolTip.SetToolTip(this.labelPercentCharS, "Shows the percent of the letter S");
 			this.labelPercentCharS.DoubleClick += new System.EventHandler(this.LabelPercentCharS_DoubleClick);
-			this.labelPercentCharS.Enter += new System.EventHandler(this.LabelPercentCharS_Enter);
-			this.labelPercentCharS.Leave += new System.EventHandler(this.LabelPercentCharS_Leave);
-			this.labelPercentCharS.MouseEnter += new System.EventHandler(this.LabelPercentCharS_MouseEnter);
-			this.labelPercentCharS.MouseLeave += new System.EventHandler(this.LabelPercentCharS_MouseLeave);
+			this.labelPercentCharS.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharS.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelPercentCharS.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelPercentCharS.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// comboBoxCharS
 			// 
@@ -2092,10 +2091,10 @@
 			this.comboBoxCharS.Size = new System.Drawing.Size(38, 21);
 			this.comboBoxCharS.TabIndex = 73;
 			this.toolTip.SetToolTip(this.comboBoxCharS, "Indicates whether the letter S is a consonant or a vowel");
-			this.comboBoxCharS.Enter += new System.EventHandler(this.ComboBoxCharS_Enter);
-			this.comboBoxCharS.Leave += new System.EventHandler(this.ComboBoxCharS_Leave);
-			this.comboBoxCharS.MouseEnter += new System.EventHandler(this.ComboBoxCharS_MouseEnter);
-			this.comboBoxCharS.MouseLeave += new System.EventHandler(this.ComboBoxCharS_MouseLeave);
+			this.comboBoxCharS.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharS.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.comboBoxCharS.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.comboBoxCharS.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// numericUpDownCharS
 			// 
@@ -2112,9 +2111,9 @@
             0,
             0,
             0});
-			this.numericUpDownCharS.ValueChanged += new System.EventHandler(this.NumericUpDownCharS_ValueChanged);
-			this.numericUpDownCharS.Enter += new System.EventHandler(this.NumericUpDownCharS_Enter);
-			this.numericUpDownCharS.Leave += new System.EventHandler(this.NumericUpDownCharS_Leave);
+			this.numericUpDownCharS.ValueChanged += new System.EventHandler(this.UpdatePercentLabels_ValueChanged);
+			this.numericUpDownCharS.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.numericUpDownCharS.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharS
 			// 
@@ -2128,44 +2127,10 @@
 			this.labelCharS.TabIndex = 72;
 			this.labelCharS.Text = "S:";
 			this.toolTip.SetToolTip(this.labelCharS, "Displays information of the letter S");
-			this.labelCharS.Enter += new System.EventHandler(this.LabelCharS_Enter);
-			this.labelCharS.Leave += new System.EventHandler(this.LabelCharS_Leave);
-			this.labelCharS.MouseEnter += new System.EventHandler(this.LabelCharS_MouseEnter);
-			this.labelCharS.MouseLeave += new System.EventHandler(this.LabelCharS_MouseLeave);
-			// 
-			// statusStrip
-			// 
-			this.statusStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.StatusBar;
-			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.textInfo,
-            this.toolStripProgressBar});
-			this.statusStrip.Location = new System.Drawing.Point(0, 302);
-			this.statusStrip.Name = "statusStrip";
-			this.statusStrip.Size = new System.Drawing.Size(509, 22);
-			this.statusStrip.SizingGrip = false;
-			this.statusStrip.TabIndex = 108;
-			this.statusStrip.Text = "statusStrip";
-			// 
-			// textInfo
-			// 
-			this.textInfo.AccessibleDescription = "Shows some information";
-			this.textInfo.AccessibleName = "information label";
-			this.textInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
-			this.textInfo.Name = "textInfo";
-			this.textInfo.Size = new System.Drawing.Size(92, 17);
-			this.textInfo.Text = "information text";
-			this.textInfo.ToolTipText = "Shows some information";
-			// 
-			// toolStripProgressBar
-			// 
-			this.toolStripProgressBar.AccessibleDescription = "Shows the progress of the application";
-			this.toolStripProgressBar.AccessibleName = "Apply progress bar";
-			this.toolStripProgressBar.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar;
-			this.toolStripProgressBar.Name = "toolStripProgressBar";
-			this.toolStripProgressBar.Size = new System.Drawing.Size(100, 16);
-			this.toolStripProgressBar.Step = 1;
-			this.toolStripProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-			this.toolStripProgressBar.ToolTipText = "Shows the progress of the application";
+			this.labelCharS.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharS.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharS.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharS.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
 			// 
 			// labelCharPool
 			// 
@@ -2180,10 +2145,32 @@
 			this.labelCharPool.Text = "char pool: ";
 			this.toolTip.SetToolTip(this.labelCharPool, "Double-click the show the char pool");
 			this.labelCharPool.DoubleClick += new System.EventHandler(this.LabelCharPool_DoubleClick);
-			this.labelCharPool.Enter += new System.EventHandler(this.LabelCharPool_Enter);
-			this.labelCharPool.Leave += new System.EventHandler(this.LabelCharPool_Leave);
-			this.labelCharPool.MouseEnter += new System.EventHandler(this.LabelCharPool_MouseEnter);
-			this.labelCharPool.MouseLeave += new System.EventHandler(this.LabelCharPool_MouseLeave);
+			this.labelCharPool.Enter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharPool.Leave += new System.EventHandler(this.ClearStatusbar_Leave);
+			this.labelCharPool.MouseEnter += new System.EventHandler(this.SetStatusbar_Enter);
+			this.labelCharPool.MouseLeave += new System.EventHandler(this.ClearStatusbar_Leave);
+			// 
+			// statusStrip
+			// 
+			this.statusStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.StatusBar;
+			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+			this.statusStrip.Location = new System.Drawing.Point(0, 302);
+			this.statusStrip.Name = "statusStrip";
+			this.statusStrip.Size = new System.Drawing.Size(509, 22);
+			this.statusStrip.SizingGrip = false;
+			this.statusStrip.TabIndex = 108;
+			this.statusStrip.Text = "statusStrip";
+			// 
+			// toolStripStatusLabel
+			// 
+			this.toolStripStatusLabel.AccessibleDescription = "Shows some information";
+			this.toolStripStatusLabel.AccessibleName = "information label";
+			this.toolStripStatusLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText;
+			this.toolStripStatusLabel.AutoToolTip = true;
+			this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+			this.toolStripStatusLabel.Size = new System.Drawing.Size(93, 17);
+			this.toolStripStatusLabel.Text = "information text";
 			// 
 			// ProbabilityTableForm
 			// 
@@ -2453,8 +2440,7 @@
 		private System.Windows.Forms.Label labelCharS;
 		private System.Windows.Forms.ToolTip toolTip;
 		private System.Windows.Forms.StatusStrip statusStrip;
-		private System.Windows.Forms.ToolStripStatusLabel textInfo;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
 		private System.Windows.Forms.Label labelCharPool;
-		private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar;
 	}
 }
