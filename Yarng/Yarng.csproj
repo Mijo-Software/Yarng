@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeAnalysis.CSharp.CodeStyle.3.8.0\build\Microsoft.CodeAnalysis.CSharp.CodeStyle.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.CSharp.CodeStyle.3.8.0\build\Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\build\Microsoft.CodeAnalysis.NetAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\build\Microsoft.CodeAnalysis.NetAnalyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -20,6 +23,8 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -44,6 +49,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Yarng.xml</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -53,6 +63,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\Yarng.xml</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -61,8 +76,12 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DocumentationFile>bin\x64\Debug\Yarng.xml</DocumentationFile>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -71,18 +90,12 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>default</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release x32|AnyCPU'">
-    <OutputPath>bin\Release x32\</OutputPath>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release x32|x64'">
-    <OutputPath>bin\x64\Release x32\</OutputPath>
-    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>8.0</LangVersion>
+    <DocumentationFile>bin\x64\Release\Yarng.xml</DocumentationFile>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Yarng.Program</StartupObject>
@@ -113,6 +126,8 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HistoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +154,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,7 +195,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -252,7 +277,29 @@
     <None Include="Resources\resultset_next1.png" />
     <Content Include="Yarng_New.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.CSharp.CodeStyle.3.8.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CodeStyle.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.CSharp.CodeStyle.3.8.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CodeStyle.Fixes.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.CSharp.CodeStyle.3.8.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.CodeStyle.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.CSharp.CodeStyle.3.8.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.CodeStyle.Fixes.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\analyzers\dotnet\cs\Microsoft.CodeAnalysis.NetAnalyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\build\Microsoft.CodeAnalysis.NetAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\build\Microsoft.CodeAnalysis.NetAnalyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\build\Microsoft.CodeAnalysis.NetAnalyzers.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\build\Microsoft.CodeAnalysis.NetAnalyzers.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.CSharp.CodeStyle.3.8.0\build\Microsoft.CodeAnalysis.CSharp.CodeStyle.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.CSharp.CodeStyle.3.8.0\build\Microsoft.CodeAnalysis.CSharp.CodeStyle.props'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.targets" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.3.2\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.targets')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\build\Microsoft.CodeAnalysis.NetAnalyzers.targets" Condition="Exists('..\packages\Microsoft.CodeAnalysis.NetAnalyzers.5.0.1\build\Microsoft.CodeAnalysis.NetAnalyzers.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

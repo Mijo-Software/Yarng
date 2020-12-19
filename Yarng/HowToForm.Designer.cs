@@ -1,6 +1,6 @@
 ﻿namespace Yarng
 {
-	partial class HowToForm
+	internal partial class HowToForm
 	{
 		/// <summary>
 		/// Required designer variable.

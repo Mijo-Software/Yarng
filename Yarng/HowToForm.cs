@@ -1,18 +1,31 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Yarng
 {
-	public partial class HowToForm : Form
+	/// <summary>
+	/// HowTo form
+	/// </summary>
+	[DebuggerDisplay(value: "{" + nameof(GetDebuggerDisplay) + "(),nq}")]
+	internal partial class HowToForm : Form
 	{
-		public HowToForm()
-		{
-			InitializeComponent();
-		}
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		public HowToForm() => InitializeComponent();
 
-		private void HowToForm_Load(object sender, EventArgs e)
+		/// <summary>
+		/// Load the HowTo form
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void HowToForm_Load(object sender, EventArgs e) => richTextBox.SelectedRtf = Properties.Resources.howto;
+
+		private string GetDebuggerDisplay()
 		{
-			richTextBox.SelectedRtf = Properties.Resources.howto;
+			return ToString();
 		}
 	}
 }

@@ -1,24 +1,52 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Globalization;
 using System.Speech.Synthesis;
 using System.Text;
 using System.Windows.Forms;
+using Yarng.Properties;
 
 namespace Yarng
 {
+	/// <summary>
+	/// Main form
+	/// </summary>
+	[DebuggerDisplay(value: "{" + nameof(GetDebuggerDisplay) + "(),nq}")]
 	public partial class MainForm : Form
 	{
+		/// <summary>
+		/// Default strings
+		/// </summary>
 		private readonly string
 			strDefaultVowels = "aeiou",
 			strDefaultConsonants = "bcdfghjklmnpqrstvwxyz",
 			strDefaultAlphabet = "abcdefghijklmnopqrstuvwxyz";
 
+		/// <summary>
+		/// Letter strings
+		/// </summary>
 		private string
 			strVowelPool,
 			strConsonantPool;
 
+		/// <summary>
+		/// Letter variants
+		/// </summary>
 		private enum Letter : byte { Consonant = 0, Vowel /*Syllable, Semivowel, DoubleConsonant, DoubleVowel*/ };
+
+		/// <summary>
+		/// Languages
+		/// </summary>
 		private enum LetterLanguage : byte { Default = 0, English, German, Frence, Spanish, Portuguese, Italian, Dutch, Latin, UserDefined };
 
+		/// <summary>
+		/// Culture info for the date
+		/// </summary>
+		private readonly CultureInfo culture = CultureInfo.CurrentUICulture;
+
+		/// <summary>
+		/// Reset the settings
+		/// </summary>
 		private void ResetSettings()
 		{
 			strVowelPool = strDefaultVowels;
@@ -31,52 +59,32 @@ namespace Yarng
 			comboLanguage.SelectedIndex = (byte)LetterLanguage.Default;
 		}
 
-		private void SetStatusText(object sender, EventArgs e)
+		/// <summary>
+		/// Reverse a string
+		/// </summary>
+		/// <param name="text">text to reverse</param>
+		/// <returns>reversed text</returns>
+		private static string ReverseString(string text)
 		{
-			if (sender is Button button)
-			{
-				textInfo.Text = button.AccessibleDescription;
-			}
-			else if (sender is Label label)
-			{
-				textInfo.Text = label.AccessibleDescription;
-			}
-			else if (sender is ComboBox comboBox)
-			{
-				textInfo.Text = comboBox.AccessibleDescription;
-			}
-			else if (sender is TextBox textBox)
-			{
-				textInfo.Text = textBox.AccessibleDescription;
-			}
-			else if (sender is ProgressBar progressBar)
-			{
-				textInfo.Text = progressBar.AccessibleDescription;
-			}
-			else if (sender is NumericUpDown numericUpDown)
-			{
-				textInfo.Text = numericUpDown.AccessibleDescription;
-			}
+			char[] array = text.ToCharArray();
+			Array.Reverse(array: array);
+			return new string(value: array);
 		}
 
-		private void SetStatusText(string text)
-		{
-			textInfo.Text = text;
-		}
-
-		private void ClearStatusText()
-		{
-			SetStatusText(text: "");
-		}
-
-		private uint CountChar(string text, char searchChar)
+		/// <summary>
+		/// Count the specific chars of the string
+		/// </summary>
+		/// <param name="text">text</param>
+		/// <param name="chr">character to count</param>
+		/// <returns>number of chararcters</returns>
+		private static uint CountChar(string text, char chr = '\0')
 		{
 			uint tmp = 0;
 			if (!string.IsNullOrEmpty(value: text))
 			{
-				for (int i = 0; i < text.Length; i++)
+				foreach (char item in text)
 				{
-					if (text[index: i] == searchChar)
+					if (item == chr)
 					{
 						tmp++;
 					}
@@ -85,41 +93,96 @@ namespace Yarng
 			return tmp;
 		}
 
-		private byte GetValueCharfromPools(char chr)
+		/// <summary>
+		/// Get the value of a specific char from a pool
+		/// </summary>
+		/// <param name="chr">char</param>
+		/// <returns>value of a specific char</returns>
+		private byte GetValueCharfromPools(char chr = '\0')
 		{
-			if ((byte)CountChar(text: strConsonantPool, searchChar: chr) != 0)
+			if ((byte)CountChar(text: strConsonantPool, chr: chr) > 0)
 			{
-				return (byte)CountChar(text: strConsonantPool, searchChar: chr);
+				return (byte)CountChar(text: strConsonantPool, chr: chr);
 			}
-			else if ((byte)CountChar(text: strVowelPool, searchChar: chr) != 0)
+			else if ((byte)CountChar(text: strVowelPool, chr: chr) > 0)
 			{
-				return (byte)CountChar(text: strVowelPool, searchChar: chr);
+				return (byte)CountChar(text: strVowelPool, chr: chr);
 			}
 			return 1;
 		}
 
+		/// <summary>
+		/// Check if a letter as string is a vowel
+		/// </summary>
+		/// <param name="letter"></param>
+		/// <returns>true if is a vowel</returns>
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
 		private bool IsVowel(string letter)
 		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
+			}
 			return textVowels.Text.Contains(value: letter);
 		}
 
+		/// <summary>
+		/// Check if a letter as string is a consonant
+		/// </summary>
+		/// <param name="letter"></param>
+		/// <returns>true if is a consonant</returns>
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
 		private bool IsConsonant(string letter)
 		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
+			}
 			return textConsonants.Text.Contains(value: letter);
 		}
 
+		/// <summary>
+		/// Check if a letter as string is a default vowel
+		/// </summary>
+		/// <param name="letter"></param>
+		/// <returns>true if is a default vowel</returns>
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
 		private bool IsVowelDefault(string letter)
 		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
+			}
 			return strDefaultVowels.Contains(value: letter);
 		}
 
+		/// <summary>
+		/// Check if a letter as string is a default consonant
+		/// </summary>
+		/// <param name="letter"></param>
+		/// <returns>true if is a default consonant</returns>
+		/// <exception cref="ArgumentException">text must not null or emtpy</exception>
 		private bool IsConsonantDefault(string letter)
 		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
+			}
 			return strDefaultConsonants.Contains(value: letter);
 		}
 
+		/// <summary>
+		/// Get the sort of a the	char
+		/// </summary>
+		/// <param name="letter">char</param>
+		/// <returns>value</returns>
+		/// <exception cref="ArgumentException">text must not null or empty</exception>
 		private byte GetSortOfChar(string letter)
 		{
+			if (string.IsNullOrEmpty(value: letter))
+			{
+				throw new ArgumentException(message: Strings.message, paramName: nameof(letter));
+			}
 			if (IsVowel(letter: letter))
 			{
 				return (byte)Letter.Vowel;
@@ -133,40 +196,49 @@ namespace Yarng
 				switch (letter)
 				{
 					case "a": return (byte)Letter.Vowel;
-					case "b": return (byte)Letter.Consonant;
-					case "c": return (byte)Letter.Consonant;
+					case "b":
+					case "c":
 					case "d": return (byte)Letter.Consonant;
 					case "e": return (byte)Letter.Vowel;
-					case "f": return (byte)Letter.Consonant;
-					case "g": return (byte)Letter.Consonant;
+					case "f":
+					case "g":
 					case "h": return (byte)Letter.Consonant;
 					case "i": return (byte)Letter.Vowel;
-					case "j": return (byte)Letter.Consonant;
-					case "k": return (byte)Letter.Consonant;
-					case "l": return (byte)Letter.Consonant;
-					case "m": return (byte)Letter.Consonant;
+					case "j":
+					case "k":
+					case "l":
+					case "m":
 					case "n": return (byte)Letter.Consonant;
 					case "o": return (byte)Letter.Vowel;
-					case "p": return (byte)Letter.Consonant;
-					case "q": return (byte)Letter.Consonant;
-					case "r": return (byte)Letter.Consonant;
-					case "s": return (byte)Letter.Consonant;
+					case "p":
+					case "q":
+					case "r":
+					case "s":
 					case "t": return (byte)Letter.Consonant;
 					case "u": return (byte)Letter.Vowel;
-					case "v": return (byte)Letter.Consonant;
-					case "w": return (byte)Letter.Consonant;
-					case "x": return (byte)Letter.Consonant;
-					case "y": return (byte)Letter.Consonant;
+					case "v":
+					case "w":
+					case "x":
+					case "y":
 					case "z": return (byte)Letter.Consonant;
-					default: break;
 				}
 			}
-
 			return (byte)Letter.Consonant;
 		}
 
+		/// <summary>
+		/// ???
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		/// <exception cref="ArgumentNullException">mouse event arguments must not null</exception>
 		private void NumericCharacterLenghtsMin(object sender, MouseEventArgs e)
 		{
+			if (e is null)
+			{
+				throw new ArgumentNullException(paramName: nameof(e));
+			}
 			((HandledMouseEventArgs)e).Handled = true;
 			bool up = true;
 			if (e.Delta < 0)
@@ -183,8 +255,19 @@ namespace Yarng
 			}
 		}
 
+		/// <summary>
+		/// ???
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		/// <exception cref="ArgumentNullException">mouse event arguments must not null</exception>
 		private void NumericCharacterLenghtsMax(object sender, MouseEventArgs e)
 		{
+			if (e is null)
+			{
+				throw new ArgumentNullException(paramName: nameof(e));
+			}
 			((HandledMouseEventArgs)e).Handled = true;
 			bool up = true;
 			if (e.Delta < 0)
@@ -201,144 +284,199 @@ namespace Yarng
 			}
 		}
 
+		/// <summary>
+		/// Constructor
+		/// </summary>
 		public MainForm()
 		{
 			InitializeComponent();
 		}
 
+		/// <summary>
+		/// Load the main form
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void MainForm_Load(object sender, EventArgs e)
 		{
-			ClearStatusText();
-			numericCharacterLenghtsMin.MouseWheel += new MouseEventHandler(NumericCharacterLenghtsMin);
-			numericCharacterLenghtsMax.MouseWheel += new MouseEventHandler(NumericCharacterLenghtsMax);
+			ClearStatusbar_Leave(sender: null, EventArgs.Empty);
+			numericCharacterLenghtsMin.MouseWheel += NumericCharacterLenghtsMin;
+			numericCharacterLenghtsMax.MouseWheel += NumericCharacterLenghtsMax;
 			ResetSettings();
 		}
 
 		#region Click handlers
 
+		/// <summary>
+		/// Show the probability table form
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonShowProbabilityTable_Click(object sender, EventArgs e)
 		{
-			//new ProbabilityTableForm().ShowDialog();
-			ProbabilityTableForm formProbabilityTable = new ProbabilityTableForm
+			using ProbabilityTableForm probabilityTableForm = new ProbabilityTableForm
 			{
 				Consonants = textConsonants.Text,
 				Vowels = textVowels.Text,
 				ConsonantPool = strConsonantPool,
 				VowelPool = strVowelPool,
-				NumericValueCharA = GetValueCharfromPools(chr: Properties.CharacterResources.a[index: 0]),
-				NumericValueCharB = GetValueCharfromPools(chr: Properties.CharacterResources.b[index: 0]),
-				NumericValueCharC = GetValueCharfromPools(chr: Properties.CharacterResources.c[index: 0]),
-				NumericValueCharD = GetValueCharfromPools(chr: Properties.CharacterResources.d[index: 0]),
-				NumericValueCharE = GetValueCharfromPools(chr: Properties.CharacterResources.e[index: 0]),
-				NumericValueCharF = GetValueCharfromPools(chr: Properties.CharacterResources.f[index: 0]),
-				NumericValueCharG = GetValueCharfromPools(chr: Properties.CharacterResources.g[index: 0]),
-				NumericValueCharH = GetValueCharfromPools(chr: Properties.CharacterResources.h[index: 0]),
-				NumericValueCharI = GetValueCharfromPools(chr: Properties.CharacterResources.i[index: 0]),
-				NumericValueCharJ = GetValueCharfromPools(chr: Properties.CharacterResources.j[index: 0]),
-				NumericValueCharK = GetValueCharfromPools(chr: Properties.CharacterResources.k[index: 0]),
-				NumericValueCharL = GetValueCharfromPools(chr: Properties.CharacterResources.l[index: 0]),
-				NumericValueCharM = GetValueCharfromPools(chr: Properties.CharacterResources.m[index: 0]),
-				NumericValueCharN = GetValueCharfromPools(chr: Properties.CharacterResources.n[index: 0]),
-				NumericValueCharO = GetValueCharfromPools(chr: Properties.CharacterResources.o[index: 0]),
-				NumericValueCharP = GetValueCharfromPools(chr: Properties.CharacterResources.p[index: 0]),
-				NumericValueCharQ = GetValueCharfromPools(chr: Properties.CharacterResources.q[index: 0]),
-				NumericValueCharR = GetValueCharfromPools(chr: Properties.CharacterResources.r[index: 0]),
-				NumericValueCharS = GetValueCharfromPools(chr: Properties.CharacterResources.s[index: 0]),
-				NumericValueCharT = GetValueCharfromPools(chr: Properties.CharacterResources.t[index: 0]),
-				NumericValueCharU = GetValueCharfromPools(chr: Properties.CharacterResources.u[index: 0]),
-				NumericValueCharV = GetValueCharfromPools(chr: Properties.CharacterResources.v[index: 0]),
-				NumericValueCharW = GetValueCharfromPools(chr: Properties.CharacterResources.w[index: 0]),
-				NumericValueCharX = GetValueCharfromPools(chr: Properties.CharacterResources.x[index: 0]),
-				NumericValueCharY = GetValueCharfromPools(chr: Properties.CharacterResources.y[index: 0]),
-				NumericValueCharZ = GetValueCharfromPools(chr: Properties.CharacterResources.z[index: 0]),
-				SortOfCharA = GetSortOfChar(letter: Properties.CharacterResources.a),
-				SortOfCharB = GetSortOfChar(letter: Properties.CharacterResources.b),
-				SortOfCharC = GetSortOfChar(letter: Properties.CharacterResources.c),
-				SortOfCharD = GetSortOfChar(letter: Properties.CharacterResources.d),
-				SortOfCharE = GetSortOfChar(letter: Properties.CharacterResources.e),
-				SortOfCharF = GetSortOfChar(letter: Properties.CharacterResources.f),
-				SortOfCharG = GetSortOfChar(letter: Properties.CharacterResources.g),
-				SortOfCharH = GetSortOfChar(letter: Properties.CharacterResources.h),
-				SortOfCharI = GetSortOfChar(letter: Properties.CharacterResources.i),
-				SortOfCharJ = GetSortOfChar(letter: Properties.CharacterResources.j),
-				SortOfCharK = GetSortOfChar(letter: Properties.CharacterResources.k),
-				SortOfCharL = GetSortOfChar(letter: Properties.CharacterResources.l),
-				SortOfCharM = GetSortOfChar(letter: Properties.CharacterResources.m),
-				SortOfCharN = GetSortOfChar(letter: Properties.CharacterResources.n),
-				SortOfCharO = GetSortOfChar(letter: Properties.CharacterResources.o),
-				SortOfCharP = GetSortOfChar(letter: Properties.CharacterResources.p),
-				SortOfCharQ = GetSortOfChar(letter: Properties.CharacterResources.q),
-				SortOfCharR = GetSortOfChar(letter: Properties.CharacterResources.r),
-				SortOfCharS = GetSortOfChar(letter: Properties.CharacterResources.s),
-				SortOfCharT = GetSortOfChar(letter: Properties.CharacterResources.t),
-				SortOfCharU = GetSortOfChar(letter: Properties.CharacterResources.u),
-				SortOfCharV = GetSortOfChar(letter: Properties.CharacterResources.v),
-				SortOfCharW = GetSortOfChar(letter: Properties.CharacterResources.w),
-				SortOfCharX = GetSortOfChar(letter: Properties.CharacterResources.x),
-				SortOfCharY = GetSortOfChar(letter: Properties.CharacterResources.y),
-				SortOfCharZ = GetSortOfChar(letter: Properties.CharacterResources.z)
+				NumericValueCharA = GetValueCharfromPools(chr: CharacterResources.a[index: 0]),
+				NumericValueCharB = GetValueCharfromPools(chr: CharacterResources.b[index: 0]),
+				NumericValueCharC = GetValueCharfromPools(chr: CharacterResources.c[index: 0]),
+				NumericValueCharD = GetValueCharfromPools(chr: CharacterResources.d[index: 0]),
+				NumericValueCharE = GetValueCharfromPools(chr: CharacterResources.e[index: 0]),
+				NumericValueCharF = GetValueCharfromPools(chr: CharacterResources.f[index: 0]),
+				NumericValueCharG = GetValueCharfromPools(chr: CharacterResources.g[index: 0]),
+				NumericValueCharH = GetValueCharfromPools(chr: CharacterResources.h[index: 0]),
+				NumericValueCharI = GetValueCharfromPools(chr: CharacterResources.i[index: 0]),
+				NumericValueCharJ = GetValueCharfromPools(chr: CharacterResources.j[index: 0]),
+				NumericValueCharK = GetValueCharfromPools(chr: CharacterResources.k[index: 0]),
+				NumericValueCharL = GetValueCharfromPools(chr: CharacterResources.l[index: 0]),
+				NumericValueCharM = GetValueCharfromPools(chr: CharacterResources.m[index: 0]),
+				NumericValueCharN = GetValueCharfromPools(chr: CharacterResources.n[index: 0]),
+				NumericValueCharO = GetValueCharfromPools(chr: CharacterResources.o[index: 0]),
+				NumericValueCharP = GetValueCharfromPools(chr: CharacterResources.p[index: 0]),
+				NumericValueCharQ = GetValueCharfromPools(chr: CharacterResources.q[index: 0]),
+				NumericValueCharR = GetValueCharfromPools(chr: CharacterResources.r[index: 0]),
+				NumericValueCharS = GetValueCharfromPools(chr: CharacterResources.s[index: 0]),
+				NumericValueCharT = GetValueCharfromPools(chr: CharacterResources.t[index: 0]),
+				NumericValueCharU = GetValueCharfromPools(chr: CharacterResources.u[index: 0]),
+				NumericValueCharV = GetValueCharfromPools(chr: CharacterResources.v[index: 0]),
+				NumericValueCharW = GetValueCharfromPools(chr: CharacterResources.w[index: 0]),
+				NumericValueCharX = GetValueCharfromPools(chr: CharacterResources.x[index: 0]),
+				NumericValueCharY = GetValueCharfromPools(chr: CharacterResources.y[index: 0]),
+				NumericValueCharZ = GetValueCharfromPools(chr: CharacterResources.z[index: 0]),
+				SortOfCharA = GetSortOfChar(letter: CharacterResources.a),
+				SortOfCharB = GetSortOfChar(letter: CharacterResources.b),
+				SortOfCharC = GetSortOfChar(letter: CharacterResources.c),
+				SortOfCharD = GetSortOfChar(letter: CharacterResources.d),
+				SortOfCharE = GetSortOfChar(letter: CharacterResources.e),
+				SortOfCharF = GetSortOfChar(letter: CharacterResources.f),
+				SortOfCharG = GetSortOfChar(letter: CharacterResources.g),
+				SortOfCharH = GetSortOfChar(letter: CharacterResources.h),
+				SortOfCharI = GetSortOfChar(letter: CharacterResources.i),
+				SortOfCharJ = GetSortOfChar(letter: CharacterResources.j),
+				SortOfCharK = GetSortOfChar(letter: CharacterResources.k),
+				SortOfCharL = GetSortOfChar(letter: CharacterResources.l),
+				SortOfCharM = GetSortOfChar(letter: CharacterResources.m),
+				SortOfCharN = GetSortOfChar(letter: CharacterResources.n),
+				SortOfCharO = GetSortOfChar(letter: CharacterResources.o),
+				SortOfCharP = GetSortOfChar(letter: CharacterResources.p),
+				SortOfCharQ = GetSortOfChar(letter: CharacterResources.q),
+				SortOfCharR = GetSortOfChar(letter: CharacterResources.r),
+				SortOfCharS = GetSortOfChar(letter: CharacterResources.s),
+				SortOfCharT = GetSortOfChar(letter: CharacterResources.t),
+				SortOfCharU = GetSortOfChar(letter: CharacterResources.u),
+				SortOfCharV = GetSortOfChar(letter: CharacterResources.v),
+				SortOfCharW = GetSortOfChar(letter: CharacterResources.w),
+				SortOfCharX = GetSortOfChar(letter: CharacterResources.x),
+				SortOfCharY = GetSortOfChar(letter: CharacterResources.y),
+				SortOfCharZ = GetSortOfChar(letter: CharacterResources.z)
 			};
-			if (formProbabilityTable.ShowDialog() == DialogResult.OK)
+			if (probabilityTableForm.ShowDialog() == DialogResult.OK)
 			{
-				textConsonants.Text = formProbabilityTable.Consonants;
-				textVowels.Text = formProbabilityTable.Vowels;
-				strConsonantPool = formProbabilityTable.ConsonantPool;
-				strVowelPool = formProbabilityTable.VowelPool;
+				textConsonants.Text = ReverseString(text: probabilityTableForm.Consonants);
+				textVowels.Text = ReverseString(text: probabilityTableForm.Vowels);
+				strConsonantPool = ReverseString(text: probabilityTableForm.ConsonantPool);
+				strVowelPool = ReverseString(text: probabilityTableForm.VowelPool);
 				comboLanguage.SelectedIndex = (byte)LetterLanguage.UserDefined;
 			}
 		}
 
+		/// <summary>
+		/// Load the default settings
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonLoadDefaultSettings_Click(object sender, EventArgs e)
 		{
 			ResetSettings();
-			MessageBox.Show(text: "The settings were resetted", caption: "", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+			MessageBox.Show(text: Strings.settingsReset, caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
 		}
 
+		/// <summary>
+		/// Load a specific template
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonLoadTemplate_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// Savea specific template
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonSaveTemplate_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// Open the about form
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void ButtonAbout_Click(object sender, EventArgs e)
 		{
-			new AboutForm().ShowDialog();
+			using AboutForm about = new AboutForm();
+			about.ShowDialog();
 		}
 
+		/// <summary>
+		/// Open the history form
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonHistory_Click(object sender, EventArgs e)
 		{
-			new HistoryForm().ShowDialog();
+			using HistoryForm history = new HistoryForm();
+			history.ShowDialog();
 		}
 
+		/// <summary>
+		/// Open the howTo form
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonHowTo_Click(object sender, EventArgs e)
 		{
-			new HowToForm().ShowDialog();
+			using HowToForm how = new HowToForm();
+			how.ShowDialog();
 		}
 
+		/// <summary>
+		/// Exit the application
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonExit_Click(object sender, EventArgs e)
 		{
 			Close();
 		}
 
+		/// <summary>
+		/// Generate the name list
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonGenerate_Click(object sender, EventArgs e)
 		{
-			int nLengthOfName;
-			char ch;
-			Random _r = new Random();
+			progressGenerate.Visible = true;
+			Random random = new Random();
 			StringBuilder
 				sbName = new StringBuilder(value: ""),
 				sbNames = new StringBuilder(value: "");
-			bool isEven;
-			if (_r.Next(minValue: 0, maxValue: 10) % 2 == 0)
-			{
-				isEven = true;
-			}
-			else
-			{
-				isEven = false;
-			}
+			bool isEven = random.Next(minValue: 0, maxValue: 10) % 2 == 0;
 			textList.Clear();
 			progressGenerate.Value = 0;
 			progressGenerate.Maximum = (int)numericNumberOfNames.Value - 1;
@@ -347,38 +485,40 @@ namespace Yarng
 			{
 				//progressGenerate.Value = i;
 				progressGenerate.PerformStep();
-				nLengthOfName = _r.Next(minValue: (int)numericCharacterLenghtsMin.Value, maxValue: (int)numericCharacterLenghtsMax.Value + 1);
+				int nLengthOfName = random.Next(minValue: (int)numericCharacterLenghtsMin.Value, maxValue: (int)numericCharacterLenghtsMax.Value + 1);
 				sbNames.Length = 0;
 				for (int n = 0; n < nLengthOfName; n++)
 				{
-					if (isEven)
-					{
-						ch = strVowelPool[index: _r.Next(maxValue: strVowelPool.Length)];
-					}
-					else
-					{
-						ch = strConsonantPool[index: _r.Next(maxValue: strConsonantPool.Length)];
-					}
+					char chr = isEven
+						? strVowelPool[index: random.Next(maxValue: strVowelPool.Length)]
+						: strConsonantPool[index: random.Next(maxValue: strConsonantPool.Length)];
 					isEven = !isEven;
 					if (n == 0)
 					{
-						ch = char.ToUpper(c: ch);
+						chr = char.ToUpper(c: chr, culture: culture);
 					}
 					sbName.Length = 0;
-					sbName.Append(value: ch);
+					sbName.Append(value: chr);
 					sbNames.Append(value: sbName);
 				}
 				textList.AppendText(text: sbNames.ToString());
 				if (i < numericNumberOfNames.Value - 1)
 				{
-					textList.AppendText(text: ", \r\n");
+					textList.AppendText(text: Environment.NewLine);
 				}
 			}
+			progressGenerate.Visible = false;
 		}
 
+		/// <summary>
+		/// Speech the name list
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonSpeechText_Click(object sender, EventArgs e)
 		{
-			SpeechSynthesizer speaker = new SpeechSynthesizer();
+			using SpeechSynthesizer speaker = new SpeechSynthesizer();
 			speaker.SetOutputToDefaultAudioDevice();
 			speaker.Rate = -2;
 			speaker.Volume = 100;
@@ -392,43 +532,94 @@ namespace Yarng
 			}
 		}
 
-		private void ButtonClearList_Click(object sender, EventArgs e)
-		{
-			textList.Clear();
-		}
+		/// <summary>
+		/// Clear the name list
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void ButtonClearList_Click(object sender, EventArgs e) => textList.Clear();
 
+		/// <summary>
+		/// Copy the name list to the clipboard
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonCopyList_Click(object sender, EventArgs e)
 		{
-			if (textList.Text != "")
+			if (!string.IsNullOrEmpty(value: textList.Text))
 			{
 				Clipboard.SetText(text: textList.Text);
 			}
 		}
 
+		/// <summary>
+		/// Export the name list
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonExportList_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// Print the name list
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonPrintList_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// Step left
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonStepLeft_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// Step right
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonStepRight_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// Mirror
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonMirror_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// Sort
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonSort_Click(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// Scramble
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ButtonScramble_Click(object sender, EventArgs e)
 		{
 		}
@@ -437,39 +628,62 @@ namespace Yarng
 
 		#region DoubleClick handlers
 
-		private void LabelVowels_DoubleClick(object sender, EventArgs e)
-		{
-			MessageBox.Show(text: "vowel pool: " + strVowelPool, caption: "information", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-		}
+		/// <summary>
+		/// Show the vowel pool
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void LabelVowels_DoubleClick(object sender, EventArgs e) => MessageBox.Show(text: $"{Strings.vowelPool}{Strings.colonSpace}{strVowelPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, defaultButton: MessageBoxDefaultButton.Button1, options: MessageBoxOptions.DefaultDesktopOnly);
 
-		private void LabelConsonants_DoubleClick(object sender, EventArgs e)
-		{
-			MessageBox.Show(text: "consonant pool: " + strConsonantPool, caption: "information", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-		}
-
+		/// <summary>
+		/// Show the consonant pool
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void LabelConsonants_DoubleClick(object sender, EventArgs e) => MessageBox.Show(text: $"{Strings.consonantPool}{Strings.colonSpace}{strConsonantPool}", caption: Strings.information, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, defaultButton: MessageBoxDefaultButton.Button1, options: MessageBoxOptions.DefaultDesktopOnly);
 
 		#endregion
 
 		#region ValueChanged handlers
 
+		/// <summary>
+		/// ???
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void NumericNumberOfNames_ValueChanged(object sender, EventArgs e)
 		{
 		}
 
+		/// <summary>
+		/// ??
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void NumericCharacterLenghtsMin_ValueChanged(object sender, EventArgs e)
 		{
 			if (numericCharacterLenghtsMin.Value > numericCharacterLenghtsMax.Value)
 			{
-				MessageBox.Show(text: "The min-value mustn't be bigger than the max-value.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.minValueMustBigger, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation, defaultButton: MessageBoxDefaultButton.Button1, options: MessageBoxOptions.DefaultDesktopOnly);
 				numericCharacterLenghtsMin.Value = numericCharacterLenghtsMax.Value;
 			}
 		}
 
+		/// <summary>
+		/// ??
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void NumericCharacterLenghtsMax_ValueChanged(object sender, EventArgs e)
 		{
 			if (numericCharacterLenghtsMax.Value < numericCharacterLenghtsMin.Value)
 			{
-				MessageBox.Show(text: "The max-value mustn't be lesser than the min-value.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.maxValueMustLesser, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation, defaultButton: MessageBoxDefaultButton.Button1, options: MessageBoxOptions.DefaultDesktopOnly);
 				numericCharacterLenghtsMax.Value = numericCharacterLenghtsMin.Value;
 			}
 		}
@@ -478,601 +692,138 @@ namespace Yarng
 
 		#region Enter handlers
 
-		private void ButtonShowProbabilityTable_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
+		/// <summary>
+		/// Set the information text in the status bar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
+		private void SetStatusbar_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((Control)sender).AccessibleDescription;
 
-		private void ButtonLoadDefaultSettings_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboLanguage_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonLoadTemplate_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonSaveTemplate_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonAbout_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonHistory_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonHowTo_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonExit_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonGenerate_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonSpeechText_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonClearList_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonCopyList_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonExportList_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonPrintList_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonStepLeft_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonStepRight_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonMirror_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonSort_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonScramble_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericNumberOfNames_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericCharacterLenghtsMin_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void NumericCharacterLenghtsMax_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void TextVowels_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void TextConsonants_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void TextList_Enter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		#endregion
-
-		#region MouseEnter handers
-
-		private void TextVowels_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void TextConsonants_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonShowProbabilityTable_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonLoadDefaultSettings_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ComboLanguage_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonLoadTemplate_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonSaveTemplate_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonAbout_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonHistory_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonHowTo_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonExit_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void TextList_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonGenerate_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonSpeechText_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-
-		private void ButtonClearList_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonCopyList_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonExportList_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonPrintList_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonStepLeft_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonStepRight_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonMirror_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonSort_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
-
-		private void ButtonScramble_MouseEnter(object sender, EventArgs e)
-		{
-			SetStatusText(sender: sender, e: e);
-		}
+		/// <summary>
+		/// Set the information text of a ToolStripMenuItem in the status bar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameter <paramref name="e"/> is not needed, but must be indicated.</remarks>
+		private void SetStatusbarOfToolStripMenuItem_Enter(object sender, EventArgs e) => toolStripStatusLabel.Text = ((ToolStripMenuItem)sender).AccessibleDescription;
 
 		#endregion
 
 		#region Leave handlers
 
+		/// <summary>
+		/// Clear the information text in the status bar
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
+		private void ClearStatusbar_Leave(object sender, EventArgs e) => toolStripStatusLabel.Text = string.Empty;
+
+		/// <summary>
+		/// Clear the information text in the status bar while check if the text box of vowels is not empty
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void TextVowels_Leave(object sender, EventArgs e)
 		{
-			ClearStatusText();
+			toolStripStatusLabel.Text = string.Empty;
 			if (textVowels.TextLength == 0)
 			{
-				MessageBox.Show(text: "The text field must include not less than one vowel.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.mustHaveVowels, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation, defaultButton: MessageBoxDefaultButton.Button1, options: MessageBoxOptions.DefaultDesktopOnly);
 				textVowels.Text = strDefaultVowels;
 			}
 		}
 
+		/// <summary>
+		/// Clear the information text in the status bar while check if the text box of consonants is not empty
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void TextConsonants_Leave(object sender, EventArgs e)
 		{
-			ClearStatusText();
+			toolStripStatusLabel.Text = string.Empty;
 			if (textConsonants.TextLength == 0)
 			{
-				MessageBox.Show(text: "The text field must include not less than one consonant.", caption: "Warning", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation);
+				MessageBox.Show(text: Strings.mustHaveConsonants, caption: Strings.warning, buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Exclamation, defaultButton: MessageBoxDefaultButton.Button1, options: MessageBoxOptions.DefaultDesktopOnly);
 				textConsonants.Text = strDefaultConsonants;
 			}
-		}
-
-		private void NumericNumberOfNames_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericCharacterLenghtsMin_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void NumericCharacterLenghtsMax_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonShowProbabilityTable_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonLoadDefaultSettings_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboLanguage_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonLoadTemplate_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonSaveTemplate_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonAbout_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonHistory_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonHowTo_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonExit_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void TextList_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonGenerate_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonSpeechText_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonClearList_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonCopyList_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonExportList_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonPrintList_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonStepLeft_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonStepRight_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonMirror_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonSort_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonScramble_Leave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		#endregion
-
-		#region MouseLeave handlers
-
-		private void TextVowels_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void TextConsonants_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonShowProbabilityTable_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonLoadDefaultSettings_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ComboLanguage_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonLoadTemplate_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonSaveTemplate_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonAbout_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonHistory_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonHowTo_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonExit_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void TextList_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonGenerate_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonSpeechText_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonClearList_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonCopyList_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonExportList_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonPrintList_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonStepLeft_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonStepRight_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonMirror_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonSort_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
-		}
-
-		private void ButtonScramble_MouseLeave(object sender, EventArgs e)
-		{
-			ClearStatusText();
 		}
 
 		#endregion
 
 		#region SelectedIndexChanged handlers
 
+		/// <summary>
+		/// Adjust the letters of the choosen language
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void ComboLanguage_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			switch (comboLanguage.SelectedIndex)
 			{
 				default:
-				case (byte)LetterLanguage.Default:
-					{
-						strVowelPool = strDefaultVowels;
-						strConsonantPool = strDefaultConsonants;
-						break;
-					}
+					strVowelPool = strDefaultVowels;
+					strConsonantPool = strDefaultConsonants;
+					break;
 				case (byte)LetterLanguage.English:
+					int[] arrLanguageValueEnglish = { 11, 2, 2, 6, 13, 2, 2, 9, 6, 1, 1, 3, 3, 7, 7, 1, 0, 5, 6, 9, 2, 1, 2, 0, 2, 0 };
+					strConsonantPool = "";
+					strVowelPool = "";
+					for (int n = 0; n < arrLanguageValueEnglish.Length; n++)
 					{
-						int[] arrLanguageValueEnglish = { 11, 2, 2, 6, 13, 2, 2, 9, 6, 1, 1, 3, 3, 7, 7, 1, 0, 5, 6, 9, 2, 1, 2, 0, 2, 0 };
-						strConsonantPool = "";
-						strVowelPool = "";
-
-						for (int n = 0; n < arrLanguageValueEnglish.Length; n++)
+						MessageBox.Show(text: n.ToString(provider: culture));
+						for (int i = 0; i < arrLanguageValueEnglish[n]; i++)
 						{
-							MessageBox.Show(n.ToString());
-							for (int i = 0; i < arrLanguageValueEnglish[n]; i++)
+							if (IsVowelDefault(letter: strDefaultAlphabet[index: i].ToString(provider: culture)))
 							{
-								if (IsVowelDefault(strDefaultAlphabet[index: i].ToString()))
-								{
-									strVowelPool += strDefaultAlphabet[index: i];
-								}
-								else if (IsConsonantDefault(strDefaultAlphabet[index: i].ToString()))
-								{
-									strConsonantPool += strDefaultAlphabet[index: i];
-								}
+								strVowelPool += strDefaultAlphabet[index: i];
+							}
+							else if (IsConsonantDefault(letter: strDefaultAlphabet[index: i].ToString(provider: culture)))
+							{
+								strConsonantPool += strDefaultAlphabet[index: i];
 							}
 						}
-
-						break;
 					}
+					break;
 				case (byte)LetterLanguage.German:
-					{
-						strConsonantPool = "";
-						strVowelPool = "";
-						break;
-					}
+					strConsonantPool = "";
+					strVowelPool = "";
+					break;
 				case (byte)LetterLanguage.Frence:
-					{
-						strConsonantPool = "";
-						strVowelPool = "";
-						break;
-					}
+					strConsonantPool = "";
+					strVowelPool = "";
+					break;
 				case (byte)LetterLanguage.Spanish:
-					{
-						strConsonantPool = "";
-						strVowelPool = "";
-						break;
-					}
+					strConsonantPool = "";
+					strVowelPool = "";
+					break;
 				case (byte)LetterLanguage.Portuguese:
-					{
-						strConsonantPool = "";
-						strVowelPool = "";
-						break;
-					}
+					strConsonantPool = "";
+					strVowelPool = "";
+					break;
 				case (byte)LetterLanguage.Italian:
-					{
-						strConsonantPool = "";
-						strVowelPool = "";
-						break;
-					}
+					strConsonantPool = "";
+					strVowelPool = "";
+					break;
 				case (byte)LetterLanguage.Dutch:
-					{
-						strConsonantPool = "";
-						strVowelPool = "";
-						break;
-					}
+					strConsonantPool = "";
+					strVowelPool = "";
+					break;
 				case (byte)LetterLanguage.Latin:
-					{
-						strConsonantPool = "";
-						strVowelPool = "";
-						break;
-					}
+					strConsonantPool = "";
+					strVowelPool = "";
+					break;
 			}
+		}
+
+		private string GetDebuggerDisplay()
+		{
+			return ToString();
 		}
 
 		#endregion

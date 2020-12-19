@@ -1,98 +1,33 @@
-﻿using System;
-using System.Reflection;
+﻿using MijoSoftware.AssemblyInformation;
+using System;
 using System.Windows.Forms;
 
 namespace Yarng
 {
-	partial class AboutForm : Form
+	/// <summary>
+	/// AboutForm
+	/// </summary>
+	internal partial class AboutForm : Form
 	{
-		public AboutForm()
-		{
-			InitializeComponent();
-			Text = string.Format(format: "Info about {0}", arg0: AssemblyTitle);
-			labelProductName.Text = AssemblyProduct;
-			labelVersion.Text = string.Format(format: "Version {0}", arg0: AssemblyVersion);
-			labelCopyright.Text = AssemblyCopyright;
-			labelCompanyName.Text = AssemblyCompany;
-			textBoxDescription.Text = AssemblyDescription;
-		}
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		public AboutForm() => InitializeComponent();
 
-		#region Assemblyattributaccessoren
-
-		public string AssemblyTitle
-		{
-			get
-			{
-				object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-				if (attributes.Length > 0)
-				{
-					AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-					if (titleAttribute.Title != "")
-					{
-						return titleAttribute.Title;
-					}
-				}
-				return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
-			}
-		}
-
-		public string AssemblyVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString();
-
-		public string AssemblyDescription
-		{
-			get
-			{
-				object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-				if (attributes.Length == 0)
-				{
-					return "";
-				}
-				return ((AssemblyDescriptionAttribute)attributes[0]).Description;
-			}
-		}
-
-		public string AssemblyProduct
-		{
-			get
-			{
-				object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-				if (attributes.Length == 0)
-				{
-					return "";
-				}
-				return ((AssemblyProductAttribute)attributes[0]).Product;
-			}
-		}
-
-		public string AssemblyCopyright
-		{
-			get
-			{
-				object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-				if (attributes.Length == 0)
-				{
-					return "";
-				}
-				return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
-			}
-		}
-
-		public string AssemblyCompany
-		{
-			get
-			{
-				object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-				if (attributes.Length == 0)
-				{
-					return "";
-				}
-				return ((AssemblyCompanyAttribute)attributes[0]).Company;
-			}
-		}
-		#endregion
-
+		/// <summary>
+		/// Load the AboutForm
+		/// </summary>
+		/// <param name="sender">object sender</param>
+		/// <param name="e">event arguments</param>
+		/// <remarks>The parameters <paramref name="e"/> and <paramref name="sender"/> are not needed, but must be indicated.</remarks>
 		private void AboutForm_Load(object sender, EventArgs e)
 		{
+			Text = $"Info about {AssemblyInfo.AssemblyTitle}";
+			labelProductName.Text = AssemblyInfo.AssemblyProduct;
+			labelVersion.Text = $"Version {AssemblyInfo.AssemblyVersion}";
+			labelCopyright.Text = AssemblyInfo.AssemblyCopyright;
+			labelCompanyName.Text = AssemblyInfo.AssemblyCompany;
+			textBoxDescription.Text = AssemblyInfo.AssemblyDescription;
 		}
 	}
 }
